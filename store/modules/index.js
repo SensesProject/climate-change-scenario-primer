@@ -1,1 +1,1 @@
-export { default as static } from './static'
+export { default as data } from './data'
