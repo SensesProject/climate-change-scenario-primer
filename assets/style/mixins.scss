@@ -1,0 +1,38 @@
+@mixin media-query ($device) {
+  @media screen and (min-width: $device) {
+    @content;
+  }
+}
+
+@mixin underline ($color) {
+  background: linear-gradient(to top, transparent, transparent 0em, $color 0em, $color 0.1em, transparent 0);
+}
+
+@mixin underline-active ($color) {
+  background: lighten($color, 30) linear-gradient(to top, transparent, transparent 0em, $color 0em, $color 0.1em, transparent 0);;
+}
+
+@mixin transparent-gradient ($color) {
+  background-image: linear-gradient(to bottom, transparentize($color, 1) 0%, transparentize($color, 0.8) 100%);
+}
+
+@mixin font-feature-settings ($value) {
+  -webkit-font-feature-settings: $value;
+  -moz-font-feature-settings: $value;
+  -o-font-feature-settings: $value;
+  font-feature-settings: $value;
+}
+
+@mixin flex-row () {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-column () {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}

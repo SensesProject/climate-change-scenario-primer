@@ -1,0 +1,100 @@
+@charset "utf-8";
+@import "typography";
+@import "global";
+
+blockquote, body, dd, dl, figure, h1, h2, h3, h4, h5, h6, hr, ol, p, pre, time, ul {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font: normal normal 105%/1.7 $font-sans;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  // -moz-osx-font-smoothing: grayscale;
+  // -webkit-font-smoothing: antialiased;
+  @include font-feature-settings("kern" 1)
+  font-kerning: normal;
+  color: $color-text;
+}
+
+.mobile-invisible {
+	visibility: hidden;
+  display: none;
+}
+
+@include media-query($on-palm) {
+  .mobile-invisible {
+  	visibility: visible;
+    display: inherit;
+  }
+}
+
+a, .a {
+  color: $color-text-highlight;
+  text-decoration: none;
+  cursor: pointer;
+
+  &[href^='#'], &:not([href]) {
+    color: $color-text-highlight;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: $color-text;
+  }
+
+  &:visited {
+    color: darken($color-text-highlight, 15%);
+  }
+
+  &:hover, &:focus {
+    color: darken($color-text-highlight, 10%);
+  }
+}
+
+input {
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  zoom: 1;
+  border: 0;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+nav li, nav ol {
+  display: inline-block;
+  list-style: none;
+}
+
+figure > img {
+  display: block;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.wrapper {
+  width: 100vw;
+  max-width: $max-width;
+  padding-left: #{$spacing-unit / 2};
+  padding-right: #{$spacing-unit / 2};
+}
