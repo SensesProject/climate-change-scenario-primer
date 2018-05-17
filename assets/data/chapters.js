@@ -7,4 +7,6 @@ export default [{
   title: 'The SSP-RCP Scenario Framework'
 }, {
   title: 'Scenarios and Models'
+}, {
+  title: 'More Scenarios'
 }]
