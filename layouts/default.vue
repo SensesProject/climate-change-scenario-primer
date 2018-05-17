@@ -3,7 +3,6 @@
     <LayoutHeader/>
     <nuxt class="chapter"/>
     <LayoutNextChapter/>
-    <LayoutNavigation/>
   </div>
 </template>
 
