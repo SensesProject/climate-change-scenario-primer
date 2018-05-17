@@ -22,6 +22,7 @@ module.exports = {
   plugins: [
     '~/plugins/components.js'
   ],
+  loading: false,
   /*
   ** Build configuration
   */
