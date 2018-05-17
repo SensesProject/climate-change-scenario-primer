@@ -14,7 +14,8 @@
   },
   "dependencies": {
     "normalize-scss": "^7.0.1",
-    "nuxt": "^1.0.0"
+    "nuxt": "^1.0.0",
+    "vue-resize": "^0.4.4"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",

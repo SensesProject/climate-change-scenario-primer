@@ -1,12 +1,23 @@
 <template>
   <div class="root">
+    <resize-observer @notify="setClientWidth" />
     <LayoutHeader/>
     <nuxt class="chapter"/>
     <LayoutNextChapter/>
   </div>
 </template>
 
-<script />
+<script>
+import { mapActions } from 'vuex'
+export default {
+  methods: {
+    ...mapActions([
+      'setClientWidth'
+    ])
+  }
+}
+
+</script>
 
 <style scoped lang="scss">
 @import "~@/assets/style/global";
