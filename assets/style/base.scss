@@ -126,3 +126,16 @@ h3 {
     font-size: 1.8rem;
   }
 }
+
+p {
+  margin: 2rem 0;
+  max-width: 720px;
+
+  strong {
+    color: darken($color-text-highlight, 20%);
+  }
+}
+
+p + p {
+  margin-top: -1rem;
+}
