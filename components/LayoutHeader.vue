@@ -39,7 +39,7 @@ export default {
 
   .wrapper {
     height: 100%;
-    padding: $spacing-unit / 2;
+    padding: $spacing-unit #{$spacing-unit / 2};
     @include flex-column();
     align-items: flex-start;
     justify-content: space-between;

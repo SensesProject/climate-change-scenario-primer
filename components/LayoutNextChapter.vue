@@ -2,7 +2,15 @@
   <div class="LayoutNextChapter">
     <section class="wrapper">
       <router-link :to="nextChapter.route">
-        <span class="next">Next Chapter →</span>
+        <span
+          v-if="nextIndex < chapters - 1 && nextIndex !== 0"
+          class="next">Next Chapter →</span>
+        <span
+          v-if="nextIndex === chapters - 1"
+          class="next">Last Chapter →</span>
+        <span
+          v-if="nextIndex === 0"
+          class="next">To the Beginning →</span>
         <h3>{{ nextChapter.title }}</h3>
       </router-link>
     </section>
@@ -13,10 +21,17 @@
 export default {
   computed: {
     nextChapter () {
+      const { $store, nextIndex } = this
+      const chapters = $store.getters.chapters
+      return chapters[nextIndex]
+    },
+    nextIndex () {
       const { $store, $route } = this
       const chapters = $store.getters.chapters
-      const nextChapter = (chapters.map(c => c.route).indexOf($route.path) + 1) % chapters.length
-      return chapters[nextChapter]
+      return (chapters.map(c => c.route).indexOf($route.path) + 1) % chapters.length
+    },
+    chapters () {
+      return this.$store.getters.chapters.length
     }
   }
 }
@@ -28,7 +43,7 @@ export default {
   width: 100vw;
   @include flex-column();
   justify-content: space-around;
-  height: $spacing-unit * 4;
+  height: $spacing-unit * 6;
   background: $color-pale-gray;
   border-top: 1px solid $color-light-gray;
 

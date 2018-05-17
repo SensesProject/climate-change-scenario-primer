@@ -12,8 +12,8 @@
   background: lighten($color, 30) linear-gradient(to top, transparent, transparent 0em, $color 0em, $color 0.1em, transparent 0);;
 }
 
-@mixin transparent-gradient ($color) {
-  background-image: linear-gradient(to bottom, transparentize($color, 1) 0%, transparentize($color, 0.8) 100%);
+@mixin transparent-gradient ($color, $direction) {
+  background-image: linear-gradient(to $direction, transparentize($color, 1) 0%, transparentize($color, 0) 100%);
 }
 
 @mixin font-feature-settings ($value) {

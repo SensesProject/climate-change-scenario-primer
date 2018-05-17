@@ -6,23 +6,61 @@
 
     <p>There are five Shared Socioeconomic Pathways (SSPs) narrating different socioeconomic futures. This is important as we can&rsquo;t predict the future and these narratives have drastically different implications for our challenges regarding climate change mitigation and adaptation.</p>
 
-    <p>SSP1: …</p>
+    <LayoutListItem>
+      <VisSsp
+        slot="graphic"
+        :ssp="1"/>
+      <div>
+        <h4>SSP1</h4>
+        <p>Some Details on the SSP1 Narrative</p>
+      </div>
+    </LayoutListItem>
 
-    <p>SSP2: …</p>
+    <LayoutListItem>
+      <VisSsp
+        slot="graphic"
+        :ssp="2"/>
+      SSP2: …
+    </LayoutListItem>
 
-    <p>SSP3: …</p>
+    <LayoutListItem>
+      <VisSsp
+        slot="graphic"
+        :ssp="3"/>
+      SSP3: …
+    </LayoutListItem>
 
-    <p>SSP4: …</p>
+    <LayoutListItem>
+      <VisSsp
+        slot="graphic"
+        :ssp="4"/>
+      SSP4: …
+    </LayoutListItem>
 
-    <p>SSP5: …</p>
+    <LayoutListItem>
+      <VisSsp
+        slot="graphic"
+        :ssp="5"/>
+      SSP5: …
+    </LayoutListItem>
 
     <p>These narratives play out differently across different variables.</p>
 
-    <p>Population growth: …</p>
+    <LayoutScrollify vis="TestScrollify">
 
-    <p>Education: …</p>
+      <div>
+        <p>Population growth: …</p>
+      </div>
 
-    <p>Technological developement: …</p>
+      <div>
+        <p>Education: …</p>
+      </div>
+
+      <div>
+        <p>Technological developement: …</p>
+      </div>
+
+    </LayoutScrollify>
 
     <h3 id="rcps">RCPs</h3>
 
@@ -85,7 +123,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import "~@/assets/style/global";
 .wrapper {
 }
-
 </style>

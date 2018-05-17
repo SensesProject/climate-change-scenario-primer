@@ -12,5 +12,7 @@ export default {
 
 <style scoped lang="scss">
 @import "~@/assets/style/global";
-
+.Component {
+  
+}
 </style>

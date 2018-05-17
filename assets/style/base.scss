@@ -93,8 +93,7 @@ table {
 .wrapper {
   width: 100vw;
   max-width: $max-width;
-  padding-left: #{$spacing-unit / 2};
-  padding-right: #{$spacing-unit / 2};
+  padding: #{$spacing-unit * 2} #{$spacing-unit / 2};
 }
 
 h1 {
@@ -133,6 +132,14 @@ p {
 
   strong {
     color: darken($color-text-highlight, 20%);
+  }
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
   }
 }
 
