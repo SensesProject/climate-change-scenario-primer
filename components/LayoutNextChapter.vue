@@ -3,7 +3,7 @@
     <section class="wrapper">
       <router-link :to="nextChapter.route">
         <span class="next">Next Chapter →</span>
-        <h2>{{ nextChapter.title }}</h2>
+        <h3>{{ nextChapter.title }}</h3>
       </router-link>
     </section>
   </div>

@@ -1,14 +1,12 @@
 <template>
-  <div
+  <header
     :class="{index}"
     class="LayoutHeader">
     <section class="wrapper">
-      <header>
-        <h1>SENSES</h1>
-      </header>
+      <h1>SENSES</h1>
       <h2>{{ title }}</h2>
     </section>
-  </div>
+  </header>
 </template>
 
 <script>
@@ -36,7 +34,7 @@ export default {
   height: 30vh;
 
   &.index {
-    height: 60vh;
+    height: 50vh;
   }
 
   .wrapper {

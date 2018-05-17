@@ -42,9 +42,9 @@ a, .a {
   //   color: $color-text;
   // }
 
-  &:visited {
-    color: darken($color-text-highlight, 15%);
-  }
+  // &:visited {
+  //   color: darken($color-text-highlight, 15%);
+  // }
 
   &:hover, &:focus {
     color: darken($color-text-highlight, 10%);
@@ -95,4 +95,34 @@ table {
   max-width: $max-width;
   padding-left: #{$spacing-unit / 2};
   padding-right: #{$spacing-unit / 2};
+}
+
+h1 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: bold;
+  font-family: $font-mono;
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 1.1;
+  margin: 0;
+
+  @include media-query($on-palm) {
+    font-size: 2.4rem;
+  }
+}
+
+h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 0;
+
+  @include media-query($on-palm) {
+    font-size: 1.8rem;
+  }
 }
