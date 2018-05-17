@@ -1,4 +1,4 @@
-const width = window.innerWidth
+const width = typeof window !== 'undefined' ? window.innerWidth : 320
 
 const state = () => ({
   showMenu: false,
@@ -15,7 +15,7 @@ const actions = {
     commit('HIDE_MENU')
   },
   setClientWidth ({ commit }) {
-    const width = window.innerWidth
+    const width = typeof window !== 'undefined' ? window.innerWidth : 320
     commit('SET_WIDTH', width)
     commit('SET_ON_PALM', width >= 600)
     commit('SET_ON_LAPTOP', width >= 800)
