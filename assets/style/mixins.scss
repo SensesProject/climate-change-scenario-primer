@@ -27,7 +27,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 @mixin flex-column () {
@@ -35,4 +35,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+}
+
+@mixin light-text () {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
 }

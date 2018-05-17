@@ -12,8 +12,6 @@ html {
   font: normal normal 105%/1.7 $font-sans;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  // -moz-osx-font-smoothing: grayscale;
-  // -webkit-font-smoothing: antialiased;
   @include font-feature-settings("kern" 1)
   font-kerning: normal;
   color: $color-text;
@@ -40,9 +38,9 @@ a, .a {
     color: $color-text-highlight;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    color: $color-text;
-  }
+  // h1, h2, h3, h4, h5, h6 {
+  //   color: $color-text;
+  // }
 
   &:visited {
     color: darken($color-text-highlight, 15%);

@@ -30,6 +30,7 @@ export default {
 .LayoutHeader {
   width: 100vw;
   @include flex-column();
+  @include light-text();
   background: $color-violet;
   color: $color-white;
   height: 30vh;
