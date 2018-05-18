@@ -18,7 +18,9 @@ export default {
         threshold: 0,
         rootMargin: '-50% 0% -50% 0%'
       },
-      step: 0
+      step: 0,
+      height: 200,
+      maxWidth: 460
     }
   },
   computed: {
@@ -40,15 +42,31 @@ export default {
       if (!view.onPalm) return null
       return createElement(
         'div',
-        { class: ['interactive'] },
+        {
+          class: ['interactive'],
+          style: {
+            'max-width': `${this.maxWidth}px`
+          }
+        },
         [
           createElement(
             'div',
-            { class: ['sticky'] },
+            {
+              class: ['sticky'],
+              style: {
+                top: `calc(50% - ${this.height / 2}px)`
+              }
+            },
             [
               createElement(
                 vis,
-                { props: { step } }
+                {
+                  props: { step },
+                  on: {
+                    setHeight: this.setHeight,
+                    setMaxWidth: this.setMaxWidth
+                  }
+                }
               )
             ]
           )
@@ -60,11 +78,18 @@ export default {
       if (view.onPalm) return null
       return createElement(
         'div',
-        { class: ['interactive'] },
+        {
+          class: ['interactive']
+        },
         [
           createElement(
             vis,
-            { props: { step } }
+            {
+              props: { step },
+              on: {
+                setHeight: this.setHeight
+              }
+            }
           )
         ]
       )
@@ -112,6 +137,16 @@ export default {
       Object.keys($refs).forEach(key => {
         this.observer.observe($refs[key])
       })
+    },
+    setHeight (height) {
+      const { $refs, view } = this
+      Object.keys($refs).forEach(key => {
+        $refs[key].children[0].style.height = view.onPalm ? `${height}px` : `auto`
+      })
+      this.height = height
+    },
+    setMaxWidth (maxWidth) {
+      this.maxWidth = maxWidth
     }
   },
   render (createElement) {
@@ -164,6 +199,7 @@ export default {
       .interactive {
         margin-bottom: $spacing-unit;
         margin-top: $spacing-unit;
+        @include flex-row();
       }
 
       @include media-query($on-palm) {
