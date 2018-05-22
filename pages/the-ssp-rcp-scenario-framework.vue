@@ -49,15 +49,15 @@
     <LayoutScrollify vis="TestScrollify">
 
       <div>
-        <p>Population growth: …</p>
-      </div>
-
-      <div>
         <p>Education: …</p>
       </div>
 
       <div>
-        <p>Technological developement: …</p>
+        <p>International Trade: …</p>
+      </div>
+
+      <div>
+        <p>Technology developement: …</p>
       </div>
 
     </LayoutScrollify>
