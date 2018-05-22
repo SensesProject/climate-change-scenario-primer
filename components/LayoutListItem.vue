@@ -1,10 +1,10 @@
 <template>
-  <p class="LayoutListItem">
+  <div class="LayoutListItem">
     <slot
       name="graphic"
       class="graphic"/>
     <slot class="text"/>
-  </p>
+  </div>
 </template>
 
 <script>
