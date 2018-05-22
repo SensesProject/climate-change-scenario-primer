@@ -10,6 +10,9 @@
 <script>
 import { mapActions } from 'vuex'
 export default {
+  created () {
+    this.$nextTick(this.setClientWidth)
+  },
   methods: {
     ...mapActions([
       'setClientWidth'

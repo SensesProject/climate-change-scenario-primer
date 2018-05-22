@@ -1,10 +1,8 @@
-const width = typeof window !== 'undefined' ? window.innerWidth : 320
-
 const state = () => ({
   showMenu: false,
   width: null,
-  onPalm: width >= 600,
-  onLaptop: width >= 800
+  onPalm: false,
+  onLaptop: false
 })
 
 const actions = {
@@ -15,7 +13,7 @@ const actions = {
     commit('HIDE_MENU')
   },
   setClientWidth ({ commit }) {
-    const width = typeof window !== 'undefined' ? window.innerWidth : 320
+    const width = typeof window !== 'undefined' ? window.innerWidth : 121
     commit('SET_WIDTH', width)
     commit('SET_ON_PALM', width >= 600)
     commit('SET_ON_LAPTOP', width >= 800)
