@@ -46,7 +46,7 @@
 
     <p>These narratives play out differently across different variables.</p>
 
-    <LayoutScrollify vis="TestScrollify">
+    <LayoutScrollify vis="VisSspComparison">
 
       <div>
         <p>Education: …</p>

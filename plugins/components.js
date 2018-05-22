@@ -10,6 +10,7 @@ import LayoutCard from '~/components/LayoutCard'
 
 import VisSsp from '~/components/VisSsp'
 import VisCycle from '~/components/VisCycle'
+import VisSspComparison from '~/components/VisSspComparison'
 
 import TestScrollify from '~/components/TestScrollify'
 
@@ -25,6 +26,7 @@ Vue.component('LayoutCard', LayoutCard)
 
 Vue.component('VisSsp', VisSsp)
 Vue.component('VisCycle', VisCycle)
+Vue.component('VisSspComparison', VisSspComparison)
 
 Vue.component('TestScrollify', TestScrollify)
 
