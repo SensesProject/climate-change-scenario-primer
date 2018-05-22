@@ -71,42 +71,42 @@
     <table>
       <thead>
         <tr>
-          <th style="text-align:left;"> RCP </th>
-          <th style="text-align:left;"> Forcing </th>
-          <th style="text-align:left;"> Temperature </th>
-          <th style="text-align:left;"> Description </th>
+          <th> RCP </th>
+          <th> Forcing </th>
+          <th> Temperature </th>
+          <th> Description </th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td style="text-align:left;"> RCP 1.9 </td>
-          <td style="text-align:left;"> 1.9 W/m2 </td>
-          <td style="text-align:left;"> ~1.5°C </td>
-          <td style="text-align:left;"> Declining Emissions </td>
+          <td> RCP 1.9 </td>
+          <td> 1.9 W/m2 </td>
+          <td> ~1.5°C </td>
+          <td> Declining Emissions </td>
         </tr>
         <tr>
-          <td style="text-align:left;"> RCP 2.6 </td>
-          <td style="text-align:left;"> 2.6 W/m2 </td>
-          <td style="text-align:left;"> ~2.0°C </td>
-          <td style="text-align:left;"> Declining Emissions </td>
+          <td> RCP 2.6 </td>
+          <td> 2.6 W/m2 </td>
+          <td> ~2.0°C </td>
+          <td> Declining Emissions </td>
         </tr>
         <tr>
-          <td style="text-align:left;"> RCP 4.5 </td>
-          <td style="text-align:left;"> 4.5 W/m2 </td>
-          <td style="text-align:left;"> ~2.4°C </td>
-          <td style="text-align:left;"> Stabilising Emissions </td>
+          <td> RCP 4.5 </td>
+          <td> 4.5 W/m2 </td>
+          <td> ~2.4°C </td>
+          <td> Stabilising Emissions </td>
         </tr>
         <tr>
-          <td style="text-align:left;"> RCP 6.0 </td>
-          <td style="text-align:left;"> 6.0 W/m2 </td>
-          <td style="text-align:left;"> ~2.8°C </td>
-          <td style="text-align:left;"> Stabilising Emissions </td>
+          <td> RCP 6.0 </td>
+          <td> 6.0 W/m2 </td>
+          <td> ~2.8°C </td>
+          <td> Stabilising Emissions </td>
         </tr>
         <tr>
-          <td style="text-align:left;"> RCP 8.5 </td>
-          <td style="text-align:left;"> 8.5 W/m2 </td>
-          <td style="text-align:left;"> ~4.3°C </td>
-          <td style="text-align:left;"> Rising Emissions </td>
+          <td> RCP 8.5 </td>
+          <td> 8.5 W/m2 </td>
+          <td> ~4.3°C </td>
+          <td> Rising Emissions </td>
         </tr>
       </tbody>
     </table>
