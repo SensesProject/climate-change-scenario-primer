@@ -179,6 +179,26 @@ p {
     color: darken($color-text-highlight, 20%);
   }
 
+  .yellow {
+    color: $color-yellow
+  }
+
+  .green {
+    color: $color-green
+  }
+
+  .blue {
+    color: $color-blue
+  }
+
+  .red {
+    color: $color-red
+  }
+
+  .violet {
+    color: $color-violet
+  }
+
   &:first-of-type {
     margin-top: 0;
   }
