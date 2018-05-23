@@ -11,6 +11,9 @@ const getters = {
         route: `/${title.toLowerCase().replace(/ /g, '-')}`
       }
     })
+  },
+  iam (state) {
+    return state.iam
   }
 }
 

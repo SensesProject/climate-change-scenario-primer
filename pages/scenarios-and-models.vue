@@ -6,7 +6,7 @@
 
     <p>Integrated assessment models (IAMs) describe how socioeconomics relate to land &amp; energy use and how that   relates to emissions.</p>
 
-    <LayoutScrollify vis="TestScrollify">
+    <LayoutScrollify vis="VisIamStructure">
 
       <div>
         <p>Here is a very simple example of such a model. As you can see…</p>
@@ -18,10 +18,6 @@
 
       <div>
         <p>Furthermore…</p>
-      </div>
-
-      <div>
-        <p>However…</p>
       </div>
 
       <div>
