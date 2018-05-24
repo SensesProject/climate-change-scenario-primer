@@ -105,9 +105,9 @@ export default {
     ...mapGetters([
       'fingerprints'
     ]),
-    ...mapFields([
-      'FingerprintsCategory'
-    ]),
+    ...mapFields({
+      selectedCategory: 'fingerprints.category'
+    }),
     properties () {
       return this.fingerprints.map(property => ({
         ...property,
@@ -126,16 +126,13 @@ export default {
       return (100 / this.width) * 16
     },
     groups () {
-      const { gray, violet, lightViolet, red, yellow } = this
+      const { gray, violet, red, yellow } = this
       return [{
         color: 'gray',
         properties: gray
       }, {
         color: 'violet',
         properties: violet
-      }, {
-        color: 'light-violet',
-        properties: lightViolet
       }, {
         color: 'red',
         properties: red
@@ -145,7 +142,8 @@ export default {
       }]
     },
     gray () {
-      const { hover, properties } = this
+      const { hover, properties, step } = this
+      if (step === 1) return properties
       if (hover === null) return []
       return properties.filter(property => property.category === hover.category)
     },
@@ -155,18 +153,18 @@ export default {
         case 0:
           return [properties.find(p => p.id === 'c0p9')]
         case 1:
-          return properties.filter(p => p.category === this.FingerprintsCategory)
+          return properties.filter(p => p.category === this.selectedCategory)
         default: return []
       }
     },
-    lightViolet () {
-      const { step, properties } = this
-      switch (step) {
-        case 1:
-          return properties
-        default: return []
-      }
-    },
+    // lightViolet () {
+    //   const { step, properties } = this
+    //   switch (step) {
+    //     case 1:
+    //       return properties
+    //     default: return []
+    //   }
+    // },
     red () {
       const { step, properties } = this
       switch (step) {
@@ -205,14 +203,14 @@ export default {
       this.hover = property
       switch (this.step) {
         case 1:
-          this.FingerprintsCategory = property.category
+          this.selectedCategory = property.category
       }
     },
     resetHover () {
       this.hover = null
       switch (this.step) {
         case 1:
-          this.FingerprintsCategory = null
+          this.selectedCategory = null
       }
     }
   }

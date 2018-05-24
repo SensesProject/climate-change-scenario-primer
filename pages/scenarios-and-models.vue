@@ -36,7 +36,7 @@
         <p>
           Then there a many more aspects and relationships between them we didn't consider. They can be categorized in
           <InHighlight
-            field="FingerprintsCategory"
+            field="fingerprints.category"
             value="Economic Growth and Development"
             class="yellow">Economic Growth and Development
           </InHighlight>
