@@ -1,5 +1,5 @@
 import chapters from './chapters'
 import iam from './iam'
-import fingerprint from './fingerprint'
+import fingerprints from './fingerprints'
 
-export default { chapters, iam, fingerprint }
+export default { chapters, iam, fingerprints }

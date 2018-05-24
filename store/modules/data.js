@@ -15,8 +15,8 @@ const getters = {
   iam (state) {
     return state.iam
   },
-  fingerprint (state) {
-    return state.fingerprint
+  fingerprints (state) {
+    return state.fingerprints
   }
 }
 
