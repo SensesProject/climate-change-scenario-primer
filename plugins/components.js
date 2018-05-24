@@ -15,6 +15,8 @@ import VisIamStructure from '~/components/VisIamStructure'
 import VisIamStructureChart from '~/components/VisIamStructureChart'
 import VisFingerprints from '~/components/VisFingerprints'
 
+import InHighlight from '~/components/InHighlight'
+
 import TestScrollify from '~/components/TestScrollify'
 
 import { ResizeObserver } from 'vue-resize'
@@ -33,6 +35,8 @@ Vue.component('VisSspComparison', VisSspComparison)
 Vue.component('VisIamStructure', VisIamStructure)
 Vue.component('VisIamStructureChart', VisIamStructureChart)
 Vue.component('VisFingerprints', VisFingerprints)
+
+Vue.component('InHighlight', InHighlight)
 
 Vue.component('TestScrollify', TestScrollify)
 

@@ -78,70 +78,70 @@ export default [{
 }, {
   id: 'c1p0',
   name: 'Use of Biomass',
-  category: 'Economic Growth and Development',
+  category: 'Land use',
   models: ['AIM/CGE', 'GCAM', 'IMAGE', 'REMIND-MAGPIE', 'WITCH-GLOBIUM'],
   x: 61.77,
   y: 59.47
 }, {
   id: 'c1p1',
   name: 'Use of Land',
-  category: 'Economic Growth and Development',
+  category: 'Land use',
   models: ['AIM/CGE', 'GCAM', 'IMAGE', 'REMIND-MAGPIE'],
   x: 66.59,
   y: 62.32
 }, {
   id: 'c1p2',
   name: 'Use of Water',
-  category: 'Economic Growth and Development',
+  category: 'Land use',
   models: ['IMAGE'],
   x: 63.66,
   y: 76.21
 }, {
   id: 'c1p3',
   name: 'Land use by land type',
-  category: 'Economic Growth and Development',
+  category: 'Land use',
   models: ['AIM/CGE', 'GCAM', 'IMAGE', 'REMIND-MAGPIE'],
   x: 66.50,
   y: 68.01
 }, {
   id: 'c1p4',
   name: 'Land use for bioenergy',
-  category: 'Economic Growth and Development',
+  category: 'Land use',
   models: ['AIM/CGE', 'GCAM', 'IMAGE', 'REMIND-MAGPIE'],
   x: 56.71,
   y: 67.90
 }, {
   id: 'c1p5',
   name: 'Food consumption',
-  category: 'Economic Growth and Development',
+  category: 'Land use',
   models: ['AIM/CGE', 'GCAM', 'IMAGE', 'REMIND-MAGPIE'],
   x: 56.87,
   y: 62.24
 }, {
   id: 'c1p6',
   name: 'Crop prices',
-  category: 'Economic Growth and Development',
+  category: 'Land use',
   models: ['AIM/CGE', 'GCAM', 'REMIND-MAGPIE'],
   x: 61.55,
   y: 70.78
 }, {
   id: 'c1p7',
   name: 'Water indicators',
-  category: 'Economic Growth and Development',
+  category: 'Land use',
   models: ['IMAGE', 'REMIND-MAGPIE'],
   x: 61.64,
   y: 65.10
 }, {
   id: 'c1p8',
   name: 'Trade in bioenergy crops',
-  category: 'Economic Growth and Development',
+  category: 'Land use',
   models: ['AIM/CGE', 'GCAM', 'REMIND-MAGPIE'],
   x: 56.90,
   y: 56.60
 }, {
   id: 'c1p9',
   name: 'Trade in food crops',
-  category: 'Economic Growth and Development',
+  category: 'Land use',
   models: ['AIM/CGE', 'GCAM', 'REMIND-MAGPIE'],
   x: 53.57,
   y: 52.06

@@ -29,11 +29,18 @@
     <LayoutScrollify vis="VisFingerprints">
 
       <div>
-        <p>For every SSP there is a Marker-Model. This graphic shows indicators which are considered by those five models. We also had indicators like GDP and population growth in our simplified model, but energy types are split further down into actual energy sources.</p>
+        <p>In contrast to the simplified model above the models used to generate SSP-Scenarios are a lot more complex. This graphic illusrates what kind of aspects are taken into account by those models - each dot represents one of those aspects. There are similarities to our model from before. <strong class="violet">GDP</strong> plays an important role. Aspects like <strong class="yellow">energy</strong> and <strong class="red">emissions</strong> are looked at in greater detail.</p>
       </div>
 
       <div>
-        <p>Overall those models are far more complex and also include many more indicators describing Economic Growth and Development, Land use, Electricity and heat, Refining, Energy demand, Resource extraction and trade and Climate and non-climate environmental change.</p>
+        <p>
+          Then there a many more aspects and relationships between them we didn't consider. They can be categorized in
+          <InHighlight
+            field="FingerprintsCategory"
+            value="Economic Growth and Development"
+            class="yellow">Economic Growth and Development
+          </InHighlight>
+          , Land use, Electricity and heat, Refining, Energy demand, Resource extraction and trade and Climate and non-climate environmental change.</p>
       </div>
 
       <div>

@@ -17,7 +17,8 @@
     "intersection-observer": "^0.5.0",
     "normalize-scss": "^7.0.1",
     "nuxt": "^1.0.0",
-    "vue-resize": "^0.4.4"
+    "vue-resize": "^0.4.4",
+    "vuex-map-fields": "^1.2.3"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",
