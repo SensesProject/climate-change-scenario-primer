@@ -14,6 +14,9 @@ const getters = {
   },
   iam (state) {
     return state.iam
+  },
+  fingerprint (state) {
+    return state.fingerprint
   }
 }
 
