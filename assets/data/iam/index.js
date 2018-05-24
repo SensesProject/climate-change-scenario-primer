@@ -17,7 +17,7 @@ const variableNames = Object.keys(modelOutput.l001t0[0]).filter(key => key !== '
 const variables = variableNames.map(variable => {
   const obj = {}
   Object.keys(modelOutput).forEach(scenario => {
-    obj[scenario] = modelOutput[scenario].map(d => d[variable])
+    obj[scenario] = modelOutput[scenario].map(d => d[variable]).filter((d, i) => i < 10)
   })
   const max = Math.max(...Object.keys(modelOutput).map(scenario => {
     return Math.max(...obj[scenario])
