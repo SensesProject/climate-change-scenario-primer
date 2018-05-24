@@ -26,7 +26,7 @@
 
     </LayoutScrollify>
 
-    <LayoutScrollify vis="TestScrollify">
+    <LayoutScrollify vis="VisFingerprints">
 
       <div>
         <p>For every SSP there is a Marker-Model. This graphic shows indicators which are considered by those five models. We also had indicators like GDP and population growth in our simplified model, but energy types are split further down into actual energy sources.</p>

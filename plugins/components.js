@@ -13,6 +13,7 @@ import VisCycle from '~/components/VisCycle'
 import VisSspComparison from '~/components/VisSspComparison'
 import VisIamStructure from '~/components/VisIamStructure'
 import VisIamStructureChart from '~/components/VisIamStructureChart'
+import VisFingerprints from '~/components/VisFingerprints'
 
 import TestScrollify from '~/components/TestScrollify'
 
@@ -31,6 +32,7 @@ Vue.component('VisCycle', VisCycle)
 Vue.component('VisSspComparison', VisSspComparison)
 Vue.component('VisIamStructure', VisIamStructure)
 Vue.component('VisIamStructureChart', VisIamStructureChart)
+Vue.component('VisFingerprints', VisFingerprints)
 
 Vue.component('TestScrollify', TestScrollify)
 

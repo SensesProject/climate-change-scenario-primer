@@ -1,7 +1,7 @@
 <template>
   <div
-    ref="sspComparison"
-    class="SspComparison">
+    ref="VisFingerprint"
+    class="VisFingerprint">
     <svg
       v-if="width > 0"
       :style="{'stroke-width': strokeWidth, 'font-size': `${fontSize}px`}"
@@ -221,7 +221,7 @@ export default {
     setWidth () {
       this.width = 0
       this.$nextTick(() => {
-        this.width = this.$refs.sspComparison.getBoundingClientRect().width
+        this.width = this.$refs.VisFingerprint.getBoundingClientRect().width
         this.$emit('setHeight', this.height)
       })
     }
@@ -231,7 +231,7 @@ export default {
 
 <style scoped lang="scss">
 @import "~@/assets/style/global";
-.SspComparison {
+.VisFingerprint {
   width: 100%;
   max-width: 400px;
 
