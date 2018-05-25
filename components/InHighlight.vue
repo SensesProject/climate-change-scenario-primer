@@ -4,13 +4,17 @@
       :class="{active: highlight === value}"
       class="highlight"
       @mouseover="highlight = value"
-      @mouseout="highlight = null"><slot/><wbr></span>
+      @mouseout="reset()"><slot/><wbr></span>
   </span>
 </template>
 
 <script>
 export default {
   props: {
+    out: {
+      type: Boolean,
+      default: true
+    },
     field: {
       type: String,
       default: 'test'
@@ -28,6 +32,11 @@ export default {
       set (value) {
         return this.$store.commit('updateField', {path: this.field, value})
       }
+    }
+  },
+  methods: {
+    reset () {
+      if (this.out) this.highlight = null
     }
   }
 }

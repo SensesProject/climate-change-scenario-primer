@@ -8,8 +8,8 @@
       viewBox="0 0 100 75">
       <g class="lines">
         <polyline
-          v-for="line in lines"
-          :key="line.name"
+          v-for="(line, i) in lines"
+          :key="`${line.name}-${i}`"
           v-bind="line.attrs"/>
       </g>
       <g
@@ -39,11 +39,22 @@
         </g>
       </g>
     </svg>
+    <div
+      v-if="legend"
+      class="key">
+      <span
+        v-for="(scenario, i) in lines"
+        :key="`key-${i}`"
+        class="key-item"><span
+          :class="scenario.attrs.class"
+          class="dot"/>&nbsp;{{ scenario.name }} </span>
+    </div>
   </div>
 </template>
 
 <script>
 import { mapState } from 'vuex'
+import { mapFields } from 'vuex-map-fields'
 import { scaleLinear } from 'd3-scale'
 import { format } from 'd3-format'
 export default {
@@ -52,8 +63,20 @@ export default {
       type: String,
       default: 'gdp'
     },
+    legend: {
+      type: String,
+      default: null
+    },
     max: {
       type: Number,
+      default: null
+    },
+    staticFilter: {
+      type: Object,
+      default: null
+    },
+    dynamicFilter: {
+      type: String,
       default: null
     }
   },
@@ -67,7 +90,24 @@ export default {
     ...mapState([
       'view'
     ]),
+    ...mapFields({
+      highlightSsp: 'charts.ssp',
+      filter: 'charts.filter'
+    }),
     data () {
+      if (this.dynamicFilter !== null) {
+        console.log('DYNAMIC')
+        return this.$store.getters.scenario(this.scenario).filter(scenario => {
+          return scenario.ssp === (this.filter || this.dynamicFilter)
+        })
+      }
+      if (this.staticFilter !== null) {
+        return this.$store.getters.scenario(this.scenario).filter(scenario => {
+          const ssp = this.staticFilter.ssp === null || this.staticFilter.ssp === scenario.ssp
+          const rcp = this.staticFilter.rcp === null || this.staticFilter.rcp === scenario.rcp
+          return ssp && rcp
+        })
+      }
       return this.$store.getters.scenario(this.scenario)
     },
     variable () {
@@ -93,12 +133,19 @@ export default {
       return scaleLinear().domain(this.yDomain).range([75, 0]).nice()
     },
     lines () {
-      const { data, strokeWidth, years, xScale, yScale } = this
+      const { data, strokeWidth, years, xScale, yScale, highlightSsp } = this
       return data.map(scenario => {
+        const name = this.legend === 'ssp' ? scenario.ssp : scenario.rcp === 'Baseline' ? `Baseline` : `RCP${scenario.rcp}`
         return {
-          name: scenario.rcp === 'Baseline' ? scenario.ssp : `${scenario.ssp}-RCP${scenario.rcp}`,
+          name,
           attrs: {
-            class: [scenario.ssp, `RCP${scenario.rcp}`],
+            class: [
+              scenario.ssp,
+              `RCP${scenario.rcp}`,
+              {
+                fade: (highlightSsp !== null && highlightSsp !== scenario.ssp)
+              }
+            ],
             style: {'stroke-width': strokeWidth * 2},
             points: years.map(year => `${xScale(year)},${yScale(scenario[year])}`).join(' ')
           }
@@ -113,6 +160,9 @@ export default {
   watch: {
     'view.width' () {
       this.setWidth()
+    },
+    'filter' () {
+      if (this.filter === null) this.filter = this.dynamicFilter
     }
   },
   mounted () {
@@ -134,7 +184,7 @@ export default {
 .VisChart {
   svg {
     overflow: visible;
-    margin: 1.3rem 0;
+    margin: 1.3rem 0 0.8rem;
     font-family: $font-mono;
 
     text {
@@ -144,6 +194,7 @@ export default {
     .lines {
       polyline {
         fill: none;
+        transition: stroke .1s;
         mix-blend-mode: multiply;
         &.SSP1 {
           stroke: $color-green;
@@ -173,6 +224,9 @@ export default {
         &.RCP26 {
           opacity: 0.2;
         }
+        &.fade {
+          stroke: $color-light-gray;
+        }
       }
     }
 
@@ -188,10 +242,7 @@ export default {
 
       &.x-axis {
         text {
-          &.left {
-
-          }
-
+          fill: $color-dark-gray;
           &.right {
             text-anchor: end;
           }
@@ -200,8 +251,51 @@ export default {
       &.y-axis {
         .tick {
           text {
+            fill: $color-dark-gray;
             dominant-baseline: unset;
           }
+        }
+      }
+    }
+  }
+  .key {
+    cursor: default;
+    .key-item {
+      padding-right: 0.5em;
+
+      .dot {
+        height: 0.7em;
+        width: 0.7em;
+        border-radius: 50%;
+        display: inline-block;
+
+        &.SSP1 {
+          background: $color-green;
+        }
+        &.SSP2 {
+          background: $color-blue;
+        }
+        &.SSP3 {
+          background: $color-red;
+        }
+        &.SSP4 {
+          background: $color-yellow;
+        }
+        &.SSP5 {
+          background: $color-violet;
+        }
+
+        &.RCP60 {
+          opacity: 0.8;
+        }
+        &.RCP45 {
+          opacity: 0.6;
+        }
+        &.RCP34 {
+          opacity: 0.4;
+        }
+        &.RCP26 {
+          opacity: 0.2;
         }
       }
     }

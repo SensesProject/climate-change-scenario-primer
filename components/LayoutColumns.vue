@@ -30,6 +30,7 @@ export default {
 
   @include media-query($on-palm) {
     @include flex-row;
+    align-items: flex-start;
 
     .left {
       margin: 0 #{$spacing-unit / 2} 0 0;

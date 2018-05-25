@@ -83,7 +83,7 @@
           <InHighlight
             field="fingerprints.model"
             class="green"
-            value="GCAM">GCAM4</InHighlight>
+            value="GCAM">GCAM4,</InHighlight>
           <InHighlight
             field="fingerprints.model"
             class="yellow"
@@ -106,33 +106,59 @@
     <LayoutColumns>
       <VisChart
         slot="left"
+        legend="ssp"
         scenario="population"/>
       <VisChart
         slot="right"
         scenario="gdp"/>
     </LayoutColumns>
 
-    <p>Assumptions on population growth and GDP are already part of the scenario assumptions. This shows us how they turn out over time and in numbers. As you can see the SSP3 scenario of regional rivalary leads us to continued population growth but relatively low growth in GDP. SSP1 (Sustainability) and SSP5 (Fossil-fueled developement) show similar patterns in population growth, but vast differences when it comes to GDP.</p>
+    <p>
+      Assumptions on population growth and GDP are already part of the scenario assumptions. This shows us how they turn out over time and in numbers. As you can see the
+      <InHighlight
+        field="charts.ssp"
+        class="red"
+        value="SSP3">SSP3</InHighlight> scenario of regional rivalary leads us to continued population growth but relatively low growth in GDP.
+      <InHighlight
+        field="charts.ssp"
+        class="green"
+        value="SSP1">SSP1</InHighlight> (Sustainability) and
+      <InHighlight
+        field="charts.ssp"
+        class="violet"
+        value="SSP5">SSP5</InHighlight> (Fossil-fueled developement) show similar patterns in population growth, but vast differences when it comes to GDP.
+    </p>
 
     <LayoutColumns>
       <VisChart
         slot="left"
+        :static-filter="{ssp: null, rcp: 'Baseline'}"
+        legend="ssp"
         scenario="finalenergy"/>
       <VisChart
         slot="right"
+        :static-filter="{ssp: null, rcp: 'Baseline'}"
         scenario="emissions"/>
     </LayoutColumns>
 
-    <p>The high GDP of SSP5 comes at a cost: High energy needs and with that lots of CO2-emissions. Until now we only looked at SSP-Baseline Scenarios. Let&rsquo;s set emission goals and include RCPs.</p>
+    <p>
+      The high GDP of
+      <InHighlight
+        field="charts.ssp"
+        class="violet"
+        value="SSP5">SSP5</InHighlight> comes at a cost: High energy needs and with that lots of CO2-emissions. Until now we only looked at SSP-Baseline Scenarios. Let&rsquo;s set emission goals and include RCPs.
+    </p>
 
     <LayoutColumns>
       <VisChart
         slot="left"
         :max="3200"
+        legend="rcp"
         scenario="carbonSsp1"/>
       <VisChart
         slot="right"
         :max="3200"
+        legend="rcp"
         scenario="carbonSsp5"/>
     </LayoutColumns>
 
@@ -141,14 +167,45 @@
     <LayoutColumns>
       <VisChart
         slot="left"
+        :max="1200"
+        dynamic-filter="SSP1"
+        legend="rcp"
         scenario="finalenergy"/>
       <VisChart
         slot="right"
+        :max="140000"
+        dynamic-filter="SSP1"
         scenario="emissions"/>
     </LayoutColumns>
 
-    <p>Compared to the Baseline-Scenarios this results in similar final energy but less emissions.</p>
-
+    <p>
+      Compared to the Baseline-Scenarios this results in similar final energy but less emissions.
+      <InHighlight
+        :out="false"
+        field="charts.filter"
+        class="green"
+        value="SSP1">SSP1,</InHighlight>
+      <InHighlight
+        :out="false"
+        field="charts.filter"
+        class="blue"
+        value="SSP2">SSP2,</InHighlight>
+      <InHighlight
+        :out="false"
+        field="charts.filter"
+        class="red"
+        value="SSP3">SSP3,</InHighlight>
+      <InHighlight
+        :out="false"
+        field="charts.filter"
+        class="yellow"
+        value="SSP4">SSP4,</InHighlight>
+      <InHighlight
+        :out="false"
+        field="charts.filter"
+        class="violet"
+        value="SSP5">SSP5</InHighlight>
+    </p>
     <h3 id="climate-models">Climate Models</h3>
 
     <p>Climate models take us from emissions to things like temperature and precipitation. As with IAMs they describe a complex system,  in this case the earth. Climate models are therefore sometimes also related to as Earth System Models. In contrast to weather models they focus on long term changes whereas spatial and temporal resolution is less important.</p>

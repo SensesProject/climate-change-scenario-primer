@@ -5,6 +5,11 @@ const state = () => ({
     properties: null,
     category: null,
     model: null
+  },
+  charts: {
+    ssp: null,
+    rcp: null,
+    filter: null
   }
 })
 
