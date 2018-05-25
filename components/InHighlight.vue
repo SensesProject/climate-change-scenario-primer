@@ -29,9 +29,6 @@ export default {
         return this.$store.commit('updateField', {path: this.field, value})
       }
     }
-  },
-  created () {
-    console.log(this.highlight)
   }
 }
 </script>
