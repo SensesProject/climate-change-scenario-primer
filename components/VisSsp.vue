@@ -1,14 +1,20 @@
 <template>
   <div class="VisSsp">
-    <svg
-      width="100%"
-      height="100%"
-      viewBox="-1 -1 2 2"
-      preserveAspectRatio="xMinYMin">
-      <circle
-        :fill="fill"
-        r="1"/>
-    </svg>
+    <img
+      v-if="ssp === 1"
+      src="~/assets/img/SSP1.png">
+    <img
+      v-if="ssp === 2"
+      src="~/assets/img/SSP2.png">
+    <img
+      v-if="ssp === 3"
+      src="~/assets/img/SSP3.png">
+    <img
+      v-if="ssp === 4"
+      src="~/assets/img/SSP4.png">
+    <img
+      v-if="ssp === 5"
+      src="~/assets/img/SSP5.png">
   </div>
 </template>
 
@@ -42,8 +48,8 @@ export default {
 <style scoped lang="scss">
 @import "~@/assets/style/global";
 .VisSsp {
-  width: 120px;
-  max-width: 20vw;
+  width: 300px;
+  max-width: 30vw;
   margin: 0 $spacing-unit #{$spacing-unit / 2} 0;
 }
 </style>
