@@ -14,6 +14,7 @@ import VisSspComparison from '~/components/VisSspComparison'
 import VisIamStructure from '~/components/VisIamStructure'
 import VisIamStructureChart from '~/components/VisIamStructureChart'
 import VisFingerprints from '~/components/VisFingerprints'
+import VisChart from '~/components/VisChart'
 
 import InHighlight from '~/components/InHighlight'
 
@@ -35,6 +36,7 @@ Vue.component('VisSspComparison', VisSspComparison)
 Vue.component('VisIamStructure', VisIamStructure)
 Vue.component('VisIamStructureChart', VisIamStructureChart)
 Vue.component('VisFingerprints', VisFingerprints)
+Vue.component('VisChart', VisChart)
 
 Vue.component('InHighlight', InHighlight)
 

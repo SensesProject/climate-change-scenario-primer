@@ -104,29 +104,47 @@
     <p>Feeding scenario assumptions into models will get us scenarios – a set of output variables describing the futures. Let&rsquo;s take a look how some of these variables play out in different scenarios.</p>
 
     <LayoutColumns>
-      <TestScrollify slot="left"/>
-      <TestScrollify slot="right"/>
+      <VisChart
+        slot="left"
+        scenario="population"/>
+      <VisChart
+        slot="right"
+        scenario="gdp"/>
     </LayoutColumns>
 
     <p>Assumptions on population growth and GDP are already part of the scenario assumptions. This shows us how they turn out over time and in numbers. As you can see the SSP3 scenario of regional rivalary leads us to continued population growth but relatively low growth in GDP. SSP1 (Sustainability) and SSP5 (Fossil-fueled developement) show similar patterns in population growth, but vast differences when it comes to GDP.</p>
 
     <LayoutColumns>
-      <TestScrollify slot="left"/>
-      <TestScrollify slot="right"/>
+      <VisChart
+        slot="left"
+        scenario="finalenergy"/>
+      <VisChart
+        slot="right"
+        scenario="emissions"/>
     </LayoutColumns>
 
     <p>The high GDP of SSP5 comes at a cost: High energy needs and with that lots of CO2-emissions. Until now we only looked at SSP-Baseline Scenarios. Let&rsquo;s set emission goals and include RCPs.</p>
 
     <LayoutColumns>
-      <TestScrollify slot="left"/>
-      <TestScrollify slot="right"/>
+      <VisChart
+        slot="left"
+        :max="3200"
+        scenario="carbonSsp1"/>
+      <VisChart
+        slot="right"
+        :max="3200"
+        scenario="carbonSsp5"/>
     </LayoutColumns>
 
     <p>That&rsquo;s means introducing a carbon price. The height of which of course depends on the former emissions and our goal.</p>
 
     <LayoutColumns>
-      <TestScrollify slot="left"/>
-      <TestScrollify slot="right"/>
+      <VisChart
+        slot="left"
+        scenario="finalenergy"/>
+      <VisChart
+        slot="right"
+        scenario="emissions"/>
     </LayoutColumns>
 
     <p>Compared to the Baseline-Scenarios this results in similar final energy but less emissions.</p>

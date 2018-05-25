@@ -17,6 +17,9 @@ const getters = {
   },
   fingerprints (state) {
     return state.fingerprints
+  },
+  scenario: (state) => (scenario) => {
+    return state.scenarios[scenario]
   }
 }
 
