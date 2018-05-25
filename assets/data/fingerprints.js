@@ -451,8 +451,8 @@ export default [{
   name: 'Industry',
   category: 'Energy demand',
   models: ['GCAM'],
-  x: 16.48,
-  y: 22.89
+  x: 30.88,
+  y: 26.89
 }, {
   id: 'c4p2',
   name: 'Residential & Commercial',
@@ -542,8 +542,8 @@ export default [{
   name: 'Use of raw materials',
   category: 'Resource extraction and trade',
   models: ['IMAGE'],
-  x: 41.58,
-  y: 10.81
+  x: 46.78,
+  y: 19.21
 }, {
   id: 'c6p0',
   name: 'CO2',
@@ -584,8 +584,8 @@ export default [{
   name: 'Source-based aerosol emissions',
   category: 'Climate and non-climate environmental change',
   models: ['AIM/CGE', 'GCAM', 'IMAGE', 'REMIND-MAGPIE'],
-  x: 57.71,
-  y: 29.24
+  x: 58.31,
+  y: 29.04
 }, {
   id: 'c6p6',
   name: 'Radiative forcing',
@@ -612,6 +612,6 @@ export default [{
   name: 'Climate change adaptation',
   category: 'Climate and non-climate environmental change',
   models: ['WITCH-GLOBIUM'],
-  x: 68.90,
-  y: 21.44
+  x: 68.70,
+  y: 27.34
 }]
