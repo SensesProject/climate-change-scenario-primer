@@ -2,7 +2,9 @@ import { getField, updateField } from 'vuex-map-fields'
 const state = () => ({
   test: null,
   fingerprints: {
-    category: null
+    properties: null,
+    category: null,
+    model: null
   }
 })
 

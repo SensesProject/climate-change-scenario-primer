@@ -41,3 +41,11 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
+
+@mixin underline($color) {
+  background: transparentize($color, 0.8) linear-gradient(to top, transparent, transparent 0em, $color 0em, $color 0.1em, transparent 0);
+}
+
+@mixin underline-active($color) {
+  background: transparentize($color, 0.6) linear-gradient(to top, transparent, transparent 0em, $color 0em, $color 0.1em, transparent 0);;
+}

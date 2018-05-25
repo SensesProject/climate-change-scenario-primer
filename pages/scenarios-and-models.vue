@@ -29,7 +29,24 @@
     <LayoutScrollify vis="VisFingerprints">
 
       <div>
-        <p>In contrast to the simplified model above the models used to generate SSP-Scenarios are a lot more complex. This graphic illusrates what kind of aspects are taken into account by those models - each dot represents one of those aspects. There are similarities to our model from before. <strong class="violet">GDP</strong> plays an important role. Aspects like <strong class="yellow">energy</strong> and <strong class="red">emissions</strong> are looked at in greater detail.</p>
+        <p>
+          In contrast to the simplified model above the models used to generate SSP-Scenarios are a lot more complex. This graphic illusrates what kind of aspects are taken into account by those models - each dot represents one of those aspects. There are similarities to our model from before.
+          <InHighlight
+            field="fingerprints.properties"
+            class="violet"
+            value="GDP">GDP</InHighlight>
+          plays an important role. Aspects like
+          <InHighlight
+            field="fingerprints.properties"
+            class="yellow"
+            value="energy">energy</InHighlight>
+          and
+          <InHighlight
+            field="fingerprints.properties"
+            class="red"
+            value="emissions">emissions</InHighlight>
+          are looked at in greater detail.
+        </p>
       </div>
 
       <div>
@@ -37,14 +54,67 @@
           Then there a many more aspects and relationships between them we didn't consider. They can be categorized in
           <InHighlight
             field="fingerprints.category"
-            value="Economic Growth and Development"
-            class="yellow">Economic Growth and Development
+            value="Economic Growth and Development">Economic Growth and Development,
           </InHighlight>
-          , Land use, Electricity and heat, Refining, Energy demand, Resource extraction and trade and Climate and non-climate environmental change.</p>
+          <InHighlight
+            field="fingerprints.category"
+            value="Land use">Land use,
+          </InHighlight>
+          <InHighlight
+            field="fingerprints.category"
+            value="Electricity and heat">Electricity and heat,
+          </InHighlight>
+          <InHighlight
+            field="fingerprints.category"
+            value="Refining">Refining,
+          </InHighlight>
+          <InHighlight
+            field="fingerprints.category"
+            value="Energy demand">Energy demand,
+          </InHighlight>
+          <InHighlight
+            field="fingerprints.category"
+            value="Resource extraction and trade">Resource extraction and trade
+          </InHighlight>
+          and
+          <InHighlight
+            field="fingerprints.category"
+            value="Climate and non-climate environmental change">Climate and non-climate environmental change.
+          </InHighlight>
+        </p>
       </div>
 
       <div>
-        <p>However, there are also key differnces in what indicators the five marker scenarios IMAGE, MESSAGE-GLOBIUM, AIM/CGE, GCAM4 and REMIND-MAGPIE cover. That&rsquo;s actually the reason for having marker scenarios: For example some models are better equipped to model high regional inequality as requiered for SSP4-Scenarios.</p>
+        <p>
+          However, there are also key differnces in what indicators the five marker scenarios
+          <InHighlight
+            field="fingerprints.model"
+            class="blue"
+            value="AIM/CGE">AIM/CGE,
+          </InHighlight>
+          <InHighlight
+            field="fingerprints.model"
+            class="green"
+            value="GCAM">GCAM4
+          </InHighlight>
+          <InHighlight
+            field="fingerprints.model"
+            class="yellow"
+            value="IMAGE">IMAGE,
+          </InHighlight>
+          <InHighlight
+            field="fingerprints.model"
+            class="red"
+            value="REMIND-MAGPIE">REMIND-MAGPIE
+          </InHighlight>
+          and
+          <InHighlight
+            field="fingerprints.model"
+            class="violet"
+            value="WITCH-GLOBIUM">WITCH-GLOBIUM
+          </InHighlight>
+          cover. That&rsquo;s actually the reason for having marker scenarios: For example some models are better equipped to model high regional inequality as requiered for SSP4-Scenarios.
+        </p>
       </div>
 
     </LayoutScrollify>

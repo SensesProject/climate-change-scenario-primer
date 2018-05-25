@@ -4,9 +4,9 @@
     class="VisFingerprints">
     <svg
       :style="{'font-size': `${fontSize}px`, 'stroke-width': strokeWidth}"
-      :height="width"
+      :height="height"
       width="100%"
-      viewBox="0 0 100 100">
+      viewBox="0.66 16.21 84.39 73.19">
       <filter id="gooey">
         <feGaussianBlur
           in="SourceGraphic"
@@ -37,9 +37,9 @@
         </g>
       </g>
       <g
-        v-for="group in groups"
-        :key="`group-${group.color}`"
-        :class="[group.color]"
+        v-for="(group, i) in groups"
+        :key="`group-${i}`"
+        :class="[group.color, {active: group.active}]"
         class="group">
         <g
           v-for="property in group.properties"
@@ -106,8 +106,17 @@ export default {
       'fingerprints'
     ]),
     ...mapFields({
-      selectedCategory: 'fingerprints.category'
+      selectedProperties: 'fingerprints.properties',
+      selectedCategory: 'fingerprints.category',
+      selectedModel: 'fingerprints.model'
     }),
+    height () {
+      const xs = this.properties.map(p => p.x)
+      const ys = this.properties.map(p => p.y)
+      const width = Math.max(...xs) - Math.min(...xs) + 6
+      const height = Math.max(...ys) - Math.min(...ys) + 6
+      return this.width * height / width
+    },
     properties () {
       return this.fingerprints.map(property => ({
         ...property,
@@ -126,58 +135,54 @@ export default {
       return (100 / this.width) * 16
     },
     groups () {
-      const { gray, violet, red, yellow } = this
-      return [{
-        color: 'gray',
-        properties: gray
-      }, {
-        color: 'violet',
-        properties: violet
-      }, {
-        color: 'red',
-        properties: red
-      }, {
-        color: 'yellow',
-        properties: yellow
-      }]
-    },
-    gray () {
-      const { hover, properties, step } = this
-      if (step === 1) return properties
-      if (hover === null) return []
-      return properties.filter(property => property.category === hover.category)
-    },
-    violet () {
-      const { step, properties } = this
+      const { step, properties, selectedProperties, selectedCategory, selectedModel } = this
       switch (step) {
         case 0:
-          return [properties.find(p => p.id === 'c0p9')]
+          return [{
+            color: 'violet',
+            active: selectedProperties === null || selectedProperties === 'GDP',
+            properties: [properties.find(p => p.id === 'c0p9')]
+          }, {
+            color: 'red',
+            active: selectedProperties === null || selectedProperties === 'emissions',
+            properties: properties.filter(p => p.id.match(/c6p[0-5]/))
+          }, {
+            color: 'yellow',
+            active: selectedProperties === null || selectedProperties === 'energy',
+            properties: properties.filter(p => p.id.match(/c2p([1-9]$|1[0-5]$)/))
+          }]
         case 1:
-          return properties.filter(p => p.category === this.selectedCategory)
-        default: return []
-      }
-    },
-    // lightViolet () {
-    //   const { step, properties } = this
-    //   switch (step) {
-    //     case 1:
-    //       return properties
-    //     default: return []
-    //   }
-    // },
-    red () {
-      const { step, properties } = this
-      switch (step) {
-        case 0:
-          return properties.filter(p => p.id.match(/c6p[0-5]/))
-        default: return []
-      }
-    },
-    yellow () {
-      const { step, properties } = this
-      switch (step) {
-        case 0:
-          return properties.filter(p => p.id.match(/c2p([1-9]$|1[0-5]$)/))
+          return [{
+            color: 'gray',
+            active: false,
+            properties: properties.filter(p => p.category !== selectedCategory)
+          }, {
+            color: 'violet',
+            active: true,
+            properties: properties.filter(p => p.category === selectedCategory)
+          }]
+        case 2:
+          return [{
+            color: selectedModel === 'AIM/CGE' ? 'blue' : 'gray',
+            active: selectedModel === 'AIM/CGE',
+            properties: properties.filter(p => p.models.find(m => m === 'AIM/CGE'))
+          }, {
+            color: selectedModel === 'GCAM' ? 'green' : 'gray',
+            active: selectedModel === 'GCAM',
+            properties: properties.filter(p => p.models.find(m => m === 'GCAM'))
+          }, {
+            color: selectedModel === 'IMAGE' ? 'yellow' : 'gray',
+            active: selectedModel === 'IMAGE',
+            properties: properties.filter(p => p.models.find(m => m === 'IMAGE'))
+          }, {
+            color: selectedModel === 'REMIND-MAGPIE' ? 'red' : 'gray',
+            active: selectedModel === 'REMIND-MAGPIE',
+            properties: properties.filter(p => p.models.find(m => m === 'REMIND-MAGPIE'))
+          }, {
+            color: selectedModel === 'WITCH-GLOBIUM' ? 'violet' : 'gray',
+            active: selectedModel === 'WITCH-GLOBIUM',
+            properties: properties.filter(p => p.models.find(m => m === 'WITCH-GLOBIUM'))
+          }]
         default: return []
       }
     }
@@ -185,6 +190,9 @@ export default {
   watch: {
     'view.width' () {
       this.setWidth()
+    },
+    step () {
+      this.selectedProperties = this.selectedCategory = this.selectedModel = null
     }
   },
   mounted () {
@@ -196,7 +204,7 @@ export default {
       this.width = 0
       this.$nextTick(() => {
         this.width = this.$refs.VisFingerprints.getBoundingClientRect().width
-        this.$emit('setHeight', this.width)
+        this.$emit('setHeight', this.height)
       })
     },
     setHover (property) {
@@ -244,10 +252,14 @@ export default {
       mix-blend-mode: multiply;
       pointer-events: none;
       filter: url(#gooey);
-      opacity: 0.8;
+      opacity: 0.3;
+
+      &.active {
+        opacity: 0.8;
+      }
 
       &.gray {
-        fill: $color-light-gray;
+        fill: $color-gray;
       }
 
       &.yellow {

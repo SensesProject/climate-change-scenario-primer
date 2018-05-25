@@ -1,10 +1,13 @@
 <template>
-  <span
-    :class="{active: highlight === value}"
-    class="InHighlight"
-    @mouseover="highlight = value"
-    @mouseout="highlight = null">
-    <slot/>
+  <span class="InHighlight">
+    <span
+      :class="{active: highlight === value}"
+      class="highlight"
+      @mouseover="highlight = value"
+      @mouseout="highlight = null">
+      <slot/>
+    </span>
+    &nbsp;
   </span>
 </template>
 
@@ -39,11 +42,57 @@ export default {
 <style scoped lang="scss">
 @import "~@/assets/style/global";
 .InHighlight {
-  &.yellow {
-    background: transparentize($color-yellow, 0.5);
-
+  .highlight {
+    cursor: default;
+    color: $color-text;
+    @include underline($color-gray);
     &.active {
-      background: transparentize($color-yellow, 0.2);
+      @include underline-active($color-violet);
+    }
+  }
+
+  &.violet {
+    .highlight {
+      @include underline($color-violet);
+      &.active {
+        @include underline-active($color-violet);
+      }
+    }
+  }
+
+  &.blue {
+    .highlight {
+      @include underline($color-blue);
+      &.active {
+        @include underline-active($color-blue);
+      }
+    }
+  }
+
+  &.green {
+    .highlight {
+      @include underline($color-green);
+      &.active {
+        @include underline-active($color-green);
+      }
+    }
+  }
+
+  &.yellow {
+    .highlight {
+      @include underline($color-yellow);
+      &.active {
+        @include underline-active($color-yellow);
+      }
+    }
+  }
+
+  &.red {
+    .highlight {
+      @include underline($color-red);
+      &.active {
+        @include underline-active($color-red);
+      }
     }
   }
 }
