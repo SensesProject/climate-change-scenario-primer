@@ -163,23 +163,23 @@ export default {
           }]
         case 2:
           return [{
-            color: selectedModel === 'AIM/CGE' ? 'blue' : 'gray',
+            color: 'blue',
             active: selectedModel === 'AIM/CGE',
             properties: properties.filter(p => p.models.find(m => m === 'AIM/CGE'))
           }, {
-            color: selectedModel === 'GCAM' ? 'green' : 'gray',
+            color: 'green',
             active: selectedModel === 'GCAM',
             properties: properties.filter(p => p.models.find(m => m === 'GCAM'))
           }, {
-            color: selectedModel === 'IMAGE' ? 'yellow' : 'gray',
+            color: 'yellow',
             active: selectedModel === 'IMAGE',
             properties: properties.filter(p => p.models.find(m => m === 'IMAGE'))
           }, {
-            color: selectedModel === 'REMIND-MAGPIE' ? 'red' : 'gray',
+            color: 'red',
             active: selectedModel === 'REMIND-MAGPIE',
             properties: properties.filter(p => p.models.find(m => m === 'REMIND-MAGPIE'))
           }, {
-            color: selectedModel === 'WITCH-GLOBIUM' ? 'violet' : 'gray',
+            color: 'violet',
             active: selectedModel === 'WITCH-GLOBIUM',
             properties: properties.filter(p => p.models.find(m => m === 'WITCH-GLOBIUM'))
           }]
@@ -252,14 +252,14 @@ export default {
       mix-blend-mode: multiply;
       pointer-events: none;
       filter: url(#gooey);
-      opacity: 0.3;
+      opacity: 0.1;
 
       &.active {
         opacity: 0.8;
       }
 
       &.gray {
-        fill: $color-gray;
+        fill: $color-black;
       }
 
       &.yellow {

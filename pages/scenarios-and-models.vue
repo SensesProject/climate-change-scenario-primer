@@ -75,7 +75,7 @@
 
       <div>
         <p>
-          However, there are also key differnces in what indicators the five marker scenarios
+          However, there are also key differnces in what aspects different models cover. Each of the five models
           <InHighlight
             field="fingerprints.model"
             class="blue"
@@ -95,7 +95,7 @@
           <InHighlight
             field="fingerprints.model"
             class="violet"
-            value="WITCH-GLOBIUM">WITCH-GLOBIUM</InHighlight>cover. That&rsquo;s actually the reason for having marker scenarios: For example some models are better equipped to model high regional inequality as requiered for SSP4-Scenarios.
+            value="WITCH-GLOBIUM">WITCH-GLOBIUM</InHighlight> is a refernce models for one SSP, as it is suited to handle the input assumption of that specific SSP.
         </p>
       </div>
 
