@@ -34,18 +34,15 @@
           <InHighlight
             field="fingerprints.properties"
             class="violet"
-            value="GDP">GDP</InHighlight>
-          plays an important role. Aspects like
+            value="GDP">GDP</InHighlight>plays an important role. Aspects like
           <InHighlight
             field="fingerprints.properties"
             class="yellow"
-            value="energy">energy</InHighlight>
-          and
+            value="energy">energy</InHighlight>and
           <InHighlight
             field="fingerprints.properties"
             class="red"
-            value="emissions">emissions</InHighlight>
-          are looked at in greater detail.
+            value="emissions">emissions</InHighlight>are looked at in greater detail.
         </p>
       </div>
 
@@ -54,33 +51,25 @@
           Then there a many more aspects and relationships between them we didn't consider. They can be categorized in
           <InHighlight
             field="fingerprints.category"
-            value="Economic Growth and Development">Economic Growth and Development,
-          </InHighlight>
+            value="Economic Growth and Development">Economic Growth and Development,</InHighlight>
           <InHighlight
             field="fingerprints.category"
-            value="Land use">Land use,
-          </InHighlight>
+            value="Land use">Land use,</InHighlight>
           <InHighlight
             field="fingerprints.category"
-            value="Electricity and heat">Electricity and heat,
-          </InHighlight>
+            value="Electricity and heat">Electricity and heat,</InHighlight>
           <InHighlight
             field="fingerprints.category"
-            value="Refining">Refining,
-          </InHighlight>
+            value="Refining">Refining,</InHighlight>
           <InHighlight
             field="fingerprints.category"
-            value="Energy demand">Energy demand,
-          </InHighlight>
+            value="Energy demand">Energy demand,</InHighlight>
           <InHighlight
             field="fingerprints.category"
-            value="Resource extraction and trade">Resource extraction and trade
-          </InHighlight>
-          and
+            value="Resource extraction and trade">Resource extraction and trade</InHighlight>and
           <InHighlight
             field="fingerprints.category"
-            value="Climate and non-climate environmental change">Climate and non-climate environmental change.
-          </InHighlight>
+            value="Climate and non-climate environmental change">Climate and non-climate environmental change.</InHighlight>
         </p>
       </div>
 
@@ -90,30 +79,23 @@
           <InHighlight
             field="fingerprints.model"
             class="blue"
-            value="AIM/CGE">AIM/CGE,
-          </InHighlight>
+            value="AIM/CGE">AIM/CGE,</InHighlight>
           <InHighlight
             field="fingerprints.model"
             class="green"
-            value="GCAM">GCAM4
-          </InHighlight>
+            value="GCAM">GCAM4</InHighlight>
           <InHighlight
             field="fingerprints.model"
             class="yellow"
-            value="IMAGE">IMAGE,
-          </InHighlight>
+            value="IMAGE">IMAGE,</InHighlight>
           <InHighlight
             field="fingerprints.model"
             class="red"
-            value="REMIND-MAGPIE">REMIND-MAGPIE
-          </InHighlight>
-          and
+            value="REMIND-MAGPIE">REMIND-MAGPIE</InHighlight>and
           <InHighlight
             field="fingerprints.model"
             class="violet"
-            value="WITCH-GLOBIUM">WITCH-GLOBIUM
-          </InHighlight>
-          cover. That&rsquo;s actually the reason for having marker scenarios: For example some models are better equipped to model high regional inequality as requiered for SSP4-Scenarios.
+            value="WITCH-GLOBIUM">WITCH-GLOBIUM</InHighlight>cover. That&rsquo;s actually the reason for having marker scenarios: For example some models are better equipped to model high regional inequality as requiered for SSP4-Scenarios.
         </p>
       </div>
 

@@ -4,10 +4,7 @@
       :class="{active: highlight === value}"
       class="highlight"
       @mouseover="highlight = value"
-      @mouseout="highlight = null">
-      <slot/>
-    </span>
-    &nbsp;
+      @mouseout="highlight = null"><slot/><wbr></span>
   </span>
 </template>
 
@@ -42,6 +39,7 @@ export default {
 <style scoped lang="scss">
 @import "~@/assets/style/global";
 .InHighlight {
+  padding-right: 0.3em;
   .highlight {
     cursor: default;
     color: $color-text;
