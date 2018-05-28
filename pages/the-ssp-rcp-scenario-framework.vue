@@ -56,20 +56,26 @@
       </div>
     </LayoutListItem>
 
-    <p>These narratives play out differently across different variables.</p>
+    <p>These narratives play out differently across variables. In the following chart the SSPs are mapped along challenges for adaptation and challenges for mitigation. Starting with education another variable is shown through color: The darker the color the higher the value.</p>
 
     <LayoutScrollify vis="VisSspComparison">
-
       <div>
-        <p>Education: …</p>
+        <div>
+          <h4>Education</h4>
+          <p>Education plays a key role in socioeconomics, as it is closely linked to the fertility rate. The progressive SSP1 and SSP5 futures show high education, while the educational level in the SSP3 world is quite low. In the inequal SSP4 there are regional differences, ranging from medium education in higher income countries to low education in lower income countries.</p>
+        </div>
       </div>
-
       <div>
-        <p>International Trade: …</p>
+        <div>
+          <h4>International Trade</h4>
+          <p>Trade is another important aspect. It shows how globalized and connected the world is. In most futures there will be a medium amount of international trade. In SSP5 it's high and in SSP3, a world of regional rivalry, it is low.</p>
+        </div>
       </div>
-
       <div>
-        <p>Technology developement: …</p>
+        <div>
+          <h4>Technology developement</h4>
+          <p>Rapid technological developement is important for economic success. But technology also plays a key role when it comes through adapting to and mitigating climate change. Overall there's a similar pattern to education. While in the inequal SSP4 it varies between high to low. </p>
+        </div>
       </div>
 
     </LayoutScrollify>
