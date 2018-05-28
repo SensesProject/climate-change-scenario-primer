@@ -19,5 +19,7 @@ export default {
   @include flex-row;
   align-items: flex-start;
   justify-content: flex-start;
+
+  margin-bottom: $spacing-unit;
 }
 </style>

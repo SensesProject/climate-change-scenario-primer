@@ -137,5 +137,8 @@ export default {
 <style scoped lang="scss">
 @import "~@/assets/style/global";
 .wrapper {
+  h4 {
+    margin: 0 0 $spacing-unit / 2;
+  }
 }
 </style>
