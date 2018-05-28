@@ -4,24 +4,24 @@
 
     <h3 id="integrated-assessment-models">Integrated Assessment Models</h3>
 
-    <p>Integrated assessment models (IAMs) describe how socioeconomics relate to land &amp; energy use and how that   relates to emissions.</p>
+    <p>Integrated assessment models (IAMs) describe how socioeconomics relate to land &amp; energy use and how that relates to emissions.</p>
 
     <LayoutScrollify vis="VisIamStructure">
 
       <div>
-        <p>Here is a very simple example of such a model. As you can see…</p>
+        <p>Here is a very simple example of such a model: In this case we assume that GDP is driven by the population, respectively the working force, energy and capital stock. As you can see all of those three factors are raising and so is GDP.</p>
       </div>
 
       <div>
-        <p>And…</p>
+        <p>One share of the global GDP is flows into consumption and the other share is invested to raise available energy and capital stock. Integrated assessment models are optimized to achieve the highest possible consumption in the long run.</p>
       </div>
 
       <div>
-        <p>Furthermore…</p>
+        <p>To tell us something about emissions we need to split the energy investments into investments for clean and dirty energy. This results in clean and dirty energy and dirty energy leads to emissions.</p>
       </div>
 
       <div>
-        <p>Finally…</p>
+        <p>Using this model we can now change input assumptions like the population growth rate or introduce a carbon tax to explore how different scenarios unfold. If you toggle the switches below the chart you'll see how higher population leads to higher GDP and consumption but also to higher energy needs. Introducing carbon tax makes it lucrative to invest in clean energy and emissions quickly drop.</p>
       </div>
 
     </LayoutScrollify>
