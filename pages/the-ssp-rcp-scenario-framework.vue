@@ -11,8 +11,8 @@
         slot="graphic"
         :ssp="1"/>
       <div>
-        <h4>SSP1</h4>
-        <p>Some Details on the SSP1 Narrative</p>
+        <h4>SSP1: Sustainability—Taking the green road</h4>
+        <p>The world shifts gradually, but pervasively, toward a more sustainable path, emphasizing more inclusive development that respects perceived environmental boundaries. Increasing evidence of and accounting for the social, cultural, and economic costs of environmental degradation and inequality drive this shift. The combination of directed development of environmentally friendly technologies, a favorable outlook for renewable energy, institutions that can facilitate international cooperation, and relatively low energy demand results in relatively <strong>low challenges to mitigation</strong>. At the same time, the improvements in human well-being, along with strong and flexible global, regional, and national institutions imply <strong>low challenges to adaptation</strong>.</p>
       </div>
     </LayoutListItem>
 
@@ -20,28 +20,40 @@
       <VisSsp
         slot="graphic"
         :ssp="2"/>
-      SSP2: …
+      <div>
+        <h4>SSP2: Middle of the road</h4>
+        <p>The world follows a path in which social, economic, and technological trends do not shift markedly from historical patterns. Development and income growth proceeds unevenly, with some countries making relatively good progress while others fall short of expectations. Most economies are politically stable. Globally connected markets function imperfectly. Global and national institutions work toward but make slow progress in achieving sustainable development goals, including improved living conditions and access to education, safe water, and health care. These moderate development trends leave the world, on average, facing <strong>moderate challenges to mitigation and adaptation</strong>, but with significant heterogeneities across and within countries.</p>
+      </div>
     </LayoutListItem>
 
     <LayoutListItem>
       <VisSsp
         slot="graphic"
         :ssp="3"/>
-      SSP3: …
+      <div>
+        <h4>SSP3: Regional rivalry—A rocky road</h4>
+        <p>A resurgent nationalism, concerns about competitiveness and security, and regional conflicts push countries to increasingly focus on domestic or, at most, regional issues. This trend is reinforced by the limited number of comparatively weak global institutions, with uneven coordination and cooperation for addressing environmental and other global concerns. Policies shift over time to become increasingly oriented toward national and regional security issues, including barriers to trade, particularly in the energy resource and agricultural markets. Growing resource intensity and fossil fuel dependency along with difficulty in achieving international cooperation and slow technological change imply <strong>high challenges to mitigation</strong>. The limited progress on human development, slow income growth, and lack of effective institutions, especially those that can act across regions, implies <strong>high challenges to adaptation</strong> for many groups in all regions.</p>
+      </div>
     </LayoutListItem>
 
     <LayoutListItem>
       <VisSsp
         slot="graphic"
         :ssp="4"/>
-      SSP4: …
+      <div>
+        <h4>SSP4: Inequality—A road divided</h4>
+        <p>Highly unequal investments in human capital, combined with increasing disparities in economic opportunity and political power, lead to increasing inequalities and stratification both across and within countries. Over time, a gap widens between an internationally-connected society that is well educated and contributes to knowledge- and capital-intensive sectors of the global economy, and a fragmented collection of lower-income, poorly educated societies that work in a labor intensive, low-tech economy. The combination of some development of low carbon supply options and expertise, and a well-integrated international political and business class capable of acting quickly and decisively, implies <strong>low challenges to mitigation</strong>. <strong>Challenges to adaptation are high</strong> for the substantial proportions of populations at low levels of development and with limited access to effective institutions for coping with economic or environmental stresses.</p>
+      </div>
     </LayoutListItem>
 
     <LayoutListItem>
       <VisSsp
         slot="graphic"
         :ssp="5"/>
-      SSP5: …
+      <div>
+        <h4>SSP5: Fossil-fueled development—Taking the highway</h4>
+        <p>Driven by the economic success of industrialized and emerging economies, this world places increasing faith in competitive markets, innovation and participatory societies to produce rapid technological progress and development of human capital as the path to sustainable development. The push for economic and social development is coupled with the exploitation of abundant fossil fuel resources and the adoption of resource and energy intensive lifestyles around the world. The strong reliance on fossil fuels and the lack of global environmental concern result in potentially <strong>high challenges to mitigation</strong>. The attainment of human development goals, robust economic growth, and highly engineered infrastructure results in <strong>relatively low challenges to adaptation</strong> to any potential climate change for all but a few.</p>
+      </div>
     </LayoutListItem>
 
     <p>These narratives play out differently across different variables.</p>
