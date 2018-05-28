@@ -15,6 +15,7 @@ import VisIamStructure from '~/components/VisIamStructure'
 import VisIamStructureChart from '~/components/VisIamStructureChart'
 import VisFingerprints from '~/components/VisFingerprints'
 import VisChart from '~/components/VisChart'
+import VisMap from '~/components/VisMap'
 
 import InHighlight from '~/components/InHighlight'
 
@@ -37,6 +38,7 @@ Vue.component('VisIamStructure', VisIamStructure)
 Vue.component('VisIamStructureChart', VisIamStructureChart)
 Vue.component('VisFingerprints', VisFingerprints)
 Vue.component('VisChart', VisChart)
+Vue.component('VisMap', VisMap)
 
 Vue.component('InHighlight', InHighlight)
 

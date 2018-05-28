@@ -211,8 +211,12 @@
     <p>Climate models take us from emissions to things like temperature and precipitation. As with IAMs they describe a complex system,  in this case the earth. Climate models are therefore sometimes also related to as Earth System Models. In contrast to weather models they focus on long term changes whereas spatial and temporal resolution is less important.</p>
 
     <LayoutColumns>
-      <TestScrollify slot="left"/>
-      <TestScrollify slot="right"/>
+      <VisMap
+        slot="left"
+        scenario="rcp26"/>
+      <VisMap
+        slot="right"
+        scenario="rcp60"/>
     </LayoutColumns>
 
     <p>This shows the change in average surface temperature from 1986-2005 to 2081-2100 for two different emission scenarios: RCP 2.6 and RCP 8.5.</p>
