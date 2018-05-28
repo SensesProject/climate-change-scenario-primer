@@ -23,7 +23,7 @@ module.exports = {
   plugins: [
     '~/plugins/components.js'
   ],
-  loading: false,
+  loading: { color: '#FEAE00' },
   /*
   ** Build configuration
   */
