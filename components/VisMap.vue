@@ -1,5 +1,6 @@
 <template>
   <div class="VisMap">
+    <div class="title">{{ rcp }}</div>
     <img
       v-if="scenario === 'rcp26'"
       src="~/assets/img/rcp26.png">
@@ -39,6 +40,11 @@ export default {
       max: '+12°C',
       min: '-12°C'
     }
+  },
+  computed: {
+    rcp () {
+      return this.scenario === 'rcp26' ? 'RCP 2.6' : 'RCP 6.0'
+    }
   }
 }
 </script>
@@ -47,6 +53,9 @@ export default {
 @import "~@/assets/style/global";
 .VisMap {
   @include flex-column;
+  .title {
+    width: 100%;
+  }
   .key {
     .color {
       height: 0.8em;
