@@ -297,11 +297,15 @@
 
     <p>Of course there is a strong link between those sectors and changes in climate, but for some of them changing socioeconomic factors also play an important role. That&rsquo;s why the SSP-RCP Framework is also used here. However, climate impact scenarios generally don&rsquo;t cover the whole bandwith of the SSP-RCP framework. Most of them refer to SSP2 and either RCP 2.6 or RCP 6.0.</p>
 
-    <p>Let&rsquo;s have a look at how these two scenarios play out for different variables.</p>
+    <p>Climate impact models – similarly to climate models – produce gridded data, which can be shown in maps. However, another way of looking at that data is by showing the relation of temperature changes and changes in affected land area.</p>
 
     <LayoutColumns>
-      <TestScrollify slot="left"/>
-      <TestScrollify slot="right"/>
+      <VisChartImpact
+        slot="left"
+        variable="Flood"/>
+      <VisChartImpact
+        slot="right"
+        variable="Crop Failure"/>
     </LayoutColumns>
 
     <p>As you might have expected, the SSP2-RCP6.0 scenarios show us more extreme impacts.</p>
