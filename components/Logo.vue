@@ -39,7 +39,6 @@ export default {
   position: absolute;
   top: 0;
   right: 0;
-  display: block;
 
   margin: $spacing-unit * 0.5;
   @include media-query($on-laptop) {
