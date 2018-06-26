@@ -1,5 +1,6 @@
 <template>
   <section class="wrapper">
+    <h2>Socioeconomics</h2>
     <p>The SSP-RCP Scenario Framework is a combination of socioeconomic and emission scenario assumptions. The framework opens a broad and explorable space of possible futures other scenarios - explorative and normative - can connect to.</p>
 
     <h3 id="ssps">SSPs</h3>

@@ -136,7 +136,7 @@ table {
 }
 
 .wrapper {
-  width: 100vw;
+  width: 100%;
   max-width: $max-width;
   padding: #{$spacing-unit * 2} #{$spacing-unit / 2};
 }
@@ -154,9 +154,11 @@ h2 {
   font-weight: bold;
   line-height: 1.1;
   margin: 0;
+  color: $color-text-highlight;
+  letter-spacing: 0.4px;
 
   @include media-query($on-palm) {
-    font-size: 2.4rem;
+    font-size: 3.75rem;
   }
 }
 

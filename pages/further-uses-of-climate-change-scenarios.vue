@@ -1,5 +1,6 @@
 <template>
   <section class="wrapper">
+    <h2>Further Uses of Climate Change Scenarios</h2>
     <p>As mentionend in the beginning, the world of climate change scenarios covers more than SSP-RCP Scenarios. For example technology-on-off scenarios show implications of new technologies like carbon capture and storage (CCS) and delayed action scenarios allow us to explore implications of delaying climate change policies. On the regional level scenarios let us evaluate specific mitigation and aadaptation strategies.</p>
 
     <img src="~/assets/img/regional2global.jpeg">

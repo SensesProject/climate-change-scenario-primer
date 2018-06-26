@@ -163,7 +163,7 @@ export default {
               opacity: 1;
             }
 
-            &:hover, &.nuxt-link-exact-active {
+            &:hover {
               opacity: 1;
             }
           }
@@ -182,6 +182,10 @@ export default {
               margin-right: $spacing-unit / 2;
             }
           }
+        }
+
+        &.nuxt-link-exact-active li .title {
+          opacity: 1;
         }
       }
     }

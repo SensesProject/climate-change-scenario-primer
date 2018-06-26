@@ -1,13 +1,13 @@
 <template>
   <div class="LayoutNextChapter">
     <section class="wrapper">
-      <router-link :to="nextChapter.route">
+      <router-link :to="nextChapter.path">
         <span
-          v-if="nextIndex < chapters - 1 && nextIndex !== 0"
+          v-if="nextIndex < chapters.length - 1 && nextIndex !== 0"
           class="next">Next Chapter →</span>
         <span
-          v-if="nextIndex === chapters - 1"
-          class="next">Last Chapter →</span>
+          v-if="nextIndex === chapters.length - 1"
+          class="next">Final Chapter →</span>
         <span
           v-if="nextIndex === 0"
           class="next">To the Beginning →</span>
@@ -18,20 +18,18 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
   computed: {
+    ...mapState(['chapters']),
     nextChapter () {
-      const { $store, nextIndex } = this
-      const chapters = $store.getters.chapters
-      return chapters[nextIndex]
+      // const { $store, nextIndex } = this
+      // const chapters = $store.state.chapters
+      return this.chapters[this.nextIndex]
     },
     nextIndex () {
-      const { $store, $route } = this
-      const chapters = $store.getters.chapters
-      return (chapters.map(c => c.path).indexOf($route.path) + 1) % chapters.length
-    },
-    chapters () {
-      return this.$store.getters.chapters.length
+      const { $route } = this
+      return (this.chapters.map(c => c.path).indexOf($route.path) + 1) % this.chapters.length
     }
   }
 }
@@ -40,7 +38,7 @@ export default {
 <style scoped lang="scss">
 @import "~@/assets/style/global";
 .LayoutNextChapter {
-  width: 100vw;
+  width: 100%;
   @include flex-column();
   justify-content: space-around;
   height: $spacing-unit * 6;

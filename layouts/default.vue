@@ -4,8 +4,10 @@
     <LayoutNav/>
     <Logo/>
     <!-- <LayoutHeader/> -->
-    <nuxt class="chapter"/>
-    <!-- <LayoutNextChapter/> -->
+    <div class="container">
+      <nuxt class="chapter"/>
+      <LayoutNextChapter/>
+    </div>
   </div>
 </template>
 
@@ -31,8 +33,14 @@ export default {
   @include flex-column();
   // @include flex-row();
 
-  .main {
+  .container {
+    width: 100vw;
 
+    @include media-query($on-laptop) {
+      width: calc(100vw - #{$nav-width-laptop});
+      left: $nav-width-laptop;
+      align-self: flex-end;
+    }
   }
 }
 </style>

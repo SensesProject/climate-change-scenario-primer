@@ -1,5 +1,7 @@
 <template>
   <section class="wrapper">
+    <h2>How are Socioeconomics and Climate connected?</h2>
+
     <p>Climate change is closely connected to socioeconomics. We humans are the main driver of climate change and we are the ones who can act to mitigate climate change. Of course climate change also affects us. Severe weather events and rising sea levels will change the way we live. Let's take a closer look at the cycle below, to understand this relationship.</p>
 
     <LayoutScrollify vis="VisCycle">
