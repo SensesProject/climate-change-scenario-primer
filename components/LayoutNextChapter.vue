@@ -28,7 +28,7 @@ export default {
     nextIndex () {
       const { $store, $route } = this
       const chapters = $store.getters.chapters
-      return (chapters.map(c => c.route).indexOf($route.path) + 1) % chapters.length
+      return (chapters.map(c => c.path).indexOf($route.path) + 1) % chapters.length
     },
     chapters () {
       return this.$store.getters.chapters.length

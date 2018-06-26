@@ -14,7 +14,7 @@ export default {
   computed: {
     title () {
       const { $store, $route } = this
-      return $store.getters.chapters.find(chapter => chapter.route === $route.path).title
+      return $store.getters.chapters.find(chapter => chapter.path === $route.path).title
     },
     index () {
       return this.$route.path === '/'

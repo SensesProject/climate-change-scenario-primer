@@ -1,12 +1,24 @@
 export default [{
-  title: 'Climate Change Scenario Primer',
-  route: '/'
+  title: 'Climate Change Scenarios',
+  path: '/'
 }, {
-  title: 'It starts with socioeconomics'
+  title: 'What are Climate Change Scenarios?'
 }, {
-  title: 'The SSP-RCP Scenario Framework'
+  title: 'How are Socioeconomics and Climate connected?'
 }, {
-  title: 'Scenarios and Models'
+  title: 'Socioeconomics',
+  cycle: 'first'
 }, {
-  title: 'More Scenarios'
+  title: 'Energy, Land Use and Emissions',
+  cycle: 'double'
+}, {
+  title: 'Climate',
+  cycle: 'normal'
+}, {
+  title: 'Climate Impacts',
+  cycle: 'last'
+}, {
+  title: 'Further Uses of Climate Change Scenarios'
+}, {
+  title: 'Recap'
 }]

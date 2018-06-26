@@ -7,6 +7,8 @@ import LayoutListItem from '~/components/LayoutListItem'
 import LayoutColumns from '~/components/LayoutColumns'
 import LayoutCards from '~/components/LayoutCards'
 import LayoutCard from '~/components/LayoutCard'
+import LayoutNav from '~/components/LayoutNav'
+import Logo from '~/components/Logo'
 
 import VisSsp from '~/components/VisSsp'
 import VisCycle from '~/components/VisCycle'
@@ -17,6 +19,7 @@ import VisFingerprints from '~/components/VisFingerprints'
 import VisChart from '~/components/VisChart'
 import VisChartImpact from '~/components/VisChartImpact'
 import VisMap from '~/components/VisMap'
+import VisCyclePart from '~/components/VisCyclePart'
 
 import InHighlight from '~/components/InHighlight'
 
@@ -31,6 +34,8 @@ Vue.component('LayoutListItem', LayoutListItem)
 Vue.component('LayoutColumns', LayoutColumns)
 Vue.component('LayoutCards', LayoutCards)
 Vue.component('LayoutCard', LayoutCard)
+Vue.component('LayoutNav', LayoutNav)
+Vue.component('Logo', Logo)
 
 Vue.component('VisSsp', VisSsp)
 Vue.component('VisCycle', VisCycle)
@@ -41,6 +46,7 @@ Vue.component('VisFingerprints', VisFingerprints)
 Vue.component('VisChart', VisChart)
 Vue.component('VisChartImpact', VisChartImpact)
 Vue.component('VisMap', VisMap)
+Vue.component('VisCyclePart', VisCyclePart)
 
 Vue.component('InHighlight', InHighlight)
 

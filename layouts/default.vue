@@ -1,9 +1,11 @@
 <template>
   <div class="root">
     <resize-observer @notify="setClientWidth" />
-    <LayoutHeader/>
+    <LayoutNav/>
+    <Logo/>
+    <!-- <LayoutHeader/> -->
     <nuxt class="chapter"/>
-    <LayoutNextChapter/>
+    <!-- <LayoutNextChapter/> -->
   </div>
 </template>
 
@@ -27,8 +29,9 @@ export default {
 .root {
   width: 100vw;
   @include flex-column();
+  // @include flex-row();
 
-  .chapter {
+  .main {
 
   }
 }

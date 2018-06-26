@@ -4,11 +4,11 @@ const state = () => (data)
 
 const getters = {
   chapters (state) {
-    return state.chapters.map(({ title, route }) => {
-      if (route !== undefined) return { title, route }
+    return state.chapters.map((chapter) => {
+      // if (route !== undefined) return { title, route }
       return {
-        title,
-        route: `/${title.toLowerCase().replace(/ /g, '-')}`
+        ...chapter,
+        route: chapter.route || `/${chapter.title.toLowerCase().replace(/ /g, '-')}`
       }
     })
   },
