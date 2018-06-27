@@ -7,8 +7,8 @@
       @click="toggleMenu">
       <svg
         width="28px"
-        height="22px">
-        <path d="M0,1 L28,1 M0,11 L28,11 M0,21 L28,21"/>
+        height="32px">
+        <path d="M0,6 L28,6 M0,16 L28,16 M0,26 L28,26"/>
       </svg>
     </div>
     <transition name="fade">
@@ -85,14 +85,15 @@ export default {
   // }
 
   .hamburger {
-    width: 60px;
-    height: 64px;
+    // width: 60px;
+    // height: 64px;
     position: absolute;
     left: 0;
 
     @include flex-row();
 
     svg {
+      margin: $spacing-unit;
       path {
         stroke-width: 1.5;
         stroke: $color-accent;
@@ -178,8 +179,6 @@ export default {
             @include flex-row();
             justify-content: flex-start;
             position: relative;
-            // background: url('data:image/svg+xml;utf8,<svg width="38px" height="400px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><rect width="32" height="400"/><rect id="Rectangle-4" stroke="#FFFFFF" stroke-width="2" x="7" y="1" width="30" height="398" rx="15"></rect><polyline id="Path-2-Copy" stroke="#4E40B2" stroke-width="3" points="14 382 7 375 7 375 0 382"></polyline><polyline id="Path-2" stroke="#FFFFFF" stroke-width="2" points="12 382 7 377 7 377 2 382"></polyline></svg>');
-            // background: url('data:image/svg+xml;utf8,<svg width="38px" height="38px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><rect width="32" height="32"/></svg>');
 
             .cycle-part {
               height: 100%;

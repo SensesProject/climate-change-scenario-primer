@@ -70,7 +70,7 @@ export default {
 
     path {
       stroke: $color-white;
-      stroke-width: 2;
+      stroke-width: 1.5;
       fill: none;
 
       &.mask {

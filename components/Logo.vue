@@ -45,11 +45,9 @@ export default {
   position: absolute;
   top: 0;
   right: 0;
+  font-size: 16px;
 
-  margin: $spacing-unit * 0.5;
-  @include media-query($on-laptop) {
-    margin: $spacing-unit;
-  }
+  margin: $spacing-unit;
 
   svg {
     margin-right: $spacing-unit * 0.25;
