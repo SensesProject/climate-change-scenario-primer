@@ -4,7 +4,6 @@
     <Logo invert/>
     <div class="container">
       <nuxt class="chapter"/>
-      <LayoutNextChapter/>
     </div>
   </div>
 </template>

@@ -141,18 +141,28 @@ table {
 }
 
 .wrapper {
-  width: 100%;
-  max-width: $max-width;
   padding: 0 #{$spacing-unit} $spacing-unit;
+  width: 100vw;
+  margin-top: $spacing-unit * 4;
+  @include flex-column();
 
-  @include media-query($device-medium) {
-    // margin: #{$spacing-unit * 2} 0;
-    padding: 0 #{$spacing-unit * 1.5} $spacing-unit * 1.5;
+  @include media-query($device-wide) {
+    width: calc(100vw - #{$nav-width-laptop});
+    left: $nav-width-laptop;
+    align-self: flex-end;
+
+    &.index {
+      width: 100vw;
+      left: 0;
+      align-self: auto;
+    }
   }
 }
 
 h1, h2, h3 {
   hyphens: none;
+  max-width: 760px;
+  width: 100%;
 }
 
 h1 {
@@ -237,11 +247,11 @@ p + p {
 }
 
 .page-enter {
-  transform: translateX(5vw);
+  transform: translateY(5vw);
 }
 
 .page-leave-to {
-  transform: translateX(-5vw);
+  transform: translateY(-5vw);
 }
 
 .fade-enter-active, .fade-leave-active {

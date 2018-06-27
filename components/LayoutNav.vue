@@ -11,7 +11,6 @@
         <path d="M0,6 L28,6 M0,16 L28,16 M0,26 L28,26"/>
       </svg>
     </div>
-    <!-- <transition name="fade"> -->
     <div
       class="mobile"
       @click="toggleMenu">
@@ -21,7 +20,6 @@
           class="overlay"/>
       </transition>
     </div>
-    <!-- </transition> -->
     <nav :class="{ showMenu }">
       <ul>
         <nuxt-link

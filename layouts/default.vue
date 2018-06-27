@@ -1,20 +1,31 @@
 <template>
-  <div class="root">
+  <div
+    :class="{index}"
+    class="root">
     <resize-observer @notify="setClientWidth" />
-    <LayoutNav/>
-    <Logo/>
+    <transition name="fade">
+      <LayoutNav v-if="!index"/>
+    </transition>
+    <!-- <LayoutNav :hide-menu="index"/> -->
+    <Logo :invert="index"/>
     <!-- <LayoutHeader/> -->
-    <div class="container">
-      <nuxt class="chapter"/>
-      <LayoutNextChapter/>
-    </div>
+    <!-- <div class="container"> -->
+    <nuxt/>
+    <!-- <LayoutNextChapter/> -->
+    <!-- </div> -->
   </div>
 </template>
 
 <script>
 import { mapActions } from 'vuex'
 export default {
+  computed: {
+    index () {
+      return this.$route.name === 'index'
+    }
+  },
   created () {
+    console.log(this.$route)
     this.$nextTick(this.setClientWidth)
   },
   methods: {
@@ -31,18 +42,12 @@ export default {
 .root {
   width: 100vw;
   @include flex-column();
-  // @include flex-row();
+  min-height: 100vh;
+  transition: color $transition-time, background $transition-time;
 
-  .container {
-    width: 100vw;
-    margin-top: $spacing-unit * 4;
-    @include flex-column();
-
-    @include media-query($device-wide) {
-      width: calc(100vw - #{$nav-width-laptop});
-      left: $nav-width-laptop;
-      align-self: flex-end;
-    }
+  &.index {
+    background: $color-violet;
+    color: $color-white;
   }
 }
 </style>

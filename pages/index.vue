@@ -1,5 +1,5 @@
 <template>
-  <section class="wrapper">
+  <section class="wrapper index">
     <h1>Climate Change Scenarios</h1>
     <div class="intro">
       <p>
@@ -9,14 +9,14 @@
         This interactive primer explains what climate change scenarios are and how they are connected to socioeconomics, energy & land use, emissions, climate and climate impacts.
       </p>
     </div>
+    <LayoutNextChapter/>
   </section>
 </template>
 
 <script>
 export default {
   components: {
-  },
-  layout: 'index'
+  }
 }
 </script>
 
@@ -28,6 +28,7 @@ export default {
   max-width: 1280px;
 
   h1 {
+    max-width: none;
     font-size: 120px;
     color: #FFFFFF;
     letter-spacing: 1px;

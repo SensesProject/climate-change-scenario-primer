@@ -46,8 +46,8 @@ export default {
   top: 0;
   right: 0;
   font-size: 16px;
-
   margin: $spacing-unit;
+  transition: color $transition-time;
 
   svg {
     margin-right: $spacing-unit * 0.25;
@@ -55,6 +55,7 @@ export default {
     stroke: $color-accent;
     stroke-width: 1.5;
     overflow: visible;
+    transition: stroke $transition-time, stroke-width $transition-time;
   }
 
   &.invert {
