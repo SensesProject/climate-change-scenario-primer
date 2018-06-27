@@ -167,7 +167,7 @@ export default {
 @import "~@/assets/style/mixins";
 
 .LayoutScrollify {
-  @include media-query($on-palm) {
+  @include media-query($device-narrow) {
     margin: #{$spacing-unit * 2} 0;
   }
 
@@ -176,7 +176,7 @@ export default {
   > .interactive {
     display: none;
 
-    @include media-query($on-palm) {
+    @include media-query($device-narrow) {
       display: initial;
       flex: 1;
 
@@ -190,7 +190,7 @@ export default {
   .sections {
     flex: 1;
 
-    @include media-query($on-palm) {
+    @include media-query($device-narrow) {
       padding-left: $spacing-unit / 2;
     }
 
@@ -202,7 +202,7 @@ export default {
         @include flex-row();
       }
 
-      @include media-query($on-palm) {
+      @include media-query($device-narrow) {
         transition: opacity 0.2s;
         opacity: 0.3;
 
@@ -232,7 +232,7 @@ export default {
       }
 
       > div {
-        @include media-query($on-palm) {
+        @include media-query($device-narrow) {
           @include flex-column;
           align-items: flex-start;
           justify-content: space-around;

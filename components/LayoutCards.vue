@@ -78,7 +78,7 @@ export default {
   max-width: 100vw;
   position: relative;
 
-  @include media-query($on-palm) {
+  @include media-query($device-narrow) {
     overflow: hidden;
   }
 
@@ -94,7 +94,7 @@ export default {
       min-height: $spacing-unit;
     }
 
-    @include media-query($on-palm) {
+    @include media-query($device-narrow) {
       overflow: visible;
       transition: transform .4s;
     }
@@ -111,7 +111,7 @@ export default {
       height: 100%;
       width: $spacing-unit;
 
-      @include media-query($on-palm) {
+      @include media-query($device-narrow) {
         @include flex-row;
       }
 

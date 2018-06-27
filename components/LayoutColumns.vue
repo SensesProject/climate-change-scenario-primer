@@ -28,7 +28,7 @@ export default {
     margin: 0 0 #{$spacing-unit / 2} 0;
   }
 
-  @include media-query($on-palm) {
+  @include media-query($device-narrow) {
     @include flex-row;
     align-items: flex-start;
 

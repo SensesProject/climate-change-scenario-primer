@@ -16,7 +16,7 @@ html {
   font-kerning: normal;
   color: $color-text;
   hyphens: auto;
-  @include media-query($on-palm) {
+  @include media-query($device-narrow) {
 
     font-size: 125%;
   }
@@ -26,7 +26,7 @@ html {
 	visibility: hidden;
   display: none;
 
-  @include media-query($on-palm) {
+  @include media-query($device-narrow) {
   	visibility: visible;
     display: inherit;
   }
@@ -96,7 +96,7 @@ table {
   width: 100%;
   font-size: 0.75em;
 
-  @include media-query($on-palm) {
+  @include media-query($device-narrow) {
     font-size: 1em;
   }
 
@@ -145,7 +145,7 @@ table {
   max-width: $max-width;
   padding: 0 #{$spacing-unit} $spacing-unit;
 
-  @include media-query($on-laptop) {
+  @include media-query($device-medium) {
     // margin: #{$spacing-unit * 2} 0;
     padding: 0 #{$spacing-unit * 1.5} $spacing-unit * 1.5;
   }
@@ -171,7 +171,7 @@ h2 {
   color: $color-text-highlight;
   letter-spacing: 0.4px;
 
-  @include media-query($on-palm) {
+  @include media-query($device-narrow) {
     font-size: 3rem;
   }
 }
@@ -182,7 +182,7 @@ h3 {
   line-height: 1.2;
   margin: 0;
 
-  @include media-query($on-palm) {
+  @include media-query($device-narrow) {
     font-size: 1.8rem;
   }
 }

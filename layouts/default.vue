@@ -38,7 +38,7 @@ export default {
     margin-top: $spacing-unit * 4;
     @include flex-column();
 
-    @include media-query($on-laptop) {
+    @include media-query($device-wide) {
       width: calc(100vw - #{$nav-width-laptop});
       left: $nav-width-laptop;
       align-self: flex-end;

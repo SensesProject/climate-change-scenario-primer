@@ -11,18 +11,17 @@
         <path d="M0,6 L28,6 M0,16 L28,16 M0,26 L28,26"/>
       </svg>
     </div>
-    <transition name="fade">
-      <div
-        v-if="!$store.state.view.onLaptop"
-        class="mobile"
-        @click="toggleMenu">
-        <transition name="fade">
-          <div
-            v-if="showMenu"
-            class="overlay"/>
-        </transition>
-      </div>
-    </transition>
+    <!-- <transition name="fade"> -->
+    <div
+      class="mobile"
+      @click="toggleMenu">
+      <transition name="fade">
+        <div
+          v-if="showMenu"
+          class="overlay"/>
+      </transition>
+    </div>
+    <!-- </transition> -->
     <nav :class="{ showMenu }">
       <ul>
         <nuxt-link
@@ -80,7 +79,7 @@ export default {
   hyphens: none;
   z-index: 1000;
   // font-size: 1.25rem;
-  // @include media-query($on-palm) {
+  // @include media-query($device-narrow) {
   //   font-size: 1rem;
   // }
 
@@ -104,7 +103,6 @@ export default {
   .mobile {
     position: absolute;
     left: 0;
-    transform: translateX($nav-width);
 
     .overlay {
       position: absolute;
@@ -113,6 +111,10 @@ export default {
       height: 100vh;
       background: $color-white;
       opacity: 0.7;
+    }
+
+    @include media-query($device-wide) {
+      display: none;
     }
   }
   nav {
@@ -128,7 +130,7 @@ export default {
     transform: translateX(-$nav-width);
     transition: transform .4s;
 
-    @include media-query($on-laptop) {
+    @include media-query($device-wide) {
       transform: translateX(0);
     }
 
@@ -139,7 +141,7 @@ export default {
     // font-weight: bold;
     @include light-text();
 
-    @include media-query($on-laptop) {
+    @include media-query($device-wide) {
       padding: $spacing-unit / 2;
       width: $nav-width-laptop;
     }
@@ -165,7 +167,7 @@ export default {
               opacity: 1;
               letter-spacing: 0px;
 
-              @include media-query($on-palm) {
+              @include media-query($device-narrow) {
                 font-size: 1.6rem;
               }
             }
