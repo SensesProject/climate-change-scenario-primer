@@ -15,6 +15,7 @@ html {
   // @include font-feature-settings("kern" 1)
   font-kerning: normal;
   color: $color-text;
+  hyphens: auto;
 }
 
 .mobile-invisible {

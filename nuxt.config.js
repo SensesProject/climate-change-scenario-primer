@@ -4,6 +4,9 @@ module.exports = {
   ** Headers of the page
   */
   head: {
+    htmlAttrs: {
+      lang: 'en-US'
+    },
     title: 'climate-change-scenario-primer',
     meta: [
       { charset: 'utf-8' },
