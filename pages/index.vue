@@ -36,13 +36,12 @@ export default {
   }
 
   .intro {
-    font-size: 1.8rem;
-    font-family: $font-serif;
+    font-size: 1.4rem;
     width: 100%;
     @include flex-column;
 
     p {
-      max-width: 800px;
+      max-width: 700px;
       align-self: flex-end;
     }
   }

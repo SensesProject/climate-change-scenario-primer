@@ -33,5 +33,9 @@ export default {
   color: $color-white;
   @include flex-column();
   @include light-text ();
+
+  .container {
+    margin-top: $spacing-unit * 2;
+  }
 }
 </style>

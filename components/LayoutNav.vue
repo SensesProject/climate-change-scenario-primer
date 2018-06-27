@@ -30,10 +30,11 @@
           :key="chapter.path"
           :to="chapter.path">
           <li>
-            <span
+            <component
               v-if="chapter.cycle == null"
+              :is="chapter.path === '/' ? 'h1' : 'span'"
               :class="{index: chapter.path === '/'}"
-              class="title">{{ chapter.title }}</span>
+              class="title">{{ chapter.title }}</component>
             <div
               v-else
               class="cycle">
@@ -73,18 +74,15 @@ export default {
 <style scoped lang="scss">
 @import "~@/assets/style/global";
 
-.fade-enter-active, .fade-leave-active {
-  transition: opacity .4s;
-}
-
-.fade-enter, .fade-leave-to {
-  opacity: 0 !important;
-}
-
 .Navigation {
   position: fixed;
   left: 0;
   hyphens: none;
+  z-index: 1000;
+  // font-size: 1.25rem;
+  // @include media-query($on-palm) {
+  //   font-size: 1rem;
+  // }
 
   .hamburger {
     width: 60px;
@@ -123,6 +121,8 @@ export default {
     background: $color-accent;
     left: 0;
     top: 0;
+    padding: $spacing-unit / 2;
+    overflow: scroll;
 
     transform: translateX(-$nav-width);
     transition: transform .4s;
@@ -135,7 +135,7 @@ export default {
       transform: translateX(0);
     }
 
-    font-weight: bold;
+    // font-weight: bold;
     @include light-text();
 
     @include media-query($on-laptop) {
@@ -149,7 +149,7 @@ export default {
           display: block;
           color: $color-white;
           line-height: 1.5;
-          padding: $spacing-unit / 2;
+          padding: $spacing-unit * 0.5 $spacing-unit * 0.5;
           overflow-y: hidden;
           overflow-x: visible;
 
@@ -162,6 +162,11 @@ export default {
               font-size: 2rem;
               line-height: 1.25;
               opacity: 1;
+              letter-spacing: 0px;
+
+              @include media-query($on-palm) {
+                font-size: 1.6rem;
+              }
             }
 
             &:hover {

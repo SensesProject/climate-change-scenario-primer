@@ -35,6 +35,7 @@ export default {
 
   .container {
     width: 100vw;
+    margin-top: $spacing-unit * 4;
     @include flex-column();
 
     @include media-query($on-laptop) {

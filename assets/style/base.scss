@@ -9,13 +9,17 @@ blockquote, body, dd, dl, figure, h1, h2, h3, h4, h5, h6, hr, ol, p, pre, time, 
 
 html {
   box-sizing: border-box;
-  font: normal normal 105%/1.7 $font-sans;
+  font: normal normal 100%/1.7 $font-sans;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   // @include font-feature-settings("kern" 1)
   font-kerning: normal;
   color: $color-text;
   hyphens: auto;
+  @include media-query($on-palm) {
+
+    font-size: 125%;
+  }
 }
 
 .mobile-invisible {
@@ -139,10 +143,11 @@ table {
 .wrapper {
   width: 100%;
   max-width: $max-width;
-  padding: #{$spacing-unit * 2} #{$spacing-unit / 2};
+  padding: 0 #{$spacing-unit} $spacing-unit;
 
   @include media-query($on-laptop) {
-    padding: #{$spacing-unit * 2} #{$spacing-unit * 1.5};
+    // margin: #{$spacing-unit * 2} 0;
+    padding: 0 #{$spacing-unit * 1.5} $spacing-unit * 1.5;
   }
 }
 
@@ -162,12 +167,12 @@ h2 {
   font-size: 1.8rem;
   font-weight: bold;
   line-height: 1.25;
-  margin: #{$spacing-unit * 2} 0 #{$spacing-unit * 1};
+  margin: 0 0 #{$spacing-unit * 1};
   color: $color-text-highlight;
   letter-spacing: 0.4px;
 
   @include media-query($on-palm) {
-    font-size: 3.75rem;
+    font-size: 3rem;
   }
 }
 
@@ -185,6 +190,7 @@ h3 {
 p {
   margin: 2rem 0;
   max-width: 720px;
+  font-family: $font-serif;
 
   strong {
     color: darken($color-text-highlight, 20%);
@@ -221,4 +227,27 @@ p {
 
 p + p {
   margin-top: -1rem;
+}
+
+.page-enter-active, .page-leave-active {
+  transition: opacity .3s, transform .3s;
+}
+.page-enter, .page-leave-to {
+  opacity: 0;
+}
+
+.page-enter {
+  transform: translateX(5vw);
+}
+
+.page-leave-to {
+  transform: translateX(-5vw);
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .4s;
+}
+
+.fade-enter, .fade-leave-to {
+  opacity: 0 !important;
 }
