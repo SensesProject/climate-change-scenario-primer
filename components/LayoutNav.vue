@@ -84,6 +84,7 @@ export default {
 .Navigation {
   position: fixed;
   left: 0;
+  hyphens: none;
 
   .hamburger {
     width: 60px;

@@ -35,6 +35,7 @@ export default {
 
   .container {
     width: 100vw;
+    @include flex-column();
 
     @include media-query($on-laptop) {
       width: calc(100vw - #{$nav-width-laptop});

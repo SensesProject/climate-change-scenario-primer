@@ -21,14 +21,14 @@ html {
 .mobile-invisible {
 	visibility: hidden;
   display: none;
-}
 
-@include media-query($on-palm) {
-  .mobile-invisible {
+  @include media-query($on-palm) {
   	visibility: visible;
     display: inherit;
   }
 }
+
+
 
 a, .a {
   color: $color-text-highlight;
@@ -144,6 +144,10 @@ table {
   @include media-query($on-laptop) {
     padding: #{$spacing-unit * 2} #{$spacing-unit * 1.5};
   }
+}
+
+h1, h2, h3 {
+  hyphens: none;
 }
 
 h1 {
