@@ -1,5 +1,6 @@
 <template>
   <a
+    :class="{ invert }"
     href="/"
     class="Logo">
     <svg
@@ -24,7 +25,12 @@
 
 <script>
 export default {
-
+  props: {
+    invert: {
+      type: Boolean,
+      default: false
+    }
+  }
 }
 </script>
 
@@ -50,6 +56,15 @@ export default {
     fill: none;
     stroke: $color-accent;
     stroke-width: 1.5;
+    overflow: visible;
+  }
+
+  &.invert {
+    color: $color-white;
+    svg {
+      stroke: $color-white;
+      stroke-width: 1;
+    }
   }
 }
 </style>

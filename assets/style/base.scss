@@ -140,21 +140,25 @@ table {
   width: 100%;
   max-width: $max-width;
   padding: #{$spacing-unit * 2} #{$spacing-unit / 2};
+
+  @include media-query($on-laptop) {
+    padding: #{$spacing-unit * 2} #{$spacing-unit * 1.5};
+  }
 }
 
 h1 {
   font-size: 1rem;
-  text-transform: uppercase;
+  // text-transform: uppercase;
   letter-spacing: 0.05em;
   font-weight: bold;
-  font-family: $font-mono;
+  // font-family: $font-mono;
 }
 
 h2 {
   font-size: 1.8rem;
   font-weight: bold;
-  line-height: 1.1;
-  margin: 0;
+  line-height: 1.25;
+  margin: #{$spacing-unit * 2} 0 #{$spacing-unit * 1};
   color: $color-text-highlight;
   letter-spacing: 0.4px;
 
