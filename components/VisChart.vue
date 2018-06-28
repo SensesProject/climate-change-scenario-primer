@@ -96,7 +96,6 @@ export default {
     }),
     data () {
       if (this.dynamicFilter !== null) {
-        console.log('DYNAMIC')
         return this.$store.getters.scenario(this.scenario).filter(scenario => {
           return scenario.ssp === (this.filter || this.dynamicFilter)
         })
