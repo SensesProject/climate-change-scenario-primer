@@ -79,6 +79,7 @@ export default {
   display: flex;
   width: 100%;
   overflow: hidden;
+  justify-content: center;
 
   .overflow {
     display: flex;
