@@ -33,6 +33,7 @@
       <li>The impact of the human footprint can be clearly distinguished and obviously needs to be mitigated in its current form.</li>
       <li>Most hope lies in policy changes and technological advancements to avert irreversible consequences of climate change.</li>
     </LayoutRecap>
+    <LayoutNextChapter/>
   </section>
 </template>
 

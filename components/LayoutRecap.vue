@@ -11,7 +11,6 @@
 
 <script>
 export default {
-
 }
 </script>
 
@@ -21,7 +20,7 @@ export default {
   width: 100vw;
   border-top: 1px solid $color-accent;
   border-bottom: 1px solid $color-accent;
-  margin: $spacing-unit #{-$spacing-unit / 2} $spacing-unit #{-$spacing-unit / 2};
+  margin: $spacing-unit #{-$spacing-unit / 2} -$spacing-unit #{-$spacing-unit / 2};
   transform: translateX(-50vw);
   display: flex;
   justify-content: center;

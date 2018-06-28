@@ -143,8 +143,13 @@ table {
 .wrapper {
   padding: 0 #{$spacing-unit} $spacing-unit;
   width: 100vw;
+  // overflow: hidden;
   margin-top: $spacing-unit * 4;
   @include flex-column();
+
+  // &.index {
+  //   overflow: visible;
+  // }
 
   @include media-query($device-wide) {
     width: calc(100vw - #{$nav-width-laptop});

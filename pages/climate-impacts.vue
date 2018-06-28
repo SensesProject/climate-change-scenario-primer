@@ -88,6 +88,11 @@
     </LayoutColumns>
 
     <p>The charts show the simulation results for floods and crop failure. In each case, climate data from three different global climate models <strong class="green">GFDL-ESM2M</strong>, <strong class="yellow">MIROC5</strong> and <strong class="violet">IPSL-CM5A-LR</strong> were used to drive the impact models – each color relates to results using data from a different climate model. The thick lines depict the median of the ensemble for all impact models considered. The shaded areas show the 20th to 80th percentile of that ensemble.</p>
+
+    <LayoutRecap>
+      <li>a</li>
+    </LayoutRecap>
+    <LayoutNextChapter/>
   </section>
 </template>
 

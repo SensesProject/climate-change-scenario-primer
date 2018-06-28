@@ -131,6 +131,10 @@
     </table>
 
     <p>SSPs and RCPs work great together. SSP-Baseline Scenarios show, what will happen without the implementation of futher climate change policies, while SSPx-RCPx Scenarios demonstrate what&rsquo;s possible when applying climate change policies.</p>
+    <LayoutRecap>
+      <li>a</li>
+    </LayoutRecap>
+    <LayoutNextChapter/>
   </section>
 </template>
 

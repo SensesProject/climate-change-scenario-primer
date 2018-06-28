@@ -5,6 +5,11 @@
 
     <img src="~/assets/img/regional2global.jpeg">
     <p>Locating these scenarios in the SSP-RCP space helps understanding and comparing them and can be done in two ways. Either top-down by using the same scenario assumptions and - depending on the scenario type - also SSP-RCP scenario data as the basis. Or bottom-up by comparing scenario outcomes.</p>
+
+    <LayoutRecap>
+      <li>a</li>
+    </LayoutRecap>
+    <LayoutNextChapter/>
   </section>
 </template>
 
