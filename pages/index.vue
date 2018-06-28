@@ -1,6 +1,6 @@
 <template>
   <section class="wrapper index">
-    <h1>Climate Change Scenarios</h1>
+    <h1>Climate Change<br>Scenarios</h1>
     <div class="intro">
       <p>
         We can’t predict the future. Scenarios allow us to explore possible futures based on assumptions about them.
@@ -29,21 +29,48 @@ export default {
 
   h1 {
     max-width: none;
-    font-size: 120px;
     color: #FFFFFF;
-    letter-spacing: 1px;
-    line-height: 128px;
+    margin-top: -$spacing-unit * 2;
     margin-bottom: $spacing-unit * 2;
+    line-height: 1.1;
+
+    font-size: 2rem;
+
+    @include media-query($device-narrow) {
+      font-size: 3rem;
+    }
+
+    @include media-query($device-medium) {
+      font-size: 4rem;
+    }
+
+    @include media-query($device-wide) {
+      font-size: 6rem;
+    }
   }
 
   .intro {
-    font-size: 1.4rem;
     width: 100%;
     @include flex-column;
 
     p {
+      font-size: 1.3rem;
       max-width: 700px;
       align-self: flex-end;
+
+      @include media-query($device-narrow) {
+
+      }
+
+      @include media-query($device-medium) {
+        max-width: 640px;
+        font-size: 1.3rem;
+      }
+
+      @include media-query($device-wide) {
+        max-width: 700px;
+        font-size: 1.4rem;
+      }
     }
   }
 }
