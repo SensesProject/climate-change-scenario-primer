@@ -255,10 +255,14 @@ p + p {
   transform: translateY(-5vw);
 }
 
-.fade-enter-active, .fade-leave-active {
-  transition: opacity .4s;
+.fade-enter-active, .fade-leave-active, .fade-delayed-leave-active {
+  transition: opacity $transition-time;
 }
 
-.fade-enter, .fade-leave-to {
+.fade-delayed-enter-active {
+  transition: opacity $transition-time $transition-time / 2;
+}
+
+.fade-enter, .fade-leave-to, .fade-delayed-enter, .fade-delayed-leave-to {
   opacity: 0 !important;
 }

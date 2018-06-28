@@ -3,7 +3,7 @@
     :class="{index}"
     class="root">
     <resize-observer @notify="setClientWidth" />
-    <transition name="fade">
+    <transition name="fade-delayed">
       <LayoutNav v-if="!index"/>
     </transition>
     <!-- <LayoutNav :hide-menu="index"/> -->
