@@ -21,6 +21,7 @@ import VisChart from '~/components/VisChart'
 import VisChartImpact from '~/components/VisChartImpact'
 import VisMap from '~/components/VisMap'
 import VisCyclePart from '~/components/VisCyclePart'
+import VisCycleCircle from '~/components/VisCycleCircle'
 
 import InHighlight from '~/components/InHighlight'
 
@@ -49,6 +50,7 @@ Vue.component('VisChart', VisChart)
 Vue.component('VisChartImpact', VisChartImpact)
 Vue.component('VisMap', VisMap)
 Vue.component('VisCyclePart', VisCyclePart)
+Vue.component('VisCycleCircle', VisCycleCircle)
 
 Vue.component('InHighlight', InHighlight)
 
