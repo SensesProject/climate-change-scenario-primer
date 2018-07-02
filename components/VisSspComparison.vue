@@ -9,7 +9,7 @@
       :viewBox="viewBox"
       width="100%">
       <filter id="gooey">
-        <feGaussianBlur
+        <!-- <feGaussianBlur
           in="SourceGraphic"
           stdDeviation="25"
           color-interpolation-filters="sRGB"
@@ -18,7 +18,20 @@
           in="blur"
           mode="matrix"
           values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 200 -90"
+          result="gooey"/> -->
+        <feGaussianBlur
+          in="SourceGraphic"
+          stdDeviation="10"
+          color-interpolation-filters="sRGB"
+          result="blur"/>
+        <feColorMatrix
+          in="blur"
+          mode="matrix"
+          values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 200 -90"
           result="gooey"/>
+        <feBlend
+          in="gooey"
+          in2="gooey"/>
       </filter>
       <clipPath id="rect">
         <rect
@@ -42,7 +55,7 @@
             points="60 -20 120 -20 120 120 65 65 75 50 55 20"/>
           <polygon
             v-if="step === 1"
-            points="50 -20 120 -20 120 50 80 45 60 40 55 20"/>
+            points="50 -20 120 -20 120 50 80 45 63 37 55 20"/>
           <polygon
             v-if="step === 2"
             points="55 -20 120 -20 120 120 70 60 75 50 55 20"/>
@@ -52,13 +65,13 @@
           filter="url(#gooey)">
           <polygon
             v-if="step === 0"
-            points="-20 -20 50 -20 45 20 20 50 50 80 80 120 -20 120"/>
+            points="-20 -20 50 -20 45 20 22 50 50 80 80 120 -20 120"/>
           <polygon
             v-if="step === 1"
-            points="-20 -20 50 -20 45 20 40 40 20 45 -20 50"/>
+            points="-20 -20 50 -20 45 20 37 37 20 45 -20 50"/>
           <polygon
             v-if="step === 2"
-            points="-20 -20 50 -20 45 20 20 50 30 70 50 75 60 70 120 120 -20 120"/>
+            points="-20 -20 50 -20 45 20 25 50 35 70 50 75 60 70 120 120 -20 120"/>
         </g>
         <g class="ssps">
           <g
