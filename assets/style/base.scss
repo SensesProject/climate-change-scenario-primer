@@ -94,6 +94,7 @@ table {
   border-spacing: 0;
   border-collapse: collapse;
   width: 100%;
+  max-width: 920px;
   font-size: 0.75em;
 
   @include media-query($device-narrow) {
