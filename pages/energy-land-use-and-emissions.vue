@@ -1,28 +1,26 @@
 <template>
   <section class="wrapper">
     <h2>Energy, Land Use and Emissions</h2>
-    <p>Scenario assumptions – as offered by the SSP-RCP framework – give us still very limited information about the possible futures. To see how the scenarios play out integrated assessment models and climate impact models come in.</p>
+    <p>Scenario assumptions - e.g. offered by the SSP-RCP framework - tell us the narrative and give us the general conditions for possible futures. Based on those scenario assumptions integrated assessment models and climate impact models generate a more detailed description how possible futures could look like. They calculate energy and land use variables and the correlated emissions for both – business-as-usual and climate change mitigation assumptions.</p>
 
-    <h3 id="integrated-assessment-models">Integrated Assessment Models</h3>
-
-    <p>Integrated assessment models (IAMs) describe how socioeconomics relate to land &amp; energy use and how that relates to emissions.</p>
+    <p>Integrated assessment models (IAMs) provide consistent pathways for macro-economic, energy system related and land use variables and connect them to the resulting emissions.</p>
 
     <LayoutScrollify vis="VisIamStructure">
 
       <div>
-        <p>Here is a very simple example of such a model: In this case we assume that GDP is driven by the population, respectively the working force, energy and capital stock. As you can see all of those three factors are raising and so is GDP.</p>
+        <p>Here we give a very simple example of such an IAM. We assume that GDP is driven by the population, respectively the working force, energy and capital stock. As you can see all of those three factors are raising and so is GDP.</p>
       </div>
 
       <div>
-        <p>One share of the global GDP is flows into consumption and the other share is invested to raise available energy and capital stock. Integrated assessment models are optimized to achieve the highest possible consumption in the long run.</p>
+        <p>The produced GDP can be spent either for consumption, invested into the macro-economic capital stock or used to raise the amount of used energy. Other IAMs might also take into account investment into education which would increase the productivity of the labor. But for simplicity we ignore this option here in our very simple IAM. The goal of our simple IAM is to maximise consumption over in the long run.</p>
       </div>
 
       <div>
-        <p>To tell us something about emissions we need to split the energy investments into investments for clean and dirty energy. This results in clean and dirty energy and dirty energy leads to emissions.</p>
+        <p>To analyse the effect on emissions in our simple IAM we split the total energy into clean energy and dirty energy and also give the opportunity to invest into both types of energy separately. In this simple case only dirty energy leads to emissions. That means that the decision how much of the GDP is used to build up capacities of clean energy instead of dirty energy determines the correlated amount of emissions. The negative impact of global warming in the baseline scenarios is ignored.</p>
       </div>
 
       <div>
-        <p>Using this model we can now change input assumptions like the population growth rate or introduce a carbon tax to explore how different scenarios unfold. If you toggle the switches below the chart you'll see how higher population leads to higher GDP and consumption but also to higher energy needs. Introducing carbon tax makes it lucrative to invest in clean energy and emissions quickly drop.</p>
+        <p>Using this model we demonstrate the impact of assumptions like the population growth rate and introduction of a carbon tax. You can explore how different socio-economic and climate change mitigation scenarios could look like in this very simple IAM. If you toggle the switches below the chart you&#8217;ll see how higher population leads to higher GDP and consumption but also to higher energy needs. Introducing a carbon tax makes it lucrative to invest into clean energy and less into dirty energy and thereby emissions drop quickly.</p>
       </div>
 
     </LayoutScrollify>
@@ -33,25 +31,25 @@
 
       <div>
         <p>
-          In contrast to the simplified model above the models used to generate SSP-Scenarios are a lot more complex. This graphic illusrates what kind of aspects are taken into account by those models - each dot represents one of those aspects. There are similarities to our model from before.
+          In contrast to the simple IAM given above as example the models used to generate SSP scenarios are a lot more complex. This graphic illustrates what kind of aspects are taken into account by those models. Each dot represents one of those aspects. There are some similarities to our simple model above.
           <InHighlight
             field="fingerprints.properties"
             class="violet"
-            value="GDP">GDP</InHighlight>plays an important role. Aspects like
+            value="GDP">GDP</InHighlight>again plays a big role.
           <InHighlight
             field="fingerprints.properties"
             class="yellow"
-            value="energy">energy</InHighlight>and
+            value="energy">Energy</InHighlight> and
           <InHighlight
             field="fingerprints.properties"
             class="red"
-            value="emissions">emissions</InHighlight>are looked at in greater detail.
+            value="emissions">emissions</InHighlight>are split into more specific categories.
         </p>
       </div>
 
       <div>
         <p>
-          Then there a many more aspects and relationships between them we didn't consider. They can be categorized in
+          But the more complex IAMs represent more aspects of the macro-economy and take into account more types of technologies to produce energy at different levels and calculate a variety of produced emissions. We categorise the aspects into
           <InHighlight
             field="fingerprints.category"
             value="Economic Growth and Development">Economic Growth and Development,</InHighlight>
@@ -78,7 +76,7 @@
 
       <div>
         <p>
-          However, there are also key differnces in what aspects different models cover. Each of the five models
+          However, there are also key differences between the IAMs used to produce the SSP scenarios. They are more detailed in different aspects and cover different sectors. Each of the five models
           <InHighlight
             field="fingerprints.model"
             class="blue"
@@ -98,13 +96,13 @@
           <InHighlight
             field="fingerprints.model"
             class="violet"
-            value="WITCH-GLOBIUM">WITCH-GLOBIUM</InHighlight> is a refernce models for one SSP, as it is suited to handle the input assumption of that specific SSP.
+            value="WITCH-GLOBIUM">MESSAGE-GLOBIUM</InHighlight>is a reference models for one SSP, as it is suited to handle the input assumption of that specific SSP narrative.
         </p>
       </div>
 
     </LayoutScrollify>
 
-    <p>Feeding scenario assumptions into models will get us scenarios – a set of output variables describing the futures. Let&rsquo;s take a look how some of these variables play out in different scenarios.</p>
+    <p>Feeding scenario assumptions into models will get us scenarios – a set of output variables describing the possible future consistent to the input assumptions. Let&#8217;s take a look how some of those variables play out in different scenarios.</p>
 
     <LayoutColumns>
       <VisChart
@@ -117,19 +115,19 @@
     </LayoutColumns>
 
     <p>
-      Assumptions on population growth and GDP are already part of the scenario assumptions. This shows us how they turn out over time and in numbers. As you can see the
+      Assumptions on population growth and GDP are already part of the SSP scenario assumptions. This shows us how they turn out over time and in numbers. As you can see the
       <InHighlight
         field="charts.ssp"
         class="red"
-        value="SSP3">SSP3</InHighlight> scenario of regional rivalary leads us to continued population growth but relatively low growth in GDP.
+        value="SSP3">SSP3</InHighlight>scenario of regional rivalry leads us to continued population growth but relatively low growth in GDP.
       <InHighlight
         field="charts.ssp"
         class="green"
-        value="SSP1">SSP1</InHighlight> (Sustainability) and
+        value="SSP1">SSP1</InHighlight>(Sustainability) and
       <InHighlight
         field="charts.ssp"
         class="violet"
-        value="SSP5">SSP5</InHighlight> (Fossil-fueled developement) show similar patterns in population growth, but vast differences when it comes to GDP.
+        value="SSP5">SSP5</InHighlight>(Fossil-fuelled development) show similar patterns in population growth but significant differences when it comes to GDP.
     </p>
 
     <LayoutColumns>
@@ -149,7 +147,7 @@
       <InHighlight
         field="charts.ssp"
         class="violet"
-        value="SSP5">SSP5</InHighlight> comes at a cost: High energy needs and with that lots of CO2-emissions. Until now we only looked at SSP-Baseline Scenarios. Let&rsquo;s set emission goals and include RCPs.
+        value="SSP5">SSP5</InHighlight>comes at a cost: High energy needs and with that lots of C02-emissions. Until now we only looked at SSP-Baseline Scenarios where we assume that the world will develop like business-as-usual in the future. Negative impacts of climate change are ignored. Let&#8217;s now set emission goals and include RCPs.
     </p>
 
     <LayoutColumns>
@@ -165,7 +163,7 @@
         scenario="carbonSsp5"/>
     </LayoutColumns>
 
-    <p>That&rsquo;s means introducing a carbon price. The height of which of course depends on the former emissions and our goal.</p>
+    <p>That&#8217;s means introducing a carbon price. The height of which of course depends on the former emissions and our goal.</p>
 
     <LayoutColumns>
       <VisChart
@@ -182,35 +180,39 @@
     </LayoutColumns>
 
     <p>
-      Compared to the Baseline-Scenarios this results in similar final energy but less emissions.
       <InHighlight
         :out="false"
+        init-active
         field="charts.filter"
         class="green"
-        value="SSP1">SSP1,</InHighlight>
+        value="SSP1">SSP1</InHighlight>
       <InHighlight
         :out="false"
         field="charts.filter"
         class="blue"
-        value="SSP2">SSP2,</InHighlight>
+        value="SSP2">SSP2</InHighlight>
       <InHighlight
         :out="false"
         field="charts.filter"
         class="red"
-        value="SSP3">SSP3,</InHighlight>
+        value="SSP3">SSP3</InHighlight>
       <InHighlight
         :out="false"
         field="charts.filter"
         class="yellow"
-        value="SSP4">SSP4,</InHighlight>
+        value="SSP4">SSP4</InHighlight>
       <InHighlight
         :out="false"
         field="charts.filter"
         class="violet"
         value="SSP5">SSP5</InHighlight>
     </p>
+    <p>
+      Compared to the Baseline-Scenarios this results in some reductions in final energy and substantially decreased emissions.
+    </p>
     <LayoutRecap>
-      <li>a</li>
+      <li>Integrated assessment models (IAMs) are complex systems that use socioeconomic assumptions to produce scenarios.</li>
+      <li>Applying SSP-RCP-assumptions on to IAMs allows us to explore how land use, energy use and emissions will play out in those futures.</li>
     </LayoutRecap>
     <LayoutNextChapter/>
   </section>
