@@ -22,6 +22,10 @@ export default {
     value: {
       type: String,
       default: null
+    },
+    initActive: {
+      type: Boolean,
+      default: false
     }
   },
   computed: {
@@ -33,6 +37,9 @@ export default {
         return this.$store.commit('updateField', {path: this.field, value})
       }
     }
+  },
+  created () {
+    if (this.initActive) this.highlight = this.value
   },
   methods: {
     reset () {
@@ -46,6 +53,8 @@ export default {
 @import "~@/assets/style/global";
 .InHighlight {
   padding-right: 0.3em;
+  font-family: $font-sans;
+
   .highlight {
     cursor: default;
     color: $color-text;

@@ -44,6 +44,7 @@
       class="key">
       <span
         v-for="(scenario, i) in lines"
+        v-if="!scenario.hideFromLegend"
         :key="`key-${i}`"
         class="key-item"><span
           :class="scenario.attrs.class"
@@ -95,11 +96,15 @@ export default {
       filter: 'charts.filter'
     }),
     data () {
-      if (this.dynamicFilter !== null) {
-        return this.$store.getters.scenario(this.scenario).filter(scenario => {
-          return scenario.ssp === (this.filter || this.dynamicFilter)
-        })
-      }
+      // if (this.dynamicFilter !== null) {
+      //   return this.$store.getters.scenario(this.scenario).filter(scenario => {
+      //     if (this.dynamicFilter.split(',').length > 1) {
+      //       return scenario.ssp === (this.filter || this.dynamicFilter.split(',')[0]) || scenario.ssp === (this.filter || this.dynamicFilter.split(',')[1])
+      //     }
+      //     return scenario.ssp === (this.filter || this.dynamicFilter)
+      //     // || (this.dynamicFilter.split(',').length > 1 && (this.dynamicFilter.split(',')[0] || this.dynamicFilter.split(',')[1]))
+      //   })
+      // }
       if (this.staticFilter !== null) {
         return this.$store.getters.scenario(this.scenario).filter(scenario => {
           const ssp = this.staticFilter.ssp === null || this.staticFilter.ssp === scenario.ssp
@@ -132,7 +137,7 @@ export default {
       return scaleLinear().domain(this.yDomain).range([75, 0]).nice()
     },
     lines () {
-      const { data, strokeWidth, years, xScale, yScale, highlightSsp } = this
+      const { data, strokeWidth, years, xScale, yScale, highlightSsp, dynamicFilter, filter } = this
       return data.map(scenario => {
         const name = this.legend === 'ssp' ? scenario.ssp : scenario.rcp === 'Baseline' ? `Baseline` : `RCP${scenario.rcp}`
         return {
@@ -142,12 +147,13 @@ export default {
               scenario.ssp,
               `RCP${scenario.rcp}`,
               {
-                fade: (highlightSsp !== null && highlightSsp !== scenario.ssp)
+                fade: (highlightSsp !== null && highlightSsp !== scenario.ssp) || (dynamicFilter != null && filter !== scenario.ssp)
               }
             ],
             style: {'stroke-width': strokeWidth * 2},
             points: years.map(year => `${xScale(year)},${yScale(scenario[year])}`).join(' ')
-          }
+          },
+          hideFromLegend: dynamicFilter != null && filter !== scenario.ssp
         }
       })
     },
