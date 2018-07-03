@@ -10,6 +10,10 @@ export default {
     vis: {
       type: String,
       required: true
+    },
+    flipped: {
+      type: Boolean,
+      default: false
     }
   },
   data () {
@@ -153,7 +157,7 @@ export default {
     const { stickyVis, sections } = this
     return createElement(
       'div',
-      { class: ['LayoutScrollify'] },
+      { class: ['LayoutScrollify', {flipped: this.flipped}] },
       [
         stickyVis(createElement),
         sections(createElement)
@@ -172,6 +176,9 @@ export default {
   }
 
   display: flex;
+  &.flipped {
+    flex-direction: row-reverse;
+  }
 
   > .interactive {
     display: none;

@@ -27,7 +27,9 @@
 
     </LayoutScrollify>
 
-    <LayoutScrollify vis="VisFingerprints">
+    <LayoutScrollify
+      vis="VisFingerprints"
+      flipped>
 
       <div>
         <p>
