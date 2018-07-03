@@ -44,7 +44,7 @@
       class="key">
       <span
         v-for="(scenario, i) in lines"
-        v-if="!scenario.hideFromLegend"
+        v-show="!scenario.hideFromLegend"
         :key="`key-${i}`"
         class="key-item"><span
           :class="scenario.attrs.class"
@@ -265,6 +265,7 @@ export default {
   }
   .key {
     cursor: default;
+    font-size: 0.8rem;
     .key-item {
       padding-right: 0.5em;
 
