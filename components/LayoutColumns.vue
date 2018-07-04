@@ -19,6 +19,7 @@ export default {
 @import "~@/assets/style/global";
 .LayoutColumns {
   @include flex-column;
+  width: 100%;
 
   > div {
     flex: 1;
