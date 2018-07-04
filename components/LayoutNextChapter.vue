@@ -89,10 +89,10 @@ export default {
   }
 
   .box {
-    width: 360px;
+    width: 460px;
     max-width: 100%;
     background: $color-accent;
-    padding: $spacing-unit * 0.8 $spacing-unit * 0.8 $spacing-unit * 0.8 $spacing-unit * 1.6;
+    padding: $spacing-unit * 0.8 $spacing-unit * 1.6;
     transition: transform $transition-time, opacity $transition-time;
     opacity: 0;
     transform: translateX(100%);
@@ -118,7 +118,7 @@ export default {
     h3 {
       margin-top: 1rem;
       color: $color-white;
-      font-size: 1rem;
+      font-size: 1.4rem;
     }
 
     &:hover {
