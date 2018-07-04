@@ -40,7 +40,8 @@
         v-for="(group, i) in groups"
         :key="`group-${i}`"
         :class="[group.color, {active: group.active}]"
-        class="group">
+        class="group"
+        filter="url(energy-land-use-and-emissions#gooey)">
         <g
           v-for="property in group.properties"
           :key="property.id"
@@ -251,7 +252,7 @@ export default {
     .group {
       mix-blend-mode: multiply;
       pointer-events: none;
-      filter: url(#gooey);
+      // filter: url(#gooey);
       opacity: 0.1;
 
       &.active {
