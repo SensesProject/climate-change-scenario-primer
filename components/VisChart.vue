@@ -26,7 +26,7 @@
       <g class="axis y-axis">
         <text
           y="-0.8em"
-          class="left">{{ variable }}</text>
+          class="left sans">{{ variable }}</text>
         <g
           v-for="(tick, i) in ticks"
           :key="`tick-${i}`"
@@ -196,6 +196,10 @@ export default {
       dominant-baseline: central;
     }
 
+    .sans {
+      font-family: $font-sans;
+    }
+
     .lines {
       polyline {
         fill: none;
@@ -237,11 +241,13 @@ export default {
 
     .axis {
       line {
-        stroke: $color-light-gray;
+        stroke: $color-black;
         shape-rendering: crispEdges;
+        mix-blend-mode: multiply;
+        opacity: 0.2;
 
         &.zero {
-          stroke: $color-black;
+          opacity: 1;
         }
       }
 

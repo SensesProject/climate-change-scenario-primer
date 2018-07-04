@@ -179,7 +179,7 @@
         scenario="emissions"/>
     </LayoutColumns>
 
-    <p>
+    <p class="ssp-selection">
       <InHighlight
         :out="false"
         init-active
@@ -228,5 +228,8 @@ export default {
 <style scoped lang="scss">
 @import "~@/assets/style/global";
 .wrapper {
+  .ssp-selection {
+    margin-top: $spacing-unit * 0.5;
+  }
 }
 </style>
