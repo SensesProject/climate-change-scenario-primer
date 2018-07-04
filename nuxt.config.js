@@ -1,8 +1,10 @@
 module.exports = {
-  // mode: 'spa',
   /*
   ** Headers of the page
   */
+  router: {
+    base: '/primer/'
+  },
   head: {
     htmlAttrs: {
       lang: 'en-US'
