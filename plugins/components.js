@@ -3,6 +3,7 @@ import Vue from 'vue'
 import LayoutHeader from '~/components/LayoutHeader'
 import LayoutNextChapter from '~/components/LayoutNextChapter'
 import LayoutScrollify from '~/components/LayoutScrollify'
+import LayoutCarousel from '~/components/LayoutCarousel'
 import LayoutListItem from '~/components/LayoutListItem'
 import LayoutColumns from '~/components/LayoutColumns'
 import LayoutCards from '~/components/LayoutCards'
@@ -33,6 +34,7 @@ import { ResizeObserver } from 'vue-resize'
 Vue.component('LayoutHeader', LayoutHeader)
 Vue.component('LayoutNextChapter', LayoutNextChapter)
 Vue.component('LayoutScrollify', LayoutScrollify)
+Vue.component('LayoutCarousel', LayoutCarousel)
 Vue.component('LayoutListItem', LayoutListItem)
 Vue.component('LayoutColumns', LayoutColumns)
 Vue.component('LayoutCards', LayoutCards)
