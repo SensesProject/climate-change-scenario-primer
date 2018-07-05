@@ -1,7 +1,7 @@
 <template>
   <div
-    ref="VisFingerprint"
-    class="VisFingerprint">
+    ref="VisSspComparison"
+    class="VisSspComparison">
     <svg
       v-if="width > 0"
       :style="{'stroke-width': strokeWidth, 'font-size': `${fontSize}px`}"
@@ -42,14 +42,14 @@
       </clipPath>
       <g
         class="chart"
-        clip-path="url(#rect)">
+        clip-path="url(socioeconomics#rect)">
         <rect
           class="background"
           width="100"
           height="100"/>
         <g
           class="low"
-          filter="url(#gooey)">
+          filter="url(socioeconomics#gooey)">
           <polygon
             v-if="step === 0"
             points="60 -20 120 -20 120 120 65 65 75 50 55 20"/>
@@ -62,7 +62,7 @@
         </g>
         <g
           class="high"
-          filter="url(#gooey)">
+          filter="url(socioeconomics#gooey)">
           <polygon
             v-if="step === 0"
             points="-20 -20 50 -20 45 20 22 50 50 80 80 120 -20 120"/>
@@ -160,7 +160,7 @@ export default {
       width: 0,
       colors: ['#B6A3DD', '#8665C7', '#503D77'],
       radius: 24,
-      padding: 8,
+      padding: 5,
       ssps: [{
         id: 'SSP1',
         description: 'Sustainability',
@@ -227,14 +227,16 @@ export default {
     }
   },
   mounted () {
-    this.$emit('setMaxWidth', 400)
+    // this.$emit('setMaxWidth', 640)
     this.setWidth()
   },
   methods: {
     setWidth () {
+      console.log(console.log(this.$refs.VisSspComparison))
       this.width = 0
       this.$nextTick(() => {
-        this.width = this.$refs.VisFingerprint.getBoundingClientRect().width
+        this.width = this.$refs.VisSspComparison.getBoundingClientRect().width
+        console.log(this.$refs.VisSspComparison.getBoundingClientRect())
         this.$emit('setHeight', this.height)
       })
     }
@@ -244,11 +246,12 @@ export default {
 
 <style scoped lang="scss">
 @import "~@/assets/style/global";
-.VisFingerprint {
-  width: 100%;
-  max-width: 400px;
+.VisSspComparison {
+  width: 420px;
+  max-width: 100%;
 
   svg {
+    overflow: visible;
     .background {
       fill: $color-violet;
     }
