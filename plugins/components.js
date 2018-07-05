@@ -10,6 +10,7 @@ import LayoutCards from '~/components/LayoutCards'
 import LayoutCard from '~/components/LayoutCard'
 import LayoutNav from '~/components/LayoutNav'
 import LayoutRecap from '~/components/LayoutRecap'
+import LayoutBanner from '~/components/LayoutBanner'
 import Logo from '~/components/Logo'
 
 import VisSsp from '~/components/VisSsp'
@@ -41,6 +42,7 @@ Vue.component('LayoutCards', LayoutCards)
 Vue.component('LayoutCard', LayoutCard)
 Vue.component('LayoutNav', LayoutNav)
 Vue.component('LayoutRecap', LayoutRecap)
+Vue.component('LayoutBanner', LayoutBanner)
 Vue.component('Logo', Logo)
 
 Vue.component('VisSsp', VisSsp)
