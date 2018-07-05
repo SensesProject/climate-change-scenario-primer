@@ -59,26 +59,21 @@
 
     <p>These narratives play out differently across variables. In the following chart the SSPs are mapped along challenges for adaptation and challenges for mitigation. Starting with education another variable is shown through color: The darker the color the higher the value.</p>
 
-    <LayoutCarousel :interactive="{is: 'VisSspComparison', step: 0}">
+    <LayoutCarousel interactive="VisSspComparison">
 
-      <div>
+      <div slot="s0">
         <h4>Education</h4>
         <p>Education plays a key role in socioeconomics, as it is closely linked to the fertility rate. The progressive SSP1 and SSP5 futures show high education, while the educational level in the SSP3 world is quite low, leading to a much higher global population by the end of the 21st century. In the SSP4 there are regional differences, ranging from medium education in higher income countries to low education in lower income countries.</p>
       </div>
-    </LayoutCarousel>
-
-    <div>
-      <div>
+      <div slot="s1">
         <h4>International Trade</h4>
         <p>Trade is another important aspect. It shows how and connected the world is. In most futures there will be a medium amount of international trade. In SSP5 it&#8217;s high and in SSP3, a world of regional rivalry, it is low.</p>
       </div>
-    </div>
-    <div>
-      <div>
+      <div slot="s2">
         <h4>Technology developement</h4>
         <p>Rapid technological development is important for economic success. But technology also plays a key role when it comes through adapting to and mitigating climate change. Overall there&#8217;s a similar pattern to education, but the direction of technological development – for example, are renewable or fossil fuel energy technologies – makes a difference for challenges to mitigation. While in the unequal SSP4 it varies between high to low.</p>
       </div>
-    </div>
+    </LayoutCarousel>
 
     <h3 id="rcps">RCPs</h3>
 
@@ -149,6 +144,16 @@ export default {
 .wrapper {
   h4 {
     margin: 0 0 $spacing-unit / 2;
+  }
+  .LayoutCarousel {
+    h4 {
+      font-size: 1.5em;
+      color: $color-text-highlight;
+    }
+
+    p {
+      font-family: $font-sans;
+    }
   }
 }
 </style>
