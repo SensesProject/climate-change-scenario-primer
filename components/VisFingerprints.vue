@@ -181,8 +181,8 @@ export default {
             properties: properties.filter(p => p.models.find(m => m === 'REMIND-MAGPIE'))
           }, {
             color: 'violet',
-            active: selectedModel === 'WITCH-GLOBIUM',
-            properties: properties.filter(p => p.models.find(m => m === 'WITCH-GLOBIUM'))
+            active: selectedModel === 'MESSAGE-GLOBIUM',
+            properties: properties.filter(p => p.models.find(m => m === 'MESSAGE-GLOBIUM'))
           }]
         default: return []
       }

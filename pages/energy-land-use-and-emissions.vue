@@ -96,7 +96,7 @@
           <InHighlight
             field="fingerprints.model"
             class="violet"
-            value="WITCH-GLOBIUM">MESSAGE-GLOBIUM</InHighlight>is a reference models for one SSP, as it is suited to handle the input assumption of that specific SSP narrative.
+            value="MESSAGE-GLOBIUM">MESSAGE-GLOBIUM</InHighlight>is a reference models for one SSP, as it is suited to handle the input assumption of that specific SSP narrative.
         </p>
       </div>
 
