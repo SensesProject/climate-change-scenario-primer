@@ -1,13 +1,16 @@
 <template>
   <section class="wrapper">
     <h2>Recap</h2>
-    <p>As mentionend in the beginning, the world of climate change scenarios covers more than SSP-RCP Scenarios. For example technology-on-off scenarios show implications of new technologies like carbon capture and storage (CCS) and delayed action scenarios allow us to explore implications of delaying climate change policies. On the regional level scenarios let us evaluate specific mitigation and aadaptation strategies.</p>
+    <p>Climate change scenarios are a powerful tool for decision making in the context of climate change. There are two general types of scenarios: <strong>target-oriented</strong> and <strong>undetermined</strong> scenarios.</p>
+    <p>The relation between socioeconomics and climate change are inseparably intertwined. Socioeconomics define the our land and energy needs, which are closely linked to emissions. Emissions lead to higher GHG concentrations, which leads to climate change and its impacts. Climate impacts close the cycle as they will also influence our socioeconomics.</p>
 
-    <img src="~/assets/img/regional2global.jpeg">
-    <p>Locating these scenarios in the SSP-RCP space helps understanding and comparing them and can be done in two ways. Either top-down by using the same scenario assumptions and - depending on the scenario type - also SSP-RCP scenario data as the basis. Or bottom-up by comparing scenario outcomes.</p>
-    <LayoutRecap>
-      <li>a</li>
-    </LayoutRecap>
+    <p>To create climate change scenarios we need assumptions about the future and models which represent the relations in the cycle.</p>
+
+    <p>The <strong>SSP-RCP-Framework</strong> provides us with a set of undetermined assumptions about future socioeconomics (SSPs) and target-oriented assumptions on emission goals (RCPs). </p>
+
+    <p>On the model side <strong>integrated assessment models</strong> get us from those socioeconomic assumptions to energy, land use and emissions. <strong>Climate models</strong> take the next step towards future climate. And <strong>climate impact models</strong> show us how that effects nature and society.</p>
+
+    <p>Exploring the wide range of climate change scenarios teaches us about possible futures and mitigation and adaptation challenges.</p>
   </section>
 </template>
 
@@ -22,6 +25,7 @@ export default {
 @import "~@/assets/style/global";
 
 .wrapper {
+  margin-bottom: $spacing-unit * 2;
 }
 
 </style>
