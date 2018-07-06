@@ -14,7 +14,7 @@
 
     <LayoutRecap>
       <li>Climate change scenarios are a powerful tool for decision making in the context of climate change.</li>
-      <li>Scenarios can be target-oriented or undetermined.</li>
+      <li>Scenarios can be either target-oriented or undetermined.</li>
     </LayoutRecap>
     <LayoutNextChapter/>
   </section>

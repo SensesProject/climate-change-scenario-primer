@@ -17,7 +17,8 @@
     <p>The above plot shows the change in average near surface temperature from 2006-2010 to 2095-2099 for two different GHG scenarios: RCP 2.6 and RCP 6.0. As you can see the overall temperature is going to raise, the intensity varies between regions and the temperature changes in the RCP 6.0 scenario are far more severe.</p>
 
     <LayoutRecap>
-      <li>Climate models use emission scenarios to create climate scenarios.</li>
+      <li>Climate models are complex systems describing the physical world including its atmosphere.</li>
+      <li>Climate models generate maps on future temperature and precipitation based on GHG concentrations.</li>
     </LayoutRecap>
     <LayoutNextChapter/>
   </section>

@@ -126,7 +126,9 @@
 
     <p>SSPs and RCPs work great together. SSP-Baseline Scenarios show, what will happen without the implementation of climate change policies, while SSPx-RCPx Scenarios demonstrate what’s possible when applying climate change policies. The degree of coordinated climate change mitigation action across the globe, which is strongly related to the overall geopolitical environment as described in the SSPs, will have an influence for achieving in particular the more ambitious climate goals.</p>
     <LayoutRecap>
-      <li>a</li>
+      <li>Shared Socioeconomic Pathways (SSPs) represent five different socioeconomic futures.</li>
+      <li>Representative Concentration Pathways (RCPs) represent comprehensive reductions of greenhouse gas emissions.</li>
+      <li>In combination SSPs and RCPs make up the SSP-RCP-Framework.</li>
     </LayoutRecap>
     <LayoutNextChapter/>
   </section>
