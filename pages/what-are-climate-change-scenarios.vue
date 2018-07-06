@@ -1,87 +1,21 @@
 <template>
   <section class="wrapper">
     <h2>What are Climate Change Scenarios?</h2>
-    <p>When we talk about climate change we talk about a future 10, 30 or 80 years from now. We can&rsquo;t predict this future, but we can create scenarios – descriptions of how the future might unfold. These scenarios help us to gain in-depth insights on how climate change reflects in different futures and are a tool to communicate climate change.</p>
 
-    <div class="scenario-overview">
-      <svg
-        width="100%"
-        viewBox="0 0 477 298">
-        <g transform="translate(-82.000000, -3.000000)">
-          <g transform="translate(64.000000, 0.000000)">
-            <text font-weight="bold">
-              <tspan
-                x="138.348"
-                y="16">Climate Community Scenarios</tspan>
-            </text>
-            <g transform="translate(0.000000, 68.000000)">
-              <text font-weight="bold">
-                <tspan
-                  x="21.712"
-                  y="16">Normative Scenarios</tspan>
-              </text>
-              <text>
-                <tspan
-                  x="23.328"
-                  y="84">Adaptation Scenarios</tspan>
-                <tspan
-                  x="27.296"
-                  y="104">Mitigation Scenarios</tspan>
-              </text>
-              <text>
-                <tspan
-                  x="17.344"
-                  y="212">Pathways, Strategies &amp; </tspan>
-                <tspan
-                  x="72.184"
-                  y="232">Policies</tspan>
-              </text>
-              <path d="M101,28 L101,56"/>
-              <polygon points="101 60 106 54 96 54"/>
-              <path d="M99,116 L99,184"/>
-              <polygon points="99 188 104 182 94 182"/>
-            </g>
-            <g transform="translate(302.000000, 68.000000)">
-              <text>
-                <tspan
-                  x="8.36"
-                  y="84">Socioeconomic Scenarios</tspan>
-                <tspan
-                  x="30.456"
-                  y="104">Emission Scenarios</tspan>
-                <tspan
-                  x="12.12"
-                  y="124">Concentration Scenarios</tspan>
-                <tspan
-                  x="6.488"
-                  y="144">Climate Change Scenarios</tspan>
-              </text>
-              <text font-weight="bold">
-                <tspan
-                  x="18.032"
-                  y="16">Explorative Scenarios</tspan>
-              </text>
-              <text>
-                <tspan
-                  x="7.504"
-                  y="212">Climate Impact Scenarios</tspan>
-              </text>
-              <g transform="translate(95.000000, 28.000000)">
-                <path d="M5,0 L5,28"/>
-                <polygon points="5 32 10 26 0 26"/>
-              </g>
-              <g transform="translate(95.000000, 156.000000)">
-                <path d="M5,0 L5,28"/>
-                <polygon points="5 32 10 26 0 26"/>
-              </g>
-            </g>
-          </g>
-        </g>
-      </svg>
-    </div>
+    <p>Although we know that global warming is happening today and already has an impact on nature and human society, climate change is foremost a phenomenon with its most wide-ranging consequences in the future. </p>
 
-    <p>Plenty of different scenarios exist. A general distinction can be made between explorative and normative scenarios. Explorative scenarios, tackle the question of what can happen. They are mostly used on the global level. Normative scenarios, commonly used in regional scenarios, aim to answer what we can do to mitigate and adapt to climate change. While explorative scenarios are mostly model driven and use numbers to describe the future, normative scenarios oftentimes combine numbers and narratives.</p>
+    <p>While we understand the mechanisms that lead to global warming, the immense complexity of the climate system is associated with deep uncertainties. So instead of making predictions, the climate change community uses <strong>climate change scenarios</strong> in order to talk about the future. These scenarios provide us with profound insights on how climate change will proceed. They support better decision making and they enable us to reflect on different futures.</p>
 
+    <p>Climate change scenarios are plausible descriptions of how the future may unfold. They are based on the notion that the future, while inherently uncertain, is not entirely unknowable. Climate change scenarios are not about predicting the future, but rather about creating plausible, coherent and internally consistent descriptions of possible futures. </p>
+
+    <p>The climate change community uses many different types of scenarios. Scenarios are also used at different scales, from global scenarios to local and sectoral scenarios. However, the scenario space can be divided into two main groups: <strong>target-oriented</strong> and <strong>undetermined</strong> scenarios. </p>
+
+    <p><strong>Target-oriented scenarios</strong> often start with an image of the future that is desired and propose how a specific target can be reached. <strong>Undetermined scenarios</strong> tackle the question of what can happen. They are mostly used on the global level and are based on complex computer models that determine different scenarios based on key drivers (like demographics, economics or technology) and their relationships. </p>
+
+    <LayoutRecap>
+      <li>Climate change scenarios are a powerful tool for decision making in the context of climate change.</li>
+      <li>Scenarios can be target-oriented or undetermined.</li>
+    </LayoutRecap>
     <LayoutNextChapter/>
   </section>
 </template>
