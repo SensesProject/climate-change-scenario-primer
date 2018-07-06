@@ -1,77 +1,47 @@
 <template>
-  <div class="LayoutCarousel">
+  <div
+    :class="{vis: interactive !== null}"
+    class="LayoutCarousel">
     <div class="left">
       <div class="text">
         <transition-group
           name="fade-text"
           mode="out-in">
           <div
-            v-if="step === 0"
-            key="s0"
+            v-for="(s, i) in slotArray"
+            v-if="step === i"
+            :key="`s${i}`"
             class="slot-wrapper">
-            <slot name="s0"/>
-          </div>
-          <div
-            v-if="step === 1"
-            key="s1"
-            class="slot-wrapper">
-            <slot name="s1"/>
-          </div>
-          <div
-            v-if="step === 2"
-            key="s2"
-            class="slot-wrapper">
-            <slot name="s2"/>
+            <slot :name="`s${i}`"/>
           </div>
         </transition-group>
       </div>
       <div class="navigation">
         <span
           class="arrow"
-          @click="step = (step + 2) % 3">←</span>
+          @click="step = (step + 2) % slots">←</span>
         <span
+          v-for="(s, i) in slotArray"
+          :key="`d${i}`"
           class="dot-wrapper"
-          @click="step = 0">
+          @click="step = i">
           <span
-            :class="{active: step === 0}"
-            class="dot"/>
-        </span>
-        <span
-          class="dot-wrapper"
-          @click="step = 1">
-          <span
-            :class="{active: step === 1}"
-            class="dot"/>
-        </span>
-        <span
-          class="dot-wrapper"
-          @click="step = 2">
-          <span
-            :class="{active: step === 2}"
+            :class="{active: step === i}"
             class="dot"/>
         </span>
         <span
           class="arrow"
-          @click="step = (step + 1) % 3">→</span>
+          @click="step = (step + 1) % slots">→</span>
       </div>
     </div>
     <div>
       <transition-group
         name="fade-chart">
         <component
-          v-if="step === 0"
-          key="v0"
-          :step="0"
-          :is="interactive"/>
-        <component
-          v-if="step === 1"
-          key="v1"
-          :step="1"
-          :is="interactive"/>
-        <component
-          v-if="step === 2"
-          key="v2"
-          :step="2"
+          v-for="(s, i) in slotArray"
+          v-if="step === i"
+          :key="`v${i}`"
+          :step="i"
           :is="interactive"/>
       </transition-group>
     </div>
@@ -83,12 +53,21 @@ export default {
   props: {
     interactive: {
       type: String,
-      default: 'VisSspComparison'
+      default: null
+    },
+    slots: {
+      type: Number,
+      default: 3
     }
   },
   data () {
     return {
       step: 0
+    }
+  },
+  computed: {
+    slotArray () {
+      return '.'.repeat(this.slots).split('')
     }
   }
 }
@@ -102,14 +81,28 @@ export default {
   border: 1px solid $color-gray;
   padding: $spacing-unit;
   margin-bottom: $spacing-unit;
+  width: 100%;
+  max-width: calc(760px + #{$spacing-unit * 2});
+
+  &.vis {
+    width: auto;
+    max-width: none;
+    .left {
+      margin-right: $spacing-unit * 2;
+      max-width: 600px;
+    }
+  }
 
   .left {
     height: 100%;
     @include flex-column;
     justify-content: space-between;
+    width: 100%;
 
-    margin-right: $spacing-unit * 2;
-    max-width: 600px;
+    .text {
+      width: 100%;
+      margin-bottom: $spacing-unit / 2;
+    }
 
     .navigation {
       cursor: default;
