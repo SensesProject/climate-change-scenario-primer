@@ -89,8 +89,8 @@ export default {
   }
 
   .box {
-    width: 460px;
-    max-width: 100%;
+    width: 100%;
+    max-width: 460px;
     background: $color-accent;
     padding: $spacing-unit * 0.8 $spacing-unit * 1.6;
     transition: transform $transition-time, opacity $transition-time;
