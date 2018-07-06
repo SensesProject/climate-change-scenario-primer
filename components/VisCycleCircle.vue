@@ -101,7 +101,6 @@ export default {
           x: Math.cos(cycleOffsetRad + Math.PI * 2 / terms.length * i) * radius,
           y: Math.sin(cycleOffsetRad + Math.PI * 2 / terms.length * i) * radius
         }
-        console.log(arcEnd)
         return {
           term,
           parent: {

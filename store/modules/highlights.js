@@ -15,7 +15,6 @@ const state = () => ({
 
 const getters = {
   // getField: (state) => (field) => {
-  //   console.log(state, field)
   //   return state[field]
   // }
   getField

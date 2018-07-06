@@ -57,7 +57,7 @@ export default {
       const { observerOptions, $refs } = this
 
       this.observer = new window.IntersectionObserver(entries => {
-        console.log('OBSERVED', entries)
+        // console.log('OBSERVED', entries)
         setTimeout(() => {
           this.active = entries[0].isIntersecting
         }, 400)
