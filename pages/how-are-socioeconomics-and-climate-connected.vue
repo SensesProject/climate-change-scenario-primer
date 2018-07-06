@@ -2,9 +2,9 @@
   <section class="wrapper">
     <h2>How are Socioeconomics and Climate connected?</h2>
 
-    <p>The term Anthropocene is a proposal for naming a new geochronological epoch: namely, the age in which humans become one of the most important factors influencing the biological, geological and atmospheric processes on earth.</p>
+    <p>Climate change and human socioeconomic behaviour are inseparably intertwined.</p>
     <VisCycleCircle/>
-    <p>Climate change and human socioeconomic behaviour are inseparably intertwined. Social and economic activities are the main driver of climate change and it is us humans who can act to mitigate climate change. In turn, climate change will also have serious impacts: severe weather events and rising sea levels will change the way we live. Let&#8217;s take a closer look at the cycle below, to understand this relationship.</p>
+    <p>Social and economic activities are the main driver of climate change and it is us humans who can act to mitigate climate change. In turn, climate change will also have serious impacts: severe weather events and rising sea levels will change the way we live. Let&#8217;s take a closer look at the cycle below, to understand this relationship.</p>
 
     <!-- <LayoutScrollify vis="VisCycle"> -->
 
