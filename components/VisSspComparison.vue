@@ -235,7 +235,13 @@ export default {
       this.width = 0
       this.$nextTick(() => {
         this.width = this.$refs.VisSspComparison.getBoundingClientRect().width
-        this.$emit('setHeight', this.height)
+        console.log(this.$refs.VisSspComparison.getBoundingClientRect().width)
+
+        this.$nextTick(() => {
+          this.width = this.$refs.VisSspComparison.getBoundingClientRect().width
+          console.log(this.$refs.VisSspComparison.getBoundingClientRect().width)
+          // this.$emit('setHeight', this.height)
+        })
       })
     }
   }
@@ -245,8 +251,13 @@ export default {
 <style scoped lang="scss">
 @import "~@/assets/style/global";
 .VisSspComparison {
-  width: 420px;
-  max-width: 100%;
+  max-width: 420px;
+  width: 100%;
+  // min-width: 260px;
+
+  @include media-query($device-medium) {
+    max-width: 420px;
+  }
 
   svg {
     overflow: visible;
