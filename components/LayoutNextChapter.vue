@@ -17,9 +17,9 @@
 <script>
 import { mapState } from 'vuex'
 
-if (typeof window !== 'undefined') {
-  require('intersection-observer')
-}
+// if (typeof window !== 'undefined') {
+//   require('intersection-observer')
+// }
 
 export default {
   props: {
@@ -30,11 +30,11 @@ export default {
   },
   data () {
     return {
-      observerOptions: {
-        threshold: 0,
-        rootMargin: '10% 0% 0% 0%'
-      },
-      active: false
+      // observerOptions: {
+      //   threshold: 0,
+      //   rootMargin: '10% 0% 0% 0%'
+      // },
+      // active: false
     }
   },
   computed: {
@@ -48,26 +48,26 @@ export default {
     }
   },
   mounted () {
-    this.observe()
+    // this.observe()
   },
   methods: {
-    observe () {
-      if (typeof window === 'undefined') return
-
-      const { observerOptions, $refs } = this
-
-      this.observer = new window.IntersectionObserver(entries => {
-        // console.log('OBSERVED', entries)
-        setTimeout(() => {
-          this.active = entries[0].isIntersecting
-        }, 400)
-      }, observerOptions)
-      this.observer.observe($refs.box)
-
-      // Object.keys($refs).forEach(key => {
-      //   this.observer.observe($refs[key])
-      // })
-    }
+    // observe () {
+    //   if (typeof window === 'undefined') return
+    //
+    //   const { observerOptions, $refs } = this
+    //
+    //   this.observer = new window.IntersectionObserver(entries => {
+    //     // console.log('OBSERVED', entries)
+    //     setTimeout(() => {
+    //       this.active = entries[0].isIntersecting
+    //     }, 400)
+    //   }, observerOptions)
+    //   this.observer.observe($refs.box)
+    //
+    //   // Object.keys($refs).forEach(key => {
+    //   //   this.observer.observe($refs[key])
+    //   // })
+    // }
   }
 }
 </script>
@@ -94,13 +94,13 @@ export default {
     background: $color-accent;
     padding: $spacing-unit * 0.8 $spacing-unit * 1.6;
     transition: transform $transition-time, opacity $transition-time;
-    opacity: 0;
-    transform: translateX(100%);
+    // opacity: 0;
+    // transform: translateX(100%);
 
-    &.active {
-      opacity: 1;
-      transform: translateX(0);
-    }
+    // &.active {
+    //   opacity: 1;
+    //   transform: translateX(0);
+    // }
 
     .next {
       color: $color-white;
