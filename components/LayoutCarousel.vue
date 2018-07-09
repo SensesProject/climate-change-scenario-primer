@@ -18,7 +18,9 @@
           </transition-group>
         </div>
       </div>
-      <div class="right">
+      <div
+        v-if="interactive"
+        class="right">
         <transition-group
           name="fade-chart">
           <component
