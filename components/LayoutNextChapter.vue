@@ -34,7 +34,7 @@ export default {
       //   threshold: 0,
       //   rootMargin: '10% 0% 0% 0%'
       // },
-      // active: false
+      active: false
     }
   },
   computed: {
