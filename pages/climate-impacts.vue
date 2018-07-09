@@ -54,7 +54,7 @@
 
       <div slot="s9">
         <h4>Permafrost</h4>
-        <p>Sector description coming soon</p>
+        <p>Permafrost is defined as material that remains frozen for two consecutive years. Climate warming, which is amplified in the polar regions, can induce environmental changes that accelerate microbial breakdown of organic carbon that has previously been locked in the permafrost. The magnitude and timing of greenhouse gas emissions from thawing permafrost remain, however, highly uncertain. Thawing of permafrost affects ecosystems and climate on various spatial and temporal scales ranging from local to regional topography, hydrology, and biology as well as global scale biogeochemical cycling. Thawing of permafrost is also of high social (indigenous culture) and economical relevance (infrastructure, particularly oil and gas development).</p>
       </div>
 
       <div slot="s10">
