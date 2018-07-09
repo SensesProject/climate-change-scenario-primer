@@ -35,7 +35,7 @@
     <div class="navigation">
       <span
         class="arrow"
-        @click="step = (step + 2) % slots">←</span>
+        @click="step = (step + slots - 1) % slots">←</span>
       <span
         v-for="(s, i) in slotArray"
         :key="`d${i}`"
