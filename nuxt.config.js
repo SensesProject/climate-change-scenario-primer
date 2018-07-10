@@ -1,3 +1,5 @@
+const { favicon, msapplication } = require('./assets/js/favicon.js')
+
 module.exports = {
   /*
   ** Headers of the page
@@ -13,10 +15,11 @@ module.exports = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Primer on climate change scenarios' }
+      { hid: 'description', name: 'description', content: 'Primer on climate change scenarios' },
+      ...msapplication()
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      ...favicon()
     ]
   },
   css: [
