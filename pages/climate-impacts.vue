@@ -3,7 +3,7 @@
 
     <h2>Climate Impacts</h2>
 
-    <p>Climate impacts are consequences and effects of climate change on nature and society. These may include changed agricultural yields, increased floods and droughts, or coral reef bleaching due to changes in the chemical composition of the ocean. The Inter-Sectoral Impact Model Intercomparison Project (ISIMIP) plays an important role in climate-impact research by faciliting consistent impact simulations across various sectors and collecting and disseminating the results.</p>
+    <p>Climate impacts are consequences and effects of climate change on nature and society. These may include changed agricultural yields, increased floods and droughts, or coral reef bleaching due to changes in the chemical composition of the ocean. The Inter-Sectoral Impact Model Intercomparison Project (<a href="https://www.isimip.org/">ISIMIP</a>) plays an important role in climate-impact research by faciliting consistent impact simulations across various sectors and collecting and disseminating the results.</p>
 
     <LayoutCarousel :slots="13">
 
@@ -74,9 +74,9 @@
 
     </LayoutCarousel>
 
-    <p>In the anthropocene humans are the driver of many processes, therefore socioeconomic factors also play a major role in climate impact research. Because of that not only climate scenarios belonging to a certain RCP, but also SSP  scenarios are input to the impact models. Currently only the SSP2 scenario is used, though.</p>
+    <p>Not only temperature and precipitation are input for impact models but also socioeconomic factors are taken into account. Because of that in the ISIMIP project, not only climate scenario belonging to a certain RCP, but also SSP scenarios are input to the impact models. Currently only the SSP2 scenario is used, though.</p>
 
-    <p>The climate impact models – similarly to climate models – produce maps of impacts.</p>
+    <p>The climate impact models – similarly to climate models – produce projections of impacts.</p>
 
     <LayoutColumns>
       <VisChartImpact
@@ -90,8 +90,8 @@
     <p>The charts above show simulation analyses of impact simulations for two sectors, floods and crop failure. In particular, the change in the percentage of the global surface that is affected by extreme event when compared to preindustrial times, is shown. In each case, climate data from three different global climate models (<strong class="green">GFDL-ESM2M</strong>, <strong class="yellow">MIROC5</strong> and <strong class="violet">IPSL-CM5A-LR</strong>) were used to drive the impact models – each color relates to results using data from a different climate model. The thick lines depict the median of the ensemble for all impact models considered. The shaded areas show the 20th to 80th percentile of that ensemble and thus give a feel of the model spread.</p>
 
     <LayoutRecap>
-      <li>There is a wide range of different climate impacts including impacts related Agriculture, Energy and Health.</li>
-      <li>Climate impact models use data from climate and integrated assessment models to create impact scenarios.</li>
+      <li>There is a wide range of sectors considered in climate impact research including impacts related to agriculture, energy and health.</li>
+      <li>Climate impact models use data from climate and socioeconomic scenarios to create impact scenarios.</li>
     </LayoutRecap>
     <LayoutNextChapter/>
   </section>

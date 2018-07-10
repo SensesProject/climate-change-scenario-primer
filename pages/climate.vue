@@ -2,7 +2,7 @@
   <section class="wrapper">
     <h2>Climate</h2>
 
-    <p>The scenarios discussed above lead to particular concentrations of green house gases (GHG) in the atmosphere. Climate models then simulate the atmosphere and translate these GHG concentrations to meteorological quantities such as temperature or precipitation. Temperature and precipitation are the two most important quantities in climate impact research. It turns out that many more systems than just the atmosphere decisively influence the climate.</p>
+    <p>The scenarios discussed above lead to particular concentrations of green house gases (GHG) in the atmosphere. Climate models then simulate the atmosphere and translate these GHG concentrations to meteorological quantities such as temperature or precipitation. Temperature and precipitation are the two most important quantities in climate impact research. It turns out that many more systems than just the atmosphere decisively influence the climate. Therefore more and more subsystems, e.g. oceans, vegetation or sea ice, had to be added to climate models. Because of that these models are also known as "Earth System Models".</p>
 
     <span>Change in average near surface temperature (2006-2010 to 2095-2099)</span>
     <LayoutColumns>
@@ -18,7 +18,7 @@
 
     <LayoutRecap>
       <li>Climate models are complex systems describing the physical world including its atmosphere.</li>
-      <li>Climate models generate maps on future temperature and precipitation based on GHG concentrations.</li>
+      <li>Climate models generate projections on future temperature and precipitation based on GHG concentrations.</li>
     </LayoutRecap>
     <LayoutNextChapter/>
   </section>
