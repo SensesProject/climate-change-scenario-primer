@@ -67,19 +67,17 @@
       </div>
       <div slot="s1">
         <h4>International Trade</h4>
-        <p>Trade is another important aspect. It shows how and connected the world is. In most futures there will be a medium amount of international trade. In SSP5 it&#8217;s high and in SSP3, a world of regional rivalry, it is low.</p>
+        <p>Trade is another important aspect. It shows how connected the world is. In most futures there will be a medium amount of international trade. In SSP5 it&#8217;s high and in SSP3, a world of regional rivalry, it is low.</p>
       </div>
       <div slot="s2">
-        <h4>Technology developement</h4>
-        <p>Rapid technological development is important for economic success. But technology also plays a key role when it comes through adapting to and mitigating climate change. Overall there&#8217;s a similar pattern to education, but the direction of technological development – for example, are renewable or fossil fuel energy technologies – makes a difference for challenges to mitigation. While in the unequal SSP4 it varies between high to low.</p>
+        <h4>Technology development</h4>
+        <p>Rapid technological development is important for economic success. But technology also plays a key role when it comes to adapting to and mitigating climate change. Overall there&#8217;s a similar pattern to education, however in SSP4 technology development varies between the two extremes rapid and slow. </p>
       </div>
     </LayoutCarousel>
 
     <h3 id="rcps">RCPs</h3>
 
-    <p>Globally comprehensive reductions of greenhouse gas emissions will be needed to reach different climate goals. This is where representative concentration pathways (RCPs) come in. Again there are five scenarios, ranging from RCP 1.9 to RCP 8.5. The value stands for the radiative forcing, the link between emissions and global mean temperature, in 2100.</p>
-
-    <p>The Paris Agreement aims to keep the global mean temperature below 2°C, this corresponds to a forcing of 2.6 W/m2 respectively the RCP 2.6.</p>
+    <p>Globally enforced emission policies are a means to reach global warming targets. This is where representative concentration pathways (RCPs) come in. Again there are five scenarios, ranging from RCP 1.9 to RCP 8.5. The value refers to the "radiative forcing", a quantity that is crucially dependent on GHG concentrations and which, in turn, determines the atmosphere's temperature. More specifically, the numbers give the change in radiative forcing in 2100 compared to preindustrial times. I.e. in the RCP2.6 scenario the globally/annually averaged radiative forcing will have risen by 2.6 W/m^2 compared to preindustrial times.</p>
 
     <table>
       <thead>
@@ -123,12 +121,10 @@
         </tr>
       </tbody>
     </table>
-
-    <p>SSPs and RCPs work great together. SSP-Baseline Scenarios show, what will happen without the implementation of climate change policies, while SSPx-RCPx Scenarios demonstrate what’s possible when applying climate change policies. The degree of coordinated climate change mitigation action across the globe, which is strongly related to the overall geopolitical environment as described in the SSPs, will have an influence for achieving in particular the more ambitious climate goals.</p>
+    <p>The Paris Agreement aims to keep the global mean temperature increase below 2°C. This corresponds to a radiative forcing increase of 2.6 W/m2 or below, i.e. to RCP 1.9 or RCP 2.6.</p>
     <LayoutRecap>
       <li>Shared Socioeconomic Pathways (SSPs) represent five different socioeconomic futures.</li>
       <li>Representative Concentration Pathways (RCPs) represent comprehensive reductions of greenhouse gas emissions.</li>
-      <li>In combination SSPs and RCPs make up the SSP-RCP-Framework.</li>
     </LayoutRecap>
     <LayoutNextChapter/>
   </section>

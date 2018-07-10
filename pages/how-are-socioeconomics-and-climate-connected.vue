@@ -52,12 +52,12 @@
       <!-- <p><strong class="yellow">Socioeconomics</strong> investigate decisive factors like for example population growth, consumption and lifestyle habits, urbanisation, or equality. These inter alia define the way we live and our land and energy needs.</p> -->
     </div>
     <!-- </LayoutScrollify> -->
-    <p>With climate change so dependent of socioeconomic changes, we need to plausible assumptions on our socioeconomic future to create credible scenarios. The SSP-RCP scenario framework, described in detail in the next chapter, offers us those assumptions.</p>
+    <p>With climate change so dependent of socioeconomic development, we need to plausible assumptions on our socioeconomic future to create credible scenarios. The SSP-RCP scenario framework, described in detail in the next chapter, offers us those assumptions.</p>
 
     <LayoutRecap>
       <li>Above we have seen how the different aspects of climate change are inseparably interlinked.</li>
-      <li>The impact of the human footprint can be clearly distinguished and obviously needs to be mitigated in its current form.</li>
-      <li>Most hope lies in policy changes and technological advancements to avert irreversible consequences of climate change.</li>
+      <li>Regarding economic production, energy and land use are the strongest drivers for emissions. From a sociological point of view population growth and lifestyle are central factors that drive emissions.</li>
+      <li>Most hope for mitigating climate change lies in policy changes and technological advancements to avert irreversible consequences of climate change.</li>
     </LayoutRecap>
     <LayoutNextChapter/>
   </section>
