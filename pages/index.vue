@@ -3,7 +3,7 @@
     <h1>Climate Change<br>Scenarios</h1>
     <div class="intro">
       <p>
-        We can’t predict the future. Scenarios allow us to explore possible futures based on assumptions about them.
+        We can’t predict the future, but scenarios allow us to explore possible futures based on assumptions about them.
       </p>
       <p>
         This interactive primer explains what climate change scenarios are and how they are connected to socioeconomics, energy & land use, emissions, climate and climate impacts.
