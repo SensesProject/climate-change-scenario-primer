@@ -124,7 +124,7 @@
     <p>The Paris Agreement aims to keep the global mean temperature increase below 2°C. This corresponds to a radiative forcing increase of 2.6 W/m2 or below, i.e. to RCP 1.9 or RCP 2.6.</p>
     <LayoutRecap>
       <li>Shared Socioeconomic Pathways (SSPs) represent five different socioeconomic futures.</li>
-      <li>Representative Concentration Pathways (RCPs) represent comprehensive reductions of greenhouse gas emissions.</li>
+      <li>Representative Concentration Pathways (RCPs) represent different emission pathways leading to a specific GHG concentration value in 2100.</li>
     </LayoutRecap>
     <LayoutNextChapter/>
   </section>
