@@ -52,7 +52,7 @@
       <!-- <p><strong class="yellow">Socioeconomics</strong> investigate decisive factors like for example population growth, consumption and lifestyle habits, urbanisation, or equality. These inter alia define the way we live and our land and energy needs.</p> -->
     </div>
     <!-- </LayoutScrollify> -->
-    <p>With climate change so dependent of socioeconomic development, we need to plausible assumptions on our socioeconomic future to create credible scenarios. The SSP-RCP scenario framework, described in detail in the next chapter, offers us those assumptions.</p>
+    <p>With climate change so dependent of socioeconomic development, we need plausible assumptions on our socioeconomic future to create credible scenarios. The SSP-RCP scenario framework, described in detail in the next chapter, offers us those assumptions.</p>
 
     <LayoutRecap>
       <li>Above we have seen how the different aspects of climate change are inseparably interlinked.</li>

@@ -40,15 +40,24 @@ export default {
   computed: {
     ...mapState(['chapters']),
     nextChapter () {
+      // console.log(this.chapters[this.nextIndex], this.chapters[this.nextIndex].path, this.chapters[this.nextIndex].title)
       return this.chapters[this.nextIndex]
     },
     nextIndex () {
       const { $route } = this
-      return (this.chapters.map(c => c.path).indexOf($route.path) + 1) % this.chapters.length
+      // console.log($route.path, this.chapters.map(c => c.path), this.chapters, this.chapters.length, (this.chapters.map(c => c.path).indexOf($route.path) + 1) % this.chapters.length)
+      return (this.chapters.map(c => c.path.replace(/\//g, '')).indexOf($route.path.replace(/\//g, '')) + 1) % this.chapters.length
     }
   },
   mounted () {
-    // this.observe()
+    // console.log('m', this.nextIndex)
+    // const { $route } = this
+    // console.log($route.path, this.chapters.map(c => c.path), this.chapters, this.chapters.length, (this.chapters.map(c => c.path).indexOf($route.path) + 1) % this.chapters.length)
+  },
+  created () {
+    // console.log('c', this.nextIndex)
+    // const { $route } = this
+    // console.log($route.path, this.chapters.map(c => c.path), this.chapters, this.chapters.length, (this.chapters.map(c => c.path).indexOf($route.path) + 1) % this.chapters.length)
   },
   methods: {
     // observe () {
