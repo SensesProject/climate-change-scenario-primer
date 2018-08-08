@@ -1,26 +1,29 @@
-<template>
-  <a
-    :class="{ invert }"
-    href="/"
-    class="Logo">
-    <svg
-      width="32px"
-      height="32px">
-      <circle
-        cx="12"
-        cy="12"
-        r="11.5"/>
-      <circle
-        cx="24"
-        cy="28"
-        r="3.5"/>
-      <circle
-        cx="24"
-        cy="11"
-        r="7.5"/>
-    </svg>
-    SENSES
-  </a>
+<template lang="pug">
+  a(
+    :class='{ invert }',
+    href='/',
+    class='Logo'
+  )
+    svg(
+      width='32px'
+      height='32px'
+    )
+      circle(
+        cx=12,
+        cy=12,
+        r=11.5
+      )
+      circle(
+        cx=24,
+        cy=28,
+        r=3.5
+      )
+      circle(
+        cx=24,
+        cy=11,
+        r=7.5
+      )
+    | SENSES
 </template>
 
 <script>
