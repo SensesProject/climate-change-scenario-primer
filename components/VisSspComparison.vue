@@ -116,30 +116,36 @@
       </g>
       <g
         class="key"
-        transform="translate(0 103)">
-        <rect
-          class="background"
-          x="35"
-          width="30"
-          height="4"/>
-        <rect
-          class="high"
-          x="35"
-          width="10"
-          height="4"/>
-        <rect
-          class="low"
-          x="55"
-          width="10"
-          height="4"/>
+        transform="translate(0 104)">
         <text
-          x="32"
-          y="2"
-          class="left">{{ high }}</text>
-        <text
-          x="68"
-          y="2"
-          class="right">{{ low }}</text>
+          x="50"
+          y="0"
+          class="center">{{ label }}</text>
+        <g transform="translate(0 4)">
+          <rect
+            class="background"
+            x="35"
+            width="30"
+            height="4"/>
+          <rect
+            class="high"
+            x="35"
+            width="10"
+            height="4"/>
+          <rect
+            class="low"
+            x="55"
+            width="10"
+            height="4"/>
+          <text
+            x="32"
+            y="2"
+            class="left">{{ high }}</text>
+          <text
+            x="68"
+            y="2"
+            class="right">{{ low }}</text>
+        </g>
       </g>
     </svg>
   </div>
@@ -205,20 +211,27 @@ export default {
     //   return `translate(${offset} ${offset}) scale(${(100 - offset) / 100})`
     // },
     height () {
-      return this.width + this.padding * (this.width / 100)
+      return this.width + this.padding * 2 * (this.width / 100)
     },
     relativeHeight () {
       return 100 + this.padding
     },
     viewBox () {
       const { padding } = this
-      return `-${padding} -${padding} ${100 + padding} ${100 + padding * 2}`
+      return `-${padding} -${padding} ${100 + padding} ${100 + padding * 3}`
     },
     high () {
       return this.step === 2 ? 'Rapid' : 'High'
     },
     low () {
       return this.step === 2 ? 'Slow' : 'Low'
+    },
+    label () {
+      return [
+        'Education level',
+        'Level of international trade',
+        'Speed of technology development'
+      ][this.step]
     }
   },
   watch: {
@@ -314,6 +327,11 @@ export default {
 
       &.left {
         text-anchor: end;
+      }
+
+      &.center {
+        text-anchor: middle;
+        font-weight: bold;
       }
 
       &.right {
