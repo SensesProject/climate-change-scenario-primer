@@ -144,8 +144,15 @@ export default {
     },
     setHeight (height) {
       const { $refs, view } = this
-      Object.keys($refs).forEach(key => {
-        $refs[key].children[0].style.height = view.onPalm ? `${height}px` : `auto`
+      Object.keys($refs).filter((key, i, arr) => i === 0 || i === arr.length - 1).forEach((key, i) => {
+        const itemHeight = $refs[key].getBoundingClientRect().height
+        const offset = Math.max((height - itemHeight) / 2, 0)
+        console.log(itemHeight)
+        if (i === 0) {
+          $refs[key].children[0].style.marginTop = view.onPalm ? `${offset}px` : `auto`
+        } else {
+          $refs[key].children[0].style.marginBottom = view.onPalm ? `${offset}px` : `auto`
+        }
       })
       this.height = height
     },
@@ -221,19 +228,12 @@ export default {
           display: none;
         }
 
-        &:first-child > div {
+        margin: $spacing-unit * 3 0;
+
+        &:first-child {
           margin-top: 0 !important;
         }
-
-        &:last-child > div {
-          margin-bottom: 0 !important;
-        }
-
-        &:first-child > div > *:first-child {
-          margin-top: 0 !important;
-        }
-
-        &:last-child > div > *:last-child {
+        &:last-child {
           margin-bottom: 0 !important;
         }
       }
@@ -243,7 +243,7 @@ export default {
           @include flex-column;
           align-items: flex-start;
           justify-content: space-around;
-          min-height: 200px;
+          // min-height: 200px;
           margin: $spacing-unit 0;
 
           p {
