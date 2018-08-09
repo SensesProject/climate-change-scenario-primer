@@ -1,30 +1,25 @@
-<template>
-  <div
-    :class="{index}"
-    class="root">
-    <resize-observer @notify="setClientWidth" />
-    <transition name="fade-delayed">
-      <LayoutNav v-if="!index"/>
-    </transition>
-    <!-- <LayoutNav :hide-menu="index"/> -->
-    <Logo :invert="index"/>
-    <!-- <div class="container"> -->
-    <nuxt/>
-    <!-- <LayoutNextChapter/> -->
-    <!-- </div> -->
-  </div>
+<template lang="pug">
+  div(
+    :class='{index}',
+    class='root')
+    resize-observer(@notify='setClientWidth')
+    transition(name='fade-delayed')
+      LayoutNav(v-if='!index')
+    Logo(:invert='index')
+    nuxt
 </template>
 
 <script>
 import { mapActions } from 'vuex'
+
 export default {
   computed: {
     index () {
       return this.$route.name === 'index'
     }
   },
-  created () {
-    this.$nextTick(this.setClientWidth)
+  mounted () {
+    this.setClientWidth()
   },
   methods: {
     ...mapActions([
@@ -32,15 +27,15 @@ export default {
     ])
   }
 }
-
 </script>
 
 <style scoped lang="scss">
 @import "~@/assets/style/global";
 .root {
-  width: 100vw;
   @include flex-column();
+  width: 100vw;
   min-height: 100vh;
+
   transition: color $transition-time, background $transition-time;
 
   &.index {
