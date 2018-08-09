@@ -3,13 +3,11 @@
     :class="{index}"
     class="root">
     <resize-observer @notify="setClientWidth" />
-    <LayoutBanner/>
     <transition name="fade-delayed">
       <LayoutNav v-if="!index"/>
     </transition>
     <!-- <LayoutNav :hide-menu="index"/> -->
     <Logo :invert="index"/>
-    <!-- <LayoutHeader/> -->
     <!-- <div class="container"> -->
     <nuxt/>
     <!-- <LayoutNextChapter/> -->
