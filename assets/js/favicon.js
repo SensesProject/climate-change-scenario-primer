@@ -3,7 +3,7 @@
 module.exports = {
   favicon: function () {
     return [
-    	{ rel: 'apple-touch-icon-precomposed', sizes: '57x57', href: './apple-touch-icon-57x57.png' },
+      { rel: 'apple-touch-icon-precomposed', sizes: '57x57', href: './apple-touch-icon-57x57.png' },
       { rel: 'apple-touch-icon-precomposed', sizes: '114x114', href: './apple-touch-icon-114x114.png' },
       { rel: 'apple-touch-icon-precomposed', sizes: '72x72', href: './apple-touch-icon-72x72.png' },
       { rel: 'apple-touch-icon-precomposed', sizes: '144x144', href: './apple-touch-icon-144x144.png' },
@@ -20,7 +20,7 @@ module.exports = {
   },
   msapplication: function () {
     return [
-    	{ name: 'msapplication-TileColor', content: '#FFFFFF' },
+      { name: 'msapplication-TileColor', content: '#FFFFFF' },
       { name: 'msapplication-TileImage', content: './mstile-144x144.png' },
       { name: 'msapplication-square70x70logo', content: './mstile-70x70.png' },
       { name: 'msapplication-square150x150logo', content: './mstile-150x150.png' },
