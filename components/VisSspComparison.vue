@@ -235,12 +235,9 @@ export default {
       this.width = 0
       this.$nextTick(() => {
         this.width = this.$refs.VisSspComparison.getBoundingClientRect().width
-        console.log(this.$refs.VisSspComparison.getBoundingClientRect().width)
 
         this.$nextTick(() => {
           this.width = this.$refs.VisSspComparison.getBoundingClientRect().width
-          console.log(this.$refs.VisSspComparison.getBoundingClientRect().width)
-          // this.$emit('setHeight', this.height)
         })
       })
     }
