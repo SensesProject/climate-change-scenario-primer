@@ -62,7 +62,7 @@ export default {
   },
   watch: {
     '$route.path' () {
-      this.toggleMenu()
+      this.showMenu = false
     }
   },
   methods: {
