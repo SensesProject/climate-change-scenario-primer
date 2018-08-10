@@ -20,6 +20,7 @@ export default {
 .LayoutColumns {
   @include flex-column;
   width: 100%;
+  max-width: 1160px;
 
   > div {
     flex: 1;
