@@ -1,6 +1,7 @@
 @charset "utf-8";
 @import "typography";
 @import "global";
+@import "range";
 
 blockquote, body, dd, dl, figure, h1, h2, h3, h4, h5, h6, hr, ol, p, pre, time, ul {
   margin: 0;
@@ -245,6 +246,7 @@ p {
 p + p {
   margin-top: -1rem;
 }
+
 
 .page-enter-active, .page-leave-active {
   transition: opacity .3s, transform .3s;
