@@ -147,7 +147,6 @@ export default {
       Object.keys($refs).filter((key, i, arr) => i === 0 || i === arr.length - 1).forEach((key, i) => {
         const itemHeight = $refs[key].getBoundingClientRect().height
         const offset = Math.max((height - itemHeight) / 2, 0)
-        console.log(itemHeight)
         if (i === 0) {
           $refs[key].children[0].style.marginTop = view.onPalm ? `${offset}px` : `auto`
         } else {
