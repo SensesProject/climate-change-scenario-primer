@@ -5,7 +5,9 @@
 
     <p>Integrated assessment models (IAMs) provide consistent pathways for macro-economic, energy system related and land use variables and connect them to the resulting emissions.</p>
 
-    <LayoutScrollify vis="VisIamStructure">
+    <LayoutIAMs/>
+
+    <!-- <LayoutScrollify vis="VisIamStructure">
 
       <div>
         <p>Here we give a very simple example of such an IAM. We assume that GDP is driven by the population, respectively the working force, energy and capital stock. As you can see all of those three factors are raising and so is GDP.</p>
@@ -23,7 +25,7 @@
         <p>Using this model we demonstrate the impact of assumptions like the population growth rate and introduction of a carbon tax. You can explore how different socio-economic and climate change mitigation scenarios could look like in this very simple IAM. If you toggle the switches below the chart you&#8217;ll see how higher population leads to higher GDP and consumption but also to higher energy needs. Introducing a carbon tax makes it lucrative to invest into clean energy and less into dirty energy and thereby emissions drop quickly.</p>
       </div>
 
-    </LayoutScrollify>
+    </LayoutScrollify> -->
 
     <LayoutScrollify
       vis="VisFingerprints"

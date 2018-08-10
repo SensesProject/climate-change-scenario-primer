@@ -2,8 +2,9 @@
   <g
     ref="VisIamStructureChart"
     :transform="transform"
+    :opacity="opacity"
     class="VisIamStructureChart">
-    <g :transform="`translate(${-width / 2} ${padding.y * 0.5})`">
+    <g :transform="`translate(${-width / 2} 0)`">
       <rect
         :width="width"
         :height="height"
@@ -15,16 +16,16 @@
           :class="[element.color]"/>
         <g :transform="`translate(${ width / 2 } 0)`">
           <text
-            y="2"
+            y="6"
             class="label">{{ element.name }}</text>
           <line
             v-if="dashIn"
             :y1="-padding.y / 2"
-            :y2="-2"
+            :y2="0"
             :class="[element.color]"/>
           <line
             v-if="dashOut"
-            :y1="height + 2"
+            :y1="height"
             :y2="height + padding.y / 2"
             :class="[element.color]"/>
         </g>
@@ -59,6 +60,10 @@ export default {
     transform: {
       type: String,
       default: `translate(0 0)`
+    },
+    opacity: {
+      type: Number,
+      default: 1
     },
     scenario: {
       type: String,
@@ -111,7 +116,8 @@ export default {
 @import "~@/assets/style/global";
 .VisIamStructureChart {
   .background {
-    fill: $color-pale-gray;
+    // fill: $color-pale-gray;
+    fill: $color-black;
   }
 
   polygon {
@@ -138,6 +144,7 @@ export default {
 
   line {
     stroke-width: 2;
+    stroke: $color-light-gray;
 
     &.yellow {
       stroke: $color-yellow
@@ -164,6 +171,7 @@ export default {
     dominant-baseline: hanging;
     text-anchor: middle;
     font-size: 14px;
+    fill: $color-pale-gray;
   }
 }
 </style>
