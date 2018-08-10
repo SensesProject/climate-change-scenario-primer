@@ -1,0 +1,111 @@
+input[type=range] {
+  height: 4px;
+  background: $color-black;
+  -webkit-appearance: none;
+  margin: 10px 0;
+  width: 100%;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 0px 0px 0px $color-black;
+  background: $color-black;
+  border-radius: 0px;
+  border: 0px solid $color-black;
+  -webkit-appearance: none;
+}
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 0px 0px 0px $color-black;
+  border: 1px solid $color-light-gray;
+  height: 14px;
+  width: 14px;
+  border-radius: 14px;
+  background: $color-light-gray;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -6.5px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: $color-light-gray;
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 0px 0px 0px $color-black;
+  background: $color-light-gray;
+  border-radius: 0px;
+  border: 0px solid $color-black;
+}
+input[type=range]::-moz-range-thumb {
+  box-shadow: 1px 1px 1px $color-black;
+  border: 1px solid $color-black;
+  height: 14px;
+  width: 14px;
+  border-radius: 14px;
+  background: $color-light-gray;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: $color-light-gray;
+  border: 0px solid $color-black;
+  border-radius: 0px;
+  box-shadow: 0px 0px 0px $color-black;
+}
+input[type=range]::-ms-fill-upper {
+  background: $color-light-gray;
+  border: 0px solid $color-black;
+  border-radius: 0px;
+  box-shadow: 0px 0px 0px $color-black;
+}
+input[type=range]::-ms-thumb {
+  margin-top: 1px;
+  box-shadow: 1px 1px 1px $color-black;
+  border: 1px solid $color-black;
+  height: 14px;
+  width: 14px;
+  border-radius: 14px;
+  background: $color-light-gray;
+  cursor: pointer;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: $color-light-gray;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: $color-light-gray;
+}
+
+input[type=range].red::-webkit-slider-runnable-track {
+  background: $color-red;
+}
+input[type=range].red::-moz-range-track {
+  background: $color-red;
+}
+input[type=range].red::-ms-track {
+  background: $color-red;
+}
+
+input[type=range].green::-webkit-slider-runnable-track {
+  background: $color-green;
+}
+input[type=range].green::-moz-range-track {
+  background: $color-green;
+}
+input[type=range].green::-ms-track {
+  background: $color-green;
+}
