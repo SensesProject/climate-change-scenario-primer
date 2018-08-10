@@ -60,6 +60,11 @@ export default {
   computed: {
     ...mapState(['chapters'])
   },
+  watch: {
+    '$route.path' () {
+      this.toggleMenu()
+    }
+  },
   methods: {
     toggleMenu () {
       this.showMenu = !this.showMenu
