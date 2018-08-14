@@ -71,7 +71,10 @@ export default {
     }
   },
   data () {
-    return {}
+    return {
+      points: [],
+      animation: null
+    }
   },
   computed: {
     visible () {
@@ -97,17 +100,41 @@ export default {
     },
     graph () {
       const { graphHeight, element, scenario, width } = this
-
-      const data = element.data[scenario]
-      const scaleX = width / (data.length - 1)
+      const scaleX = width / (element.data[scenario].length - 1)
       const scaleY = -graphHeight / element.data.max
-
-      const points = data.map((y, x) => `${x * scaleX},${y * scaleY}`).join(' ')
-
+      const points = this.points.map((y, x) => `${x * scaleX},${y * scaleY}`).join(' ')
       return `0,0 ${points} ${width},0`
     }
   },
+  watch: {
+    scenario: {
+      handler (newVal, oldVal) {
+        if (cancelAnimationFrame == null) return
+        cancelAnimationFrame(this.animation)
+        this.animation = requestAnimationFrame(t => {
+          this.animate(newVal, this.points.map(d => d), 200, t, t)
+        })
+      }
+    }
+  },
+  created () {
+    this.points = this.element.data[this.scenario]
+  },
   methods: {
+    animate (scenario, oldData, duration, start, t) {
+      const newData = this.element.data[scenario]
+
+      const step = Math.max(0, (start + duration - t) / duration)
+      console.log(step)
+      this.points = newData.map((d, i) => {
+        return +d + (oldData[i] - d) * step
+      })
+      if (step > 0) {
+        this.animation = requestAnimationFrame(t => {
+          this.animate(scenario, oldData, duration, start, t)
+        })
+      }
+    }
   }
 }
 </script>
