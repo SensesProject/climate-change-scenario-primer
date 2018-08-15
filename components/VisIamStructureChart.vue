@@ -125,7 +125,6 @@ export default {
       const newData = this.element.data[scenario]
 
       const step = Math.max(0, (start + duration - t) / duration)
-      console.log(step)
       this.points = newData.map((d, i) => {
         return +d + (oldData[i] - d) * step
       })
