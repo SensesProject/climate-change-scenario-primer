@@ -54,10 +54,10 @@ export default {
 .InHighlight {
   padding-right: 0.3em;
   font-family: $font-sans;
+  color: inherit;
 
   .highlight {
     cursor: default;
-    color: $color-text;
     @include underline($color-gray);
     &.active {
       @include underline-active($color-violet);
