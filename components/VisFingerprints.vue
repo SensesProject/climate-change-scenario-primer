@@ -192,11 +192,23 @@
           <line
             x1="-8"
             x2="-82"/>
-          <text>
+          <!-- <text>
             <tspan dy="-0.6em">Climate and non-climate</tspan>
             <tspan
               x="0"
               dy="1.2em">environmental change</tspan>
+          </text> -->
+          <text>
+            <tspan dy="-1.8em">Climate and</tspan>
+            <tspan
+              x="0"
+              dy="1.2em">non-climate</tspan>
+            <tspan
+              x="0"
+              dy="1.2em">environmental</tspan>
+            <tspan
+              x="0"
+              dy="1.2em">change</tspan>
           </text>
         </g>
       </g>
