@@ -454,7 +454,9 @@ export default {
       this.gHeights[1] = width >= 800 ? 380 : 440
       this.$emit('setGHeights', this.gHeights)
       this.$nextTick(() => {
-        this.width = this.$refs.VisFingerprints.getBoundingClientRect().width
+        if (this.$refs.VisFingerprints != null) {
+          this.width = this.$refs.VisFingerprints.getBoundingClientRect().width
+        }
       })
     },
     setHover (property) {
