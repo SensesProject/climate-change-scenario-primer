@@ -4,6 +4,7 @@
     div.structure
       div.graphic-wrapper(ref="structureGraphic")
         svg.graphic(
+          v-if='ready'
           width='100%',
           height='100%')
           VisIamStructureChart(
@@ -40,6 +41,23 @@
               input.red(type='range', min=0, max=3, v-model.number='scenarioCarbon')
               span {{ scenarioNames.carbon[scenarioCarbon] }}
           p Using this model we demonstrate the impact of assumptions like the population growth rate and introduction of a carbon tax. Explore how different socio-economic and climate change mitigation scenarios play out.
+    div.fingerprint
+      div.text-wrapper(ref="fingerprintText")
+        div(v-bind='pFingerprint[0]')
+          p The IAMs used to generate SSP scenarios are a lot more complex. Clean and dirty energy is differentiated into energy sources and emissions into different types:
+        div(v-bind='pFingerprint[1]')
+          p Overall the more complex IAMs represent more aspects of the macro-economy and take into account more types of technologies to produce energy at different levels and calculate a variety of produced emissions.
+        div.graphic-wrapper(ref='fingerprintStepper', step="1")
+          VisFingerprints(
+            :pHeights='pFingerprintHeights',
+            :step='step2',
+            :selectedModel='fingerprintModel',
+            :hoverModel='hoverModel'
+            @setGHeights='setGFingerprintHeights',
+            @hover="setHoverModels")
+        LayoutRadioGroup(:options='fingerprintOptions', v-model='fingerprintModel', :highlight="hoverModels", @hover='setHoverModel')
+        div(v-bind='pFingerprint[2]', ref='fingerprintStepper2', step="2")
+          p But there are also key differences between IAMs. Some are more detailed in specific aspects and cover different categories better then others. As this makes some better suited to handle the input assumptions of one SSP each of the SSPs has its own reference model.
 </template>
 
 <script>
@@ -52,19 +70,53 @@ if (typeof window !== 'undefined') {
 export default {
   data () {
     return {
+      ready: false,
       width: 0,
       height: 0,
       highPopulationGrowth: false,
       carbonTax: false,
       step: 0,
+      step2: 0,
       pStructureHeights: [0, 0, 0, 0],
+      pFingerprintHeights: [0, 0, 0],
+      pFingerprint: [null, null, null],
+      gFingerprintHeights: [0, 0],
       observer: null,
+      observer2: null,
+      fingerprintIntersections: {
+        step1: false,
+        step2: false
+      },
       scenarioPopulation: 2,
       scenarioCarbon: 0,
       scenarioNames: {
         population: ['declining', 'stagnent', 'growing', 'growing rapidly'],
         carbon: ['none', 'low', 'medium', 'high']
-      }
+      },
+      fingerprintModel: 'IMAGE',
+      hoverModel: null,
+      hoverModels: [],
+      fingerprintOptions: [{
+        label: 'IMAGE (SSP1)',
+        value: 'IMAGE',
+        color: 'blue'
+      }, {
+        label: 'MESSAGE-GLOBIUM (SSP2)',
+        value: 'MESSAGE-GLOBIUM',
+        color: 'green'
+      }, {
+        label: 'AIM/CGE (SSP3)',
+        value: 'AIM/CGE',
+        color: 'yellow'
+      }, {
+        label: 'GCAM4 (SSP4)',
+        value: 'GCAM4',
+        color: 'red'
+      }, {
+        label: 'REMIND-MAGPIE (SSP5)',
+        value: 'REMIND-MAGPIE',
+        color: 'violet'
+      }]
     }
   },
   computed: {
@@ -168,7 +220,23 @@ export default {
         this.height = this.$refs.structureGraphic.getBoundingClientRect().height
         this.$emit('setHeight', this.height)
         this.setParagraphHeights()
+        this.ready = true
       })
+    },
+    setGFingerprintHeights (heights) {
+      this.pFingerprint = [{
+        style: {
+          'padding-top': `0px`
+        }
+      }, {
+        style: {
+          'padding-top': `${heights[0]}px`
+        }
+      }, {
+        style: {
+          'padding-top': `0px`
+        }
+      }]
     },
     transformX (x) {
       const { padding, chartWidth } = this
@@ -186,6 +254,15 @@ export default {
       this.pStructureHeights = '....'.split('').map((d, i) => {
         return this.$refs.structureText.children[i].children[0].getBoundingClientRect().height + this.padding.y
       })
+      this.pFingerprintHeights = '...'.split('').map((d, i) => {
+        return this.$refs.fingerprintText.children[i].children[0].getBoundingClientRect().height
+      })
+    },
+    setHoverModel (e) {
+      this.hoverModel = e
+    },
+    setHoverModels (e) {
+      this.hoverModels = e
     },
     observe () {
       // init intersection observer (client-side rendering only)
@@ -198,13 +275,34 @@ export default {
       this.observer = new window.IntersectionObserver(entries => {
         const intersectingElements = entries.filter(entry => entry.isIntersecting).map(entry => entry.target)
         if (intersectingElements.length > 0) {
-          this.step = +intersectingElements[0].getAttribute('step')
+          this.step = 1
         } else {
           this.step = 0
         }
       }, observerOptions)
 
       this.observer.observe(this.$refs.strucureOptions)
+
+      this.observer2 = new window.IntersectionObserver(entries => {
+        const oldIns = this.fingerprintIntersections
+        let newIns = { step1: oldIns.step1, step2: oldIns.step2 }
+        entries.forEach(e => {
+          newIns[`step${e.target.getAttribute('step')}`] = e.isIntersecting
+        })
+
+        if (newIns.step1 === false && newIns.step2 === false && !(oldIns.step1 === false && oldIns.step2 === true)) {
+          this.step2 = 0
+        } else {
+          this.step2 = 1
+        }
+        this.fingerprintIntersections = newIns
+      }, {
+        threshold: 0,
+        rootMargin: `30% 0% -30% 0%`
+      })
+
+      this.observer2.observe(this.$refs.fingerprintStepper)
+      this.observer2.observe(this.$refs.fingerprintStepper2)
     }
   }
 }
@@ -244,7 +342,6 @@ export default {
       position: absolute;
       width: 100%;
       height: 100%;
-      // min-width: 288px;
 
       .graphic {
         width: 100%;
@@ -257,7 +354,6 @@ export default {
           stroke-width: 2;
           stroke-linecap: square;
           transition: opacity $transition-time;
-          // stroke: $color-light-gray;
 
           &.yellow {
             stroke: $color-yellow
@@ -284,6 +380,10 @@ export default {
 
     .text-wrapper {
       z-index: 1;
+
+      > div {
+        padding-top: $spacing-unit;
+      }
       p {
         padding: $spacing-unit / 2 0;
       }
@@ -313,8 +413,9 @@ export default {
           justify-content: center;
 
           span {
-            width: 90px;
+            width: 76px;
             font-size: 0.8em;
+            white-space: nowrap;
 
             @include media-query($device-narrow) {
               width: 100px;
@@ -333,6 +434,32 @@ export default {
           }
         }
       }
+    }
+  }
+
+  .fingerprint {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: 760px;
+    position: relative;
+
+    .text-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+    .graphic-wrapper {
+      width: 100%;
+    }
+
+    .LayoutRadioGroup {
+      max-width: 600px;
+      align-self: center;
+      margin-bottom: $spacing-unit / 2;
     }
   }
 }
