@@ -24,6 +24,7 @@ import VisCyclePartLarge from '~/components/VisCyclePartLarge'
 import VisCycleCircle from '~/components/VisCycleCircle'
 
 import InHighlight from '~/components/InHighlight'
+import InLegendSequential from '~/components/InLegendSequential'
 
 import { ResizeObserver } from 'vue-resize'
 
@@ -51,5 +52,6 @@ Vue.component('VisCyclePartLarge', VisCyclePartLarge)
 Vue.component('VisCycleCircle', VisCycleCircle)
 
 Vue.component('InHighlight', InHighlight)
+Vue.component('InLegendSequential', InLegendSequential)
 
 Vue.component('ResizeObserver', ResizeObserver)
