@@ -1,9 +1,11 @@
+const nodeExternals = require('webpack-node-externals')
 const { favicon, msapplication } = require('./assets/js/favicon.js')
 
 module.exports = {
   /*
   ** Headers of the page
   */
+  // mode: 'spa',
   router: {
     base: '/primer/'
   },
@@ -39,7 +41,7 @@ module.exports = {
     /*
     ** Run ESLint on save
     */
-    extend (config, { isDev, isClient }) {
+    extend (config, { isDev, isClient, isServer }) {
       if (isDev && isClient) {
         config.module.rules.push({
           enforce: 'pre',
@@ -47,6 +49,13 @@ module.exports = {
           loader: 'eslint-loader',
           exclude: /(node_modules)/
         })
+      }
+      if (isServer) {
+        config.externals = [
+          nodeExternals({
+            whitelist: [/^ol|^proj4/]
+          })
+        ]
       }
     }
   }

@@ -1,9 +1,17 @@
 <template>
   <div class="LayoutColumns">
     <div class="left">
+      <span
+        v-if="leftTitle"
+        class="title"
+        v-html="leftTitle"/>
       <slot name="left"/>
     </div>
     <div class="right">
+      <span
+        v-if="rightTitle"
+        class="title"
+        v-html="rightTitle"/>
       <slot name="right"/>
     </div>
   </div>
@@ -11,7 +19,16 @@
 
 <script>
 export default {
-
+  props: {
+    leftTitle: {
+      type: String,
+      default: null
+    },
+    rightTitle: {
+      type: String,
+      default: null
+    }
+  }
 }
 </script>
 
@@ -25,6 +42,12 @@ export default {
   > div {
     flex: 1;
     width: 100%;
+
+    .title {
+      display: block;
+      text-align: center;
+      font-size: 0.9em;
+    }
   }
   .left {
     margin: 0 0 #{$spacing-unit / 2} 0;

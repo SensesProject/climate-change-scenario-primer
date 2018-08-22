@@ -316,6 +316,8 @@ export default {
   padding: $spacing-unit * 1.5 $spacing-unit;
   color: $color-white;
   margin-top: 0;
+  // max-width: 952px;
+  max-width: 1150px;
 
   p {
     font-family: $font-sans;
@@ -326,7 +328,7 @@ export default {
   @include flex-column();
 
   @include media-query($device-wide) {
-    width: calc(100vw - #{$nav-width-laptop});
+    width: calc(100vw - #{$nav-width-laptop} - #{$spacing-unit * 2});
   }
 
   .structure {
