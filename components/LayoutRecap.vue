@@ -18,28 +18,31 @@ export default {
 @import "~@/assets/style/global";
 .LayoutRecap {
   width: 100vw;
-  border-top: 1px solid $color-accent;
-  border-bottom: 1px solid $color-accent;
+  // border-top: 1px solid $color-accent;
+  // border-bottom: 1px solid $color-accent;
   margin: $spacing-unit #{-$spacing-unit / 2} -$spacing-unit #{-$spacing-unit / 2};
   transform: translateX(-50vw);
   display: flex;
   justify-content: center;
+  background: $color-black;
+  color: $color-white;
 
   .box {
     @include flex-column();
     transform: translateX(50vw);
-    border: 1px solid $color-accent;
-    border-left: none;
-    margin: -1px;
+    // border: 1px solid $color-accent;
+    // border-left: none;
     // max-width: 760px;
     justify-content: center;
     align-items: center;
+    background: $color-black;
 
     padding: $spacing-unit;
     margin-right: $spacing-unit;
 
     h3 {
-      font-size: 1rem;
+      font-size: 1.4rem;
+      margin-bottom: $spacing-unit /2;
     }
     ul {
       max-width: calc(760px - #{$spacing-unit});
