@@ -4,7 +4,7 @@ export default [{
 }, {
   title: 'What are Climate Change Scenarios?'
 }, {
-  title: 'How are Socioeconomics and Climate connected?'
+  title: 'How are Socioeconomic Development and Climate Change connected?'
 }, {
   title: 'Socioeconomics',
   cycle: 'first'
@@ -12,7 +12,10 @@ export default [{
   title: 'Energy, Land Use and Emissions',
   cycle: 'double'
 }, {
-  title: 'Climate',
+  title: 'Mitigation',
+  cycle: 'none'
+}, {
+  title: 'Climate Change',
   cycle: 'normal'
 }, {
   title: 'Climate Impacts',

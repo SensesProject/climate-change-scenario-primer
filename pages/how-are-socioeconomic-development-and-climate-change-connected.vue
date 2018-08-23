@@ -1,6 +1,6 @@
 <template>
   <section class="wrapper">
-    <h2>How are Socioeconomics and Climate connected?</h2>
+    <h2>How are Socioeconomic Development and Climate Change connected?</h2>
 
     <p>Climate change and human socioeconomic behaviour are inseparably intertwined.</p>
     <VisCycleCircle/>

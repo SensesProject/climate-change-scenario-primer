@@ -52,72 +52,11 @@
       <InHighlight
         field="charts.ssp"
         class="violet"
-        value="SSP5">SSP5</InHighlight>comes at a cost: High energy needs and with that lots of C02-emissions. Until now we only looked at SSP-Baseline Scenarios where we assume that the world will develop like business-as-usual in the future. Negative impacts of climate change are ignored. Let&#8217;s now set emission goals and include RCPs.
-    </p>
-
-    <LayoutColumns>
-      <VisChart
-        slot="left"
-        :max="3200"
-        legend="rcp"
-        scenario="carbonSsp1"/>
-      <VisChart
-        slot="right"
-        :max="3200"
-        legend="rcp"
-        scenario="carbonSsp5"/>
-    </LayoutColumns>
-
-    <p>That&#8217;s means introducing a carbon price. The height of which of course depends on the former emissions and our goal.</p>
-
-    <LayoutColumns>
-      <VisChart
-        slot="left"
-        :max="1200"
-        dynamic-filter="SSP1"
-        legend="rcp"
-        scenario="finalenergy"/>
-      <VisChart
-        slot="right"
-        :max="140000"
-        dynamic-filter="SSP1"
-        scenario="emissions"/>
-    </LayoutColumns>
-
-    <p class="ssp-selection">
-      <InHighlight
-        :out="false"
-        init-active
-        field="charts.filter"
-        class="green"
-        value="SSP1">SSP1</InHighlight>
-      <InHighlight
-        :out="false"
-        field="charts.filter"
-        class="blue"
-        value="SSP2">SSP2</InHighlight>
-      <InHighlight
-        :out="false"
-        field="charts.filter"
-        class="red"
-        value="SSP3">SSP3</InHighlight>
-      <InHighlight
-        :out="false"
-        field="charts.filter"
-        class="yellow"
-        value="SSP4">SSP4</InHighlight>
-      <InHighlight
-        :out="false"
-        field="charts.filter"
-        class="violet"
-        value="SSP5">SSP5</InHighlight>
-    </p>
-    <p>
-      Compared to the Baseline-Scenarios this results in some reductions in final energy and substantially decreased emissions.
+        value="SSP5">SSP5</InHighlight>comes at a cost: High energy needs and with that lots of C02-emissions.
     </p>
     <LayoutRecap>
       <li>Integrated assessment models (IAMs) are complex systems that use socioeconomic assumptions to produce scenarios.</li>
-      <li>Applying SSP-RCP-assumptions on to IAMs allows us to explore how land use, energy use and emissions will play out in those futures.</li>
+      <li>Applying SSP-assumptions on to IAMs allows us to explore how land use, energy use and emissions will play out in those futures.</li>
     </LayoutRecap>
     <LayoutNextChapter/>
   </section>
