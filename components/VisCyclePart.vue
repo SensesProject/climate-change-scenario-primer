@@ -30,7 +30,9 @@
       class="dots"
       width="32px"
       height="32px">
-      <g transform="translate(31 0)">
+      <g
+        v-if="type !== 'none'"
+        transform="translate(31 0)">
         <g v-if="type !== 'double'">
           <circle r="5.5"/>
         </g>

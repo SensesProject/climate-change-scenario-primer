@@ -3,8 +3,6 @@
     <h2>Socioeconomics</h2>
     <p>Given the long-term nature of climate change, the research dealing with its implications and solutions requires a long-term perspective as well. The SSP-RCP Scenario Framework is a combination of socioeconomic and emission pathway assumptions. The framework opens a broad and explorable space of possible futures other scenarios can connect to.</p>
 
-    <h3 id="ssps">SSPs</h3>
-
     <p>There are five Shared Socioeconomic Pathways (SSPs) narrating different socioeconomic futures. This is important as we can’t predict the future and these narratives have drastically different implications for our challenges regarding climate change mitigation and adaptation.</p>
 
     <LayoutListItem>
@@ -74,57 +72,8 @@
         <p>Rapid technological development is important for economic success. But technology also plays a key role when it comes to adapting to and mitigating climate change. Overall there&#8217;s a similar pattern to education, however in SSP4 technology development varies between the two extremes rapid and slow. </p>
       </div>
     </LayoutCarousel>
-
-    <h3 id="rcps">RCPs</h3>
-
-    <p>Globally enforced emission policies are a means to reach global warming targets. This is where representative concentration pathways (RCPs) come in. Again there are five scenarios, ranging from RCP 1.9 to RCP 8.5. The value refers to the "radiative forcing", a quantity that is crucially dependent on GHG concentrations and which, in turn, determines the atmosphere's temperature. More specifically, the numbers give the change in radiative forcing in 2100 compared to preindustrial times. I.e. in the RCP2.6 scenario the globally/annually averaged radiative forcing will have risen by 2.6 W/m^2 compared to preindustrial times.</p>
-
-    <table>
-      <thead>
-        <tr>
-          <th> RCP </th>
-          <th> Forcing </th>
-          <th> Temperature </th>
-          <th> Emission Trend </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td> RCP 1.9 </td>
-          <td> 1.9 W/m2 </td>
-          <td> ~1.5°C </td>
-          <td> Very Strongly Declining Emissions </td>
-        </tr>
-        <tr>
-          <td> RCP 2.6 </td>
-          <td> 2.6 W/m2 </td>
-          <td> ~2.0°C </td>
-          <td> Strongly Declining Emissions </td>
-        </tr>
-        <tr>
-          <td> RCP 4.5 </td>
-          <td> 4.5 W/m2 </td>
-          <td> ~2.4°C </td>
-          <td> Slowly Declining Emissions </td>
-        </tr>
-        <tr>
-          <td> RCP 6.0 </td>
-          <td> 6.0 W/m2 </td>
-          <td> ~2.8°C </td>
-          <td> Stabilising Emissions </td>
-        </tr>
-        <tr>
-          <td> RCP 8.5 </td>
-          <td> 8.5 W/m2 </td>
-          <td> ~4.3°C </td>
-          <td> Rising Emissions </td>
-        </tr>
-      </tbody>
-    </table>
-    <p>The Paris Agreement aims to keep the global mean temperature increase below 2°C. This corresponds to a radiative forcing increase of 2.6 W/m2 or below, i.e. to RCP 1.9 or RCP 2.6.</p>
     <LayoutRecap>
       <li>Shared Socioeconomic Pathways (SSPs) represent five different socioeconomic futures.</li>
-      <li>Representative Concentration Pathways (RCPs) represent different emission pathways leading to a specific GHG concentration value in 2100.</li>
     </LayoutRecap>
     <LayoutNextChapter/>
   </section>
