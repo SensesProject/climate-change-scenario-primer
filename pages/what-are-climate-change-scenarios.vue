@@ -59,11 +59,11 @@
 
     :markdown-it Climate change is not happening in isolation, but in concert with other processes of environmental, social, technical, economic, and cultural change. Scenario types have emerged that embed climate change in this broader context of change. Climate-resilient development pathways generalize the concept adaptation pathways and focus on patterns of future development that make societies more resilient to climate change. Sustainable development pathways are goal-oriented pathways towards achieving a  broad set of sustainable development goals, such as the 17 goals established by the United Nations 2030 Agenda for Sustainable Development.
 
-    <LayoutRecap>
-      <li>Climate change scenarios are a powerful tool for decision making in the context of climate change.</li>
-    </LayoutRecap>
-    <LayoutNextChapter/>
-  </section>
+    LayoutRecap
+      li Climate change scenarios are a powerful tool for understanding climate change, charting response strategies, and supporting climate policy making.
+      li Climate change scenarios are not about predicting the future, but come in the form of projections of what can happen or pathways of how to reach certain goals.
+      li Climate change scenarios are usually used in pairs or larger sets which determine their context and meaning.
+    LayoutNextChapter
 </template>
 
 <script>
