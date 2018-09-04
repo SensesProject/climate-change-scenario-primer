@@ -57,14 +57,14 @@ export default {
   data () {
     return {
       width: 0,
-      colors: ['#4E40B2', '#00A5D5', '#39C88A', '#FEAE00', '#C8005F'],
+      colors: ['#39C88A', '#FEAE00', '#C8005F', '#4E40B2', '#00A5D5'],
       radius: 40,
       terms: [
-        'Socioeconomics',
+        'Socioeconomic<br>Development',
         'Energy &<br>Land Use',
         'Emissions',
         'Climate',
-        'Climate Impacts'
+        'Climate<br>Impacts'
       ]
     }
   },
@@ -79,10 +79,12 @@ export default {
         const circleRadius = 5
         const arcOffset = 15
         const cycleOffset = -72
+        const arcStartOffset = i === 0 ? 5 : 0
 
         const cycleOffsetRad = Math.PI * 2 * cycleOffset / 360
         const arcOffsetRad = Math.PI * 2 * arcOffset / 360
-        const arcStartRad = cycleOffsetRad + arcOffsetRad
+        const arcStartOffsetRad = Math.PI * 2 * arcStartOffset / 360
+        const arcStartRad = cycleOffsetRad + arcOffsetRad + arcStartOffsetRad
         const arcEndRad = Math.PI * 2 / terms.length + cycleOffsetRad - arcOffsetRad
 
         const start = {
