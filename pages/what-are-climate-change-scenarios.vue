@@ -10,50 +10,73 @@
 
     :markdown-it As scenarios are not about predicting the future, a single scenario is virtually meaningless. Scenarios are rather used in pairs or larger sets to contrast different futures and choices. For example, scenario-driven climate policy analysis relies on comparing a projection without policy intervention (typically called ‘baseline scenario’) with a pathway towards a desired goal (e.g. the 2°C goal). This fundamental context-dependence makes scenarios complex objects. Understanding a single scenario requires understanding the set of scenarios it is embedded in.
 
-    :markdown-it Owing to the nature of climate change, scenario analysis is a common tool in climate change research and its various subfields. Broadly speaking, seven different types of scenarios can be identified: **1**&nbsp;socio-economic scenarios that describe the development of societal drivers of human interference with the climate system, **2**&nbsp;emissions, concentration and climate forcing scenarios that emerge from these developments, **3**&nbsp;climate change projections that result from human climate forcing, **4**&nbsp;climate impact scenarios as a result of these climate changes, **5**&nbsp;mitigation scenarios that limit human-made climate change, **6**&nbsp;adaptation scenarios that limit the impact of climate change on societies, and **7**&nbsp;integrated scenarios that capture several of the above components of future climate change. On the following pages we will introduce these types of climate change scenarios in more detail and explain their mutual relation.
+    p Owing to the nature of climate change, scenario analysis is a common tool in climate change research and its various subfields. Broadly speaking, seven different types of scenarios can be identified:
+      ul
+        li
+          strong Socio-economic
+          |  scenarios that describe the development of societal drivers of human interference with the climate system
+        li
+          strong Emissions, concentration and climate forcing
+          |  scenarios that emerge from these developments
+        li
+          strong Climate change
+          |  scenarios that result from human climate forcing
+        li
+          strong Climate impact
+          |  scenarios as a result of these climate changes
+        li
+          strong Mitigation
+          |  scenarios that limit human-made climate change
+        li
+          strong Adaptation
+          |  scenarios that limit the impact of climate change on societies
+        li
+          strong Integrated
+          |  scenarios that capture several of the above components of future climate change
+      | On the following pages we will introduce these types of climate change scenarios in more detail and explain their mutual relation.
 
     table
       thead
         tr
+          th Scenarios
           th Projection
-          th Scenario
           th Pathway
       tbody
         tr
+          td Socio-economic
           td
             span.true
-          td socio-economic
-          td
-            span.true
-        tr
-          td
-            span.true
-          td emissions, concentration and climate forcing
-          td
-        tr
-          td
-            span.true
-          td climate change
-          td
-        tr
-          td
-            span.true
-          td climate impact
-          td
-        tr
-          td
-          td mitigation
           td
             span.true
         tr
+          td Emissions, concentration and climate forcing
           td
-          td adaptation
+            span.true
+          td
+        tr
+          td Climate change
+          td
+            span.true
+          td
+        tr
+          td Climate impact
+          td
+            span.true
+          td
+        tr
+          td Mitigation
+          td
           td
             span.true
         tr
+          td Adaptation
+          td
           td
             span.true
-          td integrated
+        tr
+          td Integrated
+          td
+            span.true
           td
             span.true
 
@@ -77,14 +100,25 @@ export default {
 @import "~@/assets/style/global";
 
 .wrapper {
+  ul {
+    // font-family: $font-sans;
+    margin: $spacing-unit / 2 0;
+    list-style: url(~/assets/img/li-black.svg);
+
+    // padding-left: $spacing-unit * 2;
+  }
+
   table {
     max-width: 760px;
+
     thead {
       tr {
         th {
           text-align: center;
-          &:first-of-type, &:last-of-type {
-            font-weight: normal;
+          font-weight: normal;
+          &:first-of-type {
+            font-weight: bold;
+            text-align: left;
           }
         }
       }
@@ -94,6 +128,11 @@ export default {
         td {
           text-align: center;
           min-width: 66px;
+          &:first-of-type {
+            // font-weight: bold;
+            text-align: left;
+            max-width: 500px;
+          }
           span.true {
             display: inline-block;
             width: 1em;
