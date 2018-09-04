@@ -72,7 +72,7 @@ export default {
   },
   data () {
     return {
-      colors: ['#C8005F', '#4E40B2', '#00A5D5', '#39C88A', '#FEAE00', '#C8005F']
+      colors: ['#00A5D5', '#39C88A', '#FEAE00', '#C8005F', '#4E40B2', '#00A5D5']
     }
   }
 }

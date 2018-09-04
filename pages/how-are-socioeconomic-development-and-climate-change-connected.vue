@@ -1,65 +1,62 @@
-<template>
-  <section class="wrapper">
-    <h2>How are Socioeconomic Development and Climate Change connected?</h2>
+<template lang="pug">
+  section.wrapper
+    h2 How are Socioeconomic Development and Climate Change connected?
 
-    <p>Climate change and human socioeconomic behaviour are inseparably intertwined.</p>
-    <VisCycleCircle/>
-    <p>Social and economic activities are the main driver of climate change and it is us humans who can act to mitigate climate change. In turn, climate change will also have serious impacts: severe weather events and rising sea levels will change the way we live. Let&#8217;s take a closer look at the cycle below, to understand this relationship.</p>
+    VisCycleCircle
+    p Climate change and socioeconomic development are deeply intertwined. Social and economic activities are the main driver of climate change. In turn, climate change will have serious impacts on these activities, e.g. by rising sea levels and exposure to severe weather events. Let’s take a closer look at the cycle below to understand the underlying relationships. Since it is us humans who drive climate change, we can also act to reduce the impact of our activities on the climate (mitigation) as well as the impact of climate change on us (adaptation).
 
-    <!-- <LayoutScrollify vis="VisCycle"> -->
+    div.cycle-part.first
+      VisCyclePartLarge(type="first")
 
-    <div class="cycle-part first">
-      <VisCyclePartLarge type="first"/>
-      <!-- <p><strong class="yellow">Socioeconomics</strong> investigate decisive factors like for example population growth, consumption and lifestyle habits, urbanisation, or equality. These inter alia define the way we live and our land and energy needs.</p> -->
-    </div>
+    div.cycle-part
+      VisCyclePartLarge(
+        :index="0",
+        type="normal"
+      )
+      :markdown-it(html) <strong class="green">Socioeconomic Development</strong> comprises a myriad of factors like population, economic activity, urbanisation, education, equality, consumption patterns and lifestyles, and institutions. These factors determine the way we live, including how we use energy and land.Socio-economic scenarios are used to describe possible socio-economic futures.
 
-    <div class="cycle-part">
-      <VisCyclePartLarge
-        :index="0"
-        type="normal"/>
-      <p><strong class="violet">Socioeconomics</strong> investigate decisive factors like for example population growth, consumption and lifestyle habits, urbanisation, or equality. These inter alia define the way we live and our land and energy needs.</p>
-    </div>
+    div.cycle-part
+      VisCyclePartLarge(
+        :index="1",
+        type="normal"
+      )
+      :markdown-it(html) <strong class="yellow">Energy & Land Use</strong> are the main source of human greenhouse gas emissions and air pollutants which both interfere with Earth’s climate. Greenhouse gas emissions include carbon dioxide from the combustion of fossil fuels and deforestation, methane from livestock, rice paddies, waste fills and fossil fuel exploration and nitrous oxide from agricultural sources. Projections of future energy and land use and associated emissions are derived from energy-economy and land use models, often coupled together to form integrated assessment models.
 
-    <div class="cycle-part">
-      <VisCyclePartLarge
-        :index="1"
-        type="normal"/>
-      <p><strong class="blue">Energy and land use</strong> are closely linked to the emissions we produce and are the major pillars in this context. E.g., the amount of 76% of all greenhouse gas emissions stems from energy production and use alone.</p>
-    </div>
+    div.cycle-part
+      VisCyclePartLarge(
+        :index="2",
+        type="normal"
+      )
+      :markdown-it(html) <strong class="red">Emissions</strong> raise the concentration of greenhouse gases and air pollutants in the atmosphere. This changes the balance between incoming sunlight and outgoing heat radiation at the top of the atmosphere, leading to a radiative forcing of the climate system. Carbon cycle, atmospheric chemistry, atmospheric transport, and radiative transfer models are used to convert emissions projections into concentration and radiative forcing projections.
 
-    <div class="cycle-part">
-      <VisCyclePartLarge
-        :index="2"
-        type="normal"/>
-      <p><strong class="green">Emissions</strong> raise the concentration of greenhouse gases in the atmosphere. This leads to raising temperatures and changes in precipitation. Thus, our future will strongly depend on the course of technological advancements and policy changes.</p>
-    </div>
+    div.cycle-part
+      VisCyclePartLarge(
+        :index="3",
+        type="normal"
+      )
+      :markdown-it(html) <strong class="violet">Climate Change</strong> is characterized by rising temperatures and changes in precipitation driven by radiative forcing of the climate system. Earth system models and coupled climate models are used to derive projections of future climate change from emissions and radiative forcing projections.
 
-    <div class="cycle-part">
-      <VisCyclePartLarge
-        :index="3"
-        type="normal"/>
-      <p>As long as no further effective measures are taken our <strong class="yellow">climate</strong> will be driven by a steady increase of emissions. These changes in climate like higher temperatures and changes in precipitation will have many side effects, like droughts or sea level raising. Research on these effects is carried out in climate impact studies.</p>
-    </div>
+    div.cycle-part
+      VisCyclePartLarge(
+        :index="4",
+        type="normal"
+      )
+      :markdown-it(html) Higher temperatures and changes in precipitation lead to <strong class="blue">Climate Impacts</strong> on natural and human systems through, inter alia, droughts, floods, and storms, sea level rise, reduced freshwater availability, heat stress, and potential large scale reconfigurations of Earth system components (‘tipping points’). Research on these effects is carried out in climate impact studies, which use a suite of models ranging from water transport models to vegetation and agriculture models to produce climate impact projections.
+    div.cycle-part.last
+      VisCyclePartLarge(type="last")
 
-    <div class="cycle-part">
-      <VisCyclePartLarge
-        :index="4"
-        type="normal"/>
-      <p><strong class="red">Climate impacts</strong> will - and already did - influence socioeconomics. It is not only direct damage to nature and resources we have to be aware of, e.g. in the form of extreme weather events resulting in high infrastructural damage or food crises leading to migration. In addition, in a world with globally connected production chains also massive indirect losses can be the consequence. The link between climate impact to socioeconomics is the most complex one in the circle and there are still significant knowledge gaps and research challenges.</p>
-    </div>
-    <div class="cycle-part last">
-      <VisCyclePartLarge type="last"/>
-      <!-- <p><strong class="yellow">Socioeconomics</strong> investigate decisive factors like for example population growth, consumption and lifestyle habits, urbanisation, or equality. These inter alia define the way we live and our land and energy needs.</p> -->
-    </div>
-    <!-- </LayoutScrollify> -->
-    <p>With climate change so dependent of socioeconomic development, we need plausible assumptions on our socioeconomic future to create credible scenarios. The SSP-RCP scenario framework, described in detail in the next chapter, offers us those assumptions.</p>
+    p Climate impacts will - and already did - influence social and economic activity. Socioeconomic damages emerge not only from the direct impact on physical infrastructure, human productivity, natural resources, and ecosystem services. They also emerge from indirect impacts such as disruptions of globally connected supply chains, deteriorating institutions and climate impact induced migration. Importantly, direct and indirect damages are not only a function of future climate change and adaptation measures, but also depend on assumptions about broader socioeconomic developments. The link between climate impacts and socio-economic damages is the most complex in the circle and there are still significant knowledge gaps and research challenges. Climate damage functions used in integrated assessment models as well sector-specific impact  representations in macroeconomic general equilibrium models have to be reconciled with a growing body of empirical findings of substantial climate and weather impacts on societies today.
 
-    <LayoutRecap>
-      <li>Above we have seen how the different aspects of climate change are inseparably interlinked.</li>
-      <li>Regarding economic production, energy and land use are the strongest drivers for emissions. From a sociological point of view population growth and lifestyle are central factors that drive emissions.</li>
-      <li>Most hope for mitigating climate change lies in policy changes and technological advancements to avert irreversible consequences of climate change.</li>
-    </LayoutRecap>
-    <LayoutNextChapter/>
+    p When it comes to analysing our response to climate change, integrated assessment models capturing the link between socio-economic developments, energy and land use, and emissions can be used to investigate emissions reductions strategies to stay below a certain warming limit (mitigation pathways / scenarios). Likewise, biophysical and economic impact models can be used to study adaptation measures to limit the impact of climate change on socioeconomic activities (adaptation pathways).
+
+    p With climate change so dependent on socioeconomic development, we need plausible assumptions about a range of possible socioeconomic futures to create credible scenarios. Socioeconomic scenarios offer us such assumptions  and are discussed in more detail in the next chapter.
+
+    LayoutRecap
+      li Socioeconomic development and climate change are intricately linked, with social and economic activities determining energy and land use determining emissions determining  climate forcing and climate change determining climate impacts which in turn affect socioeconomic developments.
+      li Different types of climate change scenarios and models are associated with the individual components of the cyclical relationship between socioeconomic development and climate change. Capturing the full cycle in a consistent modelling framework  remains a research challenge.
+      li Climate change response strategies fall into mitigation strategies to limit human impact on climate change and adaptation strategies to limit the climate change impact on humans. Mitigation and adaptation scenarios (often also called “pathways”) are used to analyse such response strategies.
+
+    LayoutNextChapter
   </section>
 </template>
 
@@ -73,6 +70,10 @@ export default {
 <style scoped lang="scss">
 @import "~@/assets/style/global";
 .wrapper {
+
+  strong {
+    hyphens: none;
+  }
 
   .cycle-part {
     // paddings: $spacing-unit / 2;
