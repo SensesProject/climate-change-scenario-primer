@@ -1,6 +1,6 @@
 <template lang="pug">
   section.wrapper
-    h2 What are Climate Change Scenarios?
+    h2.h1 What are Climate Change Scenarios?
 
     p Although we know that global warming is happening today and already has an impact on nature and human society, its most wide-ranging consequences lie in the future. Human-made climate change is driven by a myriad of societal factors over decades and centuries to come. The future development of most of these factors is deeply uncertain and will be shaped by our actions. It is thus futile to ask “What will happen?” and try to predict future climate change. But the future, while inherently uncertain, is not entirely unknowable. Scenarios can be used to explore “What can happen?” and even “What should happen”? given the fact that we are able to shape our future.
 
@@ -84,7 +84,6 @@
       li Climate change scenarios are a powerful tool for understanding climate change, charting response strategies, and supporting climate policy making.
       li Climate change scenarios are not about predicting the future, but come in the form of projections of what can happen or pathways of how to reach certain goals.
       li Climate change scenarios are usually used in pairs or larger sets which determine their context and meaning.
-    LayoutNextChapter
 </template>
 
 <script>

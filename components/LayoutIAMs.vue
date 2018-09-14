@@ -1,6 +1,6 @@
 <template lang="pug">
-  div.LayoutIAMs
-    h3 IAMs in Detail
+  div.LayoutIAMs.center
+    h3.h2 IAMs in Detail
     div.structure
       div.graphic-wrapper(ref="structureGraphic")
         svg.graphic(
@@ -155,20 +155,21 @@ export default {
       })
     },
     lines () {
-      const { iam, width, height, transformX, transformY, step } = this
+      const { iam, width, view, height, transformX, transformY, step, padding } = this
       return iam.lines.map(({points, color, minStep, maxStep}) => {
+        const off = view.width < 826 ? (view.width - width) / 2 - 1 : padding.x
         return {
           color,
           opacity: (minStep == null || step >= minStep) && (maxStep == null || step <= maxStep) ? 1 : 0,
           points: points.map((p, i) => {
-            const x = p[0] === 'min' ? -this.padding.x : p[0] === 'max' ? width + this.padding.x : transformX(p[0])
+            const x = p[0] === 'min' ? -off : p[0] === 'max' ? width + off : transformX(p[0])
 
             let y
             if (p[1] === 'min') y = 1
             else if (p[1] === 'max') y = height - 1
-            else if (p[2] === 'next') y = transformY(p[1]) - this.padding.y * 0.5
-            else if (p[2] === 'off') y = transformY(p[1] - 1) + this.padding.y + this.chartHeight
-            else y = transformY(p[1] - 1) + this.padding.y * 0.5 + this.chartHeight
+            else if (p[2] === 'next') y = transformY(p[1]) - padding.y * 0.5
+            else if (p[2] === 'off') y = transformY(p[1] - 1) + padding.y + this.chartHeight
+            else y = transformY(p[1] - 1) + padding.y * 0.5 + this.chartHeight
 
             return `${x},${y}`
           }).join(' ')
@@ -250,7 +251,7 @@ export default {
       let offset = this.pStructureHeights[0] + y * height
       if (y >= 2) offset += this.pStructureHeights[1]
       if (y >= 5) offset += this.pStructureHeights[2]
-      return offset
+      return offset - padding.y
     },
     setParagraphHeights () {
       this.pStructureHeights = '....'.split('').map((d, i) => {
@@ -315,22 +316,28 @@ export default {
 .LayoutIAMs {
   position: relative;
   background: $color-black;
-  padding: $spacing-unit * 1.5 $spacing-unit;
+  padding: $spacing $spacing / 2;
   color: $color-white;
   margin-top: 0;
-  // max-width: 952px;
-  max-width: 1150px;
+  max-width: $max-width-extended;
 
   p {
     font-family: $font-sans;
-    @include light-text();;
+    @include light-text();
+    margin: 0;
   }
 
   width: 100vw;
   @include flex-column();
+  align-items: center;
+
+  h3 {
+    width: 100%;
+    max-width: $max-width;
+  }
 
   @include media-query($device-wide) {
-    width: calc(100vw - #{$nav-width-laptop} - #{$spacing-unit * 2});
+    width: calc(100vw - 320 - #{$spacing * 2});
   }
 
   .structure {
@@ -386,10 +393,10 @@ export default {
       z-index: 1;
 
       > div {
-        padding-top: $spacing-unit;
+        padding-top: $spacing;
       }
       p {
-        padding: $spacing-unit / 2 0;
+        padding: $spacing / 2 0;
       }
 
       .options {
@@ -405,11 +412,11 @@ export default {
           // flex-direction: column;
           align-items: center;
           justify-content: center;
-          margin: 0 0 $spacing-unit / 4;
+          margin: 0 0 $spacing / 4;
 
           @include media-query($device-narrow) {
-            margin: 0 $spacing-unit / 4 $spacing-unit / 4;
-            padding: $spacing-unit / 2 $spacing-unit / 2 0;
+            margin: 0 $spacing / 4 $spacing / 4;
+            padding: $spacing / 2 $spacing / 2 0;
           }
 
           display: flex;
@@ -434,7 +441,7 @@ export default {
 
           input {
             width: 100px;
-            margin: 0 $spacing-unit / 4;
+            margin: 0 $spacing / 4;
           }
         }
       }
@@ -463,7 +470,7 @@ export default {
     .LayoutRadioGroup {
       max-width: 600px;
       align-self: center;
-      margin-bottom: $spacing-unit / 2;
+      margin-bottom: $spacing / 2;
     }
   }
 }

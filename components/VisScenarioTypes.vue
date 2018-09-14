@@ -1,7 +1,7 @@
 <template>
   <div
     ref="cycle"
-    class="VisScenarioTypes">
+    class="VisScenarioTypes center">
     <svg
       :style="{'stroke-width': strokeWidth, 'font-size': `${fontSize}px`}"
       :height="width / 2"
@@ -130,7 +130,7 @@ export default {
 @import "~@/assets/style/global";
 .VisScenarioTypes {
   width: calc(100%);
-  max-width: 760px;
+  max-width: $max-width - 160px;
   position: relative;
   // margin-right: 90px;
 

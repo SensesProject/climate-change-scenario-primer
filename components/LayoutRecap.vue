@@ -1,56 +1,97 @@
-<template>
-  <div class="LayoutRecap">
-    <div class="box">
-      <h3>Summary</h3>
-      <ul>
-        <slot/>
-      </ul>
-    </div>
-  </div>
+<template lang="pug">
+  div.LayoutCloseChapter.center.extended.no-margin
+    div.box.summary.white
+      div
+        h3 Summary
+        ul
+          slot
+    router-link.box.next-chapter.violet(:to="nextChapter.path")
+      div
+        span.next Next Chapter
+        h3.h2 {{ nextChapter.title }}
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
+  computed: {
+    ...mapState(['chapters']),
+    nextChapter () {
+      return this.chapters[this.nextIndex]
+    },
+    nextIndex () {
+      const { $route } = this
+      return (this.chapters.map(c => c.path.replace(/\//g, '')).indexOf($route.path.replace(/\//g, '')) + 1) % this.chapters.length
+    }
+  }
 }
 </script>
 
 <style scoped lang="scss">
 @import "~@/assets/style/global";
-.LayoutRecap {
-  width: 100vw;
-  // border-top: 1px solid $color-accent;
-  // border-bottom: 1px solid $color-accent;
-  margin: $spacing-unit #{-$spacing-unit / 2} -$spacing-unit #{-$spacing-unit / 2};
-  transform: translateX(-50vw);
-  display: flex;
-  justify-content: center;
-  background: $color-black;
-  color: $color-white;
-
+.LayoutCloseChapter {
+  margin: $spacing 0;
   .box {
+    // width: 100vw;
+    // max-width: $max-width-extended;
+    // flex: 1;
+    padding: $spacing $spacing / 2;
     @include flex-column();
-    transform: translateX(50vw);
-    // border: 1px solid $color-accent;
-    // border-left: none;
-    // max-width: 760px;
-    justify-content: center;
-    align-items: center;
-    background: $color-black;
 
-    padding: $spacing-unit;
-    margin-right: $spacing-unit;
-
-    h3 {
-      font-size: 1.4rem;
-      margin-bottom: $spacing-unit /2;
+    * {
+      max-width: $max-width;
     }
-    ul {
-      max-width: calc(760px - #{$spacing-unit});
-      list-style: url(~/assets/img/li.svg);
+    &.summary {
+      background: $color-accent;
 
-      li {
-        margin: #{$spacing-unit / 4} 0;
+      h3 {
+        margin-bottom: $spacing / 2;
       }
+
+      ul {
+        list-style: url(~/assets/img/li.svg);
+        line-height: 1.4 ;
+      }
+    }
+    &.next-chapter {
+      .next {
+        font-family: $font-mono;
+        display: block;
+        margin-bottom: $spacing * 0.4;
+
+        &::before {
+          content: '→';
+          display: inline-block;
+          position: absolute;
+          transform: translateX(calc(-100% #{-$spacing / 4}));
+          transition: transform $transition-time;
+        }
+      }
+      &:hover {
+        .next {
+          &::before {
+            transform: translateX(calc(-100% #{-$spacing / 8}));
+          }
+        }
+      }
+    }
+  }
+
+  @include media-query($device-medium) {
+    @include flex-row();
+    align-items: stretch;
+    .box {
+      padding: $spacing $spacing * 2;
+      align-items: flex-start;
+    }
+
+    .summary {
+      width: 60%;
+    }
+
+    .next-chapter {
+      width: 40%;
+      border: 1px solid $color-accent;
     }
   }
 }

@@ -9,6 +9,7 @@ import LayoutColumns from '~/components/LayoutColumns'
 import LayoutNav from '~/components/LayoutNav'
 import LayoutRecap from '~/components/LayoutRecap'
 import LayoutRadioGroup from '~/components/LayoutRadioGroup'
+import LayoutHeader from '~/components/LayoutHeader'
 import Logo from '~/components/Logo'
 
 import VisSsp from '~/components/VisSsp'
@@ -38,6 +39,7 @@ Vue.component('LayoutColumns', LayoutColumns)
 Vue.component('LayoutNav', LayoutNav)
 Vue.component('LayoutRecap', LayoutRecap)
 Vue.component('LayoutRadioGroup', LayoutRadioGroup)
+Vue.component('LayoutHeader', LayoutHeader)
 Vue.component('Logo', Logo)
 
 Vue.component('VisSsp', VisSsp)

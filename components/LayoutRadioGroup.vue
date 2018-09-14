@@ -96,7 +96,7 @@ export default {
   font-size: 0.8em;
 
   label {
-    padding: 0 $spacing-unit / 4;
+    padding: 0 $spacing / 4;
     span {
       white-space: nowrap;
     }
@@ -124,13 +124,13 @@ export default {
     }
     .label {
       vertical-align: middle;
-      margin-left: $spacing-unit / 4;
+      margin-left: $spacing / 4;
       transition: color 0.1s;
       display: inline-block;
       transform: translateY(-1px);
       transition: color 0.4s;
       white-space: nowrap;
-      max-width: calc(100% - 1.3rem - 2px - #{$spacing-unit * 0.5})
+      max-width: calc(100% - 1.3rem - 2px - #{$spacing * 0.5})
     }
 
     &.blue {

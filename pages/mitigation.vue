@@ -1,10 +1,10 @@
 <template>
   <section class="wrapper">
-    <h2>Mitigation</h2>
+    <h2 class="h1">Mitigation</h2>
 
     <p>Globally enforced emission policies are a means to reach global warming targets. This is where representative concentration pathways (RCPs) come in. Again there are five scenarios, ranging from RCP 1.9 to RCP 8.5. The value refers to the "radiative forcing", a quantity that is crucially dependent on GHG concentrations and which, in turn, determines the atmosphere's temperature. More specifically, the numbers give the change in radiative forcing in 2100 compared to preindustrial times. I.e. in the RCP2.6 scenario the globally/annually averaged radiative forcing will have risen by 2.6 W/m^2 compared to preindustrial times.</p>
 
-    <table>
+    <table class="no-margin">
       <thead>
         <tr>
           <th> RCP </th>
@@ -113,7 +113,6 @@
     <LayoutRecap>
       <li>Representative Concentration Pathways (RCPs) represent different emission pathways leading to a specific GHG concentration value in 2100.</li>
     </LayoutRecap>
-    <LayoutNextChapter/>
   </section>
 </template>
 
@@ -128,7 +127,7 @@ export default {
 @import "~@/assets/style/global";
 .wrapper {
   .ssp-selection {
-    margin-top: $spacing-unit * 0.5;
+    margin-top: $spacing * 0.5;
   }
 }
 </style>

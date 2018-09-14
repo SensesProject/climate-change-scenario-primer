@@ -1,6 +1,6 @@
 <template>
   <section class="wrapper">
-    <h2>Energy, Land Use and Emissions</h2>
+    <h2 class="h1">Energy, Land Use and Emissions</h2>
     <p>Scenario assumptions - e.g. offered by the SSP-RCP framework - tell us the narrative and give us the general conditions for possible futures. Based on those scenario assumptions integrated assessment models and climate impact models generate a more detailed description how possible futures could look like. They calculate energy and land use variables and the correlated emissions for both – business-as-usual and climate change mitigation assumptions.</p>
 
     <p>Integrated assessment models (IAMs) provide consistent pathways for macro-economic, energy system related and land use variables and connect them to the resulting emissions.</p>
@@ -58,7 +58,6 @@
       <li>Integrated assessment models (IAMs) are complex systems that use socioeconomic assumptions to produce scenarios.</li>
       <li>Applying SSP-assumptions on to IAMs allows us to explore how land use, energy use and emissions will play out in those futures.</li>
     </LayoutRecap>
-    <LayoutNextChapter/>
   </section>
 </template>
 
@@ -73,7 +72,7 @@ export default {
 @import "~@/assets/style/global";
 .wrapper {
   .ssp-selection {
-    margin-top: $spacing-unit * 0.5;
+    margin-top: $spacing * 0.5;
   }
 }
 </style>

@@ -84,10 +84,10 @@ export default {
   justify-content: space-between;
   // align-items: flex-start;
   border: 1px solid $color-gray;
-  padding: $spacing-unit $spacing-unit $spacing-unit / 2 $spacing-unit;
-  margin-bottom: $spacing-unit;
+  padding: $spacing $spacing $spacing / 2 $spacing;
+  margin-bottom: $spacing;
   width: 100%;
-  max-width: calc(760px + #{$spacing-unit * 2});
+  max-width: calc(760px + #{$spacing * 2});
 
   .content-wrapper {
     width: 100%;
@@ -103,7 +103,7 @@ export default {
       flex: 1;
       max-width: 420px;
       width: 100%;
-      margin: $spacing-unit / 2 0;
+      margin: $spacing / 2 0;
     }
 
     @include media-query($device-medium) {
@@ -116,7 +116,7 @@ export default {
     width: auto;
     max-width: none;
     .left {
-      margin-right: $spacing-unit * 2;
+      margin-right: $spacing * 2;
       max-width: 600px;
     }
   }
@@ -129,7 +129,7 @@ export default {
 
     .text {
       width: 100%;
-      margin-bottom: $spacing-unit / 2;
+      margin-bottom: $spacing / 2;
     }
   }
 
@@ -141,7 +141,7 @@ export default {
     .arrow {
       line-height: 1rem;
       font-family: $font-mono;
-      padding: 0 $spacing-unit * 0.25;
+      padding: 0 $spacing * 0.25;
       cursor: pointer;
       &:hover {
         color: $color-text-highlight;
@@ -149,14 +149,14 @@ export default {
     }
     .dot-wrapper {
       display: inline-flex;
-      padding: 0 $spacing-unit * 0.25;
+      padding: 0 $spacing * 0.25;
       cursor: pointer;
       transform: translateY(0.5px);
 
       .dot {
         display: inline-block;
-        width: $spacing-unit * 0.25;
-        height: $spacing-unit * 0.25;
+        width: $spacing * 0.25;
+        height: $spacing * 0.25;
         background: $color-gray;
         border-radius: 50%;
         &.active {
@@ -179,11 +179,11 @@ export default {
     height: 0px;
   }
   .fade-text-enter {
-    transform: translateX($spacing-unit / 2);
+    transform: translateX($spacing / 2);
   }
 
   .fade-text-leave-to{
-    transform: translateX(-$spacing-unit / 2);
+    transform: translateX(-$spacing / 2);
   }
 
   .fade-chart-leave-active {

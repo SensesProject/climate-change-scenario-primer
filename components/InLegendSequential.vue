@@ -95,12 +95,12 @@ export default {
   .label {
     font-size: 0.9em;
     flex: 1;
-    // padding: 0 $spacing-unit / 4;
+    // padding: 0 $spacing / 4;
   }
   // .colors {
     // display: inline-flex;
     // flex: 0;
-    // margin: 0 $spacing-unit / 4;
+    // margin: 0 $spacing / 4;
     .color {
       // width: 16px;
       flex: 1;
@@ -110,12 +110,12 @@ export default {
 
       &:nth-of-type(2) {
         border-radius: 6px 0 0 6px;
-        margin-left: $spacing-unit / 4;
+        margin-left: $spacing / 4;
         min-width: 12px;
       }
       &:nth-last-of-type(2) {
         border-radius: 0 6px 6px 0;
-        margin-right: $spacing-unit / 4;
+        margin-right: $spacing / 4;
         min-width: 12px;
       }
     // }

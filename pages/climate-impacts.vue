@@ -93,7 +93,6 @@
       <li>There is a wide range of sectors considered in climate impact research including impacts related to agriculture, energy and health.</li>
       <li>Climate impact models use data from climate and socioeconomic scenarios to create impact scenarios.</li>
     </LayoutRecap>
-    <LayoutNextChapter/>
   </section>
 </template>
 

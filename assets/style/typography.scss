@@ -1,0 +1,66 @@
+html {
+  font: normal normal 100%/1.6 $font-sans;
+  color: $color-text;
+
+  font-kerning: normal;
+  font-feature-settings: "kern";
+  hyphens: auto;
+
+  @include media-query($device-narrow) {
+    font-size: 125%;
+  }
+
+  h1, h2, h3 {
+    hyphens: manual;
+  }
+
+  h1, .h1 {
+    font: bold 2.0rem/2.6rem $font-sans;
+    color: $color-text-highlight;
+    @include media-query($device-narrow) {
+      font: bold 3rem/3.725rem $font-sans;
+    }
+    margin-bottom: $spacing;
+  }
+  h2, .h2 {
+    font: bold 1.6rem/1.25 $font-sans;
+    margin-bottom: 0;
+  }
+  h3, .h3, strong, .strong {
+    font: bold 1rem/1.6 $font-sans;
+  }
+  p, .serif {
+    font-family: $font-serif;
+  }
+  .sans {
+    font-family: $font-sans;
+  }
+  .mono {
+    font-family: $font-mono;
+  }
+  svg, .chart {
+    font: normal 0.8rem/1.25 $font-sans;
+  }
+  .chart-mono {
+    font: normal 0.8rem/1.25 $font-mono;
+  }
+
+  .yellow {
+    color: $color-yellow;
+  }
+  .green {
+    color: $color-green;
+  }
+  .blue {
+    color: $color-blue;
+  }
+  .red {
+    color: $color-red;
+  }
+  .violet {
+    color: $color-violet;
+  }
+  .white {
+    color: $color-white;
+  }
+}

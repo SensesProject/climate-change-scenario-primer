@@ -221,14 +221,14 @@ export default {
 
   .label {
     position: absolute;
-    transform: translate(#{$spacing-unit * 0.25}, -50%);
+    transform: translate(#{$spacing * 0.25}, -50%);
     line-height: 1.1;
     white-space: nowrap;
     font-weight: bold;
     text-shadow: 0 0 4px $color-white, 0 0 4px $color-white, 0 0 4px $color-white, 0 0 4px $color-white;
 
     @include media-query($device-narrow) {
-      transform: translate(#{$spacing-unit * 0.5}, -50%);
+      transform: translate(#{$spacing * 0.5}, -50%);
     }
   }
 

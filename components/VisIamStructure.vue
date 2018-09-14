@@ -214,7 +214,7 @@ export default {
   .options {
     @include flex-row();
     width: 100%;
-    margin-top: $spacing-unit * 0.25;
+    margin-top: $spacing * 0.25;
     flex-wrap: wrap;
 
     input[type=checkbox] {
@@ -228,7 +228,7 @@ export default {
       font-size: 14px;
 
       &:last-of-type {
-        margin-left: $spacing-unit;
+        margin-left: $spacing;
       }
 
       label {

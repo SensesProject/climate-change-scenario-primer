@@ -196,7 +196,7 @@ export default {
   .label {
     dominant-baseline: hanging;
     text-anchor: middle;
-    font-size: 14px;
+    font-size: 0.8rem;
     fill: $color-pale-gray;
   }
 }
