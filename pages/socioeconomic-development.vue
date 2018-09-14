@@ -28,7 +28,7 @@
         strong.yellow  moderate challenges to mitigation
         |  and
         strong.red  moderate challenges to adaptation
-      li Population growth stabilizes toward the end of the centrury
+      li Population growth stabilizes toward the end of the century
       li Current social, economic, and technological trends continue
       li Global and national institutions make slow progress toward achieving sustainable development goals
 
@@ -51,7 +51,7 @@
         strong.yellow  low challenges to mitigation
         |  and
         strong.red  high challenges to adaptation
-      li Population growth stabilizes toward the end of the centrury
+      li Population growth stabilizes toward the end of the century
       li Growing divide between globally-connected, well educated society and fragmented lower income societies
       li Unrest and conflict becomes more common
       li Global, regional and national institutions are ineffective
