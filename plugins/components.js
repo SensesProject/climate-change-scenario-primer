@@ -1,7 +1,5 @@
 import Vue from 'vue'
 
-import LayoutNextChapter from '~/components/LayoutNextChapter'
-import LayoutScrollify from '~/components/LayoutScrollify'
 import LayoutIAMs from '~/components/LayoutIAMs'
 import LayoutCarousel from '~/components/LayoutCarousel'
 import LayoutListItem from '~/components/LayoutListItem'
@@ -14,7 +12,6 @@ import Logo from '~/components/Logo'
 
 import VisSsp from '~/components/VisSsp'
 import VisSspComparison from '~/components/VisSspComparison'
-import VisIamStructure from '~/components/VisIamStructure'
 import VisIamStructureChart from '~/components/VisIamStructureChart'
 import VisFingerprints from '~/components/VisFingerprints'
 import VisChart from '~/components/VisChart'
@@ -30,8 +27,6 @@ import InLegendSequential from '~/components/InLegendSequential'
 
 import { ResizeObserver } from 'vue-resize'
 
-Vue.component('LayoutNextChapter', LayoutNextChapter)
-Vue.component('LayoutScrollify', LayoutScrollify)
 Vue.component('LayoutIAMs', LayoutIAMs)
 Vue.component('LayoutCarousel', LayoutCarousel)
 Vue.component('LayoutListItem', LayoutListItem)
@@ -44,7 +39,6 @@ Vue.component('Logo', Logo)
 
 Vue.component('VisSsp', VisSsp)
 Vue.component('VisSspComparison', VisSspComparison)
-Vue.component('VisIamStructure', VisIamStructure)
 Vue.component('VisIamStructureChart', VisIamStructureChart)
 Vue.component('VisFingerprints', VisFingerprints)
 Vue.component('VisChart', VisChart)
