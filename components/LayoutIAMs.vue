@@ -90,7 +90,7 @@ export default {
       scenarioPopulation: 2,
       scenarioCarbon: 0,
       scenarioNames: {
-        population: ['declining', 'stagnent', 'growing', 'growing rapidly'],
+        population: ['stagnent', 'growing slowly', 'growing', 'growing rapidly'],
         carbon: ['none', 'low', 'medium', 'high']
       },
       fingerprintModel: 'IMAGE',
@@ -176,12 +176,14 @@ export default {
       })
     },
     scenario () {
-      return `l00${this.scenarioPopulation === 3 ? 5 : 1}t${this.scenarioCarbon === 1 ? 15 : 0}`
+      const labourScenarios = ['0p0', '0p03', '0p06', '0p09']
+      const co2priceScenarios = ['0p0', '0p05', '0p1', '0p8']
+      return `labour${labourScenarios[this.scenarioPopulation]}_CO2price${co2priceScenarios[this.scenarioCarbon]}`
     },
     pStructure () {
       return [{
         style: {
-          'padding-top': `${this.padding.y}px`
+          'padding-top': '0px'
         }
       }, {
         style: {

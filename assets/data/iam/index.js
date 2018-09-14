@@ -1,27 +1,19 @@
-import l001t0 from './l001t0'
-import l005t0 from './l005t0'
-import l001t15 from './l001t15'
-import l005t15 from './l005t15'
+import csv from './modeldata'
 
 import { csvParse } from 'd3-dsv'
 
-const modelOutput = {
-  l001t0: csvParse(l001t0),
-  l005t0: csvParse(l005t0),
-  l001t15: csvParse(l001t15),
-  l005t15: csvParse(l005t15)
-}
-
-const variableNames = Object.keys(modelOutput.l001t0[0]).filter(key => key !== 'dummy')
+const data = csvParse(csv)
+const variableNames = Object.keys(data[0]).filter(key => key !== 'dummy')
+// const variableNames = Object.keys(modelOutput.l001t0[0]).filter(key => key !== 'dummy')
 
 const variables = variableNames.map(variable => {
   const obj = {}
-  Object.keys(modelOutput).forEach(scenario => {
-    obj[scenario] = modelOutput[scenario].map(d => d[variable]).filter((d, i) => i < 10)
+  data.forEach(row => {
+    if (obj[row.scenario] === undefined) obj[row.scenario] = []
+    obj[row.scenario].push(row[variable])
+    // obj[scenario] = modelOutput[scenario].map(d => d[variable]).filter((d, i) => i < 10)
   })
-  const max = Math.max(...Object.keys(modelOutput).map(scenario => {
-    return Math.max(...obj[scenario])
-  }))
+  const max = Math.max(...data.map(row => row[variable]))
   return {
     variable,
     ...obj,
@@ -393,7 +385,6 @@ const lines = [{
 ]
 
 export default {
-  modelOutput,
   elements: elements.map(element => {
     return {
       ...element,
