@@ -5,8 +5,9 @@
     class='Logo'
   )
     svg(
-      width='32px'
-      height='32px'
+      width='28px'
+      height='28px'
+      viewBox="0 0 32 32"
     )
       circle(
         cx=12,
@@ -45,18 +46,15 @@ export default {
   justify-content: flex-end;
   color: $color-accent;
   font-family: $font-mono;
-  position: absolute;
-  top: 0;
-  right: 0;
   font-size: 16px;
-  margin: $spacing-unit;
+  margin: $spacing / 2;
   transition: color $transition-time;
 
   svg {
-    margin-right: $spacing-unit * 0.25;
+    margin-right: $spacing * 0.25;
     fill: none;
     stroke: $color-accent;
-    stroke-width: 1.5;
+    stroke-width: 2;
     overflow: visible;
     transition: stroke $transition-time, stroke-width $transition-time;
   }

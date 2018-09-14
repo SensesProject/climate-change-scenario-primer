@@ -1,5 +1,5 @@
 <template>
-  <div class="LayoutColumns">
+  <div class="LayoutColumns extended">
     <div class="left">
       <span
         v-if="leftTitle"
@@ -36,8 +36,8 @@ export default {
 @import "~@/assets/style/global";
 .LayoutColumns {
   @include flex-column;
-  width: 100%;
-  max-width: 1160px;
+
+  // max-width: $max-width-extended;
 
   > div {
     flex: 1;
@@ -50,7 +50,7 @@ export default {
     }
   }
   .left {
-    margin: 0 0 #{$spacing-unit / 2} 0;
+    margin: 0 0 #{$spacing / 2} 0;
   }
 
   @include media-query($device-narrow) {
@@ -58,7 +58,7 @@ export default {
     align-items: flex-start;
 
     .left {
-      margin: 0 #{$spacing-unit / 2} 0 0;
+      margin: 0 #{$spacing / 2} 0 0;
     }
   }
 }

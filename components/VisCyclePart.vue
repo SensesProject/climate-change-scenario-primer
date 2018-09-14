@@ -71,19 +71,19 @@ export default {
     overflow: visible;
 
     path {
-      stroke: $color-white;
+      stroke: $color-accent;
       stroke-width: 1.5;
       fill: none;
 
       &.mask {
-        stroke: $color-accent;
+        stroke: $color-white;
         stroke-width: 3;
       }
     }
 
     circle {
-      fill: $color-white;
-      stroke: $color-accent;
+      fill: $color-accent;
+      stroke: $color-white;
       stroke-width: 3;
     }
 

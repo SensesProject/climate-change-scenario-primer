@@ -4,7 +4,6 @@
       <router-link :to="nextChapter.path">
         <section
           ref="box"
-          :class="{ active }"
           class="box">
           <span class="next">{{ label }}</span>
           <h3>{{ nextChapter.title }}</h3>
@@ -28,55 +27,15 @@ export default {
       default: 'Next Chapter'
     }
   },
-  data () {
-    return {
-      // observerOptions: {
-      //   threshold: 0,
-      //   rootMargin: '10% 0% 0% 0%'
-      // },
-      active: false
-    }
-  },
   computed: {
     ...mapState(['chapters']),
     nextChapter () {
-      // console.log(this.chapters[this.nextIndex], this.chapters[this.nextIndex].path, this.chapters[this.nextIndex].title)
       return this.chapters[this.nextIndex]
     },
     nextIndex () {
       const { $route } = this
-      // console.log($route.path, this.chapters.map(c => c.path), this.chapters, this.chapters.length, (this.chapters.map(c => c.path).indexOf($route.path) + 1) % this.chapters.length)
       return (this.chapters.map(c => c.path.replace(/\//g, '')).indexOf($route.path.replace(/\//g, '')) + 1) % this.chapters.length
     }
-  },
-  mounted () {
-    // console.log('m', this.nextIndex)
-    // const { $route } = this
-    // console.log($route.path, this.chapters.map(c => c.path), this.chapters, this.chapters.length, (this.chapters.map(c => c.path).indexOf($route.path) + 1) % this.chapters.length)
-  },
-  created () {
-    // console.log('c', this.nextIndex)
-    // const { $route } = this
-    // console.log($route.path, this.chapters.map(c => c.path), this.chapters, this.chapters.length, (this.chapters.map(c => c.path).indexOf($route.path) + 1) % this.chapters.length)
-  },
-  methods: {
-    // observe () {
-    //   if (typeof window === 'undefined') return
-    //
-    //   const { observerOptions, $refs } = this
-    //
-    //   this.observer = new window.IntersectionObserver(entries => {
-    //     // console.log('OBSERVED', entries)
-    //     setTimeout(() => {
-    //       this.active = entries[0].isIntersecting
-    //     }, 400)
-    //   }, observerOptions)
-    //   this.observer.observe($refs.box)
-    //
-    //   // Object.keys($refs).forEach(key => {
-    //   //   this.observer.observe($refs[key])
-    //   // })
-    // }
   }
 }
 </script>
@@ -84,7 +43,7 @@ export default {
 <style scoped lang="scss">
 @import "~@/assets/style/global";
 .LayoutNextChapter {
-  margin-bottom: $spacing-unit * 2;
+  margin-bottom: $spacing * 2;
   display: flex;
   width: 100%;
   overflow: hidden;
@@ -102,7 +61,7 @@ export default {
     width: 100%;
     max-width: 460px;
     background: $color-accent;
-    padding: $spacing-unit * 0.8 $spacing-unit * 1.6;
+    padding: $spacing * 0.8 $spacing * 1.6;
     transition: transform $transition-time, opacity $transition-time;
     // opacity: 0;
     // transform: translateX(100%);

@@ -21,7 +21,7 @@ export default {
 @import "~@/assets/style/global";
 
 .wrapper {
-  margin-bottom: $spacing-unit * 2;
+  margin-bottom: $spacing * 2;
 }
 
 </style>

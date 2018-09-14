@@ -20,6 +20,6 @@ export default {
   align-items: flex-start;
   justify-content: flex-start;
 
-  margin-bottom: $spacing-unit;
+  margin-bottom: $spacing;
 }
 </style>

@@ -75,7 +75,6 @@
     <LayoutRecap>
       <li>Shared Socioeconomic Pathways (SSPs) represent five different socioeconomic futures.</li>
     </LayoutRecap>
-    <LayoutNextChapter/>
   </section>
 </template>
 
@@ -90,7 +89,7 @@ export default {
 @import "~@/assets/style/global";
 .wrapper {
   h4 {
-    margin: 0 0 $spacing-unit / 2;
+    margin: 0 0 $spacing / 2;
   }
   .LayoutCarousel {
     h4 {

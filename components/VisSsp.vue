@@ -50,6 +50,6 @@ export default {
 .VisSsp {
   width: 300px;
   max-width: 30vw;
-  margin: 0 $spacing-unit #{$spacing-unit / 2} 0;
+  margin: 0 $spacing #{$spacing / 2} 0;
 }
 </style>

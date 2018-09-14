@@ -34,7 +34,6 @@
       <li>Climate models are complex systems describing the physical world including its atmosphere.</li>
       <li>Climate models generate projections on future temperature and precipitation based on GHG concentrations.</li>
     </LayoutRecap>
-    <LayoutNextChapter/>
   </section>
 </template>
 
@@ -55,7 +54,7 @@ export default {
 @import "~@/assets/style/global";
 .wrapper {
   .InLegendSequential {
-    margin-top: $spacing-unit / 2;
+    margin-top: $spacing / 2;
   }
   .map-description {
     font-size: 0.9em;

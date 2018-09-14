@@ -178,7 +178,7 @@ export default {
 
 .LayoutScrollify {
   @include media-query($device-narrow) {
-    margin: #{$spacing-unit * 2} 0;
+    margin: #{$spacing * 2} 0;
   }
 
   display: flex;
@@ -204,14 +204,14 @@ export default {
     flex: 1;
 
     @include media-query($device-narrow) {
-      padding-left: $spacing-unit / 2;
+      padding-left: $spacing / 2;
     }
 
     .section {
 
       .interactive {
-        margin-bottom: $spacing-unit;
-        margin-top: $spacing-unit;
+        margin-bottom: $spacing;
+        margin-top: $spacing;
         @include flex-row();
       }
 
@@ -227,7 +227,7 @@ export default {
           display: none;
         }
 
-        margin: $spacing-unit * 3 0;
+        margin: $spacing * 3 0;
 
         &:first-child {
           margin-top: 0 !important;
@@ -243,7 +243,7 @@ export default {
           align-items: flex-start;
           justify-content: space-around;
           // min-height: 200px;
-          margin: $spacing-unit 0;
+          margin: $spacing 0;
 
           p {
             &:first-of-type {

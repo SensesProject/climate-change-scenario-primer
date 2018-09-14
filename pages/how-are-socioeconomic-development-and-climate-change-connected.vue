@@ -1,6 +1,6 @@
 <template lang="pug">
   section.wrapper
-    h2 How are Socioeconomic Development and Climate Change connected?
+    h2.h1 How are Socioeco&shy;nomic Develop&shy;ment and Climate Change connected?
 
     VisCycleCircle
     p Climate change and socioeconomic development are deeply intertwined. Social and economic activities are the main driver of climate change. In turn, climate change will have serious impacts on these activities, e.g. by rising sea levels and exposure to severe weather events. Let’s take a closer look at the cycle below to understand the underlying relationships. Since it is us humans who drive climate change, we can also act to reduce the impact of our activities on the climate (mitigation) as well as the impact of climate change on us (adaptation).
@@ -55,8 +55,6 @@
       li Socioeconomic development and climate change are intricately linked, with social and economic activities determining energy and land use determining emissions determining  climate forcing and climate change determining climate impacts which in turn affect socioeconomic developments.
       li Different types of climate change scenarios and models are associated with the individual components of the cyclical relationship between socioeconomic development and climate change. Capturing the full cycle in a consistent modelling framework  remains a research challenge.
       li Climate change response strategies fall into mitigation strategies to limit human impact on climate change and adaptation strategies to limit the climate change impact on humans. Mitigation and adaptation scenarios (often also called “pathways”) are used to analyse such response strategies.
-
-    LayoutNextChapter
   </section>
 </template>
 
@@ -76,7 +74,7 @@ export default {
   }
 
   .cycle-part {
-    // paddings: $spacing-unit / 2;
+    // paddings: $spacing / 2;
     @include flex-row;
     justify-content: flex-start;
     width: 100%;
@@ -89,11 +87,17 @@ export default {
 
     &.last {
       align-items: flex-start;
+      margin-top: -32px;
+      background: white;
+      z-index: 1;
+      position: relative;
+      transform: translateX(0)
     }
 
     p {
-      margin: $spacing-unit / 2 0;
-      padding-left: $spacing-unit * 2;
+      margin: $spacing / 2 0;
+      padding-left: $spacing * 2;
+      z-index: 2;
     }
   }
 }
