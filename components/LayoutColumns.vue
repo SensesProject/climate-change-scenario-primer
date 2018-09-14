@@ -1,5 +1,7 @@
 <template>
-  <div class="LayoutColumns extended">
+  <div
+    :class="{mobileReverse}"
+    class="LayoutColumns">
     <div class="left">
       <span
         v-if="leftTitle"
@@ -27,6 +29,10 @@ export default {
     rightTitle: {
       type: String,
       default: null
+    },
+    mobileReverse: {
+      type: Boolean,
+      default: false
     }
   }
 }
@@ -38,6 +44,10 @@ export default {
   @include flex-column;
 
   // max-width: $max-width-extended;
+
+  &.mobileReverse {
+    flex-direction: column-reverse;
+  }
 
   > div {
     flex: 1;
@@ -56,6 +66,10 @@ export default {
   @include media-query($device-narrow) {
     @include flex-row;
     align-items: flex-start;
+
+    &.mobileReverse {
+      flex-direction: row;
+    }
 
     .left {
       margin: 0 #{$spacing / 2} 0 0;

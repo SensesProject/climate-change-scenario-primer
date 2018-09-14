@@ -123,6 +123,10 @@ table {
     align-self: center;
   }
 
+  .default {
+    width: calc(100vw - #{$spacing});
+    max-width: $max-width;
+  }
   .no-margin {
     width: 100vw;
     max-width: calc(#{$spacing} + #{$max-width});

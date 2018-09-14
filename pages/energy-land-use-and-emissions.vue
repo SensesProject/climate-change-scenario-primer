@@ -9,7 +9,7 @@
 
     <p>Feeding scenario assumptions into models will get us scenarios – a set of output variables describing the possible future consistent to the input assumptions. Let&#8217;s take a look how some of those variables play out in different scenarios.</p>
 
-    <LayoutColumns>
+    <LayoutColumns class="extended">
       <VisChart
         slot="left"
         legend="ssp"
@@ -35,7 +35,7 @@
         value="SSP5">SSP5</InHighlight>(Fossil-fuelled development) show similar patterns in population growth but significant differences when it comes to GDP.
     </p>
 
-    <LayoutColumns>
+    <LayoutColumns class="extended">
       <VisChart
         slot="left"
         :static-filter="{ssp: null, rcp: 'Baseline'}"

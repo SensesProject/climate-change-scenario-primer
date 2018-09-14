@@ -6,7 +6,7 @@ export default [{
 }, {
   title: 'How are Socioeconomic Development and Climate Change connected?'
 }, {
-  title: 'Socioeconomics',
+  title: 'Socioeconomic Development',
   cycle: 'first'
 }, {
   title: 'Energy, Land Use and Emissions',

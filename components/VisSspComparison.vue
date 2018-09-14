@@ -7,18 +7,9 @@
       :style="{'stroke-width': strokeWidth, 'font-size': `${fontSize}px`}"
       :height="height"
       :viewBox="viewBox"
+      :class="{empty: step === null}"
       width="100%">
       <filter id="gooey">
-        <!-- <feGaussianBlur
-          in="SourceGraphic"
-          stdDeviation="25"
-          color-interpolation-filters="sRGB"
-          result="blur"/>
-        <feColorMatrix
-          in="blur"
-          mode="matrix"
-          values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 200 -90"
-          result="gooey"/> -->
         <feGaussianBlur
           in="SourceGraphic"
           stdDeviation="10"
@@ -40,81 +31,96 @@
           width="100"
           height="100"/>
       </clipPath>
+
       <g
         class="chart"
-        clip-path="url(socioeconomics#rect)">
+        clip-path="url(socioeconomic-development#rect)">
         <rect
           class="background"
           width="100"
           height="100"/>
-        <g
-          class="low"
-          filter="url(socioeconomics#gooey)">
-          <polygon
-            v-if="step === 0"
-            points="60 -20 120 -20 120 120 65 65 75 50 55 20"/>
-          <polygon
-            v-if="step === 1"
-            points="50 -20 120 -20 120 50 80 45 63 37 55 20"/>
-          <polygon
-            v-if="step === 2"
-            points="55 -20 120 -20 120 120 70 60 75 50 55 20"/>
-        </g>
-        <g
-          class="high"
-          filter="url(socioeconomics#gooey)">
-          <polygon
-            v-if="step === 0"
-            points="-20 -20 50 -20 45 20 22 50 50 80 80 120 -20 120"/>
-          <polygon
-            v-if="step === 1"
-            points="-20 -20 50 -20 45 20 37 37 20 45 -20 50"/>
-          <polygon
-            v-if="step === 2"
-            points="-20 -20 50 -20 45 20 25 50 35 70 50 75 60 70 120 120 -20 120"/>
-        </g>
-        <g class="ssps">
+        <g v-if="step !== null">
           <g
-            v-for="ssp in ssps"
-            :key="`ssp-${ssp.id}`"
-            :transform="`translate(${ssp.cx} ${ssp.cy})`"
-            class="ssp">
-            <circle
-              class="ssp-circle"
-              r="16"/>
-            <text
-              :y="-6"
-              class="ssp-title">{{ ssp.id }}</text>
-            <text
-              :y="2"
-              class="ssp-description"
-              v-html="ssp.description"/>
+            class="low"
+            filter="url(socioeconomic-development#gooey)">
+            <polygon
+              v-if="step === 0"
+              points="60 -20 120 -20 120 120 65 65 75 50 55 20"/>
+            <polygon
+              v-if="step === 1"
+              points="50 -20 120 -20 120 50 80 45 63 37 55 20"/>
+            <polygon
+              v-if="step === 2"
+              points="55 -20 120 -20 120 120 70 60 75 50 55 20"/>
           </g>
+          <g
+            class="high"
+            filter="url(socioeconomic-development#gooey)">
+            <polygon
+              v-if="step === 0"
+              points="-20 -20 50 -20 45 20 22 50 50 80 80 120 -20 120"/>
+            <polygon
+              v-if="step === 1"
+              points="-20 -20 50 -20 45 20 37 37 20 45 -20 50"/>
+            <polygon
+              v-if="step === 2"
+              points="-20 -20 50 -20 45 20 25 50 35 70 50 75 60 70 120 120 -20 120"/>
+          </g>
+        </g>
+      </g>
+      <g class="ssps">
+        <g
+          v-for="ssp in ssps"
+          :key="`ssp-${ssp.id}`"
+          :transform="`translate(${ssp.cx} ${ssp.cy})`"
+          class="ssp">
+          <circle
+            class="ssp-circle"
+            r="16"/>
+          <text
+            :y="-6"
+            class="ssp-title">{{ ssp.id }}</text>
+          <text
+            :y="2"
+            class="ssp-description"
+            v-html="ssp.description"/>
         </g>
       </g>
       <g
         class="axis x-axis"
         transform="translate(0 -6)">
         <text
-          x="50"
-          y="2">
+          :y="step === null ? 111 : 2"
+          x="50">
           <tspan>Low&nbsp;&nbsp;&nbsp;&nbsp;←&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
           <tspan class="strong">Challenges for Adaptation</tspan>
           <tspan>&nbsp;&nbsp;&nbsp;&nbsp;→&nbsp;&nbsp;&nbsp;&nbsp;High</tspan>
         </text>
       </g>
       <g
-        class="axis y-axis"
+        class="axis y-axis wide"
         transform="translate(-7 100) rotate(-90)">
         <text
-          x="50"
-          y="2">
+          :y="step === null || step === 1 ? 2 : 111"
+          x="50">
           <tspan>Low&nbsp;&nbsp;&nbsp;&nbsp;←&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
           <tspan class="strong">Challenges for Mitigation</tspan>
           <tspan>&nbsp;&nbsp;&nbsp;&nbsp;→&nbsp;&nbsp;&nbsp;&nbsp;High</tspan>
         </text>
       </g>
       <g
+        class="axis y-axis mobile"
+        transform="translate(-7 100) rotate(-90)">
+        <text
+          y="2"
+          x="50">
+          <tspan>Low&nbsp;&nbsp;&nbsp;&nbsp;←&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+          <tspan class="strong">Challenges for Mitigation</tspan>
+          <tspan>&nbsp;&nbsp;&nbsp;&nbsp;→&nbsp;&nbsp;&nbsp;&nbsp;High</tspan>
+        </text>
+      </g>
+      <g
+        v-if="step !== null"
         class="key"
         transform="translate(0 104)">
         <text
@@ -140,7 +146,9 @@
           <text
             x="32"
             y="2"
-            class="left">{{ high }}</text>
+            class="left">
+            {{ high }}
+          </text>
           <text
             x="68"
             y="2"
@@ -158,15 +166,14 @@ export default {
   props: {
     step: {
       type: Number,
-      default: 0
+      default: null
     }
   },
   data () {
     return {
       width: 0,
-      colors: ['#B6A3DD', '#8665C7', '#503D77'],
       radius: 24,
-      padding: 5,
+      padding: 8,
       ssps: [{
         id: 'SSP1',
         description: 'Sustainability',
@@ -211,14 +218,16 @@ export default {
     //   return `translate(${offset} ${offset}) scale(${(100 - offset) / 100})`
     // },
     height () {
-      return this.width + this.padding * 2 * (this.width / 100)
+      if (this.step === null) return this.width - this.padding * 1 * (this.width / 100)
+      return this.width + this.padding * 1 * (this.width / 100)
     },
     relativeHeight () {
       return 100 + this.padding
     },
     viewBox () {
       const { padding } = this
-      return `-${padding} -${padding} ${100 + padding} ${100 + padding * 3}`
+      if (this.step === null) return `-${padding} -${0} ${100 + padding * 2} ${100 + padding}`
+      return `-${padding} -${padding} ${100 + padding * 2} ${100 + padding * 3}`
     },
     high () {
       return this.step === 2 ? 'Rapid' : 'High'
@@ -261,13 +270,9 @@ export default {
 <style scoped lang="scss">
 @import "~@/assets/style/global";
 .VisSspComparison {
-  max-width: 420px;
+  max-width: 400px;
   width: 100%;
   // min-width: 260px;
-
-  @include media-query($device-medium) {
-    max-width: 420px;
-  }
 
   svg {
     overflow: visible;
@@ -275,13 +280,24 @@ export default {
       fill: $color-violet;
     }
 
+    text, tspan {
+      font-size: 4px;
+      fill: $color-white;
+    }
+
+    &.empty {
+      text, tspan {
+        fill: $color-black;
+      }
+    }
+
     .low {
-      fill: white;
-      opacity: 0.4;
+      fill: $color-black;
+      opacity: 0.6;
     }
 
     .high {
-      fill: black;
+      fill: $color-white;
       opacity: 0.4;
     }
 
@@ -303,18 +319,30 @@ export default {
         fill: $color-white;
         text-anchor: middle;
         dominant-baseline: central;
-        // font-weight: bold;
         @include light-text();
-        font-style: italic;
       }
     }
   }
 
   .axis {
+    &.wide {
+      display: none;
+    }
+    @include media-query($device-narrow) {
+      &.wide {
+        display: inherit;
+      }
+      &.mobile {
+        display: none;
+      }
+    }
     text {
       dominant-baseline: central;
       text-anchor: middle;
 
+      tspan {
+        dominant-baseline: central;
+      }
       .strong {
         font-weight: bold;
       }
