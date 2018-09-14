@@ -50,7 +50,7 @@
 
     <p>Until now we only looked at SSP-Baseline Scenarios where we assume that the world will develop like business-as-usual in the future. Negative impacts of climate change are ignored. Let&#8217;s now set emission goals and include RCPs.</p>
 
-    <LayoutColumns>
+    <LayoutColumns class="extended">
       <VisChart
         slot="left"
         :max="3200"
@@ -65,7 +65,7 @@
 
     <p>That&#8217;s means introducing a carbon price. The height of which of course depends on the former emissions and our goal.</p>
 
-    <LayoutColumns>
+    <LayoutColumns class="extended">
       <VisChart
         slot="left"
         :max="1200"

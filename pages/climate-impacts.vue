@@ -78,7 +78,7 @@
 
     <p>The climate impact models – similarly to climate models – produce projections of impacts.</p>
 
-    <LayoutColumns>
+    <LayoutColumns class="extended">
       <VisChartImpact
         slot="left"
         variable="Flood"/>
