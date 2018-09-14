@@ -2,8 +2,10 @@
   section.wrapper
     h2.h1 How are Socioeco&shy;nomic Develop&shy;ment and Climate Change connected?
 
-    VisCycleCircle
-    p Climate change and socioeconomic development are deeply intertwined. Social and economic activities are the main driver of climate change. In turn, climate change will have serious impacts on these activities, e.g. by rising sea levels and exposure to severe weather events. Let’s take a closer look at the cycle below to understand the underlying relationships. Since it is us humans who drive climate change, we can also act to reduce the impact of our activities on the climate (mitigation) as well as the impact of climate change on us (adaptation).
+    p Climate change and socioeconomic development are deeply intertwined. Social and economic activities are the main driver of climate change. In turn, climate change will have serious impacts on these activities, e.g. by rising sea levels and exposure to severe weather events.
+
+    VisCycleCircle.center
+    p Let’s take a closer look at the cycle above to understand the underlying relationships. Since it is us humans who drive climate change, we can also act to reduce the impact of our activities on the climate (mitigation) as well as the impact of climate change on us (adaptation).
 
     div.cycle-part.first
       VisCyclePartLarge(type="first")
@@ -41,15 +43,21 @@
         :index="4",
         type="normal"
       )
-      :markdown-it(html) Higher temperatures and changes in precipitation lead to <strong class="blue">Climate Impacts</strong> on natural and human systems through, inter alia, droughts, floods, and storms, sea level rise, reduced freshwater availability, heat stress, and potential large scale reconfigurations of Earth system components (‘tipping points’). Research on these effects is carried out in climate impact studies, which use a suite of models ranging from water transport models to vegetation and agriculture models to produce climate impact projections.
+      :markdown-it(html) Higher temperatures and changes in precipitation lead to <strong class="blue">Climate Impacts</strong> on natural and human systems through, inter alia, droughts, floods, and storms, sea level rise, reduced freshwater availability, heat stress, and potential large scale reconfigurations of Earth system components (tipping points). Research on these effects is carried out in climate impact studies, which use a suite of models ranging from water transport models to vegetation and agriculture models to produce climate impact projections.
     div.cycle-part.last
       VisCyclePartLarge(type="last")
 
-    p Climate impacts will - and already did - influence social and economic activity. Socioeconomic damages emerge not only from the direct impact on physical infrastructure, human productivity, natural resources, and ecosystem services. They also emerge from indirect impacts such as disruptions of globally connected supply chains, deteriorating institutions and climate impact induced migration. Importantly, direct and indirect damages are not only a function of future climate change and adaptation measures, but also depend on assumptions about broader socioeconomic developments. The link between climate impacts and socio-economic damages is the most complex in the circle and there are still significant knowledge gaps and research challenges. Climate damage functions used in integrated assessment models as well sector-specific impact  representations in macroeconomic general equilibrium models have to be reconciled with a growing body of empirical findings of substantial climate and weather impacts on societies today.
+    p Climate impacts will - and already did - influence social and economic activity. Socioeconomic damages emerge not only from the direct impact on physical infrastructure, human productivity, natural resources, and ecosystem services. They also emerge from indirect impacts such as disruptions of globally connected supply chains, deteriorating institutions and climate impact induced migration. Importantly, direct and indirect damages are not only a function of future climate change and adaptation measures, but also depend on assumptions about broader socioeconomic developments.
 
-    p When it comes to analysing our response to climate change, integrated assessment models capturing the link between socio-economic developments, energy and land use, and emissions can be used to investigate emissions reductions strategies to stay below a certain warming limit (mitigation pathways / scenarios). Likewise, biophysical and economic impact models can be used to study adaptation measures to limit the impact of climate change on socioeconomic activities (adaptation pathways).
+    p The link between climate impacts and socio-economic damages is the most complex in the circle and there are still significant knowledge gaps and research challenges. Integrated assessment models use climate damage functions mapping warming levels to overall reductions in economic output. Macroeconomic general equilibrium models use climate damage functions on inputs and production factors of affected economic sectors. Both have to be reconciled with a growing body of empirical findings of substantial climate and weather impacts on societies today.
 
-    p With climate change so dependent on socioeconomic development, we need plausible assumptions about a range of possible socioeconomic futures to create credible scenarios. Socioeconomic scenarios offer us such assumptions  and are discussed in more detail in the next chapter.
+    VisCycleCircle.center(reduce-impact=true)
+
+    p Integrated assessment models are an important tool to analyse our response to climate change. Since they capture the link between socio-economic developments, energy and land use, and emissions, they can be used to investigate emissions reductions strategies to stay below a certain warming limit
+      strong.yellow  (mitigation pathways)
+      |. Likewise, biophysical and economic impact models can be used to study adaptation measures to limit the impact of climate change on socioeconomic activities
+      strong.red  (adaptation pathways)
+      |.
 
     LayoutRecap
       li Socioeconomic development and climate change are intricately linked, with social and economic activities determining energy and land use determining emissions determining  climate forcing and climate change determining climate impacts which in turn affect socioeconomic developments.
