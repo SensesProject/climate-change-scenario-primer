@@ -111,6 +111,7 @@ export default {
           .title {
             opacity: 1;
             transition: opacity .2s;
+            line-height: 1.4;
 
             &.index {
               font-size: 2rem;

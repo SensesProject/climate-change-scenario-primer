@@ -51,6 +51,10 @@ export default {
       ul {
         list-style: url(~/assets/img/li.svg);
         line-height: 1.4 ;
+
+        li + li {
+          margin-top: $spacing / 2;
+        }
       }
     }
     &.next-chapter {
