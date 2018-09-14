@@ -10,37 +10,26 @@
       <g
         v-for="(item, i) in items"
         :key="`item-${i}`"
+        :class="{'reduce-impact': reduceImpact}"
         v-bind="item.parent">
         <circle v-bind="item.circle"/>
         <path v-bind="item.arc"/>
         <path v-bind="item.arrowHead"/>
       </g>
-      <!-- <circle
-        :r="radius"
-        class="line"/>
-      <g>
-      <g
-        v-for="item in items"
-        :key="`item-${item.term}`"
-        :transform="item.transform">
-        <circle
-          v-bind="item.circle"
-          class="item-circle"/>
-        <text
-          v-bind="item.text"
-          class="item-shadow">{{ item.term }}</text>
-        <text
-          v-bind="item.text"
-          class="item-text">{{ item.term }}</text>
-      </g>
-      </g> -->
     </svg>
     <div
       v-for="(item, i) in items"
       :key="`item-${i}`"
+      :class="{'reduce-impact': reduceImpact}"
       v-bind="item.text"
       class="label"
       v-html="item.term"/>
+    <div
+      v-if="reduceImpact"
+      class="label yellow mitigation">Mitigation</div>
+    <div
+      v-if="reduceImpact"
+      class="label red adaptation">Adaptation</div>
   </div>
 </template>
 
@@ -49,16 +38,15 @@ import { mapState } from 'vuex'
 
 export default {
   props: {
-    step: {
-      type: Number,
-      default: 0
+    reduceImpact: {
+      type: Boolean,
+      default: false
     }
   },
   data () {
     return {
       width: 0,
       colors: ['#39C88A', '#FEAE00', '#C8005F', '#4E40B2', '#00A5D5'],
-      radius: 40,
       terms: [
         'Socioeconomic<br>Development',
         'Energy &<br>Land Use',
@@ -75,7 +63,7 @@ export default {
     items () {
       const { terms, colors } = this
       return terms.map((term, i) => {
-        const radius = 40
+        const radius = 45
         const circleRadius = 5
         const arcOffset = 15
         const cycleOffset = -72
@@ -133,56 +121,6 @@ export default {
         }
       })
     },
-    circles () {
-      const { terms, radius } = this
-      return terms.map((term, i) => {
-        const offset = (Math.PI / terms.length) * (-2 + 2 * i)
-        const x = Math.cos(offset) * radius
-        const y = Math.sin(offset) * radius
-        return { term, x, y }
-      })
-    },
-    // items () {
-    //   const { circles, strokeWidth, step, fontSize } = this
-    //   return circles.map(({ term, x, y }, i) => {
-    //     let color = null
-    //     if (step < 5 && i === step) {
-    //       color = 'yellow'
-    //     }
-    //     if (step === 5) {
-    //       if (i === 0) color = 'green'
-    //       if (i === 2) color = 'blue'
-    //       if (i === 4) color = 'red'
-    //     }
-    //     if (step === 6) {
-    //       if (i <= 1) color = 'green'
-    //       if (i === 4) color = 'red'
-    //     }
-    //     if (step === 7) {
-    //       if (i <= 2) color = 'green'
-    //       if (i === 3) color = 'violet'
-    //       if (i === 4) color = 'red'
-    //     }
-    //     return {
-    //       term,
-    //       transform: `translate(${x}, ${y})`,
-    //       circle: {
-    //         r: 4,
-    //         'stroke-width': strokeWidth * 2,
-    //         class: [color]
-    //       },
-    //       text: {
-    //         style: {
-    //           'font-size': `${fontSize}px`,
-    //           'text-anchor': i <= 2 ? 'end' : 'start'
-    //         },
-    //         transform: `translate(${i <= 2 ? -5 : 5} 0)`,
-    //         'stroke-width': strokeWidth * 2,
-    //         class: [color]
-    //       }
-    //     }
-    //   })
-    // },
     strokeWidth () {
       return (100 / this.width) * 2
     },
@@ -230,38 +168,47 @@ export default {
     @include media-query($device-narrow) {
       transform: translate(#{$spacing * 0.5}, -50%);
     }
+
+    &.reduce-impact {
+      color: $color-light-gray !important;
+    }
+
+    &.mitigation {
+      top: 54%;
+      right: 22%;
+    }
+    &.adaptation {
+      top: 38%;
+      left: 17%;
+    }
   }
 
   svg {
     display: block;
-    .line {
-      fill: none;
-      stroke: $color-light-gray;
-    }
 
     path {
       fill: none;
     }
 
-    .item-circle, .item-text {
-      &.yellow {
-        fill: $color-yellow
+    .reduce-impact {
+      circle {
+        fill: $color-light-gray !important;
       }
 
-      &.green {
-        fill: $color-green
+      path {
+        stroke: $color-light-gray !important;
       }
 
-      &.blue {
-        fill: $color-blue
+      &:nth-of-type(1), &:nth-of-type(2) {
+        path {
+          stroke: $color-yellow !important;
+        }
       }
 
-      &.red {
-        fill: $color-red
-      }
-
-      &.violet {
-        fill: $color-violet
+      &:nth-of-type(4), &:nth-of-type(5) {
+        path {
+          stroke: $color-red !important;
+        }
       }
     }
 
