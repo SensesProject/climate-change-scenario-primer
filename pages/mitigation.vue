@@ -15,31 +15,31 @@
       </thead>
       <tbody>
         <tr>
-          <td> RCP 1.9 </td>
+          <td> 1.9 </td>
           <td> 1.9 W/m2 </td>
           <td> ~1.5°C </td>
           <td> Very Strongly Declining Emissions </td>
         </tr>
         <tr>
-          <td> RCP 2.6 </td>
+          <td> 2.6 </td>
           <td> 2.6 W/m2 </td>
           <td> ~2.0°C </td>
           <td> Strongly Declining Emissions </td>
         </tr>
         <tr>
-          <td> RCP 4.5 </td>
+          <td> 4.5 </td>
           <td> 4.5 W/m2 </td>
           <td> ~2.4°C </td>
           <td> Slowly Declining Emissions </td>
         </tr>
         <tr>
-          <td> RCP 6.0 </td>
+          <td> 6.0 </td>
           <td> 6.0 W/m2 </td>
           <td> ~2.8°C </td>
           <td> Stabilising Emissions </td>
         </tr>
         <tr>
-          <td> RCP 8.5 </td>
+          <td> 8.5 </td>
           <td> 8.5 W/m2 </td>
           <td> ~4.3°C </td>
           <td> Rising Emissions </td>
