@@ -8,7 +8,7 @@
         :id="`bt-${i}`"
         :checked="propxyValue === option.value"
         type="radio"
-        @input="propxyValue = $event.target.value">
+        @click="propxyValue = $event.target.value">
       <label
         :key="`label-${option.value}`"
         :for="`bt-${i}`"
