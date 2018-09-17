@@ -1,4 +1,4 @@
-import Map from 'ol/WebGLMap'
+import Map from 'ol/Map'
 import View from 'ol/View'
 import {Image as ImageLayer, Vector as VectorLayer} from 'ol/layer'
 import {get as getProjection, getTransform, transform} from 'ol/proj'
