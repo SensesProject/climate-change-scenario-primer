@@ -93,7 +93,7 @@ export default {
   flex-wrap: wrap;
   justify-content: center;
 
-  font-size: 0.8em;
+  font-size: 0.9em;
 
   label {
     padding: 0 $spacing / 4;
