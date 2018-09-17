@@ -22,16 +22,16 @@
       div.center.default
         h3.h2.white Share
         div.button-group
-          a.button(href="mailto:?subject=Climate Change Scenario Primer&body=http://climatescenarios.org/primer ")
+          a.button(href="mailto:?subject=Climate Change Scenario Primer&body=→ http://climatescenarios.org/primer ")
             span.mono
               span.arrow →
               |  Mail
-          a.button(href="https://twitter.com/home?status=test", rel="noopener noreferrer")
+          a.button(href="https://twitter.com/home?status=Climate Change Scenario Primer → http://climatescenarios.org/primer", rel="noopener noreferrer")
             span.mono
               span.arrow →
               |  Twitter
           |
-          a.button(href="https://www.facebook.com/sharer/sharer.php?u=test", rel="noopener noreferrer")
+          a.button(href="https://www.facebook.com/sharer/sharer.php?u=Climate Change Scenario Primer → http://climatescenarios.org/primer", rel="noopener noreferrer")
             span.mono
               span.arrow →
               |  Facebook
@@ -39,17 +39,20 @@
     div.contact.extended.no-margin
       div.center.default
         h3.h2.violet Get in Touch
-
-        a.button(href="mailto:ahoi@fidel.computer?subject=Climate Change Scenario Primer")
-          span.mono
-            span.arrow →
-            |  Send Mail 👋
+        no-ssr
+          a.button(:href="`mailto:${address}?subject=Climate Change Scenario Primer`")
+            span.mono
+              span.arrow →
+              |  Send Mail 👋
   </section>
 </template>
 
 <script>
 export default {
-  components: {
+  data () {
+    return {
+      address: 'cornelia.auer@pik-potsdam.de'
+    }
   }
 }
 </script>
@@ -58,29 +61,28 @@ export default {
 @import "~@/assets/style/global";
 
 .wrapper {
-  margin-bottom: $spacing * 2;
+  margin-bottom: $spacing;
   .h2 {
     margin-bottom: $spacing * 0.5;
   }
+
+  .share {
+    margin-top: $spacing;
+  }
+
   .share, .contact {
-    // background: @include
     padding: $spacing 0;
     @include flex-column;
-    // @include gradient();
     background: $color-accent;
 
     .button-group {
-
       .button {
         color: $color-white;
-        // flex: 1;
-
       }
     }
 
     .button {
       white-space: nowrap;
-      // border: 1px solid $color-accent;
       padding: 0 $spacing / 2 0 0;
       .arrow {
         transition: transform $transition-time;
