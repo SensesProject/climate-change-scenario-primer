@@ -38,9 +38,10 @@ export default {
 .root {
   @include flex-column();
   align-items: center;
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
   // padding: $spacing;
+  background: $color-white;
   transition: color $transition-time, background $transition-time;
 }
 </style>
