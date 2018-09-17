@@ -1,55 +1,24 @@
-<template>
-  <div
-    :class="{vis: interactive !== null}"
-    class="LayoutCarousel">
-    <div class="content-wrapper">
-      <div class="left">
-        <div class="text">
-          <transition-group
-            name="fade-text"
-            mode="out-in">
-            <div
-              v-for="(s, i) in slotArray"
-              v-if="step === i"
-              :key="`s${i}`"
-              class="slot-wrapper">
-              <slot :name="`s${i}`"/>
-            </div>
-          </transition-group>
-        </div>
-      </div>
-      <div
-        v-if="interactive"
-        class="right">
-        <transition-group
-          name="fade-chart">
-          <component
-            v-for="(s, i) in slotArray"
-            v-if="step === i"
-            :key="`v${i}`"
-            :step="i"
-            :is="interactive"/>
-        </transition-group>
-      </div>
-    </div>
-    <div class="navigation">
-      <span
-        class="arrow"
-        @click="step = (step + slots - 1) % slots">←</span>
-      <span
+<template lang="pug">
+  div.LayoutCarousel.extended.no-margin(:class="{vis: interactive !== null}")
+    div.content-wrapper.default.center
+      div.left
+        div.text
+          transition-group(name="fade-text", mode="out-in")
+            div(
+              v-for="(s, i) in slotArray",
+              v-if="step === i",
+              :key="`s${i}`",
+              class="slot-wrapper")
+              slot(:name="`s${i}`")
+    div.navigation
+      span.arrow.white(@click="step = (step + slots - 1) % slots") ←
+      span(
         v-for="(s, i) in slotArray"
         :key="`d${i}`"
         class="dot-wrapper"
-        @click="step = i">
-        <span
-          :class="{active: step === i}"
-          class="dot"/>
-      </span>
-      <span
-        class="arrow"
-        @click="step = (step + 1) % slots">→</span>
-    </div>
-  </div>
+        @click="step = i")
+        span.dot(:class="{active: step === i}")
+      span.arrow.white(@click="step = (step + 1) % slots") →
 </template>
 
 <script>
@@ -83,14 +52,12 @@ export default {
   @include flex-column;
   justify-content: space-between;
   // align-items: flex-start;
-  border: 1px solid $color-gray;
-  padding: $spacing $spacing $spacing / 2 $spacing;
-  margin-bottom: $spacing;
-  width: 100%;
-  max-width: calc(760px + #{$spacing * 2});
+  // border: 1px solid $color-gray;
+  background: $color-black;
+  padding: $spacing 0 $spacing 0;
+  // margin-bottom: $spacing;
 
   .content-wrapper {
-    width: 100%;
     @include flex-column;
 
     .left {
@@ -129,7 +96,7 @@ export default {
 
     .text {
       width: 100%;
-      margin-bottom: $spacing / 2;
+      // margin-bottom: $spacing / 2;
     }
   }
 
@@ -137,14 +104,24 @@ export default {
     cursor: default;
     @include flex-row();
     justify-content: center;
+    align-self: center;
+    // margin-top: -$spacing;
 
     .arrow {
       line-height: 1rem;
       font-family: $font-mono;
       padding: 0 $spacing * 0.25;
       cursor: pointer;
-      &:hover {
-        color: $color-text-highlight;
+      transition: transform .2s;
+      &:first-of-type {
+        &:hover {
+          transform: translateX(-0.1em);
+        }
+      }
+      &:last-of-type {
+        &:hover {
+          transform: translateX(0.1em);
+        }
       }
     }
     .dot-wrapper {
@@ -157,10 +134,13 @@ export default {
         display: inline-block;
         width: $spacing * 0.25;
         height: $spacing * 0.25;
-        background: $color-gray;
+        border: 1.5px solid $color-white;
+        // background: $color-white;
         border-radius: 50%;
         &.active {
-          background: $color-text-highlight;
+          // border: 1.5px solid $color-white;
+          // background: $color-text-highlight;
+          background: $color-white;
         }
       }
     }
