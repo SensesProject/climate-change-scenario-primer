@@ -1,6 +1,9 @@
 <template>
-  <div class="Map">
+  <div
+    ref="VisMap"
+    class="Map">
     <div
+      :style="dimensions"
       :id="mapId"
       :class="{showMap}"
       class="map"/>
@@ -11,6 +14,7 @@
 import * as d3 from 'd3-scale'
 import * as chromatic from 'd3-scale-chromatic'
 import proj4 from 'proj4'
+import { mapState } from 'vuex'
 
 let ol = null
 if (process.browser) {
@@ -65,6 +69,9 @@ export default {
   },
   data () {
     return {
+      width: mapState([
+        'view'
+      ]).view.width,
       showMap: false,
       lowRes: null,
       highRes: null,
@@ -87,7 +94,21 @@ export default {
       timeOut: null
     }
   },
+  computed: {
+    ...mapState([
+      'view'
+    ]),
+    dimensions () {
+      return {
+        width: `${this.width}px`,
+        height: `${this.width * 0.53}px`
+      }
+    }
+  },
   watch: {
+    'view.width' () {
+      this.setWidth()
+    },
     projection () {
       this.initMap()
     },
@@ -137,9 +158,20 @@ export default {
     this.map.setTarget(this.mapId)
     this.initMap()
 
-    addEventListener('resize', this.resize, false)
+    this.setWidth()
+    // addEventListener('resize', this.resize, false)
   },
   methods: {
+    setWidth () {
+      this.width = 0
+      this.$nextTick(() => {
+        this.width = this.$refs.VisMap.getBoundingClientRect().width
+        this.$nextTick(() => {
+          // this.resize()
+          this.resize()
+        })
+      })
+    },
     resize () {
       this.timeOut = setTimeout(() => {
         this.highRes.getSource().changed()
@@ -149,7 +181,7 @@ export default {
         } else {
           this.lowRes.setSource(this.prerender())
         }
-      }, 100)
+      }, 1000)
     },
     initMap () {
       if (!process.browser) return
