@@ -99,19 +99,19 @@ export default {
       fingerprintOptions: [{
         label: 'IMAGE (SSP1)',
         value: 'IMAGE',
-        color: 'blue'
+        color: 'green'
       }, {
         label: 'MESSAGE-GLOBIUM (SSP2)',
         value: 'MESSAGE-GLOBIUM',
-        color: 'green'
+        color: 'blue'
       }, {
         label: 'AIM/CGE (SSP3)',
         value: 'AIM/CGE',
-        color: 'yellow'
+        color: 'red'
       }, {
         label: 'GCAM4 (SSP4)',
         value: 'GCAM4',
-        color: 'red'
+        color: 'yellow'
       }, {
         label: 'REMIND-MAGPIE (SSP5)',
         value: 'REMIND-MAGPIE',

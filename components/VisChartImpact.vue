@@ -342,10 +342,12 @@ export default {
         }
       }
       cursor: default;
+      font-size: 0.9rem;
+
       .key-item {
         padding-right: 0.5em;
         font-size: 0.9em;
-        // white-space: nowrap;
+        white-space: nowrap;
 
         .dot {
           height: 0.7em;

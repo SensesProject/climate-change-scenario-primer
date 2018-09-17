@@ -16,6 +16,8 @@
         scenario="population"/>
       <VisChart
         slot="right"
+        legend="ssp"
+        hide-legend
         scenario="gdp"/>
     </LayoutColumns>
 
@@ -44,6 +46,8 @@
       <VisChart
         slot="right"
         :static-filter="{ssp: null, rcp: 'Baseline'}"
+        legend="ssp"
+        hide-legend
         scenario="emissions"/>
     </LayoutColumns>
 

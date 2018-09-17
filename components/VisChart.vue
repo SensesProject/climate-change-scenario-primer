@@ -3,7 +3,7 @@
     ref="VisChart"
     class="VisChart">
     <svg
-      :style="{'stroke-width': strokeWidth, 'font-size': `${fontSize}px`}"
+      :style="{'stroke-width': strokeWidth, 'font-size': `${fontSize}`}"
       width="100%"
       viewBox="0 0 100 75">
       <g class="lines">
@@ -32,7 +32,9 @@
           :key="`tick-${i}`"
           :transform="`translate(0 ${tick.y})`"
           class="tick">
-          <text y="-0.25em">{{ tick.value }}</text>
+          <text
+            v-if="tick.value !== '0'"
+            y="-0.25em">{{ tick.value }}</text>
           <line
             :class="{zero: tick.value === '0'}"
             x2="100"/>
@@ -40,15 +42,19 @@
       </g>
     </svg>
     <div
-      v-if="legend"
-      class="key">
-      <span
-        v-for="(scenario, i) in lines"
-        v-show="!scenario.hideFromLegend"
-        :key="`key-${i}`"
-        class="key-item"><span
-          :class="scenario.attrs.class"
-          class="dot"/>&nbsp;{{ scenario.name }} </span>
+      :class="{relative: bothLegends}"
+      class="key-wrapper">
+      <div
+        :class="{hide: hideLegend}"
+        class="key extended">
+        <span
+          v-for="(scenario, i) in lines"
+          v-show="!scenario.hideFromLegend"
+          :key="`key-${i}`"
+          class="key-item"><span
+            :class="scenario.attrs.class"
+            class="dot"/>&nbsp;{{ scenario.name }} </span>
+      </div>
     </div>
   </div>
 </template>
@@ -68,6 +74,14 @@ export default {
       type: String,
       default: null
     },
+    bothLegends: {
+      type: Boolean,
+      default: false
+    },
+    hideLegend: {
+      type: Boolean,
+      default: false
+    },
     max: {
       type: Number,
       default: null
@@ -77,6 +91,10 @@ export default {
       default: null
     },
     dynamicFilter: {
+      type: Array,
+      default: null
+    },
+    legendFilter: {
       type: String,
       default: null
     }
@@ -96,15 +114,6 @@ export default {
       filter: 'charts.filter'
     }),
     data () {
-      // if (this.dynamicFilter !== null) {
-      //   return this.$store.getters.scenario(this.scenario).filter(scenario => {
-      //     if (this.dynamicFilter.split(',').length > 1) {
-      //       return scenario.ssp === (this.filter || this.dynamicFilter.split(',')[0]) || scenario.ssp === (this.filter || this.dynamicFilter.split(',')[1])
-      //     }
-      //     return scenario.ssp === (this.filter || this.dynamicFilter)
-      //     // || (this.dynamicFilter.split(',').length > 1 && (this.dynamicFilter.split(',')[0] || this.dynamicFilter.split(',')[1]))
-      //   })
-      // }
       if (this.staticFilter !== null) {
         return this.$store.getters.scenario(this.scenario).filter(scenario => {
           const ssp = this.staticFilter.ssp === null || this.staticFilter.ssp === scenario.ssp
@@ -122,7 +131,7 @@ export default {
     },
     fontSize () {
       if (this.width === 0) return 1
-      return (100 / this.width) * 16
+      return `${(100 / this.width) * 0.9}rem`
     },
     xScale () {
       return scaleLinear().domain([Math.min(...this.years), Math.max(...this.years)]).range([0, 100])
@@ -137,7 +146,7 @@ export default {
       return scaleLinear().domain(this.yDomain).range([75, 0]).nice()
     },
     lines () {
-      const { data, strokeWidth, years, xScale, yScale, highlightSsp, dynamicFilter, filter } = this
+      const { data, strokeWidth, years, xScale, yScale, highlightSsp, dynamicFilter, legendFilter } = this
       return data.map(scenario => {
         const name = this.legend === 'ssp' ? scenario.ssp : scenario.rcp === 'Baseline' ? `Baseline` : `RCP${scenario.rcp}`
         return {
@@ -147,27 +156,24 @@ export default {
               scenario.ssp,
               `RCP${scenario.rcp}`,
               {
-                fade: (highlightSsp !== null && highlightSsp !== scenario.ssp) || (dynamicFilter != null && filter !== scenario.ssp)
+                fade: (dynamicFilter == null && highlightSsp !== null && highlightSsp !== scenario.ssp) || (dynamicFilter != null && !dynamicFilter.find(f => f === scenario.ssp))
               }
             ],
             style: {'stroke-width': strokeWidth * 2},
             points: years.map(year => `${xScale(year)},${yScale(scenario[year])}`).join(' ')
           },
-          hideFromLegend: dynamicFilter != null && filter !== scenario.ssp
+          hideFromLegend: legendFilter != null && legendFilter !== scenario.ssp
         }
       })
     },
     ticks () {
       return this.yScale.ticks(4)
-        .map(value => ({value: format(',.0f')(value), y: this.yScale(value)})).filter(tick => tick.y > this.fontSize)
+        .map(value => ({value: format(',.0f')(value), y: this.yScale(value)})).filter(tick => tick.y > (100 / this.width) * 18)
     }
   },
   watch: {
     'view.width' () {
       this.setWidth()
-    },
-    'filter' () {
-      if (this.filter === null) this.filter = this.dynamicFilter
     }
   },
   mounted () {
@@ -269,45 +275,73 @@ export default {
       }
     }
   }
-  .key {
-    cursor: default;
-    font-size: 0.8rem;
-    .key-item {
-      padding-right: 0.5em;
+  .key-wrapper {
+    height: 0.9rem;
 
-      .dot {
-        height: 0.7em;
-        width: 0.7em;
-        border-radius: 50%;
-        display: inline-block;
+    &.relative {
+      position: relative;
 
-        &.SSP1 {
-          background: $color-green;
-        }
-        &.SSP2 {
-          background: $color-blue;
-        }
-        &.SSP3 {
-          background: $color-red;
-        }
-        &.SSP4 {
-          background: $color-yellow;
-        }
-        &.SSP5 {
-          background: $color-violet;
-        }
+      .key {
+        width: 100%;
+      }
+    }
 
-        &.RCP60 {
-          opacity: 0.8;
+    .key {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+
+      @include media-query($device-narrow) {
+        &.hide {
+          display: none;
         }
-        &.RCP45 {
-          opacity: 0.6;
-        }
-        &.RCP34 {
-          opacity: 0.4;
-        }
-        &.RCP26 {
-          opacity: 0.2;
+      }
+
+      cursor: default;
+
+      font-size: 0.8rem;
+      @include media-query(360px) {
+        font-size: 0.9rem;
+      }
+      .key-item {
+        padding-right: 0.5em;
+        white-space: nowrap;
+
+        .dot {
+          height: 0.7em;
+          width: 0.7em;
+          border-radius: 50%;
+          display: inline-block;
+
+          &.SSP1 {
+            background: $color-green;
+          }
+          &.SSP2 {
+            background: $color-blue;
+          }
+          &.SSP3 {
+            background: $color-red;
+          }
+          &.SSP4 {
+            background: $color-yellow;
+          }
+          &.SSP5 {
+            background: $color-violet;
+          }
+
+          &.RCP60 {
+            opacity: 0.8;
+          }
+          &.RCP45 {
+            opacity: 0.6;
+          }
+          &.RCP34 {
+            opacity: 0.4;
+          }
+          &.RCP26 {
+            opacity: 0.2;
+          }
         }
       }
     }
