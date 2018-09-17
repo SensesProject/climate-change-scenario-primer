@@ -1,12 +1,49 @@
-<template>
-  <section class="wrapper">
-    <h2>Recap</h2>
-    <p>Climate change scenarios are a powerful tool for decision making in the context of climate change.</p>
-    <p>Socioeconomics and climate change are inseparably intertwined. Socioeconomics define for example our land and energy needs, which are closely linked to emissions. Increased emissions lead to higher GHG concentrations, which leads to climate change and its impacts. Climate impacts close the cycle as they will also influence our socioeconomics.</p>
+<template lang="pug">
+  section.wrapper
+    h2.h1 Recap
+    p Climate change scenarios are a powerful tool for understanding climate change, charting response strategies, and supporting climate policy making. They are not about predicting the future, but come in the form of projections of what can happen or pathways of how to reach certain goals.
 
-    <p>To create climate change scenarios we need assumptions about the future and models which represent the relations in the cycle.</p>
+    VisCycleCircle.center
 
-    <p>On the model side <strong>integrated assessment models</strong> get us from those socioeconomic assumptions to energy, land use and emissions. <strong>Climate models</strong> take the next step towards future climate. And <strong>climate impact models</strong> show us how that effects nature and society.</p>
+    p Socioeconomics and climate change are inseparably intertwined. Socioeconomics define for example our land and energy needs, which are closely linked to emissions. Increased emissions lead to higher GHG concentrations, which leads to climate change and its impacts. Climate impacts close the cycle as they will also influence our socioeconomics.
+
+    p Socioeconomic scenarios in climate change research are increasingly based on the
+      strong  Shared Socioeconomic Pathways
+      |  which represent five different futures with widely varying challenges to mitigation and adaptation.
+
+    p On the model side
+      strong  integrated assessment models
+      |  get us from those socioeconomic assumptions to energy, land use and emissions.
+      strong  Climate models
+      |  take the next step towards future climate. And
+      strong  climate impact models
+      |  show us how that effects nature and society.
+    div.share.extended.no-margin
+      div.center.default
+        h3.h2.white Share
+        div.button-group
+          a.button(href="mailto:?subject=Climate Change Scenario Primer&body=http://climatescenarios.org/primer ")
+            span.mono
+              span.arrow →
+              |  Mail
+          a.button(href="https://twitter.com/home?status=test", rel="noopener noreferrer")
+            span.mono
+              span.arrow →
+              |  Twitter
+          |
+          a.button(href="https://www.facebook.com/sharer/sharer.php?u=test", rel="noopener noreferrer")
+            span.mono
+              span.arrow →
+              |  Facebook
+          |
+    div.contact.extended.no-margin
+      div.center.default
+        h3.h2.violet Get in Touch
+
+        a.button(href="mailto:ahoi@fidel.computer?subject=Climate Change Scenario Primer")
+          span.mono
+            span.arrow →
+            |  Send Mail 👋
   </section>
 </template>
 
@@ -22,6 +59,59 @@ export default {
 
 .wrapper {
   margin-bottom: $spacing * 2;
+  .h2 {
+    margin-bottom: $spacing * 0.5;
+  }
+  .share, .contact {
+    // background: @include
+    padding: $spacing 0;
+    @include flex-column;
+    // @include gradient();
+    background: $color-accent;
+
+    .button-group {
+
+      .button {
+        color: $color-white;
+        // flex: 1;
+
+      }
+    }
+
+    .button {
+      white-space: nowrap;
+      // border: 1px solid $color-accent;
+      padding: 0 $spacing / 2 0 0;
+      .arrow {
+        transition: transform $transition-time;
+        display: inline-block;
+      }
+      &:hover {
+        .arrow {
+          transform: translateX($spacing / 8);
+        }
+      }
+    }
+  }
+
+  .contact {
+    background: $color-white;
+    @include media-query($device-medium) {
+      border: 1px solid $color-accent;
+    }
+    .button {
+      background: $color-white;
+      .hand {
+        transition: transform .2s;
+        display: inline-block;
+      }
+      &:hover {
+        .hand {
+          transform: rotate(7deg);
+        }
+      }
+    }
+  }
 }
 
 </style>
