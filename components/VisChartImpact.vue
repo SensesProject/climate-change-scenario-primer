@@ -3,9 +3,11 @@
     ref="VisChartImpact"
     class="VisChartImpact">
     <div class="title">{{ variable }}</div>
+    <div class="axis-label">Change in global land affected</div>
     <svg
+      :height="height"
       width="100%"
-      viewBox="0 0 100 85">
+      viewBox="0 0 100 77">
       <mask id="mask1">
         <rect
           width="62.5"
@@ -62,7 +64,6 @@
           :stroke-width="strokeWidth"
           class="axis">
           <g class="y-axis">
-            <text y="0.7em">Change in global land affected in %</text>
             <g
               v-for="(tick, i) in yTicks"
               :key="`y-tick-${i}`"
@@ -74,43 +75,41 @@
           <g
             class="x-axis"
             transform="translate(0, 85)">
-            <text
-              x="100"
-              y=".2em">Change in global mean temperature in °C</text>
             <g
               v-for="(tick, i) in xTicks"
               :key="`x-tick-${i}`"
               :transform="tick.transform"
               class="x-tick">
               <text
-                x="-0.0em"
-                y="-0.9em">{{ tick.label }}</text>
+                :y="-8 + strokeWidth * 4 "
+                x="-0.0em">{{ tick.label }}</text>
               <line
-                y1="-2.2em"
-                y2="-1.9em"/>
+                :y2="-8 + strokeWidth * 4"
+                y1="-8"/>
             </g>
           </g>
         </g>
       </g>
     </svg>
-    <img
-      v-if="variable === 'rcp60'"
-      src="~/assets/img/rcp60.png">
-
-    <div
-      v-if="legend"
-      class="key">
-      <span
-        v-for="(model, i) in models"
-        :key="`key-${i}`"
-        class="key-item"><span
-          :class="model.class"
-          class="dot"/>&nbsp;{{ model.name }} </span>
+    <div class="axis-label right">Change in global mean temperature</div>
+    <div class="key-wrapper">
+      <div
+        :class="{hide: !legend}"
+        class="key extended">
+        <span
+          v-for="(model, i) in models"
+          :key="`key-${i}`"
+          class="key-item"><span
+            :class="model.class"
+            class="dot"/>&nbsp;{{ model.name }} </span>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
   props: {
     variable: {
@@ -124,14 +123,14 @@ export default {
   },
   data () {
     return {
-      width: 0,
+      width: 512,
       colors: ['#00A5D5', '#10BBDD', '#79D1E4', '#BEE6EA', '#FFFBF0', '#F6BACE', '#EA77AA', '#DA2D85', '#C8005F'],
       max: '+12°C',
       min: '-12°C',
       yValues: [{
         y: 77,
         class: ['zero'],
-        value: 0
+        value: ''
       }, {
         y: 54,
         value: 0.2
@@ -140,7 +139,7 @@ export default {
         value: 0.4
       }, {
         y: 8,
-        value: 0.6
+        value: '0.6%'
       }],
       models: [{
         name: 'GFDL-ESM2M',
@@ -155,11 +154,17 @@ export default {
     }
   },
   computed: {
+    ...mapState([
+      'view'
+    ]),
+    height () {
+      return (this.width * 0.77)
+    },
     strokeWidth () {
       return (100 / this.width)
     },
     fontSize () {
-      return (100 / this.width) * 16
+      return `${(100 / this.width) * 0.9}rem`
     },
     yTicks () {
       return this.yValues.map(val => ({
@@ -184,7 +189,7 @@ export default {
         value: 3,
         x: 75
       }, {
-        value: 4,
+        value: '4°C',
         x: 100
       }].map(d => ({
         label: d.value,
@@ -217,12 +222,14 @@ export default {
   @include flex-column;
   .title {
     width: 100%;
+    font-size: 0.9em;
+    line-height: 1.2;
   }
 
   svg {
     fill: none;
     overflow: visible;
-    margin-bottom: 1em;
+    margin-bottom: 1.2rem;
 
     mask {
       fill: white;
@@ -272,12 +279,14 @@ export default {
       }
 
       &.axis {
+        mix-blend-mode: multiply;
         text {
           fill: $color-dark-gray;
           dominant-baseline: unset;
         }
 
         line {
+
           stroke: $color-light-gray;
           stroke-linejoin: round;
         }
@@ -297,6 +306,9 @@ export default {
             &:last-child {
               text-anchor: end;
             }
+            text {
+              dominant-baseline: hanging;
+            }
           }
           line {
             stroke: $color-black;
@@ -305,31 +317,57 @@ export default {
       }
     }
   }
-  .key {
-    cursor: default;
-    .key-item {
-      padding-right: 0.5em;
 
-      .dot {
-        height: 0.7em;
-        width: 0.7em;
-        border-radius: 50%;
-        display: inline-block;
+  .axis-label {
+    font-size: 0.9rem;
+    width: 100%;
+    color: $color-dark-gray;
+    hyphens: none;
+    line-height: 1.2;
+    &.right {
+      text-align: right;
+      // margin-top: -$spacing / 4;
+    }
+  }
+  .key-wrapper {
+    height: 0.9rem;
+    .key {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      @include media-query($device-narrow) {
+        &.hide {
+          display: none;
+        }
+      }
+      cursor: default;
+      .key-item {
+        padding-right: 0.5em;
+        font-size: 0.9em;
+        // white-space: nowrap;
 
-        &.green {
-          background: $color-green;
-        }
-        &.blue {
-          background: $color-blue;
-        }
-        &.red {
-          background: $color-red;
-        }
-        &.yellow {
-          background: $color-yellow;
-        }
-        &.violet {
-          background: $color-violet;
+        .dot {
+          height: 0.7em;
+          width: 0.7em;
+          border-radius: 50%;
+          display: inline-block;
+
+          &.green {
+            background: $color-green;
+          }
+          &.blue {
+            background: $color-blue;
+          }
+          &.red {
+            background: $color-red;
+          }
+          &.yellow {
+            background: $color-yellow;
+          }
+          &.violet {
+            background: $color-violet;
+          }
         }
       }
     }
