@@ -74,16 +74,19 @@
         p These narratives play out differently for key characteristics of socioeconomic futures. In the following charts, a few of these key characteristics are mapped across the five SSPs covering the space of varying challenges to mitigation and adaptation: Education, Trade and Technological Development.
 
         h3 Education
-        LayoutColumns.center.default
-          VisSspComparison(slot="right", :step=0)
+        LayoutColumns.center.default(center)
+          div.ssp-comparison(slot="right")
+            VisSspComparison(:step=0)
           p.sans(slot="left") Education plays a key role for population and human development. The higher the educational attainment, the lower the fertility rate and the higher social inclusion. The progressive SSP1 and SSP5 futures with high educational attainment have therefore substantially lower population projections than the SSP3 world in which educational attainment remains low. SSP4 is characterized by an unequal distribution of educational attainment between rich and poor households and regions.
         h3 International Trade
-        LayoutColumns.center.default(mobile-reverse=true)
-          VisSspComparison(slot="left", :step=1)
-          p.sans(slot="right") The amount of international trade is an indicator for globalization. SSP5 is the most globalized world, while regional rivalry in SSP3 is posing a barrier to globalization. The other futures have intermediate levels of globalization (SSP2), a balance between globalized institutions and an emphasis on local communities (SSP1), or fragmented societies with a globalized elite and disconnected local work forces (SSP4).
+        LayoutColumns.center.default(center)
+          div.ssp-comparison(slot="right")
+            VisSspComparison(:step=1)
+          p.sans(slot="left") The amount of international trade is an indicator for globalization. SSP5 is the most globalized world, while regional rivalry in SSP3 is posing a barrier to globalization. The other futures have intermediate levels of globalization (SSP2), a balance between globalized institutions and an emphasis on local communities (SSP1), or fragmented societies with a globalized elite and disconnected local work forces (SSP4).
         h3 Technology development
-        LayoutColumns.center.default
-          VisSspComparison(slot="right", :step=2)
+        LayoutColumns.center.default(center)
+          div.ssp-comparison(slot="right")
+            VisSspComparison(:step=2)
           p.sans(slot="left") Technological development drives economic productivity. It also plays a key role for mitigating and adapting to climate change. SSP5 has highest economic growth due to rapid technological change and human development, globalizing markets, and an emphasis on production and consumption. In contrast, regional isolation dampens technological progress in SSP3. Intermediate developments occur due to different levels of technological progress across regions (SSP2) and societal groups (SSP4), or an emphasis on a broad concept of wellbeing  that goes beyond a narrow focus on economic gains (SSP1).
     LayoutRecap
       li Socioeconomic scenarios provide a consistent set of assumptions about societal, technical, cultural and economic developments over the 21st century.
@@ -142,8 +145,19 @@ export default {
         margin: 0 0 $spacing;
       }
 
-      .VisSspComparison {
-        margin-top: $spacing / 4;
+      .ssp-comparison {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .VisSspComparison {
+          margin: #{-$spacing * 0.75} 0 0 0;
+          align-self: center;
+
+          @include media-query($device-narrow) {
+            margin: #{-$spacing / 4} 0 #{-$spacing / 2};
+          }
+        }
       }
       p {
         margin: $spacing / 4 0 0 0;
