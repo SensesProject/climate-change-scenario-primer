@@ -26,12 +26,12 @@
             span.mono
               span.arrow →
               |  Mail
-          a.button(href="https://twitter.com/home?status=Climate Change Scenario Primer → http://climatescenarios.org/primer", rel="noopener noreferrer")
+          a.button(href="https://twitter.com/home?status=→ http://climatescenarios.org/primer", rel="noopener noreferrer")
             span.mono
               span.arrow →
               |  Twitter
           |
-          a.button(href="https://www.facebook.com/sharer/sharer.php?u=Climate Change Scenario Primer → http://climatescenarios.org/primer", rel="noopener noreferrer")
+          a.button(href="https://www.facebook.com/sharer/sharer.php?u=→ http://climatescenarios.org/primer", rel="noopener noreferrer")
             span.mono
               span.arrow →
               |  Facebook
