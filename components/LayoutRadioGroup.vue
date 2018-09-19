@@ -19,9 +19,9 @@
           <div class="radio">
             <div class="circle"/>
           </div>
-          <div class="label">
-            {{ option.label }}
-          </div>
+          <div
+            class="label"
+            v-html="option.label"/>
         </span>
         <wbr>
       </label>

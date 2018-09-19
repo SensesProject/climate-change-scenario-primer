@@ -79,7 +79,8 @@
             r="16"/>
           <text
             :y="-6"
-            class="ssp-title">{{ ssp.id }}</text>
+            class="ssp-title"
+            v-html="ssp.id"/>
           <text
             :y="2"
             class="ssp-description"
@@ -175,27 +176,27 @@ export default {
       radius: 24,
       padding: 8,
       ssps: [{
-        id: 'SSP1',
+        id: 'SSP&#8239;1',
         description: 'Sustainability',
         cx: 22,
         cy: 77
       }, {
-        id: 'SSP2',
+        id: 'SSP&#8239;2',
         description: '<tspan x="0" dy="-0.2em">Middle of</tspan><tspan x="0" dy="1em">the Road</tspan>',
         cx: 50,
         cy: 50
       }, {
-        id: 'SSP3',
+        id: 'SSP&#8239;3',
         description: '<tspan x="0" dy="-0.2em">Regional</tspan><tspan x="0" dy="1em">Rivalary</tspan>',
         cx: 77,
         cy: 22
       }, {
-        id: 'SSP4',
+        id: 'SSP&#8239;4',
         description: 'Inequality',
         cx: 77,
         cy: 77
       }, {
-        id: 'SSP5',
+        id: 'SSP&#8239;5',
         description: '<tspan x="0" dy="-0.2em">Fossil-fueled</tspan><tspan x="0" dy="1em">Developement</tspan>',
         cx: 22,
         cy: 22

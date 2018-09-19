@@ -4,7 +4,7 @@
       v-for="rcp in rcps"
       :key="rcp.value"
       :style="rcp.style")
-      div.rcp RCP {{ rcp.value }}
+      div.rcp RCP&#8239;{{ rcp.value }}
       div.combination(
         v-for="(combo, i) in rcp.combinations"
         :key="`${rcp.value}-${i}`")
@@ -12,7 +12,7 @@
           v-if="combo !== null"
           :class="{infeasable: combo === false}")
         div.ssp(v-if="rcp.value === '2.6'")
-          div.label {{ ssps[i].label }}
+          div.label SSP&#8239;{{ ssps[i].label }}
           div.range(:style="ssps[i].style")
     div.key
       div.baseline.key-item
@@ -48,11 +48,11 @@ export default {
         }
       }),
       ssps: [
-        {label: 'SSP1', range: [5.2, 5.8]},
-        {label: 'SSP2', range: [6.5, 7.3]},
-        {label: 'SSP3', range: [6.7, 8.0]},
-        {label: 'SSP4', range: [5.8, 5.9]},
-        {label: 'SSP5', range: [8.2, 8.9]}
+        {label: '1', range: [5.2, 5.8]},
+        {label: '2', range: [6.5, 7.3]},
+        {label: '3', range: [6.7, 8.0]},
+        {label: '4', range: [5.8, 5.9]},
+        {label: '5', range: [8.2, 8.9]}
       ].map((d) => {
         return {
           label: d.label,

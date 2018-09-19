@@ -3,7 +3,7 @@
 
     h2.h1 Climate Impacts
 
-    p Climate impacts are consequences and effects of climate change on nature and society. These may include changed agricultural yields, increased floods and droughts, or coral reef bleaching due to changes in the chemical composition of the ocean.
+    p Climate impacts are consequences and effects of climate change on nature and society. These may include changed agricultural yields, increased floods, and droughts, or coral reef bleaching due to changes in the chemical composition of the ocean.
 
     p The Inter-Sectoral Impact Model Intercomparison Project <a class="strong" href="https://www.isimip.org/">→ISIMIP</a> plays an important role in climate-impact research by faciliting consistent impact simulations across various sectors and collecting and disseminating the results.
 
@@ -30,15 +30,17 @@
 
       div(slot="s5")
         h3.h2.white Forestry
-        p.white The Regional Forest Sector strives to understand how climate change will affect managed forests. Currently, simulations are carried out at the forest stand level for a wide range forest types covering the main forest tree species in Europe. The simulations are designed to disentangle the effects of different management schemes, of changing CO2-concentrations and of different climate scenario on key forest services and functions such as plant productivity and growth, wood harvests and carbon and water cycling. Climate change is impacting forests in manifold ways potentially increasing productivity unless water is limited or disturbances such as fire or insect outbreaks lead to catastrophic damages.
+        p.white The Regional Forest Sector strives to understand how climate change will affect managed forests. Currently, simulations are carried out at the forest stand level for a wide range forest types covering the main forest tree species in Europe. The simulations are designed to disentangle the effects of different management schemes, of changing CO
+          sub 2
+          | -concentrations and of different climate scenario on key forest services and functions such as plant productivity and growth, wood harvests and carbon and water cycling. Climate change is impacting forests in manifold ways potentially increasing productivity unless water is limited or disturbances such as fire or insect outbreaks lead to catastrophic damages.
 
       div(slot="s6")
         h3.h2.white Health
-        p.white The ISIMIP health sector strives to provide improved knowledge on how human health will be affected by climate change. So far, from the myriad of potentially climate sensitive health outcomes only temperature related mortality, heat effects on labour productivity, and geographic changes in malaria suitability, have been considered in past modelling activities. For more comprehensive assessments of the health impacts of climate change extensions are planned to include (water-borne) infectious diseases and nutritional defects arising from food shortages.  Modelling covers a wide range of spatial scales from local approaches (e.g. specific cities) to global assessments.
+        p.white The ISIMIP health sector strives to provide improved knowledge on how human health will be affected by climate change. So far, from the myriad of potentially climate sensitive health outcomes only temperature related mortality, heat effects on labour productivity, and geographic changes in malaria suitability, have been considered in past modelling activities. For more comprehensive assessments of the health impacts of climate change extensions are planned to include (water-borne) infectious diseases and nutritional defects arising from food shortages.  Modelling covers a wide range of spatial scales from local approaches (e.g., specific cities) to global assessments.
 
       div(slot="s7")
         h3.h2.white Lakes
-        p.white Analyses in the ISIMIP lake sector currently focus on how climate change is affecting the physical properties of lake functioning. Lake sector simulations follow two synergetic tracks, whereby one-dimensional lake models are either (i) tailored to reproduce observed processes in a selection of around 50 well-studied lakes, or (ii) run across all lake regions of the globe with one consistent set-up. The resulting data set provides an unprecedented opportunity to assess lake model performance and uncover global warming impacts on e.g. thermal stratification or lake ice dynamics, thereby forming the basis for understanding how lacustrine systems will respond to anthropogenic climate change.
+        p.white Analyses in the ISIMIP lake sector currently focus on how climate change is affecting the physical properties of lake functioning. Lake sector simulations follow two synergetic tracks, whereby one-dimensional lake models are either (i) tailored to reproduce observed processes in a selection of around 50 well-studied lakes, or (ii) run across all lake regions of the globe with one consistent set-up. The resulting data set provides an unprecedented opportunity to assess lake model performance and uncover global warming impacts on e.g., thermal stratification or lake ice dynamics, thereby forming the basis for understanding how lacustrine systems will respond to anthropogenic climate change.
 
       div(slot="s8")
         h3.h2.white Marine Fishery (FishMIP)
@@ -50,7 +52,7 @@
 
       div(slot="s10")
         h3.h2.white Tropical Cyclones
-        p.white The tropical cyclone sector in ISIMIP studies the change in global tropical cyclone activity and the corresponding impacts on society. This sector analyses how spatio-temporal patterns of tropical cyclone occurrence may change with climate change and, in particular, looks at changes in tropical cyclone intensity as well as frequency. Impacted societies do not only suffer from destructive winds but also from many other co-hazards like extreme precipitation, storm surges, and sea-level rise. These co-hazards provide a direct link to other sectors within ISIMIP, e.g. the coastal infrastructure sector. The simulations in this sector can provide a climate-proof risk assessment for coastal communities and provide guidance on potential adaptation strategies.
+        p.white The tropical cyclone sector in ISIMIP studies the change in global tropical cyclone activity and the corresponding impacts on society. This sector analyses how spatio-temporal patterns of tropical cyclone occurrence may change with climate change and, in particular, looks at changes in tropical cyclone intensity as well as frequency. Impacted societies do not only suffer from destructive winds but also from many other co-hazards like extreme precipitation, storm surges, and sea-level rise. These co-hazards provide a direct link to other sectors within ISIMIP, e.g., the coastal infrastructure sector. The simulations in this sector can provide a climate-proof risk assessment for coastal communities and provide guidance on potential adaptation strategies.
 
       div(slot="s11")
         h3.h2.white Water (global)
@@ -60,7 +62,7 @@
         h3.h2.white Water (regional)
         p.white Climate change is a global phenomenon, but the impacts manifest at the regional scale, and the regional scale is also where most adaptation measures in the water sector are planned and implemented. The aim of the regional water group in ISIMIP is therefore to underpin global scale assessments with more detailed regional and cross-scale studies, where both sides learn from each other and benefit from cross-pollination of ideas and methods. Eleven large scale river basins have been selected to act as case studies to investigate climate change impacts on water resources and extremes and across sectors.
 
-    p Not only temperature and precipitation are input for impact models but also socioeconomic factors are taken into account. Because of that in the ISIMIP project, not only climate scenario belonging to a certain RCP, but also SSP scenarios are input to the impact models. Currently only the SSP2 scenario is used, though.
+    p Not only temperature and precipitation are input for impact models but also socioeconomic factors are taken into account. Because of that in the ISIMIP project, not only climate scenario belonging to a certain RCP, but also SSP scenarios are input to the impact models. Currently only the SSP&#8239;2 scenario is used, though.
 
     p The climate impact models – similarly to climate models – produce projections of impacts.
 
@@ -68,16 +70,20 @@
       VisChartImpact(slot="left", variable="Flood")
       VisChartImpact(slot="right", variable="Crop Failure", :legend="false")
 
-    p The charts above show simulation analyses of impact simulations for two sectors, floods and crop failure. In particular, the change in the percentage of the global surface that is affected by extreme event when compared to preindustrial times, is shown. In each case, climate data from three different global climate models (
+    p The charts above show simulation analyses of impact simulations for two sectors, floods, and crop failure. In particular, the change in the percentage of the global surface that is affected by extreme event when compared to preindustrial times, is shown. In each case, climate data from three different global climate models (
       strong.green GFDL-ESM2M
       | ,
       strong.yellow  MIROC5
-      |  and
+      | , and
       strong.violet  IPSL-CM5A-LR
-      | ) were used to drive the impact models – each color relates to results using data from a different climate model. The thick lines depict the median of the ensemble for all impact models considered. The shaded areas show the 20th to 80th percentile of that ensemble and thus give a feel of the model spread.
+      | ) were used to drive the impact models – each color relates to results using data from a different climate model. The thick lines depict the median of the ensemble for all impact models considered. The shaded areas show the 20
+      sup th
+      |  to 80
+      sup th
+      |  percentile of that ensemble and thus give a feel of the model spread.
 
     LayoutRecap
-      li There is a wide range of sectors considered in climate impact research including impacts related to agriculture, energy and health.
+      li There is a wide range of sectors considered in climate impact research including impacts related to agriculture, energy, and health.
       li Climate impact models use data from climate and socioeconomic scenarios to create impact scenarios.
 </template>
 

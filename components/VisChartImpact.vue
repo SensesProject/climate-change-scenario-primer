@@ -68,7 +68,9 @@
               v-for="(tick, i) in yTicks"
               :key="`y-tick-${i}`"
               v-bind="tick.attrs">
-              <text y="-0.25em">{{ tick.label }}</text>
+              <text
+                y="-0.25em"
+                v-html="tick.label"/>
               <line x2="100"/>
             </g>
           </g>
@@ -82,7 +84,8 @@
               class="x-tick">
               <text
                 :y="-8 + strokeWidth * 4 "
-                x="-0.0em">{{ tick.label }}</text>
+                x="-0.0em"
+                v-html="tick.label"/>
               <line
                 :y2="-8 + strokeWidth * 4"
                 y1="-8"/>
@@ -125,8 +128,6 @@ export default {
     return {
       width: 512,
       colors: ['#00A5D5', '#10BBDD', '#79D1E4', '#BEE6EA', '#FFFBF0', '#F6BACE', '#EA77AA', '#DA2D85', '#C8005F'],
-      max: '+12°C',
-      min: '-12°C',
       yValues: [{
         y: 77,
         class: ['zero'],
@@ -139,7 +140,7 @@ export default {
         value: 0.4
       }, {
         y: 8,
-        value: '0.6%'
+        value: '0.6&#8239;%'
       }],
       models: [{
         name: 'GFDL-ESM2M',
@@ -189,7 +190,7 @@ export default {
         value: 3,
         x: 75
       }, {
-        value: '4°C',
+        value: '4&#8239;°C',
         x: 100
       }].map(d => ({
         label: d.value,
