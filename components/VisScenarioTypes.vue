@@ -48,41 +48,34 @@
         cy="20"/>
       <text
         :x="100 + strokeWidth * 4"
-        dominant-baseline="middle"
+        :y="fontSize / 4"
         class="projection">Projection</text>
       <text
         :x="100 + strokeWidth * 4"
-        y="40"
-        dominant-baseline="middle"
+        :y="40 + fontSize / 4"
         class="goal">Goal B</text>
       <text
         :x="100 + strokeWidth * 4"
-        y="20"
-        dominant-baseline="middle"
+        :y="20 + fontSize / 4"
         class="goal">Goal A</text>
       <text
         :x="100 + strokeWidth * 4"
-        y="40"
-        dominant-baseline="middle"
+        :y="40 + fontSize / 4"
         class="pathway">Pathway B</text>
       <text
         :x="100 + strokeWidth * 4"
-        y="20"
-        dominant-baseline="middle"
+        :y="20 + fontSize / 4"
         class="pathway">Pathway A</text>
       <text
-        :y="50 + strokeWidth * 1"
-        dominant-baseline="hanging">Past</text>
+        :y="50 + strokeWidth + fontSize">Past</text>
       <text
-        :y="50 + strokeWidth * 1"
+        :y="50 + strokeWidth + fontSize"
         x="30"
-        text-anchor="middle"
-        dominant-baseline="hanging">Now</text>
+        text-anchor="middle">Now</text>
       <text
-        :y="50 + strokeWidth * 1"
+        :y="50 + strokeWidth + fontSize"
         x="100"
-        text-anchor="end"
-        dominant-baseline="hanging">Future</text>
+        text-anchor="end">Future</text>
     </svg>
   </div>
 </template>
@@ -132,7 +125,8 @@ export default {
   width: calc(100%);
   max-width: $max-width - 160px;
   position: relative;
-  margin: $spacing 0;
+  padding: $spacing 0;
+  overflow: hidden;
   // margin-right: 90px;
 
   svg {

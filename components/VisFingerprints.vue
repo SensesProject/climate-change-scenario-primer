@@ -36,7 +36,8 @@
               r="8"
               class="circle"/>
             <text
-              x="16">
+              x="16"
+              y="6">
               {{ property.name }}
             </text>
           </g>
@@ -79,7 +80,9 @@
         :transform="hover.transform"
         :style="hover.style"
         class="hover">
-        <text class="shadow">
+        <text
+          class="shadow"
+          y="6">
           <!-- <tspan
             :x="hover.textOffset"
             class="category"
@@ -100,7 +103,9 @@
             class="name"
             dy="1.2em">{{ hover.name2[1] }}</tspan>
         </text>
-        <text class="text">
+        <text
+          class="text"
+          y="6">
           <!-- <tspan
             :x="hover.textOffset"
             class="category"
@@ -130,7 +135,7 @@
           <line
             x1="-8"
             x2="-20"/>
-          <text>
+          <text y="6">
             <tspan dy="-0.6em">Economic Growth</tspan>
             <tspan
               x="0"
@@ -141,7 +146,7 @@
           <line
             x1="-8"
             x2="-68"/>
-          <text>
+          <text y="6">
             <tspan>Land use</tspan>
           </text>
         </g>
@@ -151,7 +156,7 @@
           <line
             x1="8"
             x2="62"/>
-          <text>
+          <text y="6">
             <tspan>Electricity and heat</tspan>
           </text>
         </g>
@@ -161,7 +166,7 @@
           <line
             x1="8"
             x2="20"/>
-          <text>
+          <text y="6">
             <tspan>Refining</tspan>
           </text>
         </g>
@@ -171,7 +176,7 @@
           <line
             x1="8"
             x2="78"/>
-          <text>
+          <text y="6">
             <tspan>Energy demand</tspan>
           </text>
         </g>
@@ -181,7 +186,7 @@
           <line
             x1="8"
             x2="168"/>
-          <text>
+          <text y="6">
             <tspan dy="-0.6em">Resource extraction</tspan>
             <tspan
               x="0"
@@ -192,13 +197,13 @@
           <line
             x1="-8"
             x2="-82"/>
-          <!-- <text>
+          <!-- <text y="6">
             <tspan dy="-0.6em">Climate and non-climate</tspan>
             <tspan
               x="0"
               dy="1.2em">environmental change</tspan>
           </text> -->
-          <text>
+          <text y="6">
             <tspan dy="-1.8em">Climate and</tspan>
             <tspan
               x="0"
@@ -222,7 +227,9 @@
             x2="-26"
             y1="-10"
             y2="-124"/>
-          <text text-anchor="end">
+          <text
+            y="6"
+            text-anchor="end">
             <tspan>Economic</tspan>
             <tspan
               x="0"
@@ -238,7 +245,7 @@
             x2="52"
             y1="-10"
             y2="-42"/>
-          <text>
+          <text y="6">
             <tspan>Land use</tspan>
           </text>
         </g>
@@ -248,7 +255,7 @@
             x2="14"
             y1="-10"
             y2="-40"/>
-          <text>
+          <text y="6">
             <tspan>Electricity</tspan>
             <tspan
               x="0"
@@ -261,7 +268,7 @@
             x2="25"
             y1="10"
             y2="62"/>
-          <text>
+          <text y="6">
             <tspan>Refining</tspan>
           </text>
         </g>
@@ -271,7 +278,7 @@
             x2="14"
             y1="10"
             y2="26"/>
-          <text>
+          <text y="6">
             <tspan dy="-1.2em">Energy</tspan>
             <tspan
               dy="1.2em"
@@ -284,7 +291,7 @@
             x2="26"
             y1="10"
             y2="26"/>
-          <text>
+          <text y="6">
             <tspan dy="-2.4em">Resource</tspan>
             <tspan
               x="0"
@@ -300,7 +307,9 @@
             x2="-69"
             y1="10"
             y2="32"/>
-          <text text-anchor="end">
+          <text
+            y="6"
+            text-anchor="end">
             <tspan dy="-2.4em">Climate and</tspan>
             <tspan
               x="0"
@@ -579,7 +588,7 @@ export default {
 
     text {
       pointer-events: none;
-      dominant-baseline: central;
+      // dominant-baseline: central;
 
       &.shadow {
         stroke: transparentize($color-black, .2);

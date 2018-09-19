@@ -16,7 +16,7 @@
           :class="[element.color]"/>
         <g :transform="`translate(${ width / 2 } 0)`">
           <text
-            y="6"
+            y="19"
             class="label">{{ element.name }}</text>
           <line
             v-if="dashIn"
@@ -194,7 +194,7 @@ export default {
   }
 
   .label {
-    dominant-baseline: hanging;
+    // dominant-baseline: hanging;
     text-anchor: middle;
     font-size: 0.8rem;
     fill: $color-pale-gray;
