@@ -548,21 +548,21 @@ const data = [{
   y: 19.21
 }, {
   id: 'c6p0',
-  name: 'CO2',
+  name: 'CO₂',
   category: 'Climate and non-climate environmental change',
   models: ['AIM/CGE', 'GCAM4', 'IMAGE', 'REMIND-MAGPIE', 'MESSAGE-GLOBIUM'],
   x: 64.86,
   y: 37.21
 }, {
   id: 'c6p1',
-  name: 'CH4',
+  name: 'CH₄',
   category: 'Climate and non-climate environmental change',
   models: ['AIM/CGE', 'GCAM4', 'IMAGE', 'REMIND-MAGPIE', 'MESSAGE-GLOBIUM'],
   x: 60.09,
   y: 40.09
 }, {
   id: 'c6p2',
-  name: 'N2O',
+  name: 'N₂O',
   category: 'Climate and non-climate environmental change',
   models: ['AIM/CGE', 'GCAM4', 'IMAGE', 'REMIND-MAGPIE', 'MESSAGE-GLOBIUM'],
   x: 55.28,

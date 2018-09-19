@@ -1,13 +1,17 @@
 <template>
   <div class="InLegendSequential">
-    <span class="label">{{ format(min) }}</span>
+    <span
+      class="label"
+      v-html="format(min)"/>
     <span
       v-for="color in colors"
       :key="`color-${color}`"
       :style="{background: color}"
       class="color"
     />
-    <span class="label">{{ format(max) }}</span>
+    <span
+      class="label"
+      v-html="format(max)"/>
   </div>
 </template>
 
@@ -18,7 +22,7 @@ export default {
   props: {
     unit: {
       type: String,
-      default: '°C'
+      default: '&#8239;°C'
     },
     range: {
       type: Array,

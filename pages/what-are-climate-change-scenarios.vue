@@ -2,11 +2,12 @@
   section.wrapper
     h2.h1 What are Climate Change Scenarios?
 
-    p Although we know that global warming is happening today and already has an impact on nature and human society, its most wide-ranging consequences lie in the future. Human-made climate change is driven by a myriad of societal factors over decades and centuries to come. The future development of most of these factors is deeply uncertain and will be shaped by our actions. It is thus futile to ask “What will happen?” and try to predict future climate change. But the future, while inherently uncertain, is not entirely unknowable. Scenarios can be used to explore “What can happen?” and even “What should happen”? given the fact that we are able to shape our future.
+    p Although we know that global warming is happening today and already has an impact on nature and human society, its most wide-ranging consequences lie in the future. Human-made climate change is driven by a myriad of societal factors over decades and centuries to come. The future development of most of these factors is deeply uncertain and will be shaped by our actions. It is thus futile to ask “What will happen?” and try to predict future climate change. But the future, while inherently uncertain, is not entirely unknowable. Scenarios can be used to explore “What can happen?” and even “What should happen?” given the fact that we are able to shape our future.
 
     VisScenarioTypes
 
-    p Climate change scenarios are no exception. They are not predictions of the future, but rather
+    p
+      | Climate change scenarios are no exception. They are not predictions of the future, but rather
       strong.green  projections
       |  of what can happen by creating plausible, coherent and internally consistent descriptions of possible climate change futures. They can also constitute plausible, coherent and internally consistent descriptions of
       strong.blue  pathways
@@ -16,7 +17,7 @@
       strong.blue  “What should happen?”
       | , depending on the type of question they aim to answer.
 
-    p As scenarios are not about predicting the future, a single scenario is virtually meaningless. Scenarios are rather used in pairs or larger sets to contrast different futures and choices. For example, scenario-driven climate policy analysis relies on comparing a projection without policy intervention (typically called baseline scenario) with a pathway towards a desired goal (e.g. the 2°C goal). Scenarios are hence fundamentally context dependent. Understanding a single scenario requires understanding the set of scenarios it is embedded in.
+    p As scenarios are not about predicting the future, a single scenario is virtually meaningless. Scenarios are rather used in pairs or larger sets to contrast different futures and choices. For example, scenario-driven climate policy analysis relies on comparing a projection without policy intervention (typically called baseline scenario) with a pathway towards a desired goal (e.g., the 2&#8239;°C goal). Scenarios are hence fundamentally context dependent. Understanding a single scenario requires understanding the set of scenarios it is embedded in.
 
     p Owing to the nature of climate change, scenario analysis is a common tool in climate change research and its various subfields. Broadly speaking, seven different types of scenarios can be identified:
     ul.serif

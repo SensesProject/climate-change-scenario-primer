@@ -25,7 +25,13 @@
             :class='line.color')
       div.text-wrapper(ref="structureText")
         div(v-bind='pStructure[0]')
-          p Here we give a very simple example of such an IAM. We assume that GDP is driven by the population, respectively the working force, energy and capital stock. As you can see all of those three factors are raising and so is GDP.
+          p Here we give a very simple example of such an IAM. We assume that GDP is driven by the
+            strong.green  population
+            | , respectively the working force,
+            strong.yellow  energy
+            | , and
+            strong.blue  capital stock
+            | . As you can see all of those three factors are raising and so is GDP.
         div(v-bind='pStructure[1]')
           p The produced GDP can be spent either for consumption, invested into the macro-economic capital stock or used to raise the amount of used energy. Other IAMs might also take into account investment into education which would increase the productivity of the labor. But for simplicity we ignore this option here in our very simple IAM. The goal of our simple IAM is to maximise consumption in the long run.
         div(v-bind='pStructure[2]')
@@ -97,23 +103,23 @@ export default {
       hoverModel: null,
       hoverModels: [],
       fingerprintOptions: [{
-        label: 'IMAGE (SSP1)',
+        label: 'IMAGE (SSP&#8239;1)',
         value: 'IMAGE',
         color: 'green'
       }, {
-        label: 'MESSAGE-GLOBIUM (SSP2)',
+        label: 'MESSAGE-GLOBIUM (SSP&#8239;2)',
         value: 'MESSAGE-GLOBIUM',
         color: 'blue'
       }, {
-        label: 'AIM/CGE (SSP3)',
+        label: 'AIM/CGE (SSP&#8239;3)',
         value: 'AIM/CGE',
         color: 'red'
       }, {
-        label: 'GCAM4 (SSP4)',
+        label: 'GCAM4 (SSP&#8239;4)',
         value: 'GCAM4',
         color: 'yellow'
       }, {
-        label: 'REMIND-MAGPIE (SSP5)',
+        label: 'REMIND-MAGPIE (SSP&#8239;5)',
         value: 'REMIND-MAGPIE',
         color: 'violet'
       }]
