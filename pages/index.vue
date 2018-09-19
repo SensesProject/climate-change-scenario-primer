@@ -40,6 +40,7 @@ export default {
 
   @include media-query($device-wide) {
     background: $color-white;
+    padding: 0;
   }
 
   &.page-enter {
