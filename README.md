@@ -8,7 +8,7 @@
 # install dependencies
 $ npm install # Or yarn
 
-# serve with hot reload at localhost:3000
+# serve with hot reload at http://localhost:3000/primer/
 $ npm run dev
 
 # build for production and launch server
