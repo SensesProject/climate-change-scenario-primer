@@ -53,7 +53,7 @@
           :key="`key-${i}`"
           class="key-item"><span
             :class="scenario.attrs.class"
-            class="dot"/>&nbsp;{{ scenario.name }} </span>
+            class="dot"/>&nbsp;{{ scenario.name }}</span>
       </div>
     </div>
   </div>
@@ -148,7 +148,7 @@ export default {
     lines () {
       const { data, strokeWidth, years, xScale, yScale, highlightSsp, dynamicFilter, legendFilter } = this
       return data.map(scenario => {
-        const name = this.legend === 'ssp' ? scenario.ssp : scenario.rcp === 'Baseline' ? `Baseline` : `RCP${scenario.rcp}`
+        const name = this.legend === 'ssp' ? scenario.ssp : scenario.rcp === 'Baseline' ? `Baseline` : `RCP ${scenario.rcp}`
         return {
           name,
           attrs: {
