@@ -42,6 +42,7 @@ export default {
 @import "~@/assets/style/global";
 .LayoutColumns {
   @include flex-column;
+  overflow: hidden;
 
   // max-width: $max-width-extended;
 
