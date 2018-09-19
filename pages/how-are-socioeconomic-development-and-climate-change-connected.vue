@@ -15,35 +15,45 @@
         :index="0",
         type="normal"
       )
-      :markdown-it(html) <strong class="green">Socioeconomic Development</strong> comprises a myriad of factors like population, economic activity, urbanisation, education, equality, consumption patterns and lifestyles, and institutions. These factors determine the way we live, including how we use energy and land. Socio-economic scenarios are used to describe possible socio-economic futures.
+      p
+        strong.green Socioeconomic Development
+        |  comprises a myriad of factors like population, economic activity, urbanisation, education, equality, consumption patterns and lifestyles, and institutions. These factors determine the way we live, including how we use energy and land. Socio-economic scenarios are used to describe possible socio-economic futures.
 
     div.cycle-part
       VisCyclePartLarge(
         :index="1",
         type="normal"
       )
-      :markdown-it(html) <strong class="yellow">Energy & Land Use</strong> are the main source of human greenhouse gas emissions and air pollutants which both interfere with Earth’s climate. Greenhouse gas emissions include carbon dioxide from the combustion of fossil fuels and deforestation, methane from livestock, rice paddies, waste fills and fossil fuel exploration and nitrous oxide from agricultural sources. Projections of future energy and land use and associated emissions are derived from energy-economy and land use models, often coupled together to form integrated assessment models.
+      p
+        strong.yellow Energy & Land Use
+        |  are the main source of human greenhouse gas emissions and air pollutants which both interfere with Earth’s climate. Greenhouse gas emissions include carbon dioxide from the combustion of fossil fuels and deforestation, methane from livestock, rice paddies, waste fills and fossil fuel exploration and nitrous oxide from agricultural sources. Projections of future energy and land use and associated emissions are derived from energy-economy and land use models, often coupled together to form integrated assessment models.
 
     div.cycle-part
       VisCyclePartLarge(
         :index="2",
         type="normal"
       )
-      :markdown-it(html) <strong class="red">Emissions</strong> raise the concentration of greenhouse gases and air pollutants in the atmosphere. This changes the balance between incoming sunlight and outgoing heat radiation at the top of the atmosphere, leading to a radiative forcing of the climate system. Carbon cycle, atmospheric chemistry, atmospheric transport, and radiative transfer models are used to convert emissions projections into concentration and radiative forcing projections.
+      p
+        strong.red Emissions
+        |  raise the concentration of greenhouse gases and air pollutants in the atmosphere. This changes the balance between incoming sunlight and outgoing heat radiation at the top of the atmosphere, leading to a radiative forcing of the climate system. Carbon cycle, atmospheric chemistry, atmospheric transport, and radiative transfer models are used to convert emissions projections into concentration and radiative forcing projections.
 
     div.cycle-part
       VisCyclePartLarge(
         :index="3",
         type="normal"
       )
-      :markdown-it(html) <strong class="violet">Climate Change</strong> is characterized by rising temperatures and changes in precipitation driven by radiative forcing of the climate system. Earth system models and coupled climate models are used to derive projections of future climate change from emissions and radiative forcing projections.
+      p
+        strong.violet Climate Change
+        |  is characterized by rising temperatures and changes in precipitation driven by radiative forcing of the climate system. Earth system models and coupled climate models are used to derive projections of future climate change from emissions and radiative forcing projections.
 
     div.cycle-part
       VisCyclePartLarge(
         :index="4",
         type="normal"
       )
-      :markdown-it(html) Higher temperatures and changes in precipitation lead to <strong class="blue no-hyphen">Climate Impacts</strong> on natural and human systems through, inter alia, droughts, floods, and storms, sea level rise, reduced freshwater availability, heat stress, and potential large scale reconfigurations of Earth system components (tipping points). Research on these effects is carried out in climate impact studies, which use a suite of models ranging from water transport models to vegetation and agriculture models to produce climate impact projections.
+      p Higher temperatures and changes in precipitation lead to
+        strong.blue.no-hyphen  Climate Impacts
+        |  on natural and human systems through, inter alia, droughts, floods, and storms, sea level rise, reduced freshwater availability, heat stress, and potential large scale reconfigurations of Earth system components (tipping points). Research on these effects is carried out in climate impact studies, which use a suite of models ranging from water transport models to vegetation and agriculture models to produce climate impact projections.
     div.cycle-part.last
       VisCyclePartLarge(type="last")
 
