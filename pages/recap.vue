@@ -38,12 +38,12 @@
           |
     div.contact.extended.no-margin
       div.center.default
-        h3.h2.violet Get in Touch
+        h3.h2.violet Get in Touch 👋
         no-ssr
           a.button(:href="`mailto:${address}?subject=Climate Change Scenario Primer`")
             span.mono
               span.arrow →
-              |  Send Mail 👋
+              |  Send Mail
   </section>
 </template>
 
