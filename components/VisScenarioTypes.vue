@@ -132,6 +132,7 @@ export default {
   width: calc(100%);
   max-width: $max-width - 160px;
   position: relative;
+  margin: $spacing 0;
   // margin-right: 90px;
 
   svg {
