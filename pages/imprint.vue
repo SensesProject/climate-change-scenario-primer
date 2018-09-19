@@ -23,28 +23,29 @@
         | e-mail:
         a(href="mailto:cornelia.auer@pik-potsdam.de")  cornelia.auer@pik-potsdam.de
     p.sans
-      | Design and technical development:
+      strong Design and technical development
       br
-      a(href="https://uclab.fh-potsdam.de/") UCLab of the University of Applied Sciences Potsdam
+      a(href="https://uclab.fh-potsdam.de/projects/senses/") SENSES Team of UCLab of the University of Applied Sciences Potsdam
 
     p.sans
       strong About
       br
       | The website climatescenarios.org is an initiative of the EU project SENSES. The project investigates potential socio-economic futures in the face of climate change and how this knowledge can be made accessible to a broader public.
     p.sans
-      | SENSES will develop tools and approaches to make the new generation of climate change scenarios more comprehensible and accessible. Further information can be found on the project website: senses-project.org
+      | SENSES will develop tools and approaches to make the new generation of climate change scenarios more comprehensible and accessible. Further information can be found on the project website:
+      a(href="http://senses-project.org/")  senses-project.org
     p.sans
       strong Project Consortium
       br
-      | Potsdam Institute for Climate Impact Research
+      a(href="https://www.pik-potsdam.de/") Potsdam Institute for Climate Impact Research
       br
-      | International Institute for Applied Systems Analysis
+      a(href="http://www.iiasa.ac.at/") International Institute for Applied Systems Analysis
       br
-      | Stockholm Environment Institute
+      a(href="https://www.sei.org/") Stockholm Environment Institute
       br
-      | Wageningen University & Research
+      a(href="https://www.wur.nl/en.htm") Wageningen University & Research
       br
-      | University of Applied Sciences Potsdam
+      a(href="https://www.fh-potsdam.de/") University of Applied Sciences Potsdam
     p.sans
       strong Funding
       br
