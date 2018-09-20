@@ -5,7 +5,7 @@
       sub 2
       |  and vegetation can act as a carbon sink, as well. Still, the sheer magnitude of the GHG emitted in the past causes GHG to accumulate in the atmosphere and thus rising GHG  concentrations.
 
-    p GHG, as hinted by their name, play the key role in the green house effect. The  green house effect leads to rising temperatures and can be quantified by the so called "radiative forcing". A higher radiative forcing leads to higher atmospheric temperatures. The number in the RCP scenario is related to this. The radiative forcing in RCP&thinsp;8.5, for instance, is in 2100 8.5&thinsp;W/m
+    p GHG, as hinted by their name, play the key role in the green house effect. The  green house effect leads to rising temperatures and can be quantified by the so called “radiative forcing”. A higher radiative forcing leads to higher atmospheric temperatures. The number in the RCP scenario is related to this. The radiative forcing in RCP&thinsp;8.5, for instance, is in 2100 8.5&thinsp;W/m
       sup 2
       |  higher than during preindustrial times.
 
