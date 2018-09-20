@@ -3,6 +3,7 @@
     ref="cycle"
     class="VisScenarioTypes center">
     <svg
+      v-if="width"
       :style="{'stroke-width': strokeWidth, 'font-size': `${fontSize}px`}"
       :height="width / 2"
       width="100%"
