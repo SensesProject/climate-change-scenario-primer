@@ -78,5 +78,10 @@ export default {
   .ssp-selection {
     margin-top: $spacing * 0.5;
   }
+
+  .LayoutColumns {
+    margin: -$spacing 0;
+    padding: $spacing 0;
+  }
 }
 </style>
