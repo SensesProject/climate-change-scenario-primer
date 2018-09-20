@@ -62,7 +62,7 @@
         h3.h2.white Water (regional)
         p.white Climate change is a global phenomenon, but the impacts manifest at the regional scale, and the regional scale is also where most adaptation measures in the water sector are planned and implemented. The aim of the regional water group in ISIMIP is therefore to underpin global scale assessments with more detailed regional and cross-scale studies, where both sides learn from each other and benefit from cross-pollination of ideas and methods. Eleven large scale river basins have been selected to act as case studies to investigate climate change impacts on water resources and extremes and across sectors.
 
-    p Not only temperature and precipitation are input for impact models but also socioeconomic factors are taken into account. Because of that in the ISIMIP project, not only climate scenario belonging to a certain RCP, but also SSP scenarios are input to the impact models. Currently only the SSP&#8239;2 scenario is used, though.
+    p Not only temperature and precipitation are input for impact models but also socioeconomic factors are taken into account. Because of that in the ISIMIP project, not only climate scenario belonging to a certain RCP, but also SSP scenarios are input to the impact models. Currently only the SSP&thinsp;2 scenario is used, though.
 
     p The climate impact models – similarly to climate models – produce projections of impacts.
 

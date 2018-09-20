@@ -5,7 +5,7 @@
       sub 2
       |  and vegetation can act as a carbon sink, as well. Still, the sheer magnitude of the GHG emitted in the past causes GHG to accumulate in the atmosphere and thus rising GHG  concentrations.
 
-    p GHG, as hinted by their name, play the key role in the green house effect. The  green house effect leads to rising temperatures and can be quantified by the so called "radiative forcing". A higher radiative forcing leads to higher atmospheric temperatures. The number in the RCP scenario is related to this. The radiative forcing in RCP&#8239;8.5, for instance, is in 2100 8.5&#8239;W/m
+    p GHG, as hinted by their name, play the key role in the green house effect. The  green house effect leads to rising temperatures and can be quantified by the so called "radiative forcing". A higher radiative forcing leads to higher atmospheric temperatures. The number in the RCP scenario is related to this. The radiative forcing in RCP&thinsp;8.5, for instance, is in 2100 8.5&thinsp;W/m
       sup 2
       |  higher than during preindustrial times.
 
@@ -34,7 +34,7 @@
       span  (2006–2010&nbspto&nbsp2095–2099)
     p Climate models then simulate the atmosphere and translate these GHG  concentrations to meteorological quantities such as temperature or precipitation. Temperature and precipitation are the two most important quantities in climate impact research. It turns out that many more systems than just the atmosphere decisively influence the climate. Therefore more and more subsystems, e.g., oceans, vegetation or sea ice, had to be added to climate models. Because of that these models are also known as “Earth System Models”.
 
-    p The above plot shows the change in average near surface temperature from 2006–2010 to 2095–2099 for two different GHG scenarios: RCP&#8239;2.6 and RCP&#8239;6.0. As you can see: the overall temperature is going to raise, the intensity varies between regions and the temperature increases in the RCP&#8239;6.0 scenario are far more severe.
+    p The above plot shows the change in average near surface temperature from 2006–2010 to 2095–2099 for two different GHG scenarios: RCP&thinsp;2.6 and RCP&thinsp;6.0. As you can see: the overall temperature is going to raise, the intensity varies between regions and the temperature increases in the RCP&thinsp;6.0 scenario are far more severe.
 
     LayoutRecap
       li Climate models are complex systems describing the physical world including its atmosphere.

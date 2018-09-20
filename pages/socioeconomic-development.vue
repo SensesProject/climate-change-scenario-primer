@@ -13,7 +13,7 @@
     p The SSPs comprise five different narratives of the world’s future augmented by an expanding set of projections, e.g., for population, economic activity, urbanisation, and income inequality. The SSPs fall into the category of “Projections” as defined in the introduction although they have been named “Pathways” when introduced to the literature. While the use of “Pathway” for goal-oriented scenarios is more common in the literature, the term has also been used to describe a subset of trajectories of a multi-dimensional scenario.
 
     img.extended.no-margin(src="~/assets/img/SSP1.png")
-    h3 SSP&#8239;1: Sustainability - Taking the green road
+    h3 SSP&thinsp;1: Sustainability - Taking the green road
     ul
       li This future poses
         strong.yellow  low challenges to mitigation
@@ -25,7 +25,7 @@
       li Strong and flexible institutions on global, regional, and national level
 
     img.extended.no-margin(src="~/assets/img/SSP2.png")
-    h3 SSP&#8239;2: Middle of the road
+    h3 SSP&thinsp;2: Middle of the road
     ul
       li This future poses
         strong.yellow  moderate challenges to mitigation
@@ -36,7 +36,7 @@
       li Global and national institutions make slow progress toward achieving sustainable development goals
 
     img.extended.no-margin(src="~/assets/img/SSP3.png")
-    h3 SSP&#8239;3: Regional rivalry - A rocky road
+    h3 SSP&thinsp;3: Regional rivalry - A rocky road
     ul
       li This future poses
         strong.yellow  high challenges to mitigation
@@ -48,7 +48,7 @@
       li Weak global institutions and little international trade
 
     img.extended.no-margin(src="~/assets/img/SSP4.png")
-    h3 SSP&#8239;4: Inequality - A road divided
+    h3 SSP&thinsp;4: Inequality - A road divided
     ul
       li This future poses
         strong.yellow  low challenges to mitigation
@@ -60,7 +60,7 @@
       li Global, regional, and national institutions are ineffective
 
     img.extended.no-margin(src="~/assets/img/SSP5.png")
-    h3 SSP&#8239;5: Fossil-fueled development - Taking the highway
+    h3 SSP&thinsp;5: Fossil-fueled development - Taking the highway
     ul
       li This future poses
         strong.yellow  high challenges to mitigation
@@ -80,17 +80,17 @@
         LayoutColumns.center.default(center)
           div.ssp-comparison(slot="right")
             VisSspComparison(:step=0)
-          p.sans(slot="left") Education plays a key role for population and human development. The higher the educational attainment, the lower the fertility rate and the higher social inclusion. The progressive SSP&#8239;1 and SSP&#8239;5 futures with high educational attainment have therefore substantially lower population projections than the SSP&#8239;3 world in which educational attainment remains low. SSP&#8239;4 is characterized by an unequal distribution of educational attainment between rich and poor households and regions.
+          p.sans(slot="left") Education plays a key role for population and human development. The higher the educational attainment, the lower the fertility rate and the higher social inclusion. The progressive SSP&thinsp;1 and SSP&thinsp;5 futures with high educational attainment have therefore substantially lower population projections than the SSP&thinsp;3 world in which educational attainment remains low. SSP&thinsp;4 is characterized by an unequal distribution of educational attainment between rich and poor households and regions.
         h3 International Trade
         LayoutColumns.center.default(center)
           div.ssp-comparison(slot="right")
             VisSspComparison(:step=1)
-          p.sans(slot="left") The amount of international trade is an indicator for globalization. SSP&#8239;5 is the most globalized world, while regional rivalry in SSP&#8239;3 is posing a barrier to globalization. The other futures have intermediate levels of globalization (SSP&#8239;2), a balance between globalized institutions and an emphasis on local communities (SSP&#8239;1), or fragmented societies with a globalized elite and disconnected local work forces (SSP&#8239;4).
+          p.sans(slot="left") The amount of international trade is an indicator for globalization. SSP&thinsp;5 is the most globalized world, while regional rivalry in SSP&thinsp;3 is posing a barrier to globalization. The other futures have intermediate levels of globalization (SSP&thinsp;2), a balance between globalized institutions and an emphasis on local communities (SSP&thinsp;1), or fragmented societies with a globalized elite and disconnected local work forces (SSP&thinsp;4).
         h3 Technology development
         LayoutColumns.center.default(center)
           div.ssp-comparison(slot="right")
             VisSspComparison(:step=2)
-          p.sans(slot="left") Technological development drives economic productivity. It also plays a key role for mitigating and adapting to climate change. SSP&#8239;5 has highest economic growth due to rapid technological change and human development, globalizing markets, and an emphasis on production and consumption. In contrast, regional isolation dampens technological progress in SSP&#8239;3. Intermediate developments occur due to different levels of technological progress across regions (SSP&#8239;2) and societal groups (SSP&#8239;4), or an emphasis on a broad concept of wellbeing  that goes beyond a narrow focus on economic gains (SSP&#8239;1).
+          p.sans(slot="left") Technological development drives economic productivity. It also plays a key role for mitigating and adapting to climate change. SSP&thinsp;5 has highest economic growth due to rapid technological change and human development, globalizing markets, and an emphasis on production and consumption. In contrast, regional isolation dampens technological progress in SSP&thinsp;3. Intermediate developments occur due to different levels of technological progress across regions (SSP&thinsp;2) and societal groups (SSP&thinsp;4), or an emphasis on a broad concept of wellbeing  that goes beyond a narrow focus on economic gains (SSP&thinsp;1).
     LayoutRecap
       li
         | Socioeconomic scenarios provide a consistent set of assumptions about societal, technical, cultural and economic developments over the 21
