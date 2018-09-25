@@ -22,16 +22,16 @@
       div.center.default
         h3.h2.white Share
         div.button-group
-          a.button(href="mailto:?subject=Climate Change Scenario Primer&body=→ http://climatescenarios.org/primer ")
+          a.button(href="mailto:?subject=Climate Change Scenario Primer&body=→ https://climatescenarios.org/primer ")
             span.mono
               span.arrow →
               |  Mail
-          a.button(href="https://twitter.com/home?status=→ http://climatescenarios.org/primer", rel="noopener noreferrer")
+          a.button(href="https://twitter.com/home?status=→ https://climatescenarios.org/primer", rel="noopener noreferrer")
             span.mono
               span.arrow →
               |  Twitter
           |
-          a.button(href="https://www.facebook.com/sharer/sharer.php?u=→ http://climatescenarios.org/primer", rel="noopener noreferrer")
+          a.button(href="https://www.facebook.com/sharer/sharer.php?u=→ https://climatescenarios.org/primer", rel="noopener noreferrer")
             span.mono
               span.arrow →
               |  Facebook
