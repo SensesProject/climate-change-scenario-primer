@@ -6,21 +6,23 @@
       :style="{'font-size': `${fontSize}px`, 'stroke-width': strokeWidth}"
       :height="height"
       width="100%">
-      <filter id="gooey">
-        <feGaussianBlur
-          in="SourceGraphic"
-          stdDeviation="3"
-          color-interpolation-filters="sRGB"
-          result="blur"/>
-        <feColorMatrix
-          in="blur"
-          mode="matrix"
-          values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 50 -25"
-          result="gooey"/>
-        <feBlend
-          in="SourceGraphic"
-          in2="gooey"/>
-      </filter>
+      <defs>
+        <filter id="gooey">
+          <feGaussianBlur
+            in="SourceGraphic"
+            stdDeviation="3"
+            color-interpolation-filters="sRGB"
+            result="blur"/>
+          <feColorMatrix
+            in="blur"
+            mode="matrix"
+            values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 50 -25"
+            result="gooey"/>
+          <feBlend
+            in="SourceGraphic"
+            in2="gooey"/>
+        </filter>
+      </defs>
       <g class="properties">
         <g
           v-for="property in properties"
