@@ -164,19 +164,19 @@ export default {
           }]
         case 2:
           return [{
-            color: 'blue',
+            color: 'green',
             active: selectedModel === 'AIM/CGE',
             properties: properties.filter(p => p.models.find(m => m === 'AIM/CGE'))
           }, {
-            color: 'green',
+            color: 'blue',
             active: selectedModel === 'GCAM',
             properties: properties.filter(p => p.models.find(m => m === 'GCAM'))
           }, {
-            color: 'yellow',
+            color: 'red',
             active: selectedModel === 'IMAGE',
             properties: properties.filter(p => p.models.find(m => m === 'IMAGE'))
           }, {
-            color: 'red',
+            color: 'yellow',
             active: selectedModel === 'REMIND-MAGPIE',
             properties: properties.filter(p => p.models.find(m => m === 'REMIND-MAGPIE'))
           }, {
