@@ -423,15 +423,15 @@ export default {
     groups () {
       const { step, properties, selectedModel, hoverModel } = this
       return [{
-        color: 'yellow',
+        color: 'red',
         active: (selectedModel === 'AIM/CGE' || hoverModel === 'AIM/CGE') && step > 0,
         properties: properties.filter(p => p.models.find(m => m === 'AIM/CGE'))
       }, {
-        color: 'red',
+        color: 'yellow',
         active: (selectedModel === 'GCAM4' || hoverModel === 'GCAM4') && step > 0,
         properties: properties.filter(p => p.models.find(m => m === 'GCAM4'))
       }, {
-        color: 'blue',
+        color: 'green',
         active: (selectedModel === 'IMAGE' || hoverModel === 'IMAGE') && step > 0,
         properties: properties.filter(p => p.models.find(m => m === 'IMAGE'))
       }, {
@@ -439,7 +439,7 @@ export default {
         active: (selectedModel === 'REMIND-MAGPIE' || hoverModel === 'REMIND-MAGPIE') && step > 0,
         properties: properties.filter(p => p.models.find(m => m === 'REMIND-MAGPIE'))
       }, {
-        color: 'green',
+        color: 'blue',
         active: (selectedModel === 'MESSAGE-GLOBIUM' || hoverModel === 'MESSAGE-GLOBIUM') && step > 0,
         properties: properties.filter(p => p.models.find(m => m === 'MESSAGE-GLOBIUM'))
       }]
