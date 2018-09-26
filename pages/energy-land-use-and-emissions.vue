@@ -59,7 +59,7 @@
         value="SSP5">SSP&#8239;5</InHighlight> combined with the high GDP growth comes at a cost: High energy needs and lots of CO<sub>2</sub> emissions.
     </p>
     <LayoutRecap>
-      <li>Integrated assessment models (IAMs) are complex models of the energy-land-economy-climate systems that use socioeconomic assumptions to produce energy, land use and emissions scenarios.</li>
+      <li>Integrated assessment models (IAMs) are complex models of the energy-land-economy-climate system that use socioeconomic assumptions to produce energy, land use and emissions scenarios.</li>
       <li>IAMs show that the widely varying socioeconomic futures described by the SSPs lead to large variations in energy, land use and emissions in baseline projections without  climate policy interventions.</li>
       <li>IAMs are used to derive both baseline projections (What can happen?) as well as pathways oriented to achieving mitigation goals (What should happen?)</li>
     </LayoutRecap>
