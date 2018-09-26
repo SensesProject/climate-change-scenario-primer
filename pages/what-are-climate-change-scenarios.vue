@@ -22,7 +22,7 @@
     p Owing to the nature of climate change, scenario analysis is a common tool in climate change research and its various subfields. Broadly speaking, seven different types of scenarios can be identified:
     ul.serif
       li
-        strong Socio-economic scenarios
+        strong Socioeconomic scenarios
         span.scenario-types
           span.circle.blue
           span.circle.green

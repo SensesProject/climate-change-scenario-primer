@@ -26,8 +26,8 @@
       div.text-wrapper(ref="structureText")
         div(v-bind='pStructure[0]')
           p Here we give a very simple example of such an IAM. We assume that GDP is driven by the
-            strong.green  population
-            | , respectively the working force,
+            strong.green  labor
+            | ,
             strong.yellow  energy
             | , and
             strong.blue  capital stock
@@ -46,7 +46,7 @@
               span.b Carbon Tax
               input.red(type='range', min=0, max=3, v-model.number='scenarioCarbon')
               span {{ scenarioNames.carbon[scenarioCarbon] }}
-          p Using this model we demonstrate the impact of assumptions like the population growth rate and introduction of a carbon tax. Explore how different socio-economic and climate change mitigation scenarios play out.
+          p Using this model we demonstrate the impact of assumptions like the growth of labor input, which can be driven by more people entering the work force as well as increasing labor productivity, and introduction of a carbon tax. Explore how different socio-economic and climate change mitigation scenarios play out.
     div.fingerprint
       div.text-wrapper(ref="fingerprintText")
         div(v-bind='pFingerprint[0]')
@@ -107,8 +107,8 @@ export default {
         value: 'IMAGE',
         color: 'green'
       }, {
-        label: 'MESSAGE-GLOBIUM (SSP&#8239;2)',
-        value: 'MESSAGE-GLOBIUM',
+        label: 'MESSAGE-GLOBIOM (SSP&#8239;2)',
+        value: 'MESSAGE-GLOBIOM',
         color: 'blue'
       }, {
         label: 'AIM/CGE (SSP&#8239;3)',

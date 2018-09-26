@@ -4,7 +4,7 @@
     p
       | With climate change so dependent on socioeconomic development, we need scenarios  of possible socioeconomic futures to explore projections, implications and solutions to climate change. Such socioeconomic scenarios provide a consistent set of assumptions about societal, technical, cultural and economic developments over the 21
       sup st
-      |  century. To reflect the multifaceted and inherently uncertain nature of these developments, they often centre around a general narrative about the world’s future. The narrative is augmented by quantitative projections of factors like population, economic activity, and urbanisation that are needed as inputs to energy, land use, climate impacts and integrated assessment modelling.
+      |  century. To reflect the multifaceted and inherently uncertain nature of these developments, they often centre on a broad narrative about the world’s future. The narrative is augmented by quantitative projections of factors like population, economic activity, and urbanisation that are needed as inputs to energy, land use, climate impacts and integrated assessment modelling.
 
     p The current generation of socioeconomic scenarios in climate change research is increasingly based on the Shared Socio-Economic Pathways (SSPs). The SSPs offer a systematic exploration of possible socioeconomic futures in terms of widely different predispositions to mitigate and adapt to climate change. Socioeconomic challenges to mitigate vary, e.g., with the resource and carbon intensity of consumption. Socioeconomic challenges to adapt vary, e.g., with the level of education, health care, poverty and inequality in societies around the world.
 
