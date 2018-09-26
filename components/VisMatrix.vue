@@ -25,7 +25,7 @@
       |
       div.infeasable.key-item
         div.icon
-        div.label Infeasable Scenario Combination
+        div.label Infeasible Scenario Combination
 </template>
 
 <script>
