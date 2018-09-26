@@ -64,7 +64,7 @@
           :key="`group-${i}`"
           :class="[group.color, {active: group.active}]"
           class="group"
-          filter="url(energy-land-use-and-emissions#gooey)">
+          filter="url(#gooey)">
           <g
             v-for="property in group.properties"
             :key="property.id"
