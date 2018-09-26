@@ -1,13 +1,11 @@
 <template lang="pug">
   section.wrapper
     h2.h1 Climate Change
-    p The scenarios discussed above assume different green house gas (GHG) emissions into the atmosphere. Not not all GHG emitted into the atmosphere remain there, however. For instance, the oceans absorb large parts of atmospheric CO
+    p The scenarios discussed above assume a large range ofgreenhouse gas (GHG) emissions into the atmosphere. Not all GHGs emitted into the atmosphere remain there. For instance, the oceans absorb large parts of atmospheric CO
       sub 2
-      |  and vegetation can act as a carbon sink, as well. Still, the sheer magnitude of the GHG emitted in the past causes GHG to accumulate in the atmosphere and thus rising GHG  concentrations.
+      |  and vegetation can act as a carbon sink as well. Still, the sheer magnitude of GHGs emitted in the past causes GHGs to accumulate in the atmosphere and thus rising GHGs concentrations.
 
-    p GHG, as hinted by their name, play the key role in the green house effect. The  green house effect leads to rising temperatures and can be quantified by the so called “radiative forcing”. A higher radiative forcing leads to higher atmospheric temperatures. The number in the RCP scenario is related to this. The radiative forcing in RCP&thinsp;8.5, for instance, is in 2100 8.5&thinsp;W/m
-      sup 2
-      |  higher than during preindustrial times.
+    p GHGs, as hinted by their name, play the key role in the greenhouse effect. The greenhouse effect describes the balance of incoming solar radiation and outgoing heat radiation which is partly absorbed and reemitted in the atmosphere, Thanks to the natural greenhouse effect, the surface temperatures on Earth are high enough to support abundant life. However, adding further greenhouse gases by human activity induces a radiative forcing from increased absorption of outgoing heat radiation in the atmosphere, which then leads to rising temperatures on the Earth surface. The higher the radiative forcing, the larger the warming.
 
     LayoutColumns.extended(left-title="RCP&#8239;2.6", right-title="RCP&#8239;6.0")
       VisMap(
@@ -32,13 +30,13 @@
       invert-scale)
     div.map-description.center Change in average near surface temperature
       span  (2006–2010&nbspto&nbsp2095–2099)
-    p Climate models then simulate the atmosphere and translate these GHG  concentrations to meteorological quantities such as temperature or precipitation. Temperature and precipitation are the two most important quantities in climate impact research. It turns out that many more systems than just the atmosphere decisively influence the climate. Therefore more and more subsystems, e.g., oceans, vegetation or sea ice, had to be added to climate models. Because of that these models are also known as “Earth System Models”.
+    p Climate models then simulate the climate response to increased GHG concentrations and associated radiative forcing and translate them to changes in meteorological quantities such as temperature or precipitation. Temperature and precipitation are the two most important quantities in climate impact research. It turns out that many more systems than just the atmosphere decisively influence the climate. Therefore more and more subsystems, e.g., oceans, vegetation or sea ice, had to be added to climate models. Because of that these models are also known as “Earth System Models”.
 
-    p The above plot shows the change in average near surface temperature from 2006–2010 to 2095–2099 for two different GHG scenarios: RCP&thinsp;2.6 and RCP&thinsp;6.0. As you can see: the overall temperature is going to raise, the intensity varies between regions and the temperature increases in the RCP&thinsp;6.0 scenario are far more severe.
+    p The above plot shows the warming in near surface temperatures from 2006–2010 to 2095–2099 for two different emissions scenarios: RCP&thinsp;2.6 and RCP&thinsp;6.0. As you can see: the overall temperature is going to rise, and the increase is far more severe in RCP&thinsp;6.0. It can also be seen that the warming varies between regions, with highest warming occuring in the Northern latitudes.
 
     LayoutRecap
-      li Climate models are complex systems describing the physical world including its atmosphere.
-      li Climate models generate projections on future temperature and precipitation based on GHG concentrations.
+      li Climate models are complex systems describing the physical world including its atmosphere, ocean, ice sheets and vegetation. The most comprehensive climate models are called Earth system models.
+      li Climate models generate projections of future temperature and precipitation based on GHG concentration scenarios.
 </template>
 
 <script>
