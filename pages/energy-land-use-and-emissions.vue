@@ -53,14 +53,15 @@
     </LayoutColumns>
 
     <p>
-      This all as well as other factors such as technological progress and lifeystle and consumption patterns affect future energy and land use. Here we show the example of energy demand. The resource intensity and high GDP of <InHighlight
+      This and other factors such as technological progress and lifestyles affect future energy and land use. Here we show the examples of energy demand and CO2 emissions. The resource intensity of <InHighlight
         field="charts.ssp"
         class="violet"
-        value="SSP5">SSP&#8239;5</InHighlight> comes at a cost: High energy needs and with that lots of C0<sub>2</sub>-emissions.
+        value="SSP5">SSP&#8239;5</InHighlight> combined with the high GDP growth comes at a cost: High energy needs and lots of CO<sub>2</sub> emissions.
     </p>
     <LayoutRecap>
-      <li>Integrated assessment models (IAMs) are complex models of the energy-land-economy-climate system that use socioeconomic assumptions to produce energy, land use and emissions scenarios.</li>
-      <li>Applying SSP-assumptions on to IAMs allows us to explore how land use, energy use, and emissions will play out in those futures.</li>
+      <li>Integrated assessment models (IAMs) are complex models of the energy-land-economy-climate systems that use socioeconomic assumptions to produce energy, land use and emissions scenarios.</li>
+      <li>IAMs show that the widely varying socioeconomic futures described by the SSPs lead to large variations in energy, land use and emissions in baseline projections without  climate policy interventions.</li>
+      <li>IAMs are used to derive both baseline projections (What can happen?) as well as pathways oriented to achieving mitigation goals (What should happen?)</li>
     </LayoutRecap>
   </section>
 </template>
