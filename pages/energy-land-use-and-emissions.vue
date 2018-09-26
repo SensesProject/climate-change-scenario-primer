@@ -22,19 +22,17 @@
     </LayoutColumns>
 
     <p>
-      Assumptions on population growth and GDP are already part of the SSP scenario assumptions. This shows us how they turn out over time and in numbers. As you can see the
-      <InHighlight
+      Assumptions on population growth and GDP are already part of the SSP scenario assumptions. This shows us how they turn out over time and in numbers.
+      As you can see the <InHighlight
         field="charts.ssp"
         class="red"
-        value="SSP3">SSP&#8239;3</InHighlight>scenario of regional rivalry leads us to continued population growth but relatively low growth in GDP.
-      <InHighlight
+        value="SSP3">SSP&#8239;3</InHighlight> scenario of regional rivalry leads to continued population growth but relatively low growth in GDP. In contrast, <InHighlight
         field="charts.ssp"
         class="green"
-        value="SSP1">SSP&#8239;1</InHighlight>(Sustainability) and
-      <InHighlight
+        value="SSP1">SSP&#8239;1</InHighlight> (Sustainability) and <InHighlight
         field="charts.ssp"
         class="violet"
-        value="SSP5">SSP&#8239;5</InHighlight>(Fossil-fuelled development) show similar patterns in population growth but significant differences when it comes to GDP.
+        value="SSP5">SSP&#8239;5</InHighlight> (Fossil-fuelled development) show a peak and decline in population growth, but much higher GDP growth. Although they have a similar pattern of population growth, they show significantly different levels of GDP growth.
     </p>
 
     <LayoutColumns class="extended">
