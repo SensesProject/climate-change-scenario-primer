@@ -31,7 +31,7 @@
               span.arrow →
               |  Twitter
           |
-          a.button(href="https://www.facebook.com/sharer/sharer.php?u=→ https://climatescenarios.org/primer", rel="noopener noreferrer")
+          a.button(href="https://www.facebook.com/sharer/sharer.php?u=https://climatescenarios.org/primer", rel="noopener noreferrer")
             span.mono
               span.arrow →
               |  Facebook
