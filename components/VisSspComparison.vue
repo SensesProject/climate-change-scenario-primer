@@ -9,40 +9,41 @@
       :viewBox="viewBox"
       :class="{empty: step === null}"
       width="100%">
-      <filter id="gooey">
-        <feGaussianBlur
-          in="SourceGraphic"
-          stdDeviation="10"
-          color-interpolation-filters="sRGB"
-          result="blur"/>
-        <feColorMatrix
-          in="blur"
-          mode="matrix"
-          values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 200 -90"
-          result="gooey"/>
-        <feBlend
-          in="gooey"
-          in2="gooey"/>
-      </filter>
-      <clipPath id="rect">
-        <rect
-          x="0"
-          y="0"
-          width="100"
-          height="100"/>
-      </clipPath>
-
+      <defs>
+        <filter :id="'gooey' + step">
+          <feGaussianBlur
+            in="SourceGraphic"
+            stdDeviation="10"
+            color-interpolation-filters="sRGB"
+            result="blur"/>
+          <feColorMatrix
+            in="blur"
+            mode="matrix"
+            values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 200 -90"
+            result="gooey"/>
+          <feBlend
+            in="gooey"
+            in2="gooey"/>
+        </filter>
+        <clipPath :id="'rect' + step">
+          <rect
+            x="0"
+            y="0"
+            width="100"
+            height="100"/>
+        </clipPath>
+      </defs>
       <g
-        class="chart"
-        clip-path="url(socioeconomic-development#rect)">
+        :clip-path="`url(#rect${step})`"
+        class="chart">
         <rect
           class="background"
           width="100"
           height="100"/>
         <g v-if="step !== null">
           <g
-            class="low"
-            filter="url(socioeconomic-development#gooey)">
+            :filter="`url(#gooey${step})`"
+            class="low">
             <polygon
               v-if="step === 0"
               points="60 -20 120 -20 120 120 65 65 75 50 55 20"/>
@@ -54,8 +55,8 @@
               points="55 -20 120 -20 120 120 70 60 75 50 55 20"/>
           </g>
           <g
-            class="high"
-            filter="url(socioeconomic-development#gooey)">
+            :filter="`url(#gooey${step})`"
+            class="high">
             <polygon
               v-if="step === 0"
               points="-20 -20 50 -20 45 20 22 50 50 80 80 120 -20 120"/>
