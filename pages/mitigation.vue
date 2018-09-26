@@ -66,7 +66,9 @@
         both-legends
         scenario="carbonSsp5")
 
-    p The introduction of a carbon price results in reductions in final energy use and substantially decreased emissions compared to baseline scenarios.
+    p The figure below shows the energy demand and CO2 emissions developments that IAMs derived for  the various combinations of SSPs and RCPs. A key instrument to reduce emissions is emissions pricing. The emissions price that IAMs need to impose the reach the mitigation levels of the RCPs by and large reflect the cost of the last ton of emissions reduction that need to be undertaken (called marginal abatement cost in economic jargon). As shown below, the emissions price not only increases with increasing mitigation stringency, but also varies substantially with different  socioeconomic developments across the SSPs. The lower  the socioeconomic challenges to  mitigation, the lower the carbon price for the same mitigation goal.
+
+    p Mitigation scenarios in the literature are varied along more dimensions than just the SSPs and RCP forcing levels. For example, they have been used to look at the individual role of technologies and sectors for mitigating climate change by changing technology availability or technology costs in terms of a sensitivity analysis (limited technology scenarios).  Others have looked at different near term climate policy developments with different levels of delay and regional variation compared to stringent global action pathways (delay scenarios). These are particularly relevant for informing the implementation of the Paris Agreement,  which aims to coordinate nationally determined contributions (NDCs) to climate action so to reach the long term climate goals. The first set of NDCs were specified for 2030, and thus mitigation scenarios that go through the NDCs in 2030 have become available in recent years.
 
     LayoutColumns.extended
       VisChart(
@@ -92,8 +94,9 @@
       @hover="setHoverSSP")
 
     LayoutRecap
-      li Representative Concentration Pathways (RCPs) represent different emission pathways leading to a specific GHG concentration value in 2100.
-      li In combination with the SSPs (socioeconomic pathways) they allow to investigate important parameters of socioeconomic, policy, and climatic development.
+      li Representative Concentration Pathways (RCPs) represent different emissions, concentration and radiative forcing projections leading to a large range of global warming levels, from continued warming rising above 4&thinsp;°C by the year 2100 to limiting warming well below 2&thinsp;°C as called for in the Paris Agreement.
+      li Socio-economic Pathways) they provide a powerful framework to explore the space of future mitigation pathways in terms of different levels of mitigation stringency and different assumptions about socioeconomic development.
+      li The mitigation pathway literature developed by the application of integrated assessment modelling comprises a wide variety of mitigation pathways, including pathways with limited technology availability and delays in climate policy in addition to variations in mitigation targets and socioeconomic drivers.
 </template>
 
 <script>
