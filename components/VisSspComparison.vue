@@ -188,7 +188,7 @@ export default {
         cy: 50
       }, {
         id: 'SSP&#8239;3',
-        description: '<tspan x="0" dy="-0.2em">Regional</tspan><tspan x="0" dy="1em">Rivalary</tspan>',
+        description: '<tspan x="0" dy="-0.2em">Regional</tspan><tspan x="0" dy="1em">Rivalry</tspan>',
         cx: 77,
         cy: 22
       }, {
