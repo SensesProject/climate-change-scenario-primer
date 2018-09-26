@@ -198,7 +198,7 @@ export default {
         cy: 77
       }, {
         id: 'SSP&#8239;5',
-        description: '<tspan x="0" dy="-0.2em">Fossil-fueled</tspan><tspan x="0" dy="1em">Developement</tspan>',
+        description: '<tspan x="0" dy="-0.2em">Fossil-fueled</tspan><tspan x="0" dy="1em">Development</tspan>',
         cx: 22,
         cy: 22
       }]

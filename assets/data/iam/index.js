@@ -65,7 +65,7 @@ const elements = [{
 //   color: 'yellow',
 //   minStep: 2
 // }, {
-  name: 'Population',
+  name: 'Labor',
   variable: 'l',
   x: 0.5,
   y: 0,
@@ -114,7 +114,7 @@ const elements = [{
   y: 2,
   color: 'blue'
 }, {
-  name: 'Population',
+  name: 'Labor',
   variable: 'l',
   x: 0.5,
   y: 3,
@@ -157,7 +157,7 @@ const elements = [{
   y: 5,
   color: 'blue'
 }, {
-  name: 'Population',
+  name: 'Labor',
   variable: 'l',
   x: 0.5,
   y: 7,

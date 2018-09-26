@@ -1,10 +1,10 @@
 <template lang="pug">
   section.wrapper
     h2.h1 Mitigation
-    p The Paris Agreement was a historic step in global efforts to combat climate change. At the COP 21 members agreed on climate change policies to limit global mean temperature increase below 2&thinsp;°C.
-    p Such a target to stay below 2&thinsp;°C can be expressed in various quantities: by accumulated greenhouse gas (GHG) emissions, atmospheric GHG concentration, radiative forcing, or the Global mean temperature increase. The physical relationships of these quantities are reflected in Earth System Models and can be translated into each other.
+    p The Paris Agreement was a historic step in global efforts to combat climate change. Countries agreed to take action to hold global mean temperature increase well below  2&thinsp;°C and pursue efforts to limit warming to 1.5&thinsp;°C.
+    p Such temperature targets can be translated to various other quantities: emissions budgets of cumulated future greenhouse gas (GHG) emissions and stabilization levels of atmospheric GHG concentrations or, equivalently, anthropogenic radiative forcing of the climate system. Since each ton of carbon dioxide emitted into the atmosphere adds extra warming lasting over hundreds of years, a temperature limit translates into a finite budget for the amount of carbon dioxide that can still be emitted into the atmosphere.
     p
-      | For classifying the different warming targets usually the representative concentration pathways (RCPs) are used. There are five scenarios, ranging from RCP&thinsp;1.9 to RCP&thinsp;8.5. The values refer to the “radiative forcing”, a quantity that crucially depends on GHG concentrations and which, in turn, determines the atmosphere's temperature. More specifically, the numbers give the change in radiative forcing in 2100 compared to preindustrial times. I.e. in the RCP&thinsp;1.9 scenario the globally/annually averaged radiative forcing will have risen by 1.9&thinsp;Watt/m
+      | For classifying the different warming targets usually the representative concentration pathways (RCPs) are used. There are five scenarios, ranging from RCP&thinsp;1.9 to RCP&thinsp;8.5. The values refer to radiative forcing in Watt/m<sup>2</sup> by the end of the century compared to preindustrial times, a quantity that crucially depends on GHG concentrations and which, in turn, determines the atmosphere's temperature. More specifically, the numbers give the change in radiative forcing in 2100 compared to preindustrial times. I.e. in the RCP&thinsp;1.9 scenario the globally/annually averaged radiative forcing will have risen by 1.9&thinsp;Watt/m
       sup 2
       |  compared to preindustrial times.
 
@@ -56,7 +56,7 @@
 
     p For the feasible SSP &times; RCP combinations important parameters can be understood in a comprehensive way.
 
-    p One powerful example to enforce climate change mitigation is by introducing a carbon price. Depending on the ambition of the target and the socio-economic setting the price can vary drastically.
+    p One powerful example to enforce climate change mitigation is by introducing a carbon price. Depending on the ambition of the target and the socioeconomic setting the price can vary drastically.
 
     LayoutColumns.extended
       VisChart(
@@ -99,7 +99,7 @@
 
     LayoutRecap
       li Representative Concentration Pathways (RCPs) represent different emission pathways leading to a specific GHG concentration value in 2100.
-      li In combination with the SSPs (socio-economic pathways) they allow to investigate important parameters of socioeconomic, policy, and climatic development.
+      li In combination with the SSPs (socioeconomic pathways) they allow to investigate important parameters of socioeconomic, policy, and climatic development.
 </template>
 
 <script>

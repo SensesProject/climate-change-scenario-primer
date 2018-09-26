@@ -3,7 +3,7 @@
     div.wrapper
       h1.white Climate Change Scenarios
       p.sans.white We can’t predict the future, but scenarios allow us to explore possible futures, the assumptions they depend upon, and the courses of action that could bring them about.
-      p.sans.white This interactive primer explains what climate change scenarios are and how they are connected to socioeconomics, energy & land use, emissions, climate and climate impacts.
+      p.sans.white This interactive primer explains what climate change scenarios are and how they are connected to socioeconomics, energy & land use, emissions, climate change and climate impacts.
       router-link.button(:to="nextChapter.path")
         span.mono.violet
           span.arrow →

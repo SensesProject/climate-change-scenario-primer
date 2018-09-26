@@ -30,7 +30,7 @@
     p.sans
       strong About
       br
-      | The website climatescenarios.org is an initiative of the EU project SENSES. The project investigates potential socio-economic futures in the face of climate change and how this knowledge can be made accessible to a broader public.
+      | The website climatescenarios.org is an initiative of the EU project SENSES. The project investigates potential socioeconomic futures in the face of climate change and how this knowledge can be made accessible to a broader public.
     p.sans
       | SENSES will develop tools and approaches to make the new generation of climate change scenarios more comprehensible and accessible. Further information can be found on the project website:
       a(href="http://senses-project.org/")  senses-project.org

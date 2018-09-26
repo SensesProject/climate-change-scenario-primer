@@ -442,8 +442,8 @@ export default {
         properties: properties.filter(p => p.models.find(m => m === 'REMIND-MAGPIE'))
       }, {
         color: 'blue',
-        active: (selectedModel === 'MESSAGE-GLOBIUM' || hoverModel === 'MESSAGE-GLOBIUM') && step > 0,
-        properties: properties.filter(p => p.models.find(m => m === 'MESSAGE-GLOBIUM'))
+        active: (selectedModel === 'MESSAGE-GLOBIOM' || hoverModel === 'MESSAGE-GLOBIOM') && step > 0,
+        properties: properties.filter(p => p.models.find(m => m === 'MESSAGE-GLOBIOM'))
       }]
     }
   },

@@ -17,7 +17,7 @@
       )
       p
         strong.green Socioeconomic Development
-        |  comprises a myriad of factors like population, economic activity, urbanisation, education, equality, consumption patterns and lifestyles, and institutions. These factors determine the way we live, including how we use energy and land. Socio-economic scenarios are used to describe possible socio-economic futures.
+        |  comprises a myriad of factors like population, economic activity, urbanisation, education, social equality, consumption patterns, lifestyles, and institutions. These factors determine the way we live, including how we use energy and land. Socioeconomic scenarios are used to describe possible socioeconomic futures.
 
     div.cycle-part
       VisCyclePartLarge(
@@ -53,17 +53,17 @@
       )
       p Higher temperatures and changes in precipitation lead to
         strong.blue.no-hyphen  Climate Impacts
-        |  on natural and human systems through, inter alia, droughts, floods, and storms, sea level rise, reduced freshwater availability, heat stress, and potential large scale reconfigurations of Earth system components (tipping points). Research on these effects is carried out in climate impact studies, which use a suite of models ranging from water transport models to vegetation and agriculture models to produce climate impact projections.
+        |  on natural and human systems through, inter alia, droughts, floods, storms, sea level rise, reduced freshwater availability, heat stress, and potential large scale reconfigurations of Earth system components (tipping points). Research on these effects is carried out in climate impact studies, which use a suite of models ranging from water transport models to vegetation and agriculture models to produce climate impact projections.
     div.cycle-part.last
       VisCyclePartLarge(type="last")
 
     p Climate impacts will – and already did – influence social and economic activity. Socioeconomic damages emerge not only from the direct impact on physical infrastructure, human productivity, natural resources, and ecosystem services. They also emerge from indirect impacts such as disruptions of globally connected supply chains, deteriorating institutions and climate impact induced migration. Importantly, direct and indirect damages are not only a function of future climate change and adaptation measures, but also depend on assumptions about broader socioeconomic developments.
 
-    p The link between climate impacts and socio-economic damages is the most complex in the circle and there are still significant knowledge gaps and research challenges. Integrated assessment models use climate damage functions mapping warming levels to overall reductions in economic output. Macroeconomic general equilibrium models use climate damage functions on inputs and production factors of affected economic sectors. Both have to be reconciled with a growing body of empirical findings of substantial climate and weather impacts on societies today.
+    p The link between climate impacts and socioeconomic damages is the most complex in the circle and there are still significant knowledge gaps and research challenges. Integrated assessment models use climate damage functions mapping warming levels to overall reductions in economic output. Macroeconomic general equilibrium models use climate damage functions on inputs and production factors of affected economic sectors. Both have to be reconciled with a growing body of empirical findings of substantial climate and weather impacts on societies today.
 
     VisCycleCircle.center(reduce-impact=true)
 
-    p Integrated assessment models are an important tool to analyse our response to climate change. Since they capture the link between socio-economic developments, energy and land use, and emissions, they can be used to investigate emissions reductions strategies to stay below a certain warming limit
+    p Integrated assessment models are an important tool to analyse our response to climate change. Since they capture the link between socioeconomic developments, energy and land use, and emissions, they can be used to investigate emissions reductions strategies to stay below a certain warming limit
       strong.yellow  (mitigation pathways)
       |. Likewise, biophysical and economic impact models can be used to study adaptation measures to limit the impact of climate change on socioeconomic activities
       strong.red  (adaptation pathways)
