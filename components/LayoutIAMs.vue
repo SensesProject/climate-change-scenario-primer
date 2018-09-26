@@ -39,7 +39,7 @@
         div(v-bind='pStructure[3]', ref='strucureOptions', :step=1)
           div.options
             div.slider.population
-              span.b Population
+              span.b Labor
               input.green(type='range', min=0, max=3, v-model.number='scenarioPopulation')
               span {{ scenarioNames.population[scenarioPopulation] }}
             div.slider.scenarioCarbon
