@@ -1,7 +1,7 @@
 <template lang="pug">
   section.wrapper
     h2.h1 Climate Change
-    p The scenarios discussed above assume a large range ofgreenhouse gas (GHG) emissions into the atmosphere. Not all GHGs emitted into the atmosphere remain there. For instance, the oceans absorb large parts of atmospheric CO
+    p The scenarios discussed above assume a large range of greenhouse gas (GHG) emissions into the atmosphere. Not all GHGs emitted into the atmosphere remain there. For instance, the oceans absorb large parts of atmospheric CO
       sub 2
       |  and vegetation can act as a carbon sink as well. Still, the sheer magnitude of GHGs emitted in the past causes GHGs to accumulate in the atmosphere and thus rising GHGs concentrations.
 
