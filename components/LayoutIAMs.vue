@@ -25,17 +25,17 @@
             :class='line.color')
       div.text-wrapper(ref="structureText")
         div(v-bind='pStructure[0]')
-          p Here we give a very simple example of such an IAM. We assume that GDP is driven by the
+          p Here we give a very simple example of such an IAM. We assume that GDP is driven by
             strong.green  labor
             | ,
             strong.yellow  energy
             | , and
             strong.blue  capital stock
-            | . As you can see all of those three factors are raising and so is GDP.
+            | . As you can see all of those three factors are raising and so is GDP. For didactical reasons, we neglect land as a production factor in our simple example, but in reality as well as in detailed IAMs, it is an important factor.
         div(v-bind='pStructure[1]')
           p The produced GDP can be spent either for consumption, invested into the macro-economic capital stock or used to raise the amount of used energy. Other IAMs might also take into account investment into education which would increase the productivity of the labor. But for simplicity we ignore this option here in our very simple IAM. The goal of our simple IAM is to maximise consumption in the long run.
         div(v-bind='pStructure[2]')
-          p To analyse the effect on emissions in our simple IAM we split the total energy into clean energy and dirty energy and also give the opportunity to invest into both types of energy separately. In this simple case only dirty energy leads to emissions. That means that the decision how much of the GDP is used to build up capacities of clean energy instead of dirty energy determines the correlated amount of emissions. The negative impact of global warming in the baseline scenarios is ignored.
+          p To analyse the effect on emissions in our simple IAM we split the total energy into clean energy and dirty energy and also give the opportunity to invest into both types of energy separately. In this simple case only dirty energy leads to emissions. That means that the decision how much of the GDP is used to build up capacities of clean energy instead of dirty energy determines the resulting amount of emissions. The model does not include the impact of emissions on climate change which in turn would impact economic growth and energy and land use.
         div(v-bind='pStructure[3]', ref='strucureOptions', :step=1)
           div.options
             div.slider.population
@@ -52,7 +52,7 @@
         div(v-bind='pFingerprint[0]')
           p The IAMs used to generate SSP scenarios are a lot more complex. Clean and dirty energy is differentiated into energy sources and emissions into different types:
         div(v-bind='pFingerprint[1]')
-          p Overall the more complex IAMs represent more aspects of the macro-economy and take into account more types of technologies to produce energy at different levels and calculate a variety of produced emissions.
+          p Overall the more complex IAMs represent energy use on a process level, i.e. they take into account a large number of energy technologies to produce electricity, solids, liquids and gases from different energy sources like fossil fuels, nuclear and renewable energy, and link the energy supply modelling to detailed projections of energy demand. Likewise they include detailed land use models describing different uses of land and the competition between them, dependending on environmental, demand and management factors. They convert the various uses of energy and land into emissions projections for a variety of greenhouse gases and air pollutants.
         div.graphic-wrapper(ref='fingerprintStepper', step="1")
           VisFingerprints(
             :pHeights='pFingerprintHeights',
@@ -63,7 +63,7 @@
             @hover="setHoverModels")
         LayoutRadioGroup(:options='fingerprintOptions', v-model='fingerprintModel', :highlight="hoverModels", @hover='setHoverModel')
         div(v-bind='pFingerprint[2]', ref='fingerprintStepper2', step="2")
-          p But there are also key differences between IAMs. Some are more detailed in specific aspects and cover different categories better then others. As this makes some better suited to handle the input assumptions of one SSP each of the SSPs has its own reference model.
+          p But there are also key differences between IAMs. Some are more detailed in specific aspects and cover different categories better then others. As this makes some better suited to handle the input assumptions of individual SSPs, each of the SSPs has its own reference model.
 </template>
 
 <script>
