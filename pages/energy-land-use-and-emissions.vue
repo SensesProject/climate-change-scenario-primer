@@ -1,7 +1,7 @@
 <template>
   <section class="wrapper">
     <h2 class="h1">Energy, Land Use and Emissions</h2>
-    <p>Scenario assumptions – e.g., offered by the SSP-RCP framework – tell us the narrative and give us the general conditions for possible futures. Based on those scenario assumptions integrated assessment models and climate impact models generate a more detailed description how possible futures could look like. They calculate energy and land use variables and the correlated emissions for both – business-as-usual and climate change mitigation assumptions.</p>
+    <p>Socioeconomic scenarios provide general narratives and key socioeconmic developments to characterize possible futures. To understand what this means for future greenhouse gas emissions and climate change, those assumptions need to be translated into quantitative projections for future energy and land use. This is done by integrated assessment models (IAMs) representing the world’s coupled energy-land-economy-climate system and its development over the 21<sup>st</sup> century. Based on socioeconomic scenarios, IAMs derive consistent pathways for macroeconomic, energy system, and land use variables and project resulting emissions of greenhouse gases and air pollutants until the end of the century. They calculate these energy-land-emissions pathways for both baseline projections (What can happen?) and mitigation goals (What should happen?).</p>
 
     <p>Integrated assessment models (IAMs) provide consistent pathways for macroeconomic, energy system related, and land use variables and connect them to the resulting emissions.</p>
 
