@@ -51,7 +51,7 @@ export default {
         'Socioeconomic<br>Development',
         'Energy &<br>Land Use',
         'Emissions',
-        'Climate',
+        'Climate<br>Change',
         'Climate<br>Impacts'
       ]
     }
