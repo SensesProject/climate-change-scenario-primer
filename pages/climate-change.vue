@@ -5,7 +5,7 @@
       sub 2
       |  and vegetation can act as a carbon sink as well. Still, the sheer magnitude of GHGs emitted in the past causes GHGs to accumulate in the atmosphere and thus rising GHGs concentrations.
 
-    p GHGs, as hinted by their name, play the key role in the greenhouse effect. The greenhouse effect describes the balance of incoming solar radiation and outgoing heat radiation which is partly absorbed and reemitted in the atmosphere, Thanks to the natural greenhouse effect, the surface temperatures on Earth are high enough to support abundant life. However, adding further greenhouse gases by human activity induces a radiative forcing from increased absorption of outgoing heat radiation in the atmosphere, which then leads to rising temperatures on the Earth surface. The higher the radiative forcing, the larger the warming.
+    p GHGs, as hinted by their name, play the key role in the greenhouse effect. The greenhouse effect denotes the absorption and reemission of heat radiation from the Earth surface by  GHGs in the atmosphere. Thanks to the natural greenhouse effect, the surface temperatures on Earth are high enough to support abundant life. However, adding further greenhouse gases from human activity to the atmosphere induces a radiative forcing from increased absorption of outgoing heat radiation, which then leads to rising temperatures on the Earth surface (anthropogenic greenhouse effect). The higher the radiative forcing, the larger the warming.
 
     LayoutColumns.extended(left-title="RCP&#8239;2.6", right-title="RCP&#8239;6.0")
       VisMap(
