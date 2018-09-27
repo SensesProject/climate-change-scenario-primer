@@ -48,27 +48,9 @@
 
     p This scenario framework allows to explore climate change mitigation policies and their impact on energy use, land use, emissions, and economic activity relative to the baseline scenario without climate policies, to mitigation pathways with different levels of stringency (comparison across rows), and to mitigation pathways with the same level of stringency, but different socio-economic assumptions (comparison across columns). Naturally not every combination of SSPs and RCPs is feasible, e.g., SSP&thinsp;3 with a radiative forcing of 1.9 and 2.6&thinsp;W/m<sup>2</sup> has been found infeasible in IAMs due to regional rivalry impeding global coordination of deep mitigation efforts.
 
-    p For the feasible SSP &times; RCP combinations important parameters can be understood in a comprehensive way.
+    //- p For the feasible SSP &times; RCP combinations important parameters can be understood in a comprehensive way.
 
-    p One powerful example to enforce climate change mitigation is by introducing a carbon price. Depending on the ambition of the target and the socio-economic setting the price can vary drastically.
-
-    LayoutColumns.extended
-      VisChart(
-        slot="left"
-        :max="3200"
-        legend="rcp"
-        both-legends
-        scenario="carbonSsp1")
-      VisChart(
-        slot="right"
-        :max="3200"
-        legend="rcp"
-        both-legends
-        scenario="carbonSsp5")
-
-    p The figure below shows the energy demand and CO<sub>2</sub> emissions developments that IAMs derived for  the various combinations of SSPs and RCPs. A key instrument to reduce emissions is emissions pricing. The emissions price that IAMs need to impose the reach the mitigation levels of the RCPs by and large reflect the cost of the last ton of emissions reduction that need to be undertaken (called marginal abatement cost in economic jargon). As shown below, the emissions price not only increases with increasing mitigation stringency, but also varies substantially with different  socioeconomic developments across the SSPs. The lower  the socioeconomic challenges to  mitigation, the lower the carbon price for the same mitigation goal.
-
-    p Mitigation scenarios in the literature are varied along more dimensions than just the SSPs and RCP forcing levels. For example, they have been used to look at the individual role of technologies and sectors for mitigating climate change by changing technology availability or technology costs in terms of a sensitivity analysis (limited technology scenarios).  Others have looked at different near term climate policy developments with different levels of delay and regional variation compared to stringent global action pathways (delay scenarios). These are particularly relevant for informing the implementation of the Paris Agreement,  which aims to coordinate nationally determined contributions (NDCs) to climate action so to reach the long term climate goals. The first set of NDCs were specified for 2030, and thus mitigation scenarios that go through the NDCs in 2030 have become available in recent years.
+    //- p One powerful example to enforce climate change mitigation is by introducing a carbon price. Depending on the ambition of the target and the socio-economic setting the price can vary drastically.
 
     LayoutColumns.extended
       VisChart(
@@ -92,6 +74,26 @@
       v-model="ssp"
       class="center"
       @hover="setHoverSSP")
+
+    p The figure above shows the energy demand and CO<sub>2</sub> emissions developments that IAMs derived for  the various combinations of SSPs and RCPs. A key instrument to reduce emissions is emissions pricing.
+
+    LayoutColumns.extended
+      VisChart(
+        slot="left"
+        :max="3200"
+        legend="rcp"
+        both-legends
+        scenario="carbonSsp1")
+      VisChart(
+        slot="right"
+        :max="3200"
+        legend="rcp"
+        both-legends
+        scenario="carbonSsp5")
+
+    p The emissions price that IAMs need to impose the reach the mitigation levels of the RCPs by and large reflect the cost of the last ton of emissions reduction that need to be undertaken (called marginal abatement cost in economic jargon). As shown above, the emissions price not only increases with increasing mitigation stringency, but also varies substantially with different socioeconomic developments across the SSPs. The lower the socioeconomic challenges to  mitigation, the lower the carbon price for the same mitigation goal.
+
+    p Mitigation scenarios in the literature are varied along more dimensions than just the SSPs and RCP forcing levels. For example, they have been used to look at the individual role of technologies and sectors for mitigating climate change by changing technology availability or technology costs in terms of a sensitivity analysis (limited technology scenarios).  Others have looked at different near term climate policy developments with different levels of delay and regional variation compared to stringent global action pathways (delay scenarios). These are particularly relevant for informing the implementation of the Paris Agreement,  which aims to coordinate nationally determined contributions (NDCs) to climate action so to reach the long term climate goals. The first set of NDCs were specified for 2030, and thus mitigation scenarios that go through the NDCs in 2030 have become available in recent years.
 
     LayoutRecap
       li Representative Concentration Pathways (RCPs) represent different emissions, concentration and radiative forcing projections leading to a large range of global warming levels, from continued warming rising above 4&thinsp;°C by the year 2100 to limiting warming well below 2&thinsp;°C as called for in the Paris Agreement.
