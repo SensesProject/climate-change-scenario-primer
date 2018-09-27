@@ -9,9 +9,9 @@
         v-for="(combo, i) in rcp.combinations"
         :key="`${rcp.value}-${i}`")
         div.circle(
-          v-if="combo !== null"
-          :class="{infeasable: combo === false}")
-        div.ssp(v-if="rcp.value === '2.6'")
+          v-if="combo"
+          :class="classes[combo - 1]")
+        div.ssp(v-if="rcp.value === '1.9'")
           div.label SSP&#8239;{{ ssps[i].label }}
           div.range(:style="ssps[i].style")
     div.key
@@ -19,25 +19,31 @@
         div.icon
         div.label Baseline
       |
-      div.feasable.key-item
+      div.feasible.key-item
         div.icon
-        div.label Stabilsation Scenario Combination
+        div.label Feasible for all IAMs
       |
-      div.infeasable.key-item
+      div.semifeasible.key-item
         div.icon
-        div.label Infeasible Scenario Combination
+        div.label Feasible for some IAMs
+      |
+      div.infeasible.key-item
+        div.icon
+        div.label Infeasible
 </template>
 
 <script>
 export default {
   data () {
     return {
+      // 0 => nothing, 1 => feasible, 2 => feasible for some, 3 => infeasible
       rcps: [
-        {label: '8.5', combinations: [null, null, null, null, null]},
-        {label: '6.0', combinations: [null, true, true, null, true]},
-        {label: '4.5', combinations: [true, true, true, true, true]},
-        {label: '3.4', combinations: [true, true, true, true, true]},
-        {label: '2.6', combinations: [true, true, false, true, false]}
+        {label: '8.5', combinations: [0, 0, 0, 0, 0]},
+        {label: '6.0', combinations: [0, 1, 1, 0, 1]},
+        {label: '4.5', combinations: [1, 1, 1, 1, 1]},
+        {label: '3.4', combinations: [1, 1, 1, 1, 1]},
+        {label: '2.6', combinations: [1, 1, 3, 1, 2]},
+        {label: '1.9', combinations: [1, 2, 3, 2, 2]}
       ].map((d, i, rcps) => {
         return {
           value: d.label,
@@ -57,11 +63,12 @@ export default {
         return {
           label: d.label,
           style: {
-            transform: `translateY(${(-d.range[1] + 2.6) * 2}rem)`,
+            transform: `translateY(${(-d.range[1] + 1.9) * 2}rem)`,
             height: `${(d.range[1] - d.range[0]) * 2}rem`
           }
         }
-      })
+      }),
+      classes: ['feasible', 'semifeasible', 'infeasible']
     }
   }
 }
@@ -97,7 +104,11 @@ export default {
         background: $color-white;
         border: 2px solid $color-green;
 
-        &.infeasable {
+        &.semifeasible {
+          border-color: $color-yellow;
+        }
+
+        &.infeasible {
           border-color: $color-red;
         }
       }
@@ -147,13 +158,19 @@ export default {
           background: $color-accent;
         }
       }
-      &.feasable {
+      &.feasible {
         .icon {
           border-radius: 50%;
           border: 2px solid $color-green;
         }
       }
-      &.infeasable {
+      &.semifeasible {
+        .icon {
+          border-radius: 50%;
+          border: 2px solid $color-yellow;
+        }
+      }
+      &.infeasible {
         .icon {
           border-radius: 50%;
           border: 2px solid $color-red;
