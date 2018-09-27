@@ -48,10 +48,6 @@
 
     p This scenario framework allows to explore climate change mitigation policies and their impact on energy use, land use, emissions, and economic activity relative to the baseline scenario without climate policies, to mitigation pathways with different levels of stringency (comparison across rows), and to mitigation pathways with the same level of stringency, but different socio-economic assumptions (comparison across columns). Naturally not every combination of SSPs and RCPs is feasible, e.g., SSP&thinsp;3 with a radiative forcing of 1.9 and 2.6&thinsp;W/m<sup>2</sup> has been found infeasible in IAMs due to regional rivalry impeding global coordination of deep mitigation efforts.
 
-    //- p For the feasible SSP &times; RCP combinations important parameters can be understood in a comprehensive way.
-
-    //- p One powerful example to enforce climate change mitigation is by introducing a carbon price. Depending on the ambition of the target and the socio-economic setting the price can vary drastically.
-
     LayoutColumns.extended
       VisChart(
         slot="left"
