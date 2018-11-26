@@ -1,12 +1,12 @@
 <template lang="pug">
   div.LayoutCloseChapter.center.extended.no-margin
-    div.box.summary.white
+    div.box.summary.violet
       div
         h3 Summary
         ul
           slot
     router-link.box.next-chapter.violet(:to="nextChapter.path")
-      div
+      div.white
         span.next Next Chapter
         h3.h2 {{ nextChapter.title }}
 </template>
@@ -42,14 +42,15 @@ export default {
       max-width: $max-width;
     }
     &.summary {
-      background: $color-accent;
+      // background: $color-accent;
+      border: 1px solid $color-accent;
 
       h3 {
         margin-bottom: $spacing / 2;
       }
 
       ul {
-        list-style: url(~/assets/img/li.svg);
+        list-style: url(~/assets/img/li-violet.svg);
         line-height: 1.4 ;
 
         li + li {
@@ -58,6 +59,7 @@ export default {
       }
     }
     &.next-chapter {
+      background: $color-accent;
       .next {
         font-family: $font-mono;
         display: block;
@@ -95,7 +97,7 @@ export default {
 
     .next-chapter {
       width: 40%;
-      border: 1px solid $color-accent;
+      // border: 1px solid $color-accent;
     }
   }
 }
