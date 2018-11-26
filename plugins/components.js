@@ -6,6 +6,7 @@ import LayoutListItem from '~/components/LayoutListItem'
 import LayoutColumns from '~/components/LayoutColumns'
 import LayoutNav from '~/components/LayoutNav'
 import LayoutRecap from '~/components/LayoutRecap'
+import LayoutFurtherReading from '~/components/LayoutFurtherReading'
 import LayoutRadioGroup from '~/components/LayoutRadioGroup'
 import LayoutHeader from '~/components/LayoutHeader'
 import Logo from '~/components/Logo'
@@ -34,6 +35,7 @@ Vue.component('LayoutListItem', LayoutListItem)
 Vue.component('LayoutColumns', LayoutColumns)
 Vue.component('LayoutNav', LayoutNav)
 Vue.component('LayoutRecap', LayoutRecap)
+Vue.component('LayoutFurtherReading', LayoutFurtherReading)
 Vue.component('LayoutRadioGroup', LayoutRadioGroup)
 Vue.component('LayoutHeader', LayoutHeader)
 Vue.component('Logo', Logo)
