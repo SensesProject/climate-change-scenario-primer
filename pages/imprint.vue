@@ -23,9 +23,33 @@
         | e-mail:
         a(href="mailto:cornelia.auer@pik-potsdam.de")  cornelia.auer@pik-potsdam.de
     p.sans
-      strong Design and technical development
+      strong Content contributors
       br
-      a(href="https://uclab.fh-potsdam.de/projects/senses/") SENSES Team of UCLab of the University of Applied Sciences Potsdam
+      | Elmar Kriegler
+      br
+      | Cornelia Auer
+      br
+      | Lavinia Baumstark
+      br
+      | Jan Volkholz
+      br
+      | Volker Krey
+      br
+      | Kasper Kok
+      br
+      | Henrik Carlsen
+    p.sans
+      strong Design and development
+      br
+      a(href="https://uclab.fh-potsdam.de/") UCLab of the University of Applied Sciences Potsdam
+      br
+      | Katja Dittrich
+      br
+      | Boris Müller
+      br
+      | Jonas Parnow
+      br
+      | Fidel Thomet
 
     p.sans
       strong About
