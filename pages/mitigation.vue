@@ -60,7 +60,7 @@
         slot="right"
         :dynamic-filter="[ssp, hoverSSP]"
         :legend-filter="ssp"
-        :max="140000"
+        :max="140"
         legend="rcp"
         hide-legend
         scenario="emissions")

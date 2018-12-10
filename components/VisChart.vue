@@ -154,7 +154,7 @@ export default {
           attrs: {
             class: [
               scenario.ssp,
-              `RCP${scenario.rcp}`,
+              `RCP${scenario.rcp.replace(/\./, '')}`,
               {
                 fade: (dynamicFilter == null && highlightSsp !== null && highlightSsp !== scenario.ssp) || (dynamicFilter != null && !dynamicFilter.find(f => f === scenario.ssp))
               }

@@ -224,7 +224,7 @@ const data = [{
   y: 58.41
 }, {
   id: 'c2p11',
-  name: 'Solar Power',
+  name: 'Solar Power (PV)',
   category: 'Electricity and heat',
   models: ['AIM/CGE', 'GCAM4', 'IMAGE', 'REMIND-MAGPIE', 'MESSAGE-GLOBIOM'],
   x: 33.67,
@@ -238,7 +238,7 @@ const data = [{
   y: 81.30
 }, {
   id: 'c2p13',
-  name: 'Wind Power',
+  name: 'Wind Power (Offshore)',
   category: 'Electricity and heat',
   models: ['AIM/CGE', 'GCAM4', 'IMAGE', 'REMIND-MAGPIE', 'MESSAGE-GLOBIOM'],
   x: 38.82,
