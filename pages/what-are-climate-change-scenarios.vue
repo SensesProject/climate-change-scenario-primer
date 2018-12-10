@@ -85,6 +85,28 @@
       li Climate change scenarios are a powerful tool for understanding climate change, charting response strategies, and supporting climate policy making.
       li Climate change scenarios are not about predicting the future, but come in the form of projections of what can happen or pathways of how to reach certain goals.
       li Climate change scenarios are usually used in pairs or larger sets which determine their context and meaning.
+
+    LayoutFurtherReading
+      li Rounsevell, M. D., & Metzger, M. J. (2010).
+        a(href="https://onlinelibrary.wiley.com/doi/abs/10.1002/wcc.63")
+          strong  Developing qualitative scenario storylines for environmental change assessment.
+        |  Wiley Interdisciplinary Reviews: Climate Change, 1(4), 606-619.
+      li Van Notten, P. W., Rotmans, J., Van Asselt, M. B., & Rothman, D. S. (2003).
+        a(href="https://www.sciencedirect.com/science/article/pii/S0016328702000903")
+          strong  An updated scenario typology.
+        |  Futures, 35(5), 423-443.
+      li Börjeson, L., Höjer, M., Dreborg, K. H., Ekvall, T., & Finnveden, G. (2006).
+        a(href="https://www.sciencedirect.com/science/article/pii/S0016328705002132")
+          strong  Scenario types and techniques: towards a user's guide.
+        |  Futures, 38(7), 723-739.
+      li Beck, S., & Mahony, M. (2017).
+        a(href="https://www.nature.com/articles/nclimate3264")
+          strong  The IPCC and the politics of anticipation.
+        |  Nature Climate Change, 7(5), 311.
+      li Carlsen, H., Klein, R. J., & Wikman-Svahn, P. (2017).
+        a(href="https://www.nature.com/articles/nclimate3379")
+          strong  Transparent scenario development.
+        |  Nature Climate Change, 7(9), 613.
 </template>
 
 <script>

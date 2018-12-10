@@ -72,7 +72,16 @@
     LayoutRecap
       li Socioeconomic development and climate change are intricately linked, with social and economic activities determining energy and land use determining emissions determining  climate forcing and climate change determining climate impacts which in turn affect socioeconomic developments.
       li Climate change response strategies fall into mitigation strategies to limit human impact on climate change and adaptation strategies to limit the climate change impact on humans. Mitigation and adaptation scenarios (often also called “pathways”) are used to analyse such response strategies.
-  </section>
+
+    LayoutFurtherReading
+      li Moss, R. H., Edmonds, J. A., Hibbard, K. A., et al. (2010).
+        a(href="https://www.nature.com/articles/nature08823")
+          strong  The next generation of scenarios for climate change research and assessment.
+        |  Nature, 463(7282), 747-756.
+      li Van Vuuren, D. P., Kok, M. T., Girod, B., Lucas, P. L., & de Vries, B. (2012).
+        a(href="https://www.sciencedirect.com/science/article/abs/pii/S0959378012000635")
+          strong  Scenarios in global environmental assessments: key characteristics and lessons for future use.
+        |  Global Environmental Change, 22(4), 884-895.
 </template>
 
 <script>

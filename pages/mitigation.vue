@@ -95,6 +95,19 @@
       li Representative Concentration Pathways (RCPs) represent different emissions, concentration and radiative forcing projections leading to a large range of global warming levels, from continued warming rising above 4&thinsp;°C by the year 2100 to limiting warming well below 2&thinsp;°C as called for in the Paris Agreement.
       li When combined with the Socioeconomic Pathways (SSPs) they provide a powerful framework to explore the space of future mitigation pathways in terms of different levels of mitigation stringency and different assumptions about socioeconomic development.
       li The mitigation pathway literature developed by the application of integrated assessment modelling comprises a wide variety of mitigation pathways, including pathways with limited technology availability and delays in climate policy in addition to variations in mitigation targets and socioeconomic drivers.
+    LayoutFurtherReading
+      li Van Vuuren, D. P., Kriegler, E., O’Neill, B. C., et al. (2014).
+        a(href="https://link.springer.com/article/10.1007/s10584-013-0906-1")
+          strong  A new scenario framework for climate change research: scenario matrix architecture.
+        |  Climatic Change, 122(3), 373-386.
+      li Van Vuuren, D. P., Edmonds, J., Kainuma, M., et al. (2011).
+        a(href="https://link.springer.com/article/10.1007/s10584-011-0148-z")
+          strong  The representative concentration pathways: an overview.
+        |  Climatic change, 109(1-2), 5.
+      li Clarke, L., Jiang, K., Akimoto, K., et al. (2014).
+        a(href="http://pure.iiasa.ac.at/id/eprint/11119/")
+          strong  Chapter 6 - Assessing transformation pathways. In Climate Change 2014: Mitigation of Climate Change. IPCC Working Group III Contribution to AR5.
+        |  Cambridge University Press.
 </template>
 
 <script>

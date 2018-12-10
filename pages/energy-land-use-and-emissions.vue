@@ -74,6 +74,9 @@
       <li>IAMs show that the widely varying socioeconomic futures described by the SSPs lead to large variations in energy, land use and emissions in baseline projections without  climate policy interventions.</li>
       <li>IAMs are used to derive both baseline projections (What can happen?) as well as pathways oriented to achieving mitigation goals (What should happen?)</li>
     </LayoutRecap>
+    <LayoutFurtherReading>
+      <li>Riahi, K., Van Vuuren, D. P., Kriegler, E., et al. (2017).<a href="https://www.sciencedirect.com/science/article/pii/S0959378016300681"><strong> The shared socioeconomic pathways and their energy, land use, and greenhouse gas emissions implications: an overview.</strong></a>    Global Environmental Change, 42, 153-168.</li>
+    </LayoutFurtherReading>
   </section>
 </template>
 
