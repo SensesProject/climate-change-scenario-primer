@@ -83,6 +83,23 @@
     LayoutRecap
       li There is a wide range of sectors considered in climate impact research including impacts related to agriculture, energy, and health.
       li Climate impact models use data from climate and socioeconomic scenarios to create impact scenarios.
+    LayoutFurtherReading
+      li Field, C. B., Barros, V. R., Mastrandrea, M. D., et al. (2014).
+        a(href="https://www.ipcc.ch/report/ar5/wg2/")
+          strong  IPCC: Summary for Policymakers. In: Climate Change 2014: Impacts, Adaptation, and Vulnerability. Part A: Global and Sectoral Aspects. Contribution of Working Group II to the Fifth Assessment Report of the Intergovernmental Panel on Climate Change.
+        |  Cambridge University Press.
+      li Warszawski, L., Friend, A., Ostberg, S., et al. (2013).
+        a(href="http://iopscience.iop.org/article/10.1088/1748-9326/8/4/044018/meta")
+          strong  A multi-model analysis of risk of ecosystem shifts under climate change.
+        |  Environmental Research Letters, 8(4), 044018.
+      li Frieler, K., Lange, S., Piontek, F., et al. (2017).
+        a(href="http://eprints.nottingham.ac.uk/48771/")
+          strong  Assessing the impacts of 1.5 C global warming–simulation protocol of the Inter-Sectoral Impact Model Intercomparison Project (ISIMIP2b).
+        |  Geoscientific Model Development, 10(12), 4321-4345.
+      li Harrison, P. A., Dunford, R. W., Holman, I. P., & Rounsevell, M. D. (2016).
+        a(href="https://www.nature.com/articles/nclimate3039")
+          strong  Climate change impact modelling needs to include cross-sectoral interactions.
+        |  Nature Climate Change, 6(9), 885.
 </template>
 
 <script>

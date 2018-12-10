@@ -98,6 +98,23 @@
         |  century.
       li They typically centre around a general narrative about the world’s future augmented by projections of factors like population, economic activity, and urbanisation.
       li Socioeconomic scenarios in climate change research are increasingly based on the Shared Socioeconomic Pathways (SSPs) which represent five different futures with widely varying challenges to mitigation and adaptation.
+    LayoutFurtherReading
+      li O’Neill, B. C., Kriegler, E., Riahi, K., et al. (2014).
+        a(href="https://link.springer.com/article/10.1007/s10584-013-0905-2")
+          strong  A new scenario framework for climate change research: the concept of shared socioeconomic pathways.
+        |  Climatic Change, 122(3), 387-400.
+      li Cork, S. J., Peterson, G. D., Bennett, E. M., Petschel-Held, G., & Zurek, M. (2006).
+        a(href="https://www.jstor.org/stable/26266003?seq=1#metadata_info_tab_contents")
+          strong  Synthesis of the storylines.
+        |  Ecology and Society, 11(2).
+      li Kriegler, E., O’Neill, B. C., Hallegatte, S., et al. (2012).
+        a(href="https://www.sciencedirect.com/science/article/abs/pii/S0959378012000593")
+          strong  The need for and use of socio-economic scenarios for climate change analysis: a new approach based on shared socio-economic pathways.
+        |  Global Environmental Change, 22(4), 807-822.
+      li O’Neill, B. C., Kriegler, E., Ebi, K. L., et al. (2017).
+        a(href="https://www.sciencedirect.com/science/article/abs/pii/S0959378015000060")
+          strong  The roads ahead: narratives for shared socioeconomic pathways describing world futures in the 21st century.
+        |  Global Environmental Change, 42, 169-180.
 
 </template>
 

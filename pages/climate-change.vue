@@ -37,6 +37,15 @@
     LayoutRecap
       li Climate models are complex systems describing the physical world including its atmosphere, ocean, ice sheets and vegetation. The most comprehensive climate models are called Earth system models.
       li Climate models generate projections of future temperature and precipitation based on GHG concentration scenarios.
+    LayoutFurtherReading
+      li Stocker, T. F., Qin, D., Plattner, G., et al. (2013).
+        a(href="https://www.ipcc.ch/report/ar5/wg1/")
+          strong  IPCC: Summary for Policymakers. In: Climate Change 2013: The Physical Science Basis. Contribution of Working Group I to the Fifth Assessment Report of the Intergovernmental Panel on Climate Change.
+        |  Cambridge University Press.
+      li O'Neill, B. C., Tebaldi, C., Van Vuuren, D. P., et al. (2016).
+        a(href="https://www.geosci-model-dev.net/9/3461/2016/gmd-9-3461-2016.html")
+          strong  The scenario model intercomparison project (ScenarioMIP) for CMIP6.
+        |  Geoscientific Model Development, 9(9), 3461-3482.
 </template>
 
 <script>
