@@ -1,6 +1,6 @@
 <template lang="pug">
   div(:class='{index}', class='root')
-    resize-observer(@notify='setClientWidth')
+    resize-observer(@notify='setClientWidth', class="hide-print")
     transition(name='fade')
       LayoutHeader(v-if='!index')
     transition(name='fade')
@@ -43,5 +43,10 @@ export default {
   // padding: $spacing;
   background: $color-white;
   transition: color $transition-time, background $transition-time;
+
+  @include print {
+    display: block;
+    min-height: none;
+  }
 }
 </style>

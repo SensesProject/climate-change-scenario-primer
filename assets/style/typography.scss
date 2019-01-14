@@ -21,6 +21,10 @@ html {
       font: bold 3rem/3.725rem $font-sans;
     }
     margin-bottom: $spacing;
+
+    @include print {
+      margin-top: $spacing / 2;
+    }
   }
   h2, .h2 {
     font: bold 1.6rem/1.25 $font-sans;

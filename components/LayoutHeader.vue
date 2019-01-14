@@ -1,6 +1,6 @@
 <template lang="pug">
   header.LayoutHeader
-    span.menu-button(@click="toggleMenu")
+    span.menu-button.hide-print(@click="toggleMenu")
       span.burger-icon(:class="{active: showMenu}")
     Logo
 </template>
@@ -30,6 +30,11 @@ export default {
   align-items: center;
   justify-content: space-between;
   z-index: 900;
+
+  @include print {
+    position: relative;
+    width: 100%;
+  }
 
   .menu-button {
     display: inline-block;

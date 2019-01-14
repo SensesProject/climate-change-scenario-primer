@@ -1,7 +1,7 @@
 <template>
   <div
     :class="{ showMenu }"
-    class="Navigation"
+    class="Navigation hide-print"
     @click="closeMenu">
     <nav :class="{ showMenu }">
       <ul>
