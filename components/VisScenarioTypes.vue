@@ -6,6 +6,7 @@
       v-if="width"
       :style="{'stroke-width': strokeWidth, 'font-size': `${fontSize}px`}"
       :height="width / 2"
+      class="hide-print"
       width="100%"
       viewBox="0 0 100 50">
       <path
@@ -78,6 +79,11 @@
         x="100"
         text-anchor="end">Future</text>
     </svg>
+
+    <img
+      class="print-only"
+      src="~/assets/img/vis-print-fallbacks/VisScenarioTypes.jpg"
+      alt="">
   </div>
 </template>
 

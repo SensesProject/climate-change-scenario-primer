@@ -107,7 +107,9 @@ table {
     padding: $spacing * 2 $spacing / 2 $spacing / 2 $spacing / 2;
   }
 
-
+  @include print {
+    padding: 0;
+  }
 }
 
 .wrapper {
@@ -116,6 +118,12 @@ table {
   max-width: $max-width;
   margin-top: 0;
   @include flex-column();
+
+  @include print {
+    display: block;
+    max-width: none;
+    padding: 1rem;
+  }
 
   .center {
     align-self: center;
@@ -137,6 +145,11 @@ table {
 
     &.no-margin {
       width: 100vw;
+
+      @include print {
+        width: 100%;
+        max-width: none;
+      }
     }
   }
 
@@ -149,6 +162,20 @@ table {
     // width: calc(100vw - #{$nav-width-laptop});
     // left: $nav-width-laptop;
     // align-self: flex-end;
+  }
+}
+
+.hide-print {
+  @include print {
+    display: none !important;
+  }
+}
+
+.print-only {
+  display: none;
+
+  @include print {
+    display: block !important;
   }
 }
 

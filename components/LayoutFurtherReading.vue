@@ -19,6 +19,10 @@
   ul {
     list-style: url(~/assets/img/li-black.svg);
 
+    @include print {
+      list-style-position: inside;
+    }
+
     li + li {
       margin-top: $spacing / 4;
     }

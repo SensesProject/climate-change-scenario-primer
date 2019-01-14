@@ -23,59 +23,46 @@
     ul.serif
       li
         strong Socioeconomic scenarios
-        span.scenario-types
-          span.circle.blue
-          span.circle.green
+        VisScenarioTypesLegend(color="both")
         |  that describe the development of societal drivers of human interference with the climate system.
       li
         strong Emissions, concentration and climate forcing scenarios
-        span.scenario-types
-          span.circle.green
+        VisScenarioTypesLegend(color="green")
         |  that emerge from these developments.
       |
       li
         strong Climate change scenarios
-        span.scenario-types
-          span.circle.green
+        VisScenarioTypesLegend(color="green")
         |  that result from human climate forcing.
       |
       li
         strong Climate impact scenarios
-        span.scenario-types
-          span.circle.green
+        VisScenarioTypesLegend(color="green")
         |  as a result of these climate changes.
       |
       li
         strong Mitigation scenarios
-        span.scenario-types
-          span.circle.blue
+        VisScenarioTypesLegend(color="blue")
         |  that limit human-made climate change.
       |
       li
         strong Adaptation scenarios
-        span.scenario-types
-          span.circle.blue
+        VisScenarioTypesLegend(color="blue")
         |  that limit the impact of climate change on societies.
       |
       li
         strong Integrated scenarios
-        span.scenario-types
-          span.circle.blue
-          span.circle.green
+        VisScenarioTypesLegend(color="both")
         |  that capture several of the above components of future climate change.
     div.key.sans
       span.key-item
-        span.scenario-types
-          span.circle.green
+        VisScenarioTypesLegend(color="green")
         |  Projections
       span.key-item
-        span.scenario-types
-          span.circle.blue
+        VisScenarioTypesLegend(color="blue")
         |  Pathways
       span.key-item
-        span.scenario-types
-          span.circle.green
-          span.circle.blue
+        VisScenarioTypesLegend(color="both")
         |  Both
     p On the following pages we will introduce these types of climate change scenarios in more detail and explain their mutual relation.
 
@@ -137,36 +124,12 @@ export default {
     word-wrap: normal;
   }
 
-  .scenario-types {
-    margin: 0 $spacing / 8 0 0;
-    // position: absolute;
-    .circle {
-      display: inline-block;
-      width: 0.65em;
-      height: 0.65em;
-      border-radius: 50%;
-      &:nth-of-type(1) {
-        margin-left: 0.3em;
-        margin-right: -0.1rem;
-      }
-
-      &:nth-of-type(2) {
-        transform: translateX(-0.2em);
-        margin-right: -0.2em;
-        mix-blend-mode: multiply;
-      }
-
-      &.green {
-        background: $color-green;
-      }
-      &.blue {
-        background: $color-blue;
-      }
-    }
-  }
-
   ul {
     list-style: url(~/assets/img/li-black.svg);
+
+    @include print {
+      list-style-position: inside;
+    }
 
     li + li {
       margin-top: $spacing / 4;
