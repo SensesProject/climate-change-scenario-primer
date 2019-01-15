@@ -5,6 +5,7 @@
     <svg
       :style="{'stroke-width': strokeWidth}"
       :height="width"
+      class="hide-print"
       width="100%"
       viewBox="-50 -50 100 100">
       <g
@@ -20,16 +21,28 @@
     <div
       v-for="(item, i) in items"
       :key="`item-${i}`"
-      :class="{'reduce-impact': reduceImpact}"
+      :class="{'reduce-impact': reduceImpact, 'hide-print': true}"
       v-bind="item.text"
       class="label"
       v-html="item.term"/>
     <div
       v-if="reduceImpact"
-      class="label yellow mitigation">Mitigation</div>
+      class="label yellow mitigation hide-print">Mitigation</div>
     <div
       v-if="reduceImpact"
-      class="label red adaptation">Adaptation</div>
+      class="label red adaptation hide-print">Adaptation</div>
+
+    <!-- Fallback images for print. Update when changing vis! -->
+    <img
+      v-if="!reduceImpact"
+      class="print-only"
+      src="~/assets/img/vis-print-fallbacks/VisCycleCircle.jpg"
+      alt="">
+    <img
+      v-if="reduceImpact"
+      class="print-only"
+      src="~/assets/img/vis-print-fallbacks/VisCycleCircle-reduced.jpg"
+      alt="">
   </div>
 </template>
 
