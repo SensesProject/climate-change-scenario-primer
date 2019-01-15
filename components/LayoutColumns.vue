@@ -76,5 +76,14 @@ export default {
       margin: 0 #{$spacing / 2} 0 0;
     }
   }
+
+  @include print {
+    display: flex;
+    flex-flow: row;
+
+    .left {
+      margin: 0 #{$spacing} 0 0;
+    }
+  }
 }
 </style>

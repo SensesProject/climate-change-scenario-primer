@@ -127,11 +127,21 @@ table {
 
   .center {
     align-self: center;
+
+    @include print {
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 
   .default {
     width: calc(100vw - #{$spacing});
     max-width: $max-width;
+
+    @include print {
+      width: 100%;
+      max-width: none;
+    }
   }
   .no-margin {
     width: 100vw;

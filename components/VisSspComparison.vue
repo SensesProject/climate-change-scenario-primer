@@ -7,7 +7,7 @@
       :style="{'stroke-width': strokeWidth, 'font-size': `${fontSize}px`}"
       :height="height"
       :viewBox="viewBox"
-      :class="{empty: step === null}"
+      :class="{empty: step === null, 'hide-print': true}"
       width="100%">
       <defs>
         <filter :id="'gooey' + step">
@@ -158,6 +158,27 @@
         </g>
       </g>
     </svg>
+
+    <img
+      v-if="step === null"
+      class="print-only"
+      src="~/assets/img/vis-print-fallbacks/VisSspComparison.jpg"
+      alt="">
+    <img
+      v-if="step === 0"
+      class="print-only"
+      src="~/assets/img/vis-print-fallbacks/VisSspComparison-0.jpg"
+      alt="">
+    <img
+      v-if="step === 1"
+      class="print-only"
+      src="~/assets/img/vis-print-fallbacks/VisSspComparison-1.jpg"
+      alt="">
+    <img
+      v-if="step === 2"
+      class="print-only"
+      src="~/assets/img/vis-print-fallbacks/VisSspComparison-2.jpg"
+      alt="">
   </div>
 </template>
 
@@ -275,6 +296,13 @@ export default {
   max-width: 400px;
   width: 100%;
   // min-width: 260px;
+
+  @include print {
+
+    img {
+      margin-bottom: 0.5rem;
+    }
+  }
 
   svg {
     overflow: visible;

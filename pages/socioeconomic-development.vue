@@ -131,6 +131,11 @@ export default {
   img {
     margin: $spacing / 2;
 
+    @include print {
+      width: 100%;
+      margin: $spacing / 2 0;
+    }
+
     // background: $color-white;
     // padding: $spacing / 2;
     // margin: $spacing 0 $spacing / 2;
@@ -144,6 +149,11 @@ export default {
     font-family: $font-serif;
     list-style: url(~/assets/img/li-black.svg);
     line-height: 1.4em;
+
+    @include print {
+      list-style-position: inside;
+    }
+
     li {
       padding-top: $spacing / 4;
       hyphens: none;
@@ -160,6 +170,17 @@ export default {
     padding: $spacing 0;
     background: $color-black;
     @include flex-column;
+
+    @include print {
+      background-color: #fff;
+      border: 1px solid $color-black;
+      margin-bottom: $spacing;
+      padding: $spacing;
+
+      &.white {
+        color: $color-text !important;
+      }
+    }
 
     .LayoutColumns {
       margin: 0;
