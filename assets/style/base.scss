@@ -121,8 +121,9 @@ table {
 
   @include print {
     display: block;
-    max-width: none;
-    padding: 1rem;
+    max-width: 21cm;
+    padding: $spacing / 2 $spacing;
+    margin: 0 auto;
   }
 
   .center {
