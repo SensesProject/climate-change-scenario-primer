@@ -144,6 +144,10 @@ export default {
   .background {
     // fill: $color-pale-gray;
     fill: $color-black;
+
+    @include print {
+      fill: #fff;
+    }
   }
 
   polygon {
@@ -198,6 +202,10 @@ export default {
     text-anchor: middle;
     font-size: 0.8rem;
     fill: $color-pale-gray;
+
+    @include print {
+      fill: #000;
+    }
   }
 }
 </style>
