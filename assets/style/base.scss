@@ -154,6 +154,10 @@ table {
     max-width: $max-width-extended;
     align-self: center;
 
+    @include print {
+      width: 100%;
+    }
+
     &.no-margin {
       width: 100vw;
 
