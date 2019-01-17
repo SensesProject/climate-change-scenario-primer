@@ -48,7 +48,7 @@
 
     p This scenario framework allows to explore climate change mitigation policies and their impact on energy use, land use, emissions, and economic activity relative to the baseline scenario without climate policies, to mitigation pathways with different levels of stringency (comparison across rows), and to mitigation pathways with the same level of stringency, but different socio-economic assumptions (comparison across columns). Naturally not every combination of SSPs and RCPs is feasible, e.g., SSP&thinsp;3 with a radiative forcing of 1.9 and 2.6&thinsp;W/m<sup>2</sup> has been found infeasible in IAMs due to regional rivalry impeding global coordination of deep mitigation efforts.
 
-    LayoutColumns.extended
+    LayoutColumns.extended.hide-print
       VisChart(
         slot="left"
         :dynamic-filter="[ssp, hoverSSP]"
@@ -68,12 +68,16 @@
     LayoutRadioGroup(
       :options="ssps"
       v-model="ssp"
-      class="center"
+      class="center hide-print"
       @hover="setHoverSSP")
+
+    img.print-only(
+      src="~/assets/img/vis-print-fallbacks/mitigation-2.jpg",
+      alt="")
 
     p The figure above shows the energy demand and CO<sub>2</sub> emissions developments that IAMs derived for  the various combinations of SSPs and RCPs. A key instrument to reduce emissions is emissions pricing.
 
-    LayoutColumns.extended
+    LayoutColumns.extended.hide-print
       VisChart(
         slot="left"
         :max="3200"
@@ -86,6 +90,10 @@
         legend="rcp"
         both-legends
         scenario="carbonSsp5")
+
+    img.print-only(
+      src="~/assets/img/vis-print-fallbacks/mitigation-3.jpg",
+      alt="")
 
     p The emissions price that IAMs need to impose to reach the mitigation levels of the RCPs reflects by and large the cost of the most expensive ton of emissions reduction (called marginal abatement cost in economic jargon). As shown above, the emissions price not only increases with increasing mitigation stringency, but also varies substantially with different socioeconomic developments across the SSPs. The lower the socioeconomic challenges to mitigation, the lower the carbon price for the same mitigation goal.
 
