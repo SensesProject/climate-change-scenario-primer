@@ -66,5 +66,9 @@ html {
   }
   .white {
     color: $color-white;
+
+    @include print {
+      color: $color-black;
+    }
   }
 }
