@@ -64,9 +64,13 @@
 
     p Not only temperature and precipitation are input for impact models but also socioeconomic factors are taken into account. The ISIMIP project, for example, does not only use climate change projections belonging to a certain RCP as input, but also takes up elements of SSP scenarios. A suite of climate impact models produce projections of biophysical impacts of climate change in a variety of sectors described above.
 
-    LayoutColumns.extended
+    LayoutColumns.extended.hide-print
       VisChartImpact(slot="left", variable="Flood")
       VisChartImpact(slot="right", variable="Crop Failure", :legend="false")
+    img.print-only(
+      src="~/assets/img/vis-print-fallbacks/climate-impacts-1.jpg"
+      alt=""
+    )
 
     p The charts above show simulation analyses of impact simulations for two sectors, floods, and crop failure. In particular, the change in the percentage of the global surface that is affected by extreme event when compared to preindustrial times, is shown. In each case, climate data from three different global climate models (
       strong.green GFDL-ESM2M

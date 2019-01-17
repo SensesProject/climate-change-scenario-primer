@@ -325,6 +325,8 @@ export default {
     color: $color-dark-gray;
     hyphens: none;
     line-height: 1.2;
+    margin-top: $spacing / 2;
+
     &.right {
       text-align: right;
       // margin-top: -$spacing / 4;
@@ -332,6 +334,8 @@ export default {
   }
   .key-wrapper {
     height: 0.9rem;
+    margin-top: $spacing / 2;
+
     .key {
       display: flex;
       align-items: center;

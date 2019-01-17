@@ -1,6 +1,6 @@
 <template lang="pug">
   div.LayoutCarousel.extended.no-margin(:class="{vis: interactive !== null}")
-    div.content-wrapper.default.center
+    div.content-wrapper.default.center.hide-print
       div.left
         div.text
           transition-group(name="fade-text", mode="out-in")
@@ -10,7 +10,16 @@
               :key="`s${i}`",
               class="slot-wrapper")
               slot(:name="`s${i}`")
-    div.navigation
+    div.content-wrapper.default.center.print-only
+      div.left
+        div.text
+          transition-group(name="fade-text", mode="out-in")
+            div(
+              v-for="(s, i) in slotArray",
+              :key="`s${i}`",
+              class="slot-wrapper")
+              slot(:name="`s${i}`")
+    div.navigation.hide-print
       span.arrow.white(@click="step = (step + slots - 1) % slots") ←
       span(
         v-for="(s, i) in slotArray"
@@ -56,6 +65,12 @@ export default {
   background: $color-black;
   padding: $spacing 0 $spacing 0;
   // margin-bottom: $spacing;
+
+  @include print {
+    background-color: transparent;
+    padding: $spacing $spacing 0;
+    border: 1px solid $color-black;
+  }
 
   .content-wrapper {
     @include flex-column;
