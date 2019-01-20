@@ -1,16 +1,27 @@
 <template lang="pug">
-  header.LayoutHeader
+  header.LayoutHeader#header
     span.menu-button.hide-print(@click="toggleMenu")
       span.burger-icon(:class="{active: showMenu}")
+    span.attribution.print-only {{ url }}
     Logo
 </template>
 
 <script>
 import { mapState, mapActions } from 'vuex'
 export default {
+  data: function (st, e) {
+    return {
+      url: `https://climatescenario.org/primer${this.$route.path}`
+    }
+  },
   computed: mapState({
     showMenu: state => state.view.showMenu
   }),
+  watch: {
+    '$route': function () {
+      this.url = `https://climatescenario.org/primer${this.$route.path}`
+    }
+  },
   methods: mapActions(['toggleMenu'])
 }
 </script>
@@ -34,6 +45,13 @@ export default {
   @include print {
     position: relative;
     width: 100%;
+  }
+
+  .attribution {
+    color: $color-dark-gray;
+    font-size: 80%;
+    margin-left: $spacing / 2;
+    content: counter(page);
   }
 
   .menu-button {
