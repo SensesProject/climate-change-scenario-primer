@@ -12,6 +12,10 @@ html {
 
   h1, h2, h3 {
     hyphens: manual;
+
+    @include print {
+      page-break-inside: avoid;
+    }
   }
 
   h1, .h1 {

@@ -132,7 +132,7 @@ export default {
     margin: $spacing / 2;
 
     @include print {
-      width: 100%;
+      width: 70% !important;
       margin: $spacing / 2 0;
     }
 

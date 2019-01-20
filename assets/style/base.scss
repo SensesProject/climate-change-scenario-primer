@@ -13,6 +13,10 @@
 
 p {
   margin: $spacing 0;
+
+  @include print {
+    page-break-inside: avoid;
+  }
 }
 
 p + p {
@@ -121,7 +125,7 @@ table {
 
   @include print {
     display: block;
-    max-width: 21cm;
+    max-width: 20cm;
     padding: $spacing / 2 $spacing;
     margin: 0 auto;
   }
@@ -184,6 +188,10 @@ table {
   @include print {
     display: none !important;
   }
+}
+
+@page {
+  margin: 0;
 }
 
 .print-only {
