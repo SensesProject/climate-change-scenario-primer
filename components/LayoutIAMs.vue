@@ -32,14 +32,14 @@
             | , and
             strong.blue  capital stock
             | . As you can see all of those three factors are raising and so is GDP. For didactical reasons, we neglect land as a production factor in our simple example, but in reality as well as in detailed IAMs, it is an important factor.
+            img(src="~/assets/img/vis-print-fallbacks/structure-1.jpg", alt="").print-only
         div(v-bind='pStructure[1]')
           p The produced GDP can be spent either for consumption, invested into the macro-economic capital stock or used to raise the amount of used energy. Other IAMs might also take into account investment into education which would increase the productivity of the labor. But for simplicity we ignore this option here in our very simple IAM. The goal of our simple IAM is to maximise consumption in the long run.
-          img(src="~/assets/img/vis-print-fallbacks/structure-1.jpg", alt="").print-only
+          img(src="~/assets/img/vis-print-fallbacks/structure-2.jpg", alt="").print-only
         div(v-bind='pStructure[2]')
           p To analyse the effect on emissions in our simple IAM we split the total energy into clean energy and dirty energy and also give the opportunity to invest into both types of energy separately. In this simple case only dirty energy leads to emissions. That means that the decision how much of the GDP is used to build up capacities of clean energy instead of dirty energy determines the resulting amount of emissions. The model does not include the impact of emissions on climate change which in turn would impact economic growth and energy and land use.
-          img(src="~/assets/img/vis-print-fallbacks/structure-2.jpg", alt="").print-only
-        div(v-bind='pStructure[3]', ref='strucureOptions', :step=1)
           img(src="~/assets/img/vis-print-fallbacks/structure-3.jpg", alt="").print-only
+        div(v-bind='pStructure[3]', ref='strucureOptions', :step=1)
           div.options.hide-print
             div.slider.population
               span.b Labor
