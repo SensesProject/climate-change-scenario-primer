@@ -33,11 +33,11 @@
             strong.blue  capital stock
             | . As you can see all of those three factors are raising and so is GDP. For didactical reasons, we neglect land as a production factor in our simple example, but in reality as well as in detailed IAMs, it is an important factor.
         div(v-bind='pStructure[1]')
-          img(src="~/assets/img/vis-print-fallbacks/structure-1.jpg", alt="").print-only
           p The produced GDP can be spent either for consumption, invested into the macro-economic capital stock or used to raise the amount of used energy. Other IAMs might also take into account investment into education which would increase the productivity of the labor. But for simplicity we ignore this option here in our very simple IAM. The goal of our simple IAM is to maximise consumption in the long run.
+          img(src="~/assets/img/vis-print-fallbacks/structure-1.jpg", alt="").print-only
         div(v-bind='pStructure[2]')
-          img(src="~/assets/img/vis-print-fallbacks/structure-2.jpg", alt="").print-only
           p To analyse the effect on emissions in our simple IAM we split the total energy into clean energy and dirty energy and also give the opportunity to invest into both types of energy separately. In this simple case only dirty energy leads to emissions. That means that the decision how much of the GDP is used to build up capacities of clean energy instead of dirty energy determines the resulting amount of emissions. The model does not include the impact of emissions on climate change which in turn would impact economic growth and energy and land use.
+          img(src="~/assets/img/vis-print-fallbacks/structure-2.jpg", alt="").print-only
         div(v-bind='pStructure[3]', ref='strucureOptions', :step=1)
           img(src="~/assets/img/vis-print-fallbacks/structure-3.jpg", alt="").print-only
           div.options.hide-print
@@ -57,8 +57,7 @@
           img(src="~/assets/img/vis-print-fallbacks/fingerprint-1.jpg", alt="").print-only
         div(v-bind='pFingerprint[1]')
           p Overall the more complex IAMs represent energy use on a process level, i.e. they take into account a large number of energy technologies to produce electricity, solids, liquids and gases from different energy sources like fossil fuels, nuclear and renewable energy, and link the energy supply modelling to detailed projections of energy demand. Likewise they include detailed land use models describing different uses of land and the competition between them, dependending on environmental, demand and management factors. They convert the various uses of energy and land into emissions projections for a variety of greenhouse gases and air pollutants.
-        div.graphic-wrapper(ref='fingerprintStepper', step="1")
-          img(src="~/assets/img/vis-print-fallbacks/fingerprint-2.jpg", alt="").print-only
+        div.graphic-wrapper(ref='fingerprintStepper', step="1", class="hide-print")
           VisFingerprints(
             :pHeights='pFingerprintHeights',
             :step='step2',
@@ -67,6 +66,7 @@
             @setGHeights='setGFingerprintHeights',
             @hover="setHoverModels")
         LayoutRadioGroup(:options='fingerprintOptions', v-model='fingerprintModel', :highlight="hoverModels", @hover='setHoverModel')
+        img(src="~/assets/img/vis-print-fallbacks/fingerprint-2.jpg", alt="").print-only
         div(v-bind='pFingerprint[2]', ref='fingerprintStepper2', step="2")
           p But there are also key differences between IAMs. Some are more detailed in specific aspects and cover different categories better then others. As this makes some better suited to handle the input assumptions of individual SSPs, each of the SSPs has its own reference model.
 </template>

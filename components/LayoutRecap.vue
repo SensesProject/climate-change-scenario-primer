@@ -49,6 +49,10 @@ export default {
       // background: $color-accent;
       border: 1px solid $color-accent;
 
+      @include print {
+        page-break-inside: avoid;
+      }
+
       h3 {
         margin-bottom: $spacing / 2;
       }
