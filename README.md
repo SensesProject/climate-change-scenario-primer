@@ -17,6 +17,8 @@ $ npm start
 
 # generate static project
 $ npm run generate
+# remove <base… in all index.html files (it breaks some svgs in safari and paths are absolute anyways)
+sed -i '' 's/<base href="\/primer\/">//g' dist/index.html & sed -i '' 's/<base href="\/primer\/">//g' dist/*/index.html
 ```
 
 For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
