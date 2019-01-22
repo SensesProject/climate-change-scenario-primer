@@ -34,7 +34,7 @@
         </clipPath>
       </defs>
       <g
-        :clip-path="`url(socioeconomic-development#rect${step})`"
+        :clip-path="`url(#rect${step})`"
         class="chart">
         <rect
           class="background"
@@ -42,7 +42,7 @@
           height="100"/>
         <g v-if="step !== null">
           <g
-            :filter="`url(socioeconomic-development#gooey${step})`"
+            :filter="`url(#gooey${step})`"
             class="low">
             <polygon
               v-if="step === 0"
@@ -55,7 +55,7 @@
               points="55 -20 120 -20 120 120 70 60 75 50 55 20"/>
           </g>
           <g
-            :filter="`url(socioeconomic-development#gooey${step})`"
+            :filter="`url(#gooey${step})`"
             class="high">
             <polygon
               v-if="step === 0"
