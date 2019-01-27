@@ -128,7 +128,8 @@ export default {
     list-style: url(~/assets/img/li-black.svg);
 
     @include print {
-      list-style-position: inside;
+      /* list-style-position: inside; */
+      margin-left: $spacing / 2;
     }
 
     li + li {
