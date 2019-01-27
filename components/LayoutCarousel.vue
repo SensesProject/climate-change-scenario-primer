@@ -70,6 +70,10 @@ export default {
     background-color: transparent;
     padding: $spacing $spacing 0;
     border: 1px solid $color-black;
+
+    .slot-wrapper {
+      page-break-inside: avoid;
+    }
   }
 
   .content-wrapper {
