@@ -151,7 +151,8 @@ export default {
     line-height: 1.4em;
 
     @include print {
-      list-style-position: inside;
+      /* list-style-position: inside; */
+      margin-left: $spacing / 2;
     }
 
     li {
