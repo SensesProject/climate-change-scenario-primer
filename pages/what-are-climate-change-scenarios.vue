@@ -99,10 +99,6 @@
         a(href="https://www.sciencedirect.com/science/article/pii/S0016328705002132")
           strong  Scenario types and techniques: towards a user's guide.
         |  Futures, 38(7), 723-739.
-      li Beck, S., & Mahony, M. (2017).
-        a(href="https://www.nature.com/articles/nclimate3264")
-          strong  The IPCC and the politics of anticipation.
-        |  Nature Climate Change, 7(5), 311.
       li Carlsen, H., Klein, R. J., & Wikman-Svahn, P. (2017).
         a(href="https://www.nature.com/articles/nclimate3379")
           strong  Transparent scenario development.

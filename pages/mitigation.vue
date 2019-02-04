@@ -96,6 +96,9 @@
       li When combined with the Socioeconomic Pathways (SSPs) they provide a powerful framework to explore the space of future mitigation pathways in terms of different levels of mitigation stringency and different assumptions about socioeconomic development.
       li The mitigation pathway literature developed by the application of integrated assessment modelling comprises a wide variety of mitigation pathways, including pathways with limited technology availability and delays in climate policy in addition to variations in mitigation targets and socioeconomic drivers.
     LayoutFurtherReading
+      li
+        a(href="https://www.ipcc.ch/sr15/")
+          strong  IPCC Special Report on Global Warming of 1.5°C, Chapter 3
       li Van Vuuren, D. P., Kriegler, E., O’Neill, B. C., et al. (2014).
         a(href="https://link.springer.com/article/10.1007/s10584-013-0906-1")
           strong  A new scenario framework for climate change research: scenario matrix architecture.

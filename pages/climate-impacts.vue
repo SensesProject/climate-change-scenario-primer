@@ -84,6 +84,9 @@
       li There is a wide range of sectors considered in climate impact research including impacts related to agriculture, energy, and health.
       li Climate impact models use data from climate and socioeconomic scenarios to create impact scenarios.
     LayoutFurtherReading
+      li
+        a(href="https://www.ipcc.ch/sr15/")
+          strong  IPCC Special Report on Global Warming of 1.5°C, Chapter 2
       li Field, C. B., Barros, V. R., Mastrandrea, M. D., et al. (2014).
         a(href="https://www.ipcc.ch/report/ar5/wg2/")
           strong  IPCC: Summary for Policymakers. In: Climate Change 2014: Impacts, Adaptation, and Vulnerability. Part A: Global and Sectoral Aspects. Contribution of Working Group II to the Fifth Assessment Report of the Intergovernmental Panel on Climate Change.

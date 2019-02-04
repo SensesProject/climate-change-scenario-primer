@@ -103,10 +103,6 @@
         a(href="https://link.springer.com/article/10.1007/s10584-013-0905-2")
           strong  A new scenario framework for climate change research: the concept of shared socioeconomic pathways.
         |  Climatic Change, 122(3), 387-400.
-      li Cork, S. J., Peterson, G. D., Bennett, E. M., Petschel-Held, G., & Zurek, M. (2006).
-        a(href="https://www.jstor.org/stable/26266003?seq=1#metadata_info_tab_contents")
-          strong  Synthesis of the storylines.
-        |  Ecology and Society, 11(2).
       li Kriegler, E., O’Neill, B. C., Hallegatte, S., et al. (2012).
         a(href="https://www.sciencedirect.com/science/article/abs/pii/S0959378012000593")
           strong  The need for and use of socio-economic scenarios for climate change analysis: a new approach based on shared socio-economic pathways.
