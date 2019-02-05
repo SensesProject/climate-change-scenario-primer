@@ -195,7 +195,7 @@ table {
 }
 
 .print-only {
-  display: none;
+  display: none !important;
 
   @include print {
     display: block !important;
