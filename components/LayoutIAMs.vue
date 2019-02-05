@@ -362,6 +362,7 @@ export default {
     max-width: none;
     width: 100%;
     border: 1px solid $color-black;
+    display: block;
 
     img {
       max-width: 70%;
@@ -379,6 +380,7 @@ export default {
 
     @include print {
       max-width: none;
+      display: block;
     }
 
     .graphic-wrapper {
@@ -500,6 +502,7 @@ export default {
 
     @include print {
       max-width: none;
+      display: block;
 
       > div {
         padding-top: 0 !important;

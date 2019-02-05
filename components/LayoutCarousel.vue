@@ -70,10 +70,8 @@ export default {
     background-color: transparent;
     padding: $spacing $spacing 0;
     border: 1px solid $color-black;
-
-    .slot-wrapper {
-      page-break-inside: avoid;
-    }
+    display: block !important;
+    min-height: none !important;
   }
 
   .content-wrapper {
@@ -112,6 +110,10 @@ export default {
     @include flex-column;
     justify-content: space-between;
     width: 100%;
+
+    @include print {
+      display: block !important;
+    }
 
     .text {
       width: 100%;

@@ -177,6 +177,7 @@ export default {
       border: 1px solid $color-black;
       margin-bottom: $spacing;
       padding: $spacing;
+      display: block;
 
       &.white {
         color: $color-text !important;
