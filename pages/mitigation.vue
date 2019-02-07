@@ -71,11 +71,7 @@
       class="center hide-print"
       @hover="setHoverSSP")
 
-    img.print-only(
-      src="~/assets/img/vis-print-fallbacks/mitigation-2.jpg",
-      alt="")
-
-    p The figure above shows the energy demand and CO<sub>2</sub> emissions developments that IAMs derived for  the various combinations of SSPs and RCPs. A key instrument to reduce emissions is emissions pricing.
+    p.hide-print The figure above shows the energy demand and CO<sub>2</sub> emissions developments that IAMs derived for  the various combinations of SSPs and RCPs. A key instrument to reduce emissions is emissions pricing.
 
     LayoutColumns.extended.hide-print
       VisChart(

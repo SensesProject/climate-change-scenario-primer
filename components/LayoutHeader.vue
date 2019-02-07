@@ -44,12 +44,15 @@ export default {
 
   @include print {
     position: relative;
-    width: 100%;
+    width: calc(100% - 2.4cm);
+    margin: 0 auto;
+    border: 1px solid $color-light-gray;
+    border-radius: 6px;
   }
 
   .attribution {
     color: $color-dark-gray;
-    font-size: 80%;
+    font-size: 70%;
     margin-left: $spacing / 2;
     content: counter(page);
   }

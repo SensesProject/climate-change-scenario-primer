@@ -134,6 +134,7 @@ export default {
     @include print {
       width: 70% !important;
       margin: $spacing / 2 0;
+      page-break-inside: avoid;
     }
 
     // background: $color-white;
@@ -143,6 +144,11 @@ export default {
 
     &:first-of-type {
       margin-top: 0;
+    }
+  }
+  .right {
+    @include print {
+      page-break-inside: avoid;
     }
   }
   ul {
