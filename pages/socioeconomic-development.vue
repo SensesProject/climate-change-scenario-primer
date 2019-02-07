@@ -209,6 +209,10 @@ export default {
           @include media-query($device-narrow) {
             margin: #{-$spacing / 4} 0 #{-$spacing / 2};
           }
+
+          @include print {
+            margin: 0;
+          }
         }
       }
       p {
