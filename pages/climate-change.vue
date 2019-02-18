@@ -7,7 +7,7 @@
 
     p GHGs, as hinted by their name, play the key role in the greenhouse effect. The greenhouse effect denotes the absorption and reemission of heat radiation from the Earth surface by  GHGs in the atmosphere. Thanks to the natural greenhouse effect, the surface temperatures on Earth are high enough to support abundant life. However, adding further greenhouse gases from human activity to the atmosphere induces a radiative forcing from increased absorption of outgoing heat radiation, which then leads to rising temperatures on the Earth surface (anthropogenic greenhouse effect). The higher the radiative forcing, the larger the warming.
 
-    LayoutColumns.extended(left-title="RCP&#8239;2.6", right-title="RCP&#8239;6.0")
+    LayoutColumns.extended.hide-print(left-title="RCP&#8239;2.6", right-title="RCP&#8239;6.0")
       VisMap(
         slot="left",
         :grid="rcp26",
@@ -24,12 +24,16 @@
         color-scale="interpolateRdBu",
         invert-scale,
         static)
-    InLegendSequential.center(
+    InLegendSequential.center.hide-print(
       :domain="[0, 25]",
       :limit-range="[-2, 12]",
       invert-scale)
-    div.map-description.center Change in average near surface temperature
+    div.map-description.center.hide-print Change in average near surface temperature
       span  (2006–2010&nbspto&nbsp2095–2099)
+    img.print-only(
+      src="~/assets/img/vis-print-fallbacks/climate-change-1.jpg"
+      alt=""
+    )
     p Climate models then simulate the climate response to increased GHG concentrations and associated radiative forcing and translate them to changes in meteorological quantities such as temperature or precipitation. Temperature and precipitation are the two most important quantities in climate impact research. It turns out that many more systems than just the atmosphere decisively influence the climate. Therefore more and more subsystems, e.g., oceans, vegetation or sea ice, had to be added to climate models. Because of that these models are also known as “Earth System Models”.
 
     p The above plot shows the warming in near surface temperatures from 2006–2010 to 2095–2099 for two different emissions scenarios: RCP&thinsp;2.6 and RCP&thinsp;6.0. As you can see: the overall temperature is going to rise, and the increase is far more severe in RCP&thinsp;6.0. It can also be seen that the warming varies between regions, with highest warming occuring in the Northern latitudes.

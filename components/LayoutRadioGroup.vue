@@ -1,5 +1,5 @@
 <template>
-  <div class="LayoutRadioGroup">
+  <div class="LayoutRadioGroup hide-print">
     <template
       v-for="(option, i) in options">
       <input

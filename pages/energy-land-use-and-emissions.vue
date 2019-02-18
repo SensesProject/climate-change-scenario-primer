@@ -9,7 +9,7 @@
 
     <p>So feeding socioeconomic scenario assumptions into IAMs will get us scenarios for energy use, land use and emissions. Let&#8217;s take a look how this plays out for the socioeconomic futures described by the SSPs. Population and GDP developments in the SSPs are shown below.</p>
 
-    <LayoutColumns class="extended">
+    <LayoutColumns class="extended hide-print">
       <VisChart
         slot="left"
         legend="ssp"
@@ -20,6 +20,10 @@
         hide-legend
         scenario="gdp"/>
     </LayoutColumns>
+    <img
+      src="~/assets/img/vis-print-fallbacks/ssp-comparison-1.jpg"
+      alt=""
+      class="print-only">
 
     <p>As you can see the
       <InHighlight
@@ -45,7 +49,7 @@
       (Fossil-fuelled development) show a peak and decline in population growth, but much higher GDP growth. Although they have a similar pattern of population growth, they show significantly different levels of GDP growth.
     </p>
 
-    <LayoutColumns class="extended">
+    <LayoutColumns class="extended hide-print">
       <VisChart
         slot="left"
         :static-filter="{ssp: null, rcp: 'Baseline'}"
@@ -58,6 +62,10 @@
         hide-legend
         scenario="emissions"/>
     </LayoutColumns>
+    <img
+      src="~/assets/img/vis-print-fallbacks/ssp-comparison-1.jpg"
+      alt=""
+      class="print-only">
 
     <p>
       This and other factors such as technological progress and lifestyles affect future energy and land use. Here we show the examples of energy demand and CO<sub>2</sub> emissions. The resource intensity of

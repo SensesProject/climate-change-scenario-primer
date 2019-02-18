@@ -127,6 +127,12 @@ export default {
   img {
     margin: $spacing / 2;
 
+    @include print {
+      width: 70% !important;
+      margin: $spacing / 2 0;
+      page-break-inside: avoid;
+    }
+
     // background: $color-white;
     // padding: $spacing / 2;
     // margin: $spacing 0 $spacing / 2;
@@ -136,10 +142,21 @@ export default {
       margin-top: 0;
     }
   }
+  .right {
+    @include print {
+      page-break-inside: avoid;
+    }
+  }
   ul {
     font-family: $font-serif;
     list-style: url(~/assets/img/li-black.svg);
     line-height: 1.4em;
+
+    @include print {
+      /* list-style-position: inside; */
+      margin-left: $spacing / 2;
+    }
+
     li {
       padding-top: $spacing / 4;
       hyphens: none;
@@ -156,6 +173,18 @@ export default {
     padding: $spacing 0;
     background: $color-black;
     @include flex-column;
+
+    @include print {
+      background-color: #fff;
+      border: 1px solid $color-black;
+      margin-bottom: $spacing;
+      padding: $spacing;
+      display: block;
+
+      &.white {
+        color: $color-text !important;
+      }
+    }
 
     .LayoutColumns {
       margin: 0;
@@ -175,6 +204,10 @@ export default {
 
           @include media-query($device-narrow) {
             margin: #{-$spacing / 4} 0 #{-$spacing / 2};
+          }
+
+          @include print {
+            margin: 0;
           }
         }
       }

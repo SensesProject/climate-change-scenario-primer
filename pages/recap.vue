@@ -18,7 +18,7 @@
       |  take the next step towards future climate. And
       strong  climate impact models
       |  show us how that effects nature and society.
-    div.share.extended.no-margin
+    div.share.extended.no-margin.hide-print
       div.center.default
         h3.h2.white Share
         div.button-group
@@ -36,7 +36,7 @@
               span.arrow →
               |  Facebook
           |
-    div.contact.extended.no-margin
+    div.contact.extended.no-margin.hide-print
       div.center.default
         h3.h2.violet Get in Touch 👋
         no-ssr

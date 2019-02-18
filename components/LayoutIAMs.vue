@@ -2,7 +2,7 @@
   div.LayoutIAMs.center
     h3.h2 IAMs in Detail
     div.structure
-      div.graphic-wrapper(ref="structureGraphic")
+      div.graphic-wrapper.hide-print(ref="structureGraphic")
         svg.graphic(
           v-if='ready'
           width='100%',
@@ -32,12 +32,15 @@
             | , and
             strong.blue  capital stock
             | . As you can see all of those three factors are raising and so is GDP. For didactical reasons, we neglect land as a production factor in our simple example, but in reality as well as in detailed IAMs, it is an important factor.
+            img(src="~/assets/img/vis-print-fallbacks/structure-1.jpg", alt="").print-only
         div(v-bind='pStructure[1]')
           p The produced GDP can be spent either for consumption, invested into the macro-economic capital stock or used to raise the amount of used energy. Other IAMs might also take into account investment into education which would increase the productivity of the labor. But for simplicity we ignore this option here in our very simple IAM. The goal of our simple IAM is to maximise consumption in the long run.
+          img(src="~/assets/img/vis-print-fallbacks/structure-2.jpg", alt="").print-only
         div(v-bind='pStructure[2]')
           p To analyse the effect on emissions in our simple IAM we split the total energy into clean energy and dirty energy and also give the opportunity to invest into both types of energy separately. In this simple case only dirty energy leads to emissions. That means that the decision how much of the GDP is used to build up capacities of clean energy instead of dirty energy determines the resulting amount of emissions. The model does not include the impact of emissions on climate change which in turn would impact economic growth and energy and land use.
+          img(src="~/assets/img/vis-print-fallbacks/structure-3.jpg", alt="").print-only
         div(v-bind='pStructure[3]', ref='strucureOptions', :step=1)
-          div.options
+          div.options.hide-print
             div.slider.population
               span.b Labor
               input.green(type='range', min=0, max=3, v-model.number='scenarioPopulation')
@@ -51,9 +54,10 @@
       div.text-wrapper(ref="fingerprintText")
         div(v-bind='pFingerprint[0]')
           p The IAMs used to generate SSP scenarios are a lot more complex. Clean and dirty energy is differentiated into energy sources and emissions into different types:
+          img(src="~/assets/img/vis-print-fallbacks/fingerprint-1.jpg", alt="").print-only
         div(v-bind='pFingerprint[1]')
           p Overall the more complex IAMs represent energy use on a process level, i.e. they take into account a large number of energy technologies to produce electricity, solids, liquids and gases from different energy sources like fossil fuels, nuclear and renewable energy, and link the energy supply modelling to detailed projections of energy demand. Likewise they include detailed land use models describing different uses of land and the competition between them, dependending on environmental, demand and management factors. They convert the various uses of energy and land into emissions projections for a variety of greenhouse gases and air pollutants.
-        div.graphic-wrapper(ref='fingerprintStepper', step="1")
+        div.graphic-wrapper(ref='fingerprintStepper', step="1", class="hide-print")
           VisFingerprints(
             :pHeights='pFingerprintHeights',
             :step='step2',
@@ -62,6 +66,7 @@
             @setGHeights='setGFingerprintHeights',
             @hover="setHoverModels")
         LayoutRadioGroup(:options='fingerprintOptions', v-model='fingerprintModel', :highlight="hoverModels", @hover='setHoverModel')
+        img(src="~/assets/img/vis-print-fallbacks/fingerprint-2.jpg", alt="").print-only
         div(v-bind='pFingerprint[2]', ref='fingerprintStepper2', step="2")
           p But there are also key differences between IAMs. Some are more detailed in specific aspects and cover different categories better then others. As this makes some better suited to handle the input assumptions of individual SSPs, each of the SSPs has its own reference model.
 </template>
@@ -340,10 +345,29 @@ export default {
   h3 {
     width: 100%;
     max-width: $max-width;
+
+    @include print {
+      max-width: none;
+    }
   }
 
   @include media-query($device-wide) {
     width: calc(100vw - 320 - #{$spacing * 2});
+  }
+
+  @include print {
+    color: $color-black;
+    background-color: transparent;
+    padding: $spacing;
+    max-width: none;
+    width: 100%;
+    border: 1px solid $color-black;
+    display: block;
+
+    img {
+      max-width: 70%;
+      margin: $spacing auto;
+    }
   }
 
   .structure {
@@ -354,11 +378,20 @@ export default {
     max-width: 760px;
     position: relative;
 
+    @include print {
+      max-width: none;
+      display: block;
+    }
+
     .graphic-wrapper {
       align-self: center;
       position: absolute;
       width: 100%;
       height: 100%;
+
+      @include print {
+        position: relative;
+      }
 
       .graphic {
         width: 100%;
@@ -400,7 +433,12 @@ export default {
 
       > div {
         padding-top: $spacing;
+
+        @include print {
+          padding-top: 0 !important;
+        }
       }
+
       p {
         padding: $spacing / 2 0;
       }
@@ -462,11 +500,26 @@ export default {
     max-width: 760px;
     position: relative;
 
+    @include print {
+      max-width: none;
+      display: block;
+
+      > div {
+        padding-top: 0 !important;
+      }
+    }
+
     .text-wrapper {
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
       align-items: flex-start;
+
+      @include print {
+        > div {
+          padding-top: 0 !important;
+        }
+      }
     }
 
     .graphic-wrapper {

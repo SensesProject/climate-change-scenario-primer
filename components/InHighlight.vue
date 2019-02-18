@@ -56,6 +56,10 @@ export default {
   font-family: $font-sans;
   color: inherit;
 
+  @include print {
+    padding-right: 0;
+  }
+
   .highlight {
     cursor: default;
     @include underline($color-gray);
@@ -67,6 +71,13 @@ export default {
   &.violet {
     .highlight {
       @include underline($color-violet);
+
+      @include print {
+        @include underline(transparent);
+        font-weight: bold;
+        color: $color-violet;
+      }
+
       &.active {
         @include underline-active($color-violet);
       }
@@ -76,6 +87,13 @@ export default {
   &.blue {
     .highlight {
       @include underline($color-blue);
+
+      @include print {
+        @include underline(transparent);
+        font-weight: bold;
+        color: $color-blue;
+      }
+
       &.active {
         @include underline-active($color-blue);
       }
@@ -85,6 +103,13 @@ export default {
   &.green {
     .highlight {
       @include underline($color-green);
+
+      @include print {
+        @include underline(transparent);
+        font-weight: bold;
+        color: $color-green;
+      }
+
       &.active {
         @include underline-active($color-green);
       }
@@ -94,6 +119,13 @@ export default {
   &.yellow {
     .highlight {
       @include underline($color-yellow);
+
+      @include print {
+        @include underline(transparent);
+        font-weight: bold;
+        color: $color-yellow;
+      }
+
       &.active {
         @include underline-active($color-yellow);
       }
@@ -103,6 +135,13 @@ export default {
   &.red {
     .highlight {
       @include underline($color-red);
+
+      @include print {
+        @include underline(transparent);
+        font-weight: bold;
+        color: $color-red;
+      }
+
       &.active {
         @include underline-active($color-red);
       }
