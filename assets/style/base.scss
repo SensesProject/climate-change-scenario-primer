@@ -13,6 +13,10 @@
 
 p {
   margin: $spacing 0;
+
+  @include print {
+    page-break-inside: avoid;
+  }
 }
 
 p + p {
@@ -107,7 +111,9 @@ table {
     padding: $spacing * 2 $spacing / 2 $spacing / 2 $spacing / 2;
   }
 
-
+  @include print {
+    padding: 0;
+  }
 }
 
 .wrapper {
@@ -117,13 +123,30 @@ table {
   margin-top: 0;
   @include flex-column();
 
+  @include print {
+    display: block;
+    max-width: 20cm;
+    padding: $spacing / 2 $spacing;
+    margin: 0 auto;
+  }
+
   .center {
     align-self: center;
+
+    @include print {
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 
   .default {
     width: calc(100vw - #{$spacing});
     max-width: $max-width;
+
+    @include print {
+      width: 100%;
+      max-width: none;
+    }
   }
   .no-margin {
     width: 100vw;
@@ -135,8 +158,17 @@ table {
     max-width: $max-width-extended;
     align-self: center;
 
+    @include print {
+      width: 100%;
+    }
+
     &.no-margin {
       width: 100vw;
+
+      @include print {
+        width: 100%;
+        max-width: none;
+      }
     }
   }
 
@@ -149,6 +181,24 @@ table {
     // width: calc(100vw - #{$nav-width-laptop});
     // left: $nav-width-laptop;
     // align-self: flex-end;
+  }
+}
+
+.hide-print {
+  @include print {
+    display: none !important;
+  }
+}
+
+@page {
+  margin: 1.2cm 0;
+}
+
+.print-only {
+  display: none !important;
+
+  @include print {
+    display: block !important;
   }
 }
 

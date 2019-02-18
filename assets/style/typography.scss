@@ -12,6 +12,10 @@ html {
 
   h1, h2, h3 {
     hyphens: manual;
+
+    @include print {
+      page-break-inside: avoid;
+    }
   }
 
   h1, .h1 {
@@ -21,6 +25,10 @@ html {
       font: bold 3rem/3.725rem $font-sans;
     }
     margin-bottom: $spacing;
+
+    @include print {
+      margin-top: $spacing / 2;
+    }
   }
   h2, .h2 {
     font: bold 1.6rem/1.25 $font-sans;
@@ -62,5 +70,9 @@ html {
   }
   .white {
     color: $color-white;
+
+    @include print {
+      color: $color-black;
+    }
   }
 }

@@ -5,7 +5,7 @@
         h3 Summary
         ul
           slot
-    router-link.box.next-chapter.violet(:to="nextChapter.path")
+    router-link.box.next-chapter.violet.hide-print(:to="nextChapter.path")
       div.white
         span.next Next Chapter
         h3.h2 {{ nextChapter.title }}
@@ -40,10 +40,18 @@ export default {
 
     * {
       max-width: $max-width;
+
+      @include print {
+        max-width: none;
+      }
     }
     &.summary {
       // background: $color-accent;
       border: 1px solid $color-accent;
+
+      @include print {
+        page-break-inside: avoid;
+      }
 
       h3 {
         margin-bottom: $spacing / 2;
@@ -52,6 +60,11 @@ export default {
       ul {
         list-style: url(~/assets/img/li-violet.svg);
         line-height: 1.4 ;
+
+        @include print {
+          /* list-style-position: inside; */
+          margin-left: $spacing / 2;
+        }
 
         li + li {
           margin-top: $spacing / 2;

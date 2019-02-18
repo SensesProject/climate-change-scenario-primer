@@ -1,35 +1,39 @@
 <template lang="pug">
   div.VisMatrix.extended
-    div.row(
-      v-for="rcp in rcps"
-      :key="rcp.value"
-      :style="rcp.style")
-      div.rcp RCP&#8239;{{ rcp.value }}
-      div.combination(
-        v-for="(combo, i) in rcp.combinations"
-        :key="`${rcp.value}-${i}`")
-        div.circle(
-          v-if="combo"
-          :class="classes[combo - 1]")
-        div.ssp(v-if="rcp.value === '1.9'")
-          div.label SSP&#8239;{{ ssps[i].label }}
-          div.range(:style="ssps[i].style")
-    div.key
-      div.baseline.key-item
-        div.icon
-        div.label Baseline
-      |
-      div.feasible.key-item
-        div.icon
-        div.label Feasible for all IAMs
-      |
-      div.semifeasible.key-item
-        div.icon
-        div.label Feasible for some IAMs
-      |
-      div.infeasible.key-item
-        div.icon
-        div.label Infeasible
+    div.hide-print
+      div.row(
+        v-for="rcp in rcps"
+        :key="rcp.value"
+        :style="rcp.style")
+        div.rcp RCP&#8239;{{ rcp.value }}
+        div.combination(
+          v-for="(combo, i) in rcp.combinations"
+          :key="`${rcp.value}-${i}`")
+          div.circle(
+            v-if="combo"
+            :class="classes[combo - 1]")
+          div.ssp(v-if="rcp.value === '1.9'")
+            div.label SSP&#8239;{{ ssps[i].label }}
+            div.range(:style="ssps[i].style")
+      div.key
+        div.baseline.key-item
+          div.icon
+          div.label Baseline
+        |
+        div.feasible.key-item
+          div.icon
+          div.label Feasible for all IAMs
+        |
+        div.semifeasible.key-item
+          div.icon
+          div.label Feasible for some IAMs
+        |
+        div.infeasible.key-item
+          div.icon
+          div.label Infeasible
+    img.print-only(
+      src="~/assets/img/vis-print-fallbacks/mitigation-1.jpg",
+      alt="")
 </template>
 
 <script>
