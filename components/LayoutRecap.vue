@@ -1,7 +1,7 @@
 <template lang="pug">
   div.LayoutCloseChapter.center.extended.no-margin
     div.box.summary.violet
-      div
+      div.list
         h3 Summary
         ul
           slot
@@ -36,6 +36,10 @@ export default {
     // max-width: $max-width-extended;
     // flex: 1;
     padding: $spacing $spacing / 2;
+
+    @include ie {
+      padding: $spacing $spacing !important;
+    }
     @include flex-column();
 
     * {
@@ -43,6 +47,11 @@ export default {
 
       @include print {
         max-width: none;
+      }
+    }
+    .list {
+      @include ie {
+        width: 100%;
       }
     }
     &.summary {
@@ -73,6 +82,12 @@ export default {
     }
     &.next-chapter {
       background: $color-accent;
+
+      @include ie {
+        .white {
+          width: 100%;
+        }
+      }
       .next {
         font-family: $font-mono;
         display: block;
@@ -85,6 +100,13 @@ export default {
           transform: translateX(calc(-100% #{-$spacing / 4}));
           transition: transform $transition-time;
         }
+
+        @include ie {
+          &::before {
+            content: none;
+          }
+        }
+
       }
       &:hover {
         .next {

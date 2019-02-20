@@ -132,6 +132,12 @@ export default {
           background: $color-accent;
           position: absolute;
           top: 0;
+
+          @include ie {
+            position: absolute !important;
+            left: -0.45rem;
+            top: -1rem;
+          }
         }
       }
     }

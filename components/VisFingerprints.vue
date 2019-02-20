@@ -1,7 +1,7 @@
 <template>
   <div
     ref="VisFingerprints"
-    class="VisFingerprints hide-print">
+    class="VisFingerprints hide-print hide-ie">
     <svg
       :style="{'font-size': `${fontSize}px`, 'stroke-width': strokeWidth}"
       :height="height"

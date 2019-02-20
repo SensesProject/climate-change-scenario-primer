@@ -44,6 +44,12 @@ export default {
   background: $color-white;
   transition: color $transition-time, background $transition-time;
 
+  @include ie {
+    // &.index {
+      display: block !important;
+    // }
+  }
+
   @include print {
     display: block;
     min-height: none;

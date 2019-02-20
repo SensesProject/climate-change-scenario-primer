@@ -52,10 +52,11 @@
           p Using this model we demonstrate the impact of assumptions like the growth of labor input, which can be driven by more people entering the work force as well as increasing labor productivity, and introduction of a carbon tax. Explore how different socio-economic and climate change mitigation scenarios play out.
     div.fingerprint
       div.text-wrapper(ref="fingerprintText")
-        div(v-bind='pFingerprint[0]')
+        div.fingerprint1(v-bind='pFingerprint[0]')
           p The IAMs used to generate SSP scenarios are a lot more complex. Clean and dirty energy is differentiated into energy sources and emissions into different types:
           img(src="~/assets/img/vis-print-fallbacks/fingerprint-1.jpg", alt="").print-only
-        div(v-bind='pFingerprint[1]')
+          img.fingerprint1-img(src="~/assets/img/vis-print-fallbacks/fingerprint-1-ie.jpg", alt="").ie-only
+        div.ie-no-padding(v-bind='pFingerprint[1]')
           p Overall the more complex IAMs represent energy use on a process level, i.e. they take into account a large number of energy technologies to produce electricity, solids, liquids and gases from different energy sources like fossil fuels, nuclear and renewable energy, and link the energy supply modelling to detailed projections of energy demand. Likewise they include detailed land use models describing different uses of land and the competition between them, dependending on environmental, demand and management factors. They convert the various uses of energy and land into emissions projections for a variety of greenhouse gases and air pollutants.
         div.graphic-wrapper(ref='fingerprintStepper', step="1", class="hide-print")
           VisFingerprints(
@@ -65,8 +66,8 @@
             :hoverModel='hoverModel'
             @setGHeights='setGFingerprintHeights',
             @hover="setHoverModels")
-        LayoutRadioGroup(:options='fingerprintOptions', v-model='fingerprintModel', :highlight="hoverModels", @hover='setHoverModel')
-        img(src="~/assets/img/vis-print-fallbacks/fingerprint-2.jpg", alt="").print-only
+        LayoutRadioGroup.hide-ie(:options='fingerprintOptions', v-model='fingerprintModel', :highlight="hoverModels", @hover='setHoverModel')
+        //- img(src="~/assets/img/vis-print-fallbacks/fingerprint-2.jpg", alt="").print-only
         div(v-bind='pFingerprint[2]', ref='fingerprintStepper2', step="2")
           p But there are also key differences between IAMs. Some are more detailed in specific aspects and cover different categories better then others. As this makes some better suited to handle the input assumptions of individual SSPs, each of the SSPs has its own reference model.
 </template>
@@ -332,6 +333,13 @@ export default {
   margin-top: 0;
   max-width: $max-width-extended;
 
+  @include ie {
+    max-width: $max-width !important;
+    .ie-no-padding {
+      padding: $spacing / 2 0 !important;
+    }
+  }
+
   p {
     font-family: $font-sans;
     @include light-text();
@@ -341,6 +349,10 @@ export default {
   width: 100vw;
   @include flex-column();
   align-items: center;
+  // @include ie {
+  //   max-width: $max-width;
+  //   width: 100%;
+  // }
 
   h3 {
     width: 100%;
@@ -377,6 +389,10 @@ export default {
     align-items: flex-start;
     max-width: 760px;
     position: relative;
+
+    @include ie {
+      max-width: calc(#{$max-width} - #{$spacing}) !important;
+    }
 
     @include print {
       max-width: none;
@@ -430,6 +446,10 @@ export default {
 
     .text-wrapper {
       z-index: 1;
+
+      @include ie {
+        width: 100%;
+      }
 
       > div {
         padding-top: $spacing;
@@ -500,6 +520,10 @@ export default {
     max-width: 760px;
     position: relative;
 
+    @include ie {
+      max-width: calc(#{$max-width} - #{$spacing}) !important;
+    }
+
     @include print {
       max-width: none;
       display: block;
@@ -510,6 +534,20 @@ export default {
     }
 
     .text-wrapper {
+      @include ie {
+        width: 100%;
+
+        > div {
+          width: 100%;
+        }
+
+        .fingerprint1 {
+          height: 100%;
+          .fingerprint1-img {
+            padding: $spacing / 2;
+          }
+        }
+      }
       display: flex;
       flex-direction: column;
       justify-content: flex-start;

@@ -1,6 +1,6 @@
 <template lang="pug">
   div.LayoutCarousel.extended.no-margin(:class="{vis: interactive !== null}")
-    div.content-wrapper.default.center.hide-print.hide-ie
+    div.content-wrapper.default.center.hide-print
       div.left
         div.text
           transition-group(name="fade-text", mode="out-in")
@@ -10,7 +10,7 @@
               :key="`s${i}`",
               class="slot-wrapper")
               slot(:name="`s${i}`")
-    div.content-wrapper.default.center.print-only.ie-only
+    div.content-wrapper.default.center.print-only
       div.left
         div.text
           transition-group(name="fade-text", mode="out-in")
@@ -19,7 +19,7 @@
               :key="`s${i}`",
               class="slot-wrapper")
               slot(:name="`s${i}`")
-    div.navigation.hide-print.hide-ie
+    div.navigation.hide-print
       span.arrow.white(@click="step = (step + slots - 1) % slots") ←
       span(
         v-for="(s, i) in slotArray"
@@ -76,6 +76,10 @@ export default {
 
   .content-wrapper {
     @include flex-column;
+
+    @include ie {
+      max-width: calc(#{$max-width} - #{$spacing * 2}) !important;
+    }
 
     .left {
       flex: 1;

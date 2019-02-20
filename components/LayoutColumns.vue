@@ -43,6 +43,11 @@ export default {
 .LayoutColumns {
   @include flex-column;
   overflow: hidden;
+  @include media-query($device-narrow) {
+    @include ie {
+      margin-left: -3.2rem !important;
+    }
+  }
 
   // max-width: $max-width-extended;
 

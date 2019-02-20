@@ -132,8 +132,8 @@ table {
 
   @include ie {
     display: block;
-    max-width: 20cm;
-    padding: $spacing / 2 $spacing;
+    // max-width: 20cm;
+    // padding: $spacing / 2 $spacing;
     margin: 0 auto;
   }
 
@@ -176,10 +176,13 @@ table {
     max-width: $max-width-extended;
     align-self: center;
 
+    @include ie {
+      max-width: $max-width !important;
+    }
+
     @include print {
       width: 100%;
     }
-
     &.no-margin {
       width: 100vw;
 
@@ -188,6 +191,10 @@ table {
         max-width: none;
       }
     }
+    // @include ie {
+    //   max-width: $max-width;
+    //   width: 100%;
+    // }
   }
 
   // &.index {
