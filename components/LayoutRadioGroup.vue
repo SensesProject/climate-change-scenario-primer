@@ -12,7 +12,7 @@
       <label
         :key="`label-${option.value}`"
         :for="`bt-${i}`"
-        :class="[option.color, {highlight: highlight.find(d => d === option.value)}, {highlighting: highlight.length > 0}]"
+        :class="[option.color, {highlight: highlight.filter(d => d === option.value)[0]}, {highlighting: highlight.length > 0}]"
         @mouseover="hover(option.value)"
         @mouseleave="hover(null)">
         <span>

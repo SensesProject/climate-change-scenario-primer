@@ -427,23 +427,23 @@ export default {
       return [{
         color: 'red',
         active: (selectedModel === 'AIM/CGE' || hoverModel === 'AIM/CGE') && step > 0,
-        properties: properties.filter(p => p.models.find(m => m === 'AIM/CGE'))
+        properties: properties.filter(p => p.models.filter(m => m === 'AIM/CGE')[0])
       }, {
         color: 'yellow',
         active: (selectedModel === 'GCAM4' || hoverModel === 'GCAM4') && step > 0,
-        properties: properties.filter(p => p.models.find(m => m === 'GCAM4'))
+        properties: properties.filter(p => p.models.filter(m => m === 'GCAM4')[0])
       }, {
         color: 'green',
         active: (selectedModel === 'IMAGE' || hoverModel === 'IMAGE') && step > 0,
-        properties: properties.filter(p => p.models.find(m => m === 'IMAGE'))
+        properties: properties.filter(p => p.models.filter(m => m === 'IMAGE')[0])
       }, {
         color: 'violet',
         active: (selectedModel === 'REMIND-MAGPIE' || hoverModel === 'REMIND-MAGPIE') && step > 0,
-        properties: properties.filter(p => p.models.find(m => m === 'REMIND-MAGPIE'))
+        properties: properties.filter(p => p.models.filter(m => m === 'REMIND-MAGPIE')[0])
       }, {
         color: 'blue',
         active: (selectedModel === 'MESSAGE-GLOBIOM' || hoverModel === 'MESSAGE-GLOBIOM') && step > 0,
-        properties: properties.filter(p => p.models.find(m => m === 'MESSAGE-GLOBIOM'))
+        properties: properties.filter(p => p.models.filter(m => m === 'MESSAGE-GLOBIOM')[0])
       }]
     }
   },

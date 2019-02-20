@@ -21,12 +21,12 @@ const variables = variableNames.map(variable => {
   }
 })
 
-const ied = variables.find(v => v.variable === 'ied')
-const iec = variables.find(v => v.variable === 'iec')
+const ied = variables.filter(v => v.variable === 'ied')[0]
+const iec = variables.filter(v => v.variable === 'iec')[0]
 ied.max = iec.max = Math.max(ied.max, iec.max)
 
-const ed = variables.find(v => v.variable === 'ed')
-const ec = variables.find(v => v.variable === 'ec')
+const ed = variables.filter(v => v.variable === 'ed')[0]
+const ec = variables.filter(v => v.variable === 'ec')[0]
 ed.max = ec.max = Math.max(ed.max, ec.max)
 
 const elements = [{
@@ -388,7 +388,7 @@ export default {
   elements: elements.map(element => {
     return {
       ...element,
-      data: variables.find(variable => variable.variable === element.variable)
+      data: variables.filter(variable => variable.variable === element.variable)[0]
     }
   }),
   lines

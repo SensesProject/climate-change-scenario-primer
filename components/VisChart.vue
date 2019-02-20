@@ -156,7 +156,7 @@ export default {
               scenario.ssp,
               `RCP${scenario.rcp.replace(/\./, '')}`,
               {
-                fade: (dynamicFilter == null && highlightSsp !== null && highlightSsp !== scenario.ssp) || (dynamicFilter != null && !dynamicFilter.find(f => f === scenario.ssp))
+                fade: (dynamicFilter == null && highlightSsp !== null && highlightSsp !== scenario.ssp) || (dynamicFilter != null && !dynamicFilter.filter(f => f === scenario.ssp)[0])
               }
             ],
             style: {'stroke-width': strokeWidth * 2},
