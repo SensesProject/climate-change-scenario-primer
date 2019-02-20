@@ -75,6 +75,10 @@ export default {
     @include flex-column;
     background: $color-accent;
 
+    @include ie {
+      padding: $spacing / 2;
+    }
+
     .button-group {
       .button {
         color: $color-white;

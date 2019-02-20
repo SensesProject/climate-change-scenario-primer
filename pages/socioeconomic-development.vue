@@ -133,6 +133,10 @@ export default {
       page-break-inside: avoid;
     }
 
+    //- @include ie {
+    //-   width: 100% !imp;
+    //- }
+
     // background: $color-white;
     // padding: $spacing / 2;
     // margin: $spacing 0 $spacing / 2;
@@ -186,6 +190,12 @@ export default {
       }
     }
 
+    .center.default {
+      @include ie {
+        max-width: calc(#{$max-width} - #{$spacing}) !important;
+      }
+    }
+
     .LayoutColumns {
       margin: 0;
 
@@ -207,6 +217,9 @@ export default {
           }
 
           @include print {
+            margin: 0;
+          }
+          @include ie {
             margin: 0;
           }
         }

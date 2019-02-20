@@ -4,6 +4,7 @@
     class="VisChart">
     <svg
       :style="{'stroke-width': strokeWidth, 'font-size': `${fontSize}`}"
+      :height="width * 0.75 || 300"
       width="100%"
       viewBox="0 0 100 75">
       <g class="lines">
