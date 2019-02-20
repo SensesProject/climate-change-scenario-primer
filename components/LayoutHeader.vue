@@ -42,6 +42,10 @@ export default {
   justify-content: space-between;
   z-index: 900;
 
+  @include ie {
+    left: 0;
+  }
+
   @include print {
     position: relative;
     width: calc(100% - 2.4cm);
