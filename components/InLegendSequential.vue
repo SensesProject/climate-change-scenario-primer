@@ -65,7 +65,7 @@ export default {
       const offset = (this.min - this.range[0]) / resolution
 
       const length = this.max - this.min
-      return '.'.repeat(length / resolution).split('').map((d, i) => {
+      return Array.apply(null, Array(length / resolution)).map((d, i) => {
         return this.scale(this.domain[0] + 0.5 + i + offset)
       })
     },

@@ -49,7 +49,7 @@ export default {
   },
   computed: {
     slotArray () {
-      return '.'.repeat(this.slots).split('')
+      return Array.apply(null, Array(this.slots))
     }
   }
 }
