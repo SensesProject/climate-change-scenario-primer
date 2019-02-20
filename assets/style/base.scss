@@ -130,10 +130,22 @@ table {
     margin: 0 auto;
   }
 
+  @include ie {
+    display: block;
+    max-width: 20cm;
+    padding: $spacing / 2 $spacing;
+    margin: 0 auto;
+  }
+
   .center {
     align-self: center;
 
     @include print {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @include ie {
       margin-left: auto;
       margin-right: auto;
     }
@@ -146,6 +158,12 @@ table {
     @include print {
       width: 100%;
       max-width: none;
+    }
+
+    @include ie {
+      width: 100%;
+      max-width: none;
+      margin: 0 $spacing;
     }
   }
   .no-margin {
@@ -190,6 +208,12 @@ table {
   }
 }
 
+.hide-ie {
+  @include ie {
+    display: none !important;
+  }
+}
+
 @page {
   margin: 1.2cm 0;
 }
@@ -198,6 +222,13 @@ table {
   display: none !important;
 
   @include print {
+    display: block !important;
+  }
+}
+.ie-only {
+  display: none !important;
+
+  @include ie {
     display: block !important;
   }
 }
