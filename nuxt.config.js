@@ -49,6 +49,10 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    babel: {
+      'presets': ['es2017', 'es2016', 'es2015', 'stage-2'],
+      plugins: ['transform-runtime']
+    },
     /*
     ** Run ESLint on save
     */
