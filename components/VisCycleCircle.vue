@@ -170,6 +170,10 @@ export default {
   position: relative;
   margin-right: 90px;
 
+  @include ie {
+    margin-right: auto;
+  }
+
   .label {
     position: absolute;
     transform: translate(#{$spacing * 0.25}, -50%);
