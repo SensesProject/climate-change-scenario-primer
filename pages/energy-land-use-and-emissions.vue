@@ -63,7 +63,7 @@
         scenario="emissions"/>
     </LayoutColumns>
     <img
-      src="~/assets/img/vis-print-fallbacks/ssp-comparison-1.jpg"
+      src="~/assets/img/vis-print-fallbacks/ssp-comparison-2.jpg"
       alt=""
       class="print-only">
 
