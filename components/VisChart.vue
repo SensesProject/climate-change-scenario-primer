@@ -229,16 +229,19 @@ export default {
         }
 
         &.RCP60 {
-          opacity: 0.8;
+          opacity: 0.85;
         }
         &.RCP45 {
-          opacity: 0.6;
+          opacity: 0.7;
         }
         &.RCP34 {
-          opacity: 0.4;
+          opacity: 0.55;
         }
         &.RCP26 {
-          opacity: 0.2;
+          opacity: 0.4;
+        }
+        &.RCP19 {
+          opacity: 0.25;
         }
         &.fade {
           stroke: $color-light-gray;
@@ -332,16 +335,19 @@ export default {
           }
 
           &.RCP60 {
-            opacity: 0.8;
+            opacity: 0.85;
           }
           &.RCP45 {
-            opacity: 0.6;
+            opacity: 0.7;
           }
           &.RCP34 {
-            opacity: 0.4;
+            opacity: 0.55;
           }
           &.RCP26 {
-            opacity: 0.2;
+            opacity: 0.4;
+          }
+          &.RCP19 {
+            opacity: 0.25;
           }
         }
       }
