@@ -73,19 +73,20 @@
 
     p.hide-print The figure above shows the energy demand and CO<sub>2</sub> emissions developments that IAMs derived for  the various combinations of SSPs and RCPs. A key instrument to reduce emissions is emissions pricing.
 
-    LayoutColumns.extended.hide-print
+    LayoutColumns.extended.hide-print.central(central)
       VisChart(
         slot="left"
-        :max="3200"
+        :dynamic-filter="[ssp, hoverSSP]"
+        :legend-filter="ssp"
         legend="rcp"
         both-legends
         scenario="carbonSsp1")
-      VisChart(
-        slot="right"
-        :max="3200"
-        legend="rcp"
-        both-legends
-        scenario="carbonSsp5")
+
+    LayoutRadioGroup(
+      :options="ssps"
+      v-model="ssp"
+      class="center hide-print"
+      @hover="setHoverSSP")
 
     img.print-only(
       src="~/assets/img/vis-print-fallbacks/mitigation-3.jpg",
@@ -164,6 +165,9 @@ export default {
   .LayoutColumns {
     margin: -$spacing 0;
     padding: $spacing 0;
+    &.central {
+      max-width: calc(#{$max-width} / 2 + #{$spacing * 4} / 2);
+    }
   }
 }
 </style>

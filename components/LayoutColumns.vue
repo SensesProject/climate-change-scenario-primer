@@ -2,14 +2,18 @@
   <div
     :class="{mobileReverse}"
     class="LayoutColumns">
-    <div class="left">
+    <div
+      :class="{central}"
+      class="left">
       <span
         v-if="leftTitle"
         class="title"
         v-html="leftTitle"/>
       <slot name="left"/>
     </div>
-    <div class="right">
+    <div
+      v-if="!central"
+      class="right">
       <span
         v-if="rightTitle"
         class="title"
@@ -33,6 +37,10 @@ export default {
     mobileReverse: {
       type: Boolean,
       default: false
+    },
+    central: {
+      type: Boolean,
+      default: false
     }
   }
 }
@@ -43,6 +51,7 @@ export default {
 .LayoutColumns {
   @include flex-column;
   overflow: hidden;
+  justify-content: center;
   @include media-query($device-narrow) {
     @include ie {
       margin-left: -3.2rem !important;
@@ -67,6 +76,10 @@ export default {
   }
   .left {
     margin: 0 0 #{$spacing / 2} 0;
+
+    &.central {
+      margin: 0;
+    }
   }
 
   @include media-query($device-narrow) {
