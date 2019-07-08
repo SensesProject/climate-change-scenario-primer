@@ -2,6 +2,7 @@
   section.index
     div.wrapper
       h1.white Climate Change Scenarios
+      router-link.mono.white.version(to="versions") Version 1.2.2
       p.sans.white We can’t predict the future, but scenarios allow us to explore possible futures, the assumptions they depend upon, and the courses of action that could bring them about.
       p.sans.white This interactive primer explains what climate change scenarios are and how they are connected to socioeconomics, energy & land use, emissions, climate change and climate impacts.
       router-link.button(:to="nextChapter.path")
@@ -38,6 +39,10 @@ export default {
   @include gradient();
   transform: translateX(0);
 
+  h1 {
+    margin-bottom: $spacing / 4;
+  }
+
   @include media-query($device-wide) {
     background: $color-white;
     padding: 0;
@@ -59,6 +64,14 @@ export default {
   transform: translateX(0);
   max-width: $max-width-extended;
   hyphens: none;
+
+  .version {
+    font-size: 0.7rem;
+    color: lighten($color-violet, 40);
+    &:hover {
+      color: $color-white;
+    }
+  }
 
   @include media-query($device-wide) {
     @include gradient();
