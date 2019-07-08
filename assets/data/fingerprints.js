@@ -150,8 +150,8 @@ const data = [{
   name: 'Trade in electricity',
   category: 'Electricity and heat',
   models: ['AIM/CGE', 'MESSAGE-GLOBIOM'],
-  x: 22.54,
-  y: 83.31
+  x: 32.34,
+  y: 83.85
 }, {
   id: 'c2p1',
   name: 'Coal without CCS',
@@ -224,32 +224,32 @@ const data = [{
   y: 58.41
 }, {
   id: 'c2p11',
-  name: 'Solar Power (PV)',
+  name: 'Solar Power',
   category: 'Electricity and heat',
   models: ['AIM/CGE', 'GCAM4', 'IMAGE', 'REMIND-MAGPIE', 'MESSAGE-GLOBIOM'],
   x: 33.67,
   y: 61.12
-}, {
-  id: 'c2p12',
-  name: 'Solar Power (CSP)',
-  category: 'Electricity and heat',
-  models: ['GCAM4', 'REMIND-MAGPIE', 'MESSAGE-GLOBIOM'],
-  x: 37.41,
-  y: 81.30
+// }, {
+//   id: 'c2p12',
+//   name: 'Solar Power (CSP)',
+//   category: 'Electricity and heat',
+//   models: ['GCAM4', 'REMIND-MAGPIE', 'MESSAGE-GLOBIOM'],
+//   x: 37.41,
+//   y: 81.30
 }, {
   id: 'c2p13',
-  name: 'Wind Power (Offshore)',
+  name: 'Wind Power',
   category: 'Electricity and heat',
   models: ['AIM/CGE', 'GCAM4', 'IMAGE', 'REMIND-MAGPIE', 'MESSAGE-GLOBIOM'],
   x: 38.82,
   y: 52.73
-}, {
-  id: 'c2p14',
-  name: 'Wind Power (Onshore)',
-  category: 'Electricity and heat',
-  models: ['IMAGE', 'MESSAGE-GLOBIOM'],
-  x: 32.34,
-  y: 83.85
+// }, {
+//   id: 'c2p14',
+//   name: 'Wind Power (Onshore)',
+//   category: 'Electricity and heat',
+//   models: ['IMAGE', 'MESSAGE-GLOBIOM'],
+//   x: 32.34,
+//   y: 83.85
 }, {
   id: 'c2p15',
   name: 'Hydroelectric Power',
@@ -326,8 +326,8 @@ const data = [{
   name: 'Coal Heat',
   category: 'Electricity and heat',
   models: ['IMAGE', 'REMIND-MAGPIE', 'MESSAGE-GLOBIOM'],
-  x: 27.30,
-  y: 86.40
+  x: 37.41,
+  y: 81.30
 }, {
   id: 'c2p26',
   name: 'Natural Gas Heat',
