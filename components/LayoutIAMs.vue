@@ -179,6 +179,7 @@ export default {
             let y
             if (p[1] === 'min') y = 1
             else if (p[1] === 'max') y = height - 1
+            else if (p[2] === 'next' && p[3] === 'off') y = transformY(p[1])
             else if (p[2] === 'next') y = transformY(p[1]) - padding.y * 0.5
             else if (p[2] === 'off') y = transformY(p[1] - 1) + padding.y + this.chartHeight
             else y = transformY(p[1] - 1) + padding.y * 0.5 + this.chartHeight
@@ -204,7 +205,7 @@ export default {
         }
       }, {
         style: {
-          'padding-top': `${(this.chartHeight + this.padding.y) * 3 + this.padding.y}px`
+          'padding-top': `${(this.chartHeight + this.padding.y) * 1 + this.padding.y}px`
         }
       }, {
         style: {
@@ -262,7 +263,7 @@ export default {
       const height = padding.y + chartHeight
       let offset = this.pStructureHeights[0] + y * height
       if (y >= 2) offset += this.pStructureHeights[1]
-      if (y >= 5) offset += this.pStructureHeights[2]
+      if (y >= 3) offset += this.pStructureHeights[2]
       return offset - padding.y
     },
     setParagraphHeights () {
