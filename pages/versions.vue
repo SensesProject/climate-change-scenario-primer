@@ -2,6 +2,11 @@
   section.wrapper
     h2.h1 Version History
     h3.h2
+      a(href="https://github.com/SensesProject/climate-change-scenario-primer/releases/tag/1.2.3") 1.2.3
+    ul
+      li Fixed label in carbon price chart on mitigation page
+      li Improved flow chart in IAMs in Detail section
+    h3.h2
       a(href="https://github.com/SensesProject/climate-change-scenario-primer/releases/tag/1.2.2") 1.2.2
     ul
       li Added version history
