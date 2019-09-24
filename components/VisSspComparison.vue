@@ -53,6 +53,12 @@
             <polygon
               v-if="step === 2"
               points="55 -20 120 -20 120 120 70 60 75 50 55 20"/>
+            <!-- <polygon
+              v-if="step === 3"
+              points="55 -20 120 -20 120 120 70 60 75 50 55 20"/> -->
+            <polygon
+              v-if="step === 3"
+              points="35,-20 50,20 65,35 80,50 70,60 120,120 120,-20"/>
           </g>
           <g
             :filter="`url(#gooey${step})`"
@@ -66,6 +72,9 @@
             <polygon
               v-if="step === 2"
               points="-20,-20 50,-20 45,20 20,50 25,75 50,80 60,70 120,120 -20,120"/>
+            <polygon
+              v-if="step === 3"
+              points="-20,35 20,50 35,65 50,80 60,70 120,120 -20,120"/>
           </g>
         </g>
       </g>
@@ -253,16 +262,17 @@ export default {
       return `-${padding} -${padding} ${100 + padding * 2} ${100 + padding * 3}`
     },
     high () {
-      return this.step === 2 ? 'Rapid' : 'High'
+      return this.step === 2 ? 'Rapid' : this.step === 3 ? 'Strong' : 'High'
     },
     low () {
-      return this.step === 2 ? 'Slow' : 'Low'
+      return this.step === 2 ? 'Slow' : this.step === 3 ? 'Limited' : 'Low'
     },
     label () {
       return [
         'Education level',
         'Level of international trade',
-        'Speed of technology development'
+        'Speed of technology development',
+        'Land Use Regulations '
       ][this.step]
     }
   },

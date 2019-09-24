@@ -118,7 +118,7 @@ export default {
         color: 'blue'
       }, {
         label: 'AIM/CGE (SSP&#8239;3)',
-        value: 'AIM/CGE',
+        value: 'AIM',
         color: 'red'
       }, {
         label: 'GCAM4 (SSP&#8239;4)',
