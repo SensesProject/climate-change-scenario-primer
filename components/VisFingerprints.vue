@@ -10,13 +10,13 @@
         <filter id="gooey">
           <feGaussianBlur
             in="SourceGraphic"
-            stdDeviation="3"
+            stdDeviation="2"
             color-interpolation-filters="sRGB"
             result="blur"/>
           <feColorMatrix
             in="blur"
             mode="matrix"
-            values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 50 -25"
+            values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 30 -15"
             result="gooey"/>
           <feBlend
             in="SourceGraphic"
@@ -35,7 +35,7 @@
             <circle
               :class="[property.circle.fill]"
               opacity="0.5"
-              r="8"
+              r="7"
               class="circle"/>
             <text
               x="16"
@@ -44,7 +44,7 @@
             </text>
           </g>
           <circle
-            r="8"
+            r="7"
             class="circle"
             @mouseover="setHover(property)"
             @mouseout="resetHover()"/>
@@ -52,7 +52,7 @@
             v-if="property.selectedId != null"
             :style="{transform: step === 0 ? property.circle.offset : null}"
             :class="[property.circle.fill, `step-${step}`]"
-            r="8"
+            r="7"
             class="circle"
             @mouseover="setHover(property)"
             @mouseout="resetHover()"/>
@@ -71,7 +71,7 @@
             :transform="property.transform"
             class="property">
             <circle
-              r="14"
+              r="13"
               class="circle"/>
           </g>
         </g>
@@ -133,61 +133,58 @@
         v-if="view.width >= 800"
         :transform="`translate(${width / 2} 0)`"
         class="categories wide">
-        <g transform="translate(180, 200)">
+        <g transform="translate(-180, 80)">
           <line
-            x1="-8"
-            x2="-20"/>
-          <text y="6">
+            x1="8"
+            x2="66"/>
+          <text
+            y="6"
+            text-anchor="end">
             <tspan dy="-0.6em">Economic Growth</tspan>
             <tspan
               x="0"
               dy="1.2em">and Development</tspan>
           </text>
         </g>
-        <g transform="translate(180, 276)">
+        <g transform="translate(180, 150)">
           <line
             x1="-8"
-            x2="-68"/>
+            x2="-22"/>
           <text y="6">
             <tspan>Land use</tspan>
           </text>
         </g>
         <g
-          transform="translate(-180, 292)"
+          transform="translate(-180, 182)"
           text-anchor="end">
           <line
             x1="8"
-            x2="62"/>
+            x2="38"/>
           <text y="6">
             <tspan>Electricity and heat</tspan>
           </text>
         </g>
-        <g
-          transform="translate(-180, 167)"
-          text-anchor="end">
+        <g transform="translate(180, 48)">
           <line
-            x1="8"
-            x2="20"/>
+            x1="-8"
+            x2="-106"/>
           <text y="6">
             <tspan>Refining</tspan>
           </text>
         </g>
         <g
-          transform="translate(-180, 92)"
-          text-anchor="end">
+          transform="translate(180, 250)">
           <line
-            x1="8"
-            x2="78"/>
+            x1="-8"
+            x2="-40"/>
           <text y="6">
             <tspan>Energy demand</tspan>
           </text>
         </g>
-        <g
-          transform="translate(-180, 48)"
-          text-anchor="end">
+        <g transform="translate(180, 100)">
           <line
-            x1="8"
-            x2="168"/>
+            x1="-8"
+            x2="-66"/>
           <text y="6">
             <tspan dy="-0.6em">Resource extraction</tspan>
             <tspan
@@ -195,10 +192,25 @@
               dy="1.2em">and trade</tspan>
           </text>
         </g>
-        <g transform="translate(180, 81)">
+        <g transform="translate(180, 194)">
           <line
             x1="-8"
-            x2="-82"/>
+            x2="-84"/>
+          <text y="6">
+            <tspan dy="-0.6em">Carbon Dioxide</tspan>
+            <tspan
+              x="0"
+              dy="1.2em">Removal</tspan>
+          </text>
+        </g>
+        <g transform="translate(180, 324)">
+          <line
+            x1="-8"
+            x2="-135"/>
+          <line
+            x1="-135"
+            x2="-135"
+            y2="-30"/>
           <!-- <text y="6">
             <tspan dy="-0.6em">Climate and non-climate</tspan>
             <tspan
@@ -218,20 +230,31 @@
               dy="1.2em">change</tspan>
           </text>
         </g>
+        <g transform="translate(-180, 308)">
+          <line
+            x1="8"
+            x2="94"/>
+          <text
+            y="6"
+            text-anchor="end">
+            <tspan dy="-0.6em">Policy</tspan>
+            <tspan
+              x="0"
+              dy="1.2em">Representation</tspan>
+          </text>
+        </g>
       </g>
       <g
         v-else
         :transform="`translate(${width / 2} -16)`"
         class="categories narrow">
-        <g transform="translate(150, 450)">
+        <g transform="translate(-150, 44)">
           <line
-            x1="-26"
-            x2="-26"
-            y1="-10"
-            y2="-124"/>
-          <text
-            y="6"
-            text-anchor="end">
+            x1="67"
+            x2="67"
+            y1="48"
+            y2="64"/>
+          <text y="6">
             <tspan>Economic</tspan>
             <tspan
               x="0"
@@ -241,22 +264,22 @@
               dy="1.2em">Development</tspan>
           </text>
         </g>
-        <g transform="translate(20, 416)">
+        <g transform="translate(100, 44)">
           <line
             x1="52"
             x2="52"
-            y1="-10"
-            y2="-42"/>
+            y1="12"
+            y2="170"/>
           <text y="6">
             <tspan>Land use</tspan>
           </text>
         </g>
-        <g transform="translate(-114, 468)">
+        <g transform="translate(-150, 420)">
           <line
             x1="14"
             x2="14"
             y1="-10"
-            y2="-40"/>
+            y2="-88"/>
           <text y="6">
             <tspan>Electricity</tspan>
             <tspan
@@ -264,35 +287,37 @@
               dy="1.2em">and heat</tspan>
           </text>
         </g>
-        <g transform="translate(-150, 140)">
+        <g transform="translate(-24, 44)">
           <line
-            x1="25"
-            x2="25"
+            x1="21"
+            x2="21"
             y1="10"
-            y2="62"/>
+            y2="87"/>
           <text y="6">
             <tspan>Refining</tspan>
           </text>
         </g>
-        <g transform="translate(-80, 112)">
+        <g transform="translate(156, 463)">
           <line
-            x1="14"
-            x2="14"
-            y1="10"
-            y2="26"/>
-          <text y="6">
+            x1="-20"
+            x2="-20"
+            y1="-24"
+            y2="-112"/>
+          <text
+            y="6"
+            text-anchor="end">
             <tspan dy="-1.2em">Energy</tspan>
             <tspan
               dy="1.2em"
               x="0">demand</tspan>
           </text>
         </g>
-        <g transform="translate(-20, 78)">
+        <g transform="translate(78, 120)">
           <line
-            x1="26"
-            x2="26"
+            x1="24"
+            x2="24"
             y1="10"
-            y2="26"/>
+            y2="42"/>
           <text y="6">
             <tspan dy="-2.4em">Resource</tspan>
             <tspan
@@ -303,15 +328,13 @@
               dy="1.2em">and trade</tspan>
           </text>
         </g>
-        <g transform="translate(150, 104)">
+        <g transform="translate(0, 480)">
           <line
-            x1="-69"
-            x2="-69"
-            y1="10"
-            y2="32"/>
-          <text
-            y="6"
-            text-anchor="end">
+            x1="32"
+            x2="32"
+            y1="-42"
+            y2="-103"/>
+          <text y="6">
             <tspan dy="-2.4em">Climate and</tspan>
             <tspan
               x="0"
@@ -322,6 +345,37 @@
             <tspan
               x="0"
               dy="1.2em">change</tspan>
+          </text>
+        </g>
+        <g transform="translate(50, 418)">
+          <line
+            x1="16"
+            x2="16"
+            y1="-42"
+            y2="-113"/>
+          <text y="6">
+            <tspan dy="-2.4em">Carbon</tspan>
+            <tspan
+              x="0"
+              dy="1.2em">Dioxide</tspan>
+            <tspan
+              x="0"
+              dy="1.2em">Removal</tspan>
+          </text>
+        </g>
+        <g transform="translate(-20, 498)">
+          <line
+            x1="-16"
+            x2="-16"
+            y1="-42"
+            y2="-80"/>
+          <text
+            y="6"
+            text-anchor="end">
+            <tspan dy="-2.4em">Policy</tspan>
+            <tspan
+              x="0"
+              dy="1.2em">Representation</tspan>
           </text>
         </g>
       </g>
@@ -426,8 +480,8 @@ export default {
       const { step, properties, selectedModel, hoverModel } = this
       return [{
         color: 'red',
-        active: (selectedModel === 'AIM/CGE' || hoverModel === 'AIM/CGE') && step > 0,
-        properties: properties.filter(p => p.models.filter(m => m === 'AIM/CGE')[0])
+        active: (selectedModel === 'AIM' || hoverModel === 'AIM') && step > 0,
+        properties: properties.filter(p => p.models.filter(m => m === 'AIM')[0])
       }, {
         color: 'yellow',
         active: (selectedModel === 'GCAM4' || hoverModel === 'GCAM4') && step > 0,
@@ -473,6 +527,7 @@ export default {
     setHover (property) {
       this.$emit('hover', property.models)
       this.hover = property
+      console.log(property.category)
       switch (this.step) {
         case 1:
           this.selectedCategory = property.category

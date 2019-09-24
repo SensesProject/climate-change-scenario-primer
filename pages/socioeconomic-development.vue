@@ -86,11 +86,16 @@
           div.ssp-comparison(slot="right")
             VisSspComparison(:step=1)
           p.sans(slot="left") The amount of international trade is an indicator for globalization. SSP&thinsp;5 is the most globalized world, while regional rivalry in SSP&thinsp;3 is posing a barrier to globalization. The other futures have intermediate levels of globalization (SSP&thinsp;2), a balance between globalized institutions and an emphasis on local communities (SSP&thinsp;1), or fragmented societies with a globalized elite and disconnected local work forces (SSP&thinsp;4).
-        h3 Technology development
+        h3 Technology Development
         LayoutColumns.center.default(center)
           div.ssp-comparison(slot="right")
             VisSspComparison(:step=2)
           p.sans(slot="left") Technological development drives economic productivity. It also plays a key role for mitigating and adapting to climate change. SSP&thinsp;5 has highest economic growth due to rapid technological change and human development, globalizing markets, and an emphasis on production and consumption. In contrast, regional isolation dampens technological progress in SSP&thinsp;3. Intermediate developments occur due to different levels of technological progress across regions (SSP&thinsp;2) and societal groups (SSP&thinsp;4), or an emphasis on a broad concept of wellbeing  that goes beyond a narrow focus on economic gains (SSP&thinsp;1).
+        h3 Land Use Change
+        LayoutColumns.center.default(center)
+          div.ssp-comparison(slot="right")
+            VisSspComparison(:step=3)
+          p.sans(slot="left") Land use change regulations aim to conserve land that contributes to negative emissions and thus, to avoid deforestation. In SSP&thinsp;1 inclusive development that respects environmental boundaries induces strongly regulated land use change, e.g. tropical deforestation rates are strongly reduced. In contrast in SSP&thinsp;2 and SSP&thinsp;5 trends do not shift much from historical patterns and thus land use is incompletely regulated, i.e. tropical deforestation continues, although at slowly declining rates over time. In SSP&thinsp;4 land use is only effectively regulated in wealthy regions, whereas in SSP&thinsp;3 the poor protection of forests is omnipresent.
     LayoutRecap
       li
         | Socioeconomic scenarios provide a consistent set of assumptions about societal, technical, cultural and economic developments over the 21

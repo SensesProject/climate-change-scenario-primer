@@ -2,6 +2,11 @@
   section.wrapper
     h2.h1 Version History
     h3.h2
+      a(href="https://github.com/SensesProject/climate-change-scenario-primer/releases/tag/1.2.4") 1.2.4
+    ul
+      li Socioeconomic Developement: Added chart on land use changes
+      li Energy Land Use and Emissions: Updated model comparison chart
+    h3.h2
       a(href="https://github.com/SensesProject/climate-change-scenario-primer/releases/tag/1.2.3") 1.2.3
     ul
       li Fixed label in carbon price chart on mitigation page
