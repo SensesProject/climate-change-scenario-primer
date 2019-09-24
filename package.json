@@ -4,7 +4,7 @@
   "description": "Nuxt.js project",
   "author": "Fidel Thomet <me@fidelthomet.com>",
   "private": true,
-  "config": {
+  "//-config": {
     "nuxt": {
       "host": "192.168.2.79",
       "port": "3333"
