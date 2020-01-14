@@ -4,7 +4,8 @@
       :class="{active: highlight === value}"
       class="highlight"
       @mouseover="highlight = value"
-      @mouseout="reset()"><slot/><wbr></span>
+      @mouseout="reset()"
+    ><slot /><wbr></span>
   </span>
 </template>
 
@@ -34,7 +35,7 @@ export default {
         return this.$store.getters.getField(this.field)
       },
       set (value) {
-        return this.$store.commit('updateField', {path: this.field, value})
+        return this.$store.commit('updateField', { path: this.field, value })
       }
     }
   },

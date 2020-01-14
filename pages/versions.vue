@@ -48,7 +48,7 @@ export default { }
 @import "~@/assets/style/global";
 
 ul {
-  list-style: url(~/assets/img/li-violet.svg);
+  list-style: url(~@/assets/img/li-violet.svg);
   line-height: 1.4;
   margin: $spacing / 4 0 $spacing / 2;
 }

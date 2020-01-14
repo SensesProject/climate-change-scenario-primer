@@ -2,7 +2,8 @@
   <div class="InLegendSequential">
     <span
       class="label"
-      v-html="format(min)"/>
+      v-html="format(min)"
+    />
     <span
       v-for="color in colors"
       :key="`color-${color}`"
@@ -11,7 +12,8 @@
     />
     <span
       class="label"
-      v-html="format(max)"/>
+      v-html="format(max)"
+    />
   </div>
 </template>
 

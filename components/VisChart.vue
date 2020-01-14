@@ -1,60 +1,74 @@
 <template>
   <div
     ref="VisChart"
-    class="VisChart">
+    class="VisChart"
+  >
     <svg
       :style="{'stroke-width': strokeWidth, 'font-size': `${fontSize}`}"
       :height="width * 0.75 || 300"
       width="100%"
-      viewBox="0 0 100 75">
+      viewBox="0 0 100 75"
+    >
       <g class="lines">
         <polyline
           v-for="(line, i) in lines"
           :key="`${line.name}-${i}`"
-          v-bind="line.attrs"/>
+          v-bind="line.attrs"
+        />
       </g>
       <g
         class="axis x-axis"
-        transform="translate(0, 75)">
+        transform="translate(0, 75)"
+      >
         <text
           y="0.8em"
-          class="left">2005</text>
+          class="left"
+        >2005</text>
         <text
           y="0.8em"
           x="100"
-          class="right">2100</text>
+          class="right"
+        >2100</text>
       </g>
       <g class="axis y-axis">
         <text
           y="-0.8em"
-          class="left sans">{{ variable }}</text>
+          class="left sans"
+        >{{ variable }}</text>
         <g
           v-for="(tick, i) in ticks"
           :key="`tick-${i}`"
           :transform="`translate(0 ${tick.y})`"
-          class="tick">
+          class="tick"
+        >
           <text
             v-if="tick.value !== '0'"
-            y="-0.25em">{{ tick.value }}</text>
+            y="-0.25em"
+          >{{ tick.value }}</text>
           <line
             :class="{zero: tick.value === '0'}"
-            x2="100"/>
+            x2="100"
+          />
         </g>
       </g>
     </svg>
     <div
       :class="{relative: bothLegends}"
-      class="key-wrapper">
+      class="key-wrapper"
+    >
       <div
         :class="{hide: hideLegend}"
-        class="key extended">
+        class="key extended"
+      >
         <span
-          v-for="(scenario, i) in lines"
-          v-show="!scenario.hideFromLegend"
+          v-for="(s, i) in lines"
+          v-show="!s.hideFromLegend"
           :key="`key-${i}`"
-          class="key-item"><span
-            :class="scenario.attrs.class"
-            class="dot"/>&nbsp;{{ scenario.name }}</span>
+          class="key-item"
+        ><span
+          :class="s.attrs.class"
+          class="dot"
+        />&nbsp;{{ s.name }}</span>
       </div>
     </div>
   </div>
@@ -149,7 +163,7 @@ export default {
     lines () {
       const { data, strokeWidth, years, xScale, yScale, highlightSsp, dynamicFilter, legendFilter } = this
       return data.map(scenario => {
-        const name = this.legend === 'ssp' ? scenario.ssp : scenario.rcp === 'Baseline' ? `Baseline` : `RCP ${scenario.rcp}`
+        const name = this.legend === 'ssp' ? scenario.ssp : scenario.rcp === 'Baseline' ? 'Baseline' : `RCP ${scenario.rcp}`
         return {
           name,
           attrs: {
@@ -160,7 +174,7 @@ export default {
                 fade: (dynamicFilter == null && highlightSsp !== null && highlightSsp !== scenario.ssp) || (dynamicFilter != null && !dynamicFilter.filter(f => f === scenario.ssp)[0])
               }
             ],
-            style: {'stroke-width': strokeWidth * 2},
+            style: { 'stroke-width': strokeWidth * 2 },
             points: years.map(year => `${xScale(year)},${yScale(scenario[year])}`).join(' ')
           },
           hideFromLegend: legendFilter != null && legendFilter !== scenario.ssp
@@ -169,7 +183,7 @@ export default {
     },
     ticks () {
       return this.yScale.ticks(4)
-        .map(value => ({value: format(',.0f')(value), y: this.yScale(value)})).filter(tick => tick.y > (100 / this.width) * 18)
+        .map(value => ({ value: format(',.0f')(value), y: this.yScale(value) })).filter(tick => tick.y > (100 / this.width) * 18)
     }
   },
   watch: {

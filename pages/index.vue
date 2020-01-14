@@ -23,7 +23,7 @@ export default {
   computed: {
     ...mapState(['chapters']),
     nextChapter () {
-      const {chapters, $route} = this
+      const { chapters, $route } = this
       return chapters[chapters.map(c => c.path).indexOf($route.path) + 1]
     }
   }

@@ -1,27 +1,31 @@
 <template>
   <div class="LayoutRadioGroup hide-print">
     <template
-      v-for="(option, i) in options">
+      v-for="(option, i) in options"
+    >
       <input
+        :id="`bt-${i}`"
         :key="`button-${option.value}`"
         :value="option.value"
-        :id="`bt-${i}`"
         :checked="propxyValue === option.value"
         type="radio"
-        @click="propxyValue = $event.target.value">
+        @click="propxyValue = $event.target.value"
+      >
       <label
         :key="`label-${option.value}`"
         :for="`bt-${i}`"
         :class="[option.color, {highlight: highlight.filter(d => d === option.value)[0]}, {highlighting: highlight.length > 0}]"
         @mouseover="hover(option.value)"
-        @mouseleave="hover(null)">
+        @mouseleave="hover(null)"
+      >
         <span>
           <div class="radio">
-            <div class="circle"/>
+            <div class="circle" />
           </div>
           <div
             class="label"
-            v-html="option.label"/>
+            v-html="option.label"
+          />
         </span>
         <wbr>
       </label>

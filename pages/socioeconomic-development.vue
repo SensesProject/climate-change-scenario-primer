@@ -158,7 +158,7 @@ export default {
   }
   ul {
     font-family: $font-serif;
-    list-style: url(~/assets/img/li-black.svg);
+    list-style: url(~@/assets/img/li-black.svg);
     line-height: 1.4em;
 
     @include print {

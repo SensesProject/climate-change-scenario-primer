@@ -2,24 +2,30 @@
   <div
     :class="{ showMenu }"
     class="Navigation hide-print"
-    @click="closeMenu">
+    @click="closeMenu"
+  >
     <nav :class="{ showMenu }">
       <ul>
         <nuxt-link
           v-for="chapter in chapters"
           :key="chapter.path"
-          :to="chapter.path">
+          :to="chapter.path"
+        >
           <li>
             <component
-              v-if="chapter.cycle == null"
               :is="chapter.path === '/' ? 'h1' : 'span'"
+              v-if="chapter.cycle == null"
               :class="{h2: chapter.path === '/'}"
-              class="title">{{ chapter.title }}</component>
+              class="title"
+            >
+              {{ chapter.title }}
+            </component>
             <div
               v-else
-              class="cycle">
+              class="cycle"
+            >
               <div class="cycle-part">
-                <VisCyclePart :type="chapter.cycle"/>
+                <VisCyclePart :type="chapter.cycle" />
               </div>
               <div class="title">
                 {{ chapter.title }}
@@ -30,7 +36,8 @@
       </ul>
       <nuxt-link
         class="imprint"
-        to="/imprint">
+        to="/imprint"
+      >
         Imprint
       </nuxt-link>
     </nav>

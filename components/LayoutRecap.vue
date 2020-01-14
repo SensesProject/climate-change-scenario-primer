@@ -67,7 +67,7 @@ export default {
       }
 
       ul {
-        list-style: url(~/assets/img/li-violet.svg);
+        list-style: url(~@/assets/img/li-violet.svg);
         line-height: 1.4 ;
 
         @include print {

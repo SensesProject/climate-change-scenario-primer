@@ -168,7 +168,7 @@ export default {
     },
     lines () {
       const { iam, width, view, height, transformX, transformY, step, padding } = this
-      return iam.lines.map(({points, color, minStep, maxStep}) => {
+      return iam.lines.map(({ points, color, minStep, maxStep }) => {
         const off = view.width < 826 ? (view.width - width) / 2 - 1 : padding.x
         return {
           color,
@@ -242,7 +242,7 @@ export default {
     setGFingerprintHeights (heights) {
       this.pFingerprint = [{
         style: {
-          'padding-top': `0px`
+          'padding-top': '0px'
         }
       }, {
         style: {
@@ -250,7 +250,7 @@ export default {
         }
       }, {
         style: {
-          'padding-top': `0px`
+          'padding-top': '0px'
         }
       }]
     },
@@ -285,7 +285,7 @@ export default {
       if (typeof window === 'undefined') return
       const observerOptions = {
         threshold: 0,
-        rootMargin: `50% 0% -50% 0%`
+        rootMargin: '50% 0% -50% 0%'
       }
 
       this.observer = new window.IntersectionObserver(entries => {
@@ -301,7 +301,7 @@ export default {
 
       this.observer2 = new window.IntersectionObserver(entries => {
         const oldIns = this.fingerprintIntersections
-        let newIns = { step1: oldIns.step1, step2: oldIns.step2 }
+        const newIns = { step1: oldIns.step1, step2: oldIns.step2 }
         entries.forEach(e => {
           newIns[`step${e.target.getAttribute('step')}`] = e.isIntersecting
         })
@@ -314,7 +314,7 @@ export default {
         this.fingerprintIntersections = newIns
       }, {
         threshold: 0,
-        rootMargin: `30% 0% -30% 0%`
+        rootMargin: '30% 0% -30% 0%'
       })
 
       this.observer2.observe(this.$refs.fingerprintStepper)

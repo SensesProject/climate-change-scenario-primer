@@ -17,7 +17,7 @@
   }
 
   ul {
-    list-style: url(~/assets/img/li-black.svg);
+    list-style: url(~@/assets/img/li-black.svg);
 
     @include print {
       /* list-style-position: inside; */

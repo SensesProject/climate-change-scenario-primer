@@ -3,31 +3,39 @@
     ref="VisIamStructureChart"
     :transform="transform"
     :opacity="opacity"
-    class="VisIamStructureChart">
+    class="VisIamStructureChart"
+  >
     <g :transform="`translate(${-width / 2} 0)`">
       <rect
         :width="width"
         :height="height"
-        class="background"/>
+        class="background"
+      />
       <g v-if="visible">
         <polygon
           :transform="`translate(0 ${height})`"
           :points="graph"
-          :class="[element.color]"/>
+          :class="[element.color]"
+        />
         <g :transform="`translate(${ width / 2 } 0)`">
           <text
             y="19"
-            class="label">{{ element.name }}</text>
+            class="label"
+          >
+            {{ element.name }}
+          </text>
           <line
             v-if="dashIn"
             :y1="-padding.y / 2"
             :y2="0"
-            :class="[element.color]"/>
+            :class="[element.color]"
+          />
           <line
             v-if="dashOut"
             :y1="height"
             :y2="height + padding.y / 2"
-            :class="[element.color]"/>
+            :class="[element.color]"
+          />
         </g>
       </g>
     </g>
@@ -59,7 +67,7 @@ export default {
     },
     transform: {
       type: String,
-      default: `translate(0 0)`
+      default: 'translate(0 0)'
     },
     opacity: {
       type: Number,
@@ -67,7 +75,7 @@ export default {
     },
     scenario: {
       type: String,
-      default: `l001t0`
+      default: 'l001t0'
     }
   },
   data () {

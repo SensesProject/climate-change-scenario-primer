@@ -1,80 +1,98 @@
 <template>
   <div
     ref="VisSspComparison"
-    class="VisSspComparison">
+    class="VisSspComparison"
+  >
     <svg
       v-if="width > 0"
       :style="{'stroke-width': strokeWidth, 'font-size': `${fontSize}px`}"
       :height="height"
       :viewBox="viewBox"
       :class="{empty: step === null, 'hide-print': true}"
-      width="100%">
+      width="100%"
+    >
       <defs>
         <filter :id="'gooey' + step">
           <feGaussianBlur
             in="SourceGraphic"
             stdDeviation="10"
             color-interpolation-filters="sRGB"
-            result="blur"/>
+            result="blur"
+          />
           <feColorMatrix
             in="blur"
             mode="matrix"
             values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 200 -90"
-            result="gooey"/>
+            result="gooey"
+          />
           <feBlend
             in="gooey"
-            in2="gooey"/>
+            in2="gooey"
+          />
         </filter>
         <clipPath :id="'rect' + step">
           <rect
             x="0"
             y="0"
             width="100"
-            height="100"/>
+            height="100"
+          />
         </clipPath>
       </defs>
       <g
         :clip-path="`url(#rect${step})`"
-        class="chart">
+        class="chart"
+      >
         <rect
           class="background"
           width="100"
-          height="100"/>
+          height="100"
+        />
         <g v-if="step !== null">
           <g
             :filter="`url(#gooey${step})`"
-            class="low">
+            class="low"
+          >
             <polygon
               v-if="step === 0"
-              points="60 -20 120 -20 120 120 65 65 75 50 55 20"/>
+              points="60 -20 120 -20 120 120 65 65 75 50 55 20"
+            />
             <polygon
               v-if="step === 1"
-              points="50 -20 120 -20 120 50 80 45 63 37 55 20"/>
+              points="50 -20 120 -20 120 50 80 45 63 37 55 20"
+            />
             <polygon
               v-if="step === 2"
-              points="55 -20 120 -20 120 120 70 60 75 50 55 20"/>
+              points="55 -20 120 -20 120 120 70 60 75 50 55 20"
+            />
             <!-- <polygon
               v-if="step === 3"
               points="55 -20 120 -20 120 120 70 60 75 50 55 20"/> -->
             <polygon
               v-if="step === 3"
-              points="35,-20 50,20 65,35 80,50 70,60 120,120 120,-20"/>
+              points="35,-20 50,20 65,35 80,50 70,60 120,120 120,-20"
+            />
           </g>
           <g
             :filter="`url(#gooey${step})`"
-            class="high">
+            class="high"
+          >
             <polygon
               v-if="step === 0"
-              points="-20 -20 50 -20 45 20 22 50 50 80 80 120 -20 120"/>
+              points="-20 -20 50 -20 45 20 22 50 50 80 80 120 -20 120"
+            />
             <polygon
               v-if="step === 1"
-              points="-20 -20 50 -20 45 20 37 37 20 45 -20 50"/>
+              points="-20 -20 50 -20 45 20 37 37 20 45 -20 50"
+            />
             <polygon
               v-if="step === 2"
-              points="-20,-20 50,-20 45,20 20,50 25,75 50,80 60,70 120,120 -20,120"/>
+              points="-20,-20 50,-20 45,20 20,50 25,75 50,80 60,70 120,120 -20,120"
+            />
             <polygon
               v-if="step === 3"
-              points="-20,35 20,50 35,65 50,80 60,70 120,120 -20,120"/>
+              points="-20,35 20,50 35,65 50,80 60,70 120,120 -20,120"
+            />
           </g>
         </g>
       </g>
@@ -83,26 +101,32 @@
           v-for="ssp in ssps"
           :key="`ssp-${ssp.id}`"
           :transform="`translate(${ssp.cx} ${ssp.cy})`"
-          class="ssp">
+          class="ssp"
+        >
           <circle
             class="ssp-circle"
-            r="16"/>
+            r="16"
+          />
           <text
             :y="-6"
             class="ssp-title"
-            v-html="ssp.id"/>
+            v-html="ssp.id"
+          />
           <text
             :y="2"
             class="ssp-description"
-            v-html="ssp.description"/>
+            v-html="ssp.description"
+          />
         </g>
       </g>
       <g
         class="axis x-axis"
-        transform="translate(0 -6)">
+        transform="translate(0 -6)"
+      >
         <text
           :y="step === null ? 111 : 2"
-          x="50">
+          x="50"
+        >
           <tspan>Low&nbsp;&nbsp;&nbsp;&nbsp;←&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
           <tspan class="strong">Challenges for Adaptation</tspan>
           <tspan>&nbsp;&nbsp;&nbsp;&nbsp;→&nbsp;&nbsp;&nbsp;&nbsp;High</tspan>
@@ -110,10 +134,12 @@
       </g>
       <g
         class="axis y-axis wide"
-        transform="translate(-7 100) rotate(-90)">
+        transform="translate(-7 100) rotate(-90)"
+      >
         <text
           :y="step === null || step === 1 ? 2 : 111"
-          x="50">
+          x="50"
+        >
           <tspan>Low&nbsp;&nbsp;&nbsp;&nbsp;←&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
           <tspan class="strong">Challenges for Mitigation</tspan>
           <tspan>&nbsp;&nbsp;&nbsp;&nbsp;→&nbsp;&nbsp;&nbsp;&nbsp;High</tspan>
@@ -121,10 +147,12 @@
       </g>
       <g
         class="axis y-axis mobile"
-        transform="translate(-7 100) rotate(-90)">
+        transform="translate(-7 100) rotate(-90)"
+      >
         <text
           y="2"
-          x="50">
+          x="50"
+        >
           <tspan>Low&nbsp;&nbsp;&nbsp;&nbsp;←&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
           <tspan class="strong">Challenges for Mitigation</tspan>
           <tspan>&nbsp;&nbsp;&nbsp;&nbsp;→&nbsp;&nbsp;&nbsp;&nbsp;High</tspan>
@@ -133,37 +161,44 @@
       <g
         v-if="step !== null"
         class="key"
-        transform="translate(0 104)">
+        transform="translate(0 104)"
+      >
         <text
           x="50"
           y="0"
-          class="center">{{ label }}</text>
+          class="center"
+        >{{ label }}</text>
         <g transform="translate(0 4)">
           <rect
             class="background"
             x="35"
             width="30"
-            height="4"/>
+            height="4"
+          />
           <rect
             class="high"
             x="35"
             width="10"
-            height="4"/>
+            height="4"
+          />
           <rect
             class="low"
             x="55"
             width="10"
-            height="4"/>
+            height="4"
+          />
           <text
             x="32"
             y="2"
-            class="left">
+            class="left"
+          >
             {{ high }}
           </text>
           <text
             x="68"
             y="2"
-            class="right">{{ low }}</text>
+            class="right"
+          >{{ low }}</text>
         </g>
       </g>
     </svg>
@@ -172,22 +207,26 @@
       v-if="step === null"
       class="print-only"
       src="~/assets/img/vis-print-fallbacks/VisSspComparison.jpg"
-      alt="">
+      alt=""
+    >
     <img
       v-if="step === 0"
       class="print-only"
       src="~/assets/img/vis-print-fallbacks/VisSspComparison-0.jpg"
-      alt="">
+      alt=""
+    >
     <img
       v-if="step === 1"
       class="print-only"
       src="~/assets/img/vis-print-fallbacks/VisSspComparison-1.jpg"
-      alt="">
+      alt=""
+    >
     <img
       v-if="step === 2"
       class="print-only"
       src="~/assets/img/vis-print-fallbacks/VisSspComparison-2.jpg"
-      alt="">
+      alt=""
+    >
   </div>
 </template>
 

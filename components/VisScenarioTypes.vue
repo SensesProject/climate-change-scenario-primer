@@ -1,89 +1,110 @@
 <template>
   <div
     ref="cycle"
-    class="VisScenarioTypes center">
+    class="VisScenarioTypes center"
+  >
     <svg
       v-if="width"
       :style="{'stroke-width': strokeWidth, 'font-size': `${fontSize}px`}"
       :height="width / 2"
       class="hide-print"
       width="100%"
-      viewBox="0 0 100 50">
+      viewBox="0 0 100 50"
+    >
       <path
         class="range"
-        d="M30,35 Q60,20,100,40 L100,0"/>
+        d="M30,35 Q60,20,100,40 L100,0"
+      />
       <path
         class="pathway"
-        d="M30,35 Q60,20,100,40"/>
+        d="M30,35 Q60,20,100,40"
+      />
       <path
         class="pathway"
-        d="M30,35 Q60,20,100,20"/>
+        d="M30,35 Q60,20,100,20"
+      />
       <path
         class="projection"
-        d="M30,35 L100,0"/>
+        d="M30,35 L100,0"
+      />
       <path
         :d="`M${strokeWidth},${50 - strokeWidth / 2} L30,35`"
-        class="past"/>
+        class="past"
+      />
       <path
         :style="{'stroke-width': strokeWidth / 2}"
         :d="`M30,50 L30,${35 + strokeWidth * 4}`"
-        class="now"/>
+        class="now"
+      />
       <circle
         :r="strokeWidth * 1.5"
         class="now"
         cx="30"
-        cy="35"/>
+        cy="35"
+      />
       <circle
         :r="strokeWidth * 1.5"
         class="projection"
         cx="100"
-        cy="0"/>
+        cy="0"
+      />
       <circle
         :r="strokeWidth * 1.5"
         class="goal"
         cx="100"
-        cy="40"/>
+        cy="40"
+      />
       <circle
         :r="strokeWidth * 1.5"
         class="goal"
         cx="100"
-        cy="20"/>
+        cy="20"
+      />
       <text
         :x="100 + strokeWidth * 4"
         :y="fontSize / 4"
-        class="projection">Projection</text>
+        class="projection"
+      >Projection</text>
       <text
         :x="100 + strokeWidth * 4"
         :y="40 + fontSize / 4"
-        class="goal">Goal B</text>
+        class="goal"
+      >Goal B</text>
       <text
         :x="100 + strokeWidth * 4"
         :y="20 + fontSize / 4"
-        class="goal">Goal A</text>
+        class="goal"
+      >Goal A</text>
       <text
         :x="100 + strokeWidth * 4"
         :y="40 + fontSize / 4"
-        class="pathway">Pathway B</text>
+        class="pathway"
+      >Pathway B</text>
       <text
         :x="100 + strokeWidth * 4"
         :y="20 + fontSize / 4"
-        class="pathway">Pathway A</text>
+        class="pathway"
+      >Pathway A</text>
       <text
-        :y="50 + strokeWidth + fontSize">Past</text>
+        :y="50 + strokeWidth + fontSize"
+      >Past</text>
       <text
         :y="50 + strokeWidth + fontSize"
         x="30"
-        text-anchor="middle">Now</text>
+        text-anchor="middle"
+      >Now</text>
       <text
         :y="50 + strokeWidth + fontSize"
         x="100"
-        text-anchor="end">Future</text>
+        text-anchor="end"
+      >Future</text>
     </svg>
 
     <img
       class="print-only"
       src="~/assets/img/vis-print-fallbacks/VisScenarioTypes.jpg"
-      alt="">
+      alt=""
+    >
   </div>
 </template>
 

@@ -2,19 +2,24 @@
   <div class="VisSsp">
     <img
       v-if="ssp === 1"
-      src="~/assets/img/SSP1.png">
+      src="~/assets/img/SSP1.png"
+    >
     <img
       v-if="ssp === 2"
-      src="~/assets/img/SSP2.png">
+      src="~/assets/img/SSP2.png"
+    >
     <img
       v-if="ssp === 3"
-      src="~/assets/img/SSP3.png">
+      src="~/assets/img/SSP3.png"
+    >
     <img
       v-if="ssp === 4"
-      src="~/assets/img/SSP4.png">
+      src="~/assets/img/SSP4.png"
+    >
     <img
       v-if="ssp === 5"
-      src="~/assets/img/SSP5.png">
+      src="~/assets/img/SSP5.png"
+    >
   </div>
 </template>
 

@@ -60,6 +60,13 @@ module.exports = {
           loader: 'eslint-loader',
           exclude: /(node_modules)/
         })
+        config.module.rules.push({
+          test: /\.pug$/,
+          loader: 'pug-plain-loader',
+          options: {
+            data: {}
+          }
+        })
       }
       if (isServer) {
         config.externals = [

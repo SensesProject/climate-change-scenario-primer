@@ -16,6 +16,7 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "fix": "eslint --fix --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint"
   },
   "dependencies": {
@@ -26,10 +27,10 @@
     "d3-format": "^1.3.0",
     "d3-scale": "^2.1.0",
     "d3-scale-chromatic": "^1.3.0",
-    "intersection-observer": "^0.5.0",
+    "intersection-observer": "^0.7.0",
     "no-scroll": "^2.1.1",
     "normalize-scss": "^7.0.1",
-    "nuxt": "^1.4.5",
+    "nuxt": "^2.11.0",
     "ol": "^5.1.3",
     "proj4": "github:proj4js/proj4js",
     "sass-burger": "^1.3.1",
@@ -38,19 +39,20 @@
     "vuex-map-fields": "^1.2.3"
   },
   "devDependencies": {
-    "babel-eslint": "^8.2.1",
+    "babel-eslint": "^10.0.3",
     "babel-preset-latest": "^6.24.1",
-    "eslint": "^4.15.0",
-    "eslint-config-standard": "^11.0.0",
-    "eslint-friendly-formatter": "^3.0.0",
-    "eslint-loader": "^1.7.1",
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-friendly-formatter": "^4.0.1",
+    "eslint-loader": "^3.0.3",
     "eslint-plugin-import": "^2.11.0",
-    "eslint-plugin-node": "^6.0.1",
-    "eslint-plugin-promise": "^3.7.0",
-    "eslint-plugin-standard": "^3.1.0",
-    "eslint-plugin-vue": "^4.0.0",
-    "node-sass": "^4.9.3",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "eslint-plugin-vue": "^6.1.2",
+    "node-sass": "^4.13.0",
     "pug": "^2.0.3",
-    "sass-loader": "^7.0.1"
+    "pug-plain-loader": "^1.0.0",
+    "sass-loader": "^8.0.2"
   }
 }

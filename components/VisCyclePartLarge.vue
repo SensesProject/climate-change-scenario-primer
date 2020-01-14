@@ -1,15 +1,18 @@
 <template>
   <div
     :class="[type]"
-    class="VisCyclePart">
+    class="VisCyclePart"
+  >
     <svg
       v-if="type === 'first'"
       class="start"
       width="32px"
-      height="20px">
+      height="20px"
+    >
       <path
         :stroke="colors[0]"
-        d="M31,20 L31,16 C31,7.71572875 24.2842712,1 16,1 C7.71572875,1 1,7.71572875 1,16 L1,20"/>
+        d="M31,20 L31,16 C31,7.71572875 24.2842712,1 16,1 C7.71572875,1 1,7.71572875 1,16 L1,20"
+      />
     </svg>
     <svg
       v-if="type === 'normal'"
@@ -18,26 +21,32 @@
       width="32px"
       height="640px"
       viewBox="0 0 32 632"
-      preserveAspectRatio="none">
+      preserveAspectRatio="none"
+    >
       <path
         :stroke="colors[0]"
-        d="M 1,0 L1,632"/>
+        d="M 1,0 L1,632"
+      />
       <path
         :stroke="colors[index]"
         class="arrow"
-        d="M31,0 L31,24 M26,12.5 L31,17.5 L36,12.5"/>
+        d="M31,0 L31,24 M26,12.5 L31,17.5 L36,12.5"
+      />
       <path
         :stroke="colors[index + 1]"
-        d="M31,24 L31,632"/>
+        d="M31,24 L31,632"
+      />
     </svg>
     <svg
       v-if="type === 'last'"
       width="32px"
-      height="20px">
+      height="20px"
+    >
       <path
         :stroke="colors[0]"
-        d="M1,0 L1,4 C1,12.2842712 7.71572875,19 16,19 C24.2842712,19 31,12.2842712 31,4 L31,0"/>
-        <!-- <path
+        d="M1,0 L1,4 C1,12.2842712 7.71572875,19 16,19 C24.2842712,19 31,12.2842712 31,4 L31,0"
+      />
+      <!-- <path
           d="M-5,2 L1,-4 L7,2"
           class="mask"/>
         <path d="M-4,3 L1,-2 L6,3"/> -->
@@ -46,12 +55,14 @@
       v-if="type === 'normal'"
       class="dots"
       width="32px"
-      height="32px">
+      height="32px"
+    >
       <g transform="translate(31 0)">
         <g>
           <circle
             :fill="colors[index + 1]"
-            r="12"/>
+            r="12"
+          />
         </g>
       </g>
     </svg>

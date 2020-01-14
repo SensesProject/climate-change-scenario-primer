@@ -42,12 +42,12 @@ export default {
     return {
       // 0 => nothing, 1 => feasible, 2 => feasible for some, 3 => infeasible
       rcps: [
-        {label: '8.5', combinations: [0, 0, 0, 0, 0]},
-        {label: '6.0', combinations: [0, 1, 1, 0, 1]},
-        {label: '4.5', combinations: [1, 1, 1, 1, 1]},
-        {label: '3.4', combinations: [1, 1, 1, 1, 1]},
-        {label: '2.6', combinations: [1, 1, 3, 1, 2]},
-        {label: '1.9', combinations: [1, 2, 3, 2, 2]}
+        { label: '8.5', combinations: [0, 0, 0, 0, 0] },
+        { label: '6.0', combinations: [0, 1, 1, 0, 1] },
+        { label: '4.5', combinations: [1, 1, 1, 1, 1] },
+        { label: '3.4', combinations: [1, 1, 1, 1, 1] },
+        { label: '2.6', combinations: [1, 1, 3, 1, 2] },
+        { label: '1.9', combinations: [1, 2, 3, 2, 2] }
       ].map((d, i, rcps) => {
         return {
           value: d.label,
@@ -58,11 +58,11 @@ export default {
         }
       }),
       ssps: [
-        {label: '1', range: [5.2, 5.8]},
-        {label: '2', range: [6.5, 7.3]},
-        {label: '3', range: [6.7, 8.0]},
-        {label: '4', range: [5.8, 5.9]},
-        {label: '5', range: [8.2, 8.9]}
+        { label: '1', range: [5.2, 5.8] },
+        { label: '2', range: [6.5, 7.3] },
+        { label: '3', range: [6.7, 8.0] },
+        { label: '4', range: [5.8, 5.9] },
+        { label: '5', range: [8.2, 8.9] }
       ].map((d) => {
         return {
           label: d.label,

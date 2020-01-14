@@ -2,8 +2,9 @@
   <div class="LayoutListItem">
     <slot
       name="graphic"
-      class="graphic"/>
-    <slot class="text"/>
+      class="graphic"
+    />
+    <slot class="text" />
   </div>
 </template>
 

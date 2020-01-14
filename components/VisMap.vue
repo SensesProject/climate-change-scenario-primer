@@ -1,12 +1,14 @@
 <template>
   <div
     ref="VisMap"
-    class="Map">
+    class="Map"
+  >
     <div
-      :style="dimensions"
       :id="mapId"
+      :style="dimensions"
       :class="{showMap}"
-      class="map"/>
+      class="map"
+    />
   </div>
 </template>
 
@@ -78,7 +80,7 @@ export default {
       countries: null,
       map: process.browser ? new ol.Map({
         controls: [],
-        interaction: ol.interaction.defaults({altShiftDragRotate: false, pinchRotate: false, shiftDragZoom: false})
+        interaction: ol.interaction.defaults({ altShiftDragRotate: false, pinchRotate: false, shiftDragZoom: false })
       }) : null,
       extents: {
         'EPSG:4326': [-180, -90, 180, 90],
@@ -177,7 +179,7 @@ export default {
         this.highRes.getSource().changed()
         if (this.static) {
           const viewExtent = this.alternativeExtents[this.projection] || this.extents[this.projection]
-          this.map.getView().fit(viewExtent, {constrainResolution: false})
+          this.map.getView().fit(viewExtent, { constrainResolution: false })
         } else {
           this.lowRes.setSource(this.prerender())
         }
@@ -199,7 +201,7 @@ export default {
       })
       this.map.setView(view)
       const viewExtent = this.alternativeExtents[this.projection] || this.extents[this.projection]
-      view.fit(viewExtent, {constrainResolution: false})
+      view.fit(viewExtent, { constrainResolution: false })
 
       if (!this.static) {
         this.lowRes = new ol.ImageLayer({
@@ -313,7 +315,7 @@ export default {
     prerender () {
       const imageExtent = this.extents[this.projection]
       return new ol.Static({
-        url: this.createCanvas(imageExtent, null, 2, [2000, 1000], {code_: this.projection}).toDataURL(),
+        url: this.createCanvas(imageExtent, null, 2, [2000, 1000], { code_: this.projection }).toDataURL(),
         crossOrigin: '',
         projection: this.projection,
         imageExtent: imageExtent

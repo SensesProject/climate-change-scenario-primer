@@ -18,7 +18,7 @@ export default {
     showMenu: state => state.view.showMenu
   }),
   watch: {
-    '$route': function () {
+    $route: function () {
       this.url = `https://climatescenario.org/primer${this.$route.path}`
     }
   },

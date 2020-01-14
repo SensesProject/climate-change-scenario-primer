@@ -1,21 +1,24 @@
 <template>
   <div
     ref="cycle"
-    class="VisCycle">
+    class="VisCycle"
+  >
     <svg
       :style="{'stroke-width': strokeWidth}"
       :height="width"
       class="hide-print"
       width="100%"
-      viewBox="-50 -50 100 100">
+      viewBox="-50 -50 100 100"
+    >
       <g
         v-for="(item, i) in items"
         :key="`item-${i}`"
         :class="{'reduce-impact': reduceImpact}"
-        v-bind="item.parent">
-        <circle v-bind="item.circle"/>
-        <path v-bind="item.arc"/>
-        <path v-bind="item.arrowHead"/>
+        v-bind="item.parent"
+      >
+        <circle v-bind="item.circle" />
+        <path v-bind="item.arc" />
+        <path v-bind="item.arrowHead" />
       </g>
     </svg>
     <div
@@ -24,25 +27,34 @@
       :class="{'reduce-impact': reduceImpact, 'hide-print': true}"
       v-bind="item.text"
       class="label"
-      v-html="item.term"/>
+      v-html="item.term"
+    />
     <div
       v-if="reduceImpact"
-      class="label yellow mitigation hide-print">Mitigation</div>
+      class="label yellow mitigation hide-print"
+    >
+      Mitigation
+    </div>
     <div
       v-if="reduceImpact"
-      class="label red adaptation hide-print">Adaptation</div>
+      class="label red adaptation hide-print"
+    >
+      Adaptation
+    </div>
 
     <!-- Fallback images for print. Update when changing vis! -->
     <img
       v-if="!reduceImpact"
       class="print-only"
       src="~/assets/img/vis-print-fallbacks/VisCycleCircle.jpg"
-      alt="">
+      alt=""
+    >
     <img
       v-if="reduceImpact"
       class="print-only"
       src="~/assets/img/vis-print-fallbacks/VisCycleCircle-reduced.jpg"
-      alt="">
+      alt=""
+    >
   </div>
 </template>
 

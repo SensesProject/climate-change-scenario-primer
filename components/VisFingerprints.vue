@@ -1,26 +1,31 @@
 <template>
   <div
     ref="VisFingerprints"
-    class="VisFingerprints hide-print hide-ie">
+    class="VisFingerprints hide-print hide-ie"
+  >
     <svg
       :style="{'font-size': `${fontSize}px`, 'stroke-width': strokeWidth}"
       :height="height"
-      width="100%">
+      width="100%"
+    >
       <defs>
         <filter id="gooey">
           <feGaussianBlur
             in="SourceGraphic"
             stdDeviation="2"
             color-interpolation-filters="sRGB"
-            result="blur"/>
+            result="blur"
+          />
           <feColorMatrix
             in="blur"
             mode="matrix"
             values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 30 -15"
-            result="gooey"/>
+            result="gooey"
+          />
           <feBlend
             in="SourceGraphic"
-            in2="gooey"/>
+            in2="gooey"
+          />
         </filter>
       </defs>
       <g class="properties">
@@ -28,18 +33,22 @@
           v-for="property in properties"
           :key="property.id"
           :transform="property.transform"
-          class="property">
+          class="property"
+        >
           <g
             v-if="property.selectedId != null"
-            :style="{transform: property.circle.offset}">
+            :style="{transform: property.circle.offset}"
+          >
             <circle
               :class="[property.circle.fill]"
               opacity="0.5"
               r="7"
-              class="circle"/>
+              class="circle"
+            />
             <text
               x="16"
-              y="6">
+              y="6"
+            >
               {{ property.name }}
             </text>
           </g>
@@ -47,7 +56,8 @@
             r="7"
             class="circle"
             @mouseover="setHover(property)"
-            @mouseout="resetHover()"/>
+            @mouseout="resetHover()"
+          />
           <circle
             v-if="property.selectedId != null"
             :style="{transform: step === 0 ? property.circle.offset : null}"
@@ -55,7 +65,8 @@
             r="7"
             class="circle"
             @mouseover="setHover(property)"
-            @mouseout="resetHover()"/>
+            @mouseout="resetHover()"
+          />
         </g>
       </g>
       <g :class="[`step-${step}`, 'groups']">
@@ -64,15 +75,18 @@
           :key="`group-${i}`"
           :class="[group.color, {active: group.active}]"
           class="group"
-          filter="url(#gooey)">
+          filter="url(#gooey)"
+        >
           <g
             v-for="property in group.properties"
             :key="property.id"
             :transform="property.transform"
-            class="property">
+            class="property"
+          >
             <circle
               r="13"
-              class="circle"/>
+              class="circle"
+            />
           </g>
         </g>
       </g>
@@ -81,10 +95,12 @@
         :key="`text-${hover.id}`"
         :transform="hover.transform"
         :style="hover.style"
-        class="hover">
+        class="hover"
+      >
         <text
           class="shadow"
-          y="6">
+          y="6"
+        >
           <!-- <tspan
             :x="hover.textOffset"
             class="category"
@@ -93,21 +109,25 @@
             v-if="hover.name2 == null"
             :x="hover.textOffset"
             class="name"
-            dy="0em">{{ hover.name }}</tspan>
+            dy="0em"
+          >{{ hover.name }}</tspan>
           <tspan
             v-if="hover.name2 != null"
             :x="hover.textOffset"
             class="name"
-            dy="-0.6em">{{ hover.name2[0] }}</tspan>
+            dy="-0.6em"
+          >{{ hover.name2[0] }}</tspan>
           <tspan
             v-if="hover.name2 != null"
             :x="hover.textOffset"
             class="name"
-            dy="1.2em">{{ hover.name2[1] }}</tspan>
+            dy="1.2em"
+          >{{ hover.name2[1] }}</tspan>
         </text>
         <text
           class="text"
-          y="6">
+          y="6"
+        >
           <!-- <tspan
             :x="hover.textOffset"
             class="category"
@@ -116,50 +136,60 @@
             v-if="hover.name2 == null"
             :x="hover.textOffset"
             class="name"
-            dy="0em">{{ hover.name }}</tspan>
+            dy="0em"
+          >{{ hover.name }}</tspan>
           <tspan
             v-if="hover.name2 != null"
             :x="hover.textOffset"
             class="name"
-            dy="-0.6em">{{ hover.name2[0] }}</tspan>
+            dy="-0.6em"
+          >{{ hover.name2[0] }}</tspan>
           <tspan
             v-if="hover.name2 != null"
             :x="hover.textOffset"
             class="name"
-            dy="1.2em">{{ hover.name2[1] }}</tspan>
+            dy="1.2em"
+          >{{ hover.name2[1] }}</tspan>
         </text>
       </g>
       <g
         v-if="view.width >= 800"
         :transform="`translate(${width / 2} 0)`"
-        class="categories wide">
+        class="categories wide"
+      >
         <g transform="translate(-180, 80)">
           <line
             x1="8"
-            x2="66"/>
+            x2="66"
+          />
           <text
             y="6"
-            text-anchor="end">
+            text-anchor="end"
+          >
             <tspan dy="-0.6em">Economic Growth</tspan>
             <tspan
               x="0"
-              dy="1.2em">and Development</tspan>
+              dy="1.2em"
+            >and Development</tspan>
           </text>
         </g>
         <g transform="translate(180, 150)">
           <line
             x1="-8"
-            x2="-22"/>
+            x2="-22"
+          />
           <text y="6">
             <tspan>Land use</tspan>
           </text>
         </g>
         <g
           transform="translate(-180, 182)"
-          text-anchor="end">
+          text-anchor="end"
+        >
           <line
             x1="8"
-            x2="38"/>
+            x2="38"
+          />
           <text y="6">
             <tspan>Electricity and heat</tspan>
           </text>
@@ -167,16 +197,19 @@
         <g transform="translate(180, 48)">
           <line
             x1="-8"
-            x2="-106"/>
+            x2="-106"
+          />
           <text y="6">
             <tspan>Refining</tspan>
           </text>
         </g>
         <g
-          transform="translate(180, 250)">
+          transform="translate(180, 250)"
+        >
           <line
             x1="-8"
-            x2="-40"/>
+            x2="-40"
+          />
           <text y="6">
             <tspan>Energy demand</tspan>
           </text>
@@ -184,33 +217,39 @@
         <g transform="translate(180, 100)">
           <line
             x1="-8"
-            x2="-66"/>
+            x2="-66"
+          />
           <text y="6">
             <tspan dy="-0.6em">Resource extraction</tspan>
             <tspan
               x="0"
-              dy="1.2em">and trade</tspan>
+              dy="1.2em"
+            >and trade</tspan>
           </text>
         </g>
         <g transform="translate(180, 194)">
           <line
             x1="-8"
-            x2="-84"/>
+            x2="-84"
+          />
           <text y="6">
             <tspan dy="-0.6em">Carbon Dioxide</tspan>
             <tspan
               x="0"
-              dy="1.2em">Removal</tspan>
+              dy="1.2em"
+            >Removal</tspan>
           </text>
         </g>
         <g transform="translate(180, 324)">
           <line
             x1="-8"
-            x2="-135"/>
+            x2="-135"
+          />
           <line
             x1="-135"
             x2="-135"
-            y2="-30"/>
+            y2="-30"
+          />
           <!-- <text y="6">
             <tspan dy="-0.6em">Climate and non-climate</tspan>
             <tspan
@@ -221,47 +260,57 @@
             <tspan dy="-1.8em">Climate and</tspan>
             <tspan
               x="0"
-              dy="1.2em">non-climate</tspan>
+              dy="1.2em"
+            >non-climate</tspan>
             <tspan
               x="0"
-              dy="1.2em">environmental</tspan>
+              dy="1.2em"
+            >environmental</tspan>
             <tspan
               x="0"
-              dy="1.2em">change</tspan>
+              dy="1.2em"
+            >change</tspan>
           </text>
         </g>
         <g transform="translate(-180, 308)">
           <line
             x1="8"
-            x2="94"/>
+            x2="94"
+          />
           <text
             y="6"
-            text-anchor="end">
+            text-anchor="end"
+          >
             <tspan dy="-0.6em">Policy</tspan>
             <tspan
               x="0"
-              dy="1.2em">Representation</tspan>
+              dy="1.2em"
+            >Representation</tspan>
           </text>
         </g>
       </g>
       <g
         v-else
         :transform="`translate(${width / 2} -16)`"
-        class="categories narrow">
+        class="categories narrow"
+      >
         <g transform="translate(-150, 44)">
           <line
             x1="67"
             x2="67"
             y1="48"
-            y2="64"/>
+            y2="64"
+          />
           <text y="6">
             <tspan>Economic</tspan>
             <tspan
               x="0"
-              dy="1.2em">Growth and</tspan>
+              dy="1.2em"
+            >Growth and</tspan>
             <tspan
               x="0"
-              dy="1.2em">Development</tspan>
+              dy="1.2em"
+            >Development</tspan>
           </text>
         </g>
         <g transform="translate(100, 44)">
@@ -269,7 +318,8 @@
             x1="52"
             x2="52"
             y1="12"
-            y2="170"/>
+            y2="170"
+          />
           <text y="6">
             <tspan>Land use</tspan>
           </text>
@@ -279,12 +329,14 @@
             x1="14"
             x2="14"
             y1="-10"
-            y2="-88"/>
+            y2="-88"
+          />
           <text y="6">
             <tspan>Electricity</tspan>
             <tspan
               x="0"
-              dy="1.2em">and heat</tspan>
+              dy="1.2em"
+            >and heat</tspan>
           </text>
         </g>
         <g transform="translate(-24, 44)">
@@ -292,7 +344,8 @@
             x1="21"
             x2="21"
             y1="10"
-            y2="87"/>
+            y2="87"
+          />
           <text y="6">
             <tspan>Refining</tspan>
           </text>
@@ -302,14 +355,17 @@
             x1="-20"
             x2="-20"
             y1="-24"
-            y2="-112"/>
+            y2="-112"
+          />
           <text
             y="6"
-            text-anchor="end">
+            text-anchor="end"
+          >
             <tspan dy="-1.2em">Energy</tspan>
             <tspan
               dy="1.2em"
-              x="0">demand</tspan>
+              x="0"
+            >demand</tspan>
           </text>
         </g>
         <g transform="translate(78, 120)">
@@ -317,15 +373,18 @@
             x1="24"
             x2="24"
             y1="10"
-            y2="42"/>
+            y2="42"
+          />
           <text y="6">
             <tspan dy="-2.4em">Resource</tspan>
             <tspan
               x="0"
-              dy="1.2em">extraction</tspan>
+              dy="1.2em"
+            >extraction</tspan>
             <tspan
               x="0"
-              dy="1.2em">and trade</tspan>
+              dy="1.2em"
+            >and trade</tspan>
           </text>
         </g>
         <g transform="translate(0, 480)">
@@ -333,18 +392,22 @@
             x1="32"
             x2="32"
             y1="-42"
-            y2="-103"/>
+            y2="-103"
+          />
           <text y="6">
             <tspan dy="-2.4em">Climate and</tspan>
             <tspan
               x="0"
-              dy="1.2em">non-climate</tspan>
+              dy="1.2em"
+            >non-climate</tspan>
             <tspan
               x="0"
-              dy="1.2em">environmental</tspan>
+              dy="1.2em"
+            >environmental</tspan>
             <tspan
               x="0"
-              dy="1.2em">change</tspan>
+              dy="1.2em"
+            >change</tspan>
           </text>
         </g>
         <g transform="translate(50, 418)">
@@ -352,15 +415,18 @@
             x1="16"
             x2="16"
             y1="-42"
-            y2="-113"/>
+            y2="-113"
+          />
           <text y="6">
             <tspan dy="-2.4em">Carbon</tspan>
             <tspan
               x="0"
-              dy="1.2em">Dioxide</tspan>
+              dy="1.2em"
+            >Dioxide</tspan>
             <tspan
               x="0"
-              dy="1.2em">Removal</tspan>
+              dy="1.2em"
+            >Removal</tspan>
           </text>
         </g>
         <g transform="translate(-20, 498)">
@@ -368,14 +434,17 @@
             x1="-16"
             x2="-16"
             y1="-42"
-            y2="-80"/>
+            y2="-80"
+          />
           <text
             y="6"
-            text-anchor="end">
+            text-anchor="end"
+          >
             <tspan dy="-2.4em">Policy</tspan>
             <tspan
               x="0"
-              dy="1.2em">Representation</tspan>
+              dy="1.2em"
+            >Representation</tspan>
           </text>
         </g>
       </g>
@@ -438,7 +507,7 @@ export default {
       return this.fingerprints.map(property => {
         const x = (this.width - this.scale) / 2 + property.x * this.scale
         const y = property.y * this.scale + (this.view.width >= 800 ? 40 : 104)
-        const offset = {cx: 0, cy: 0}
+        const offset = { cx: 0, cy: 0 }
         let fill = null
         if (property.selectedId != null) {
           if (this.view.width >= 600) {

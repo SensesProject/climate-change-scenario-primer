@@ -1,24 +1,29 @@
 <template>
   <div
     :class="{mobileReverse}"
-    class="LayoutColumns">
+    class="LayoutColumns"
+  >
     <div
       :class="{central}"
-      class="left">
+      class="left"
+    >
       <span
         v-if="leftTitle"
         class="title"
-        v-html="leftTitle"/>
-      <slot name="left"/>
+        v-html="leftTitle"
+      />
+      <slot name="left" />
     </div>
     <div
       v-if="!central"
-      class="right">
+      class="right"
+    >
       <span
         v-if="rightTitle"
         class="title"
-        v-html="rightTitle"/>
-      <slot name="right"/>
+        v-html="rightTitle"
+      />
+      <slot name="right" />
     </div>
   </div>
 </template>
