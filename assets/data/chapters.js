@@ -19,9 +19,10 @@ export default [{
   cycle: 'normal'
 }, {
   title: 'Climate Impacts',
-  cycle: 'last'
-// }, {
-//   title: 'Further Uses of Climate Change Scenarios'
+  cycle: 'normal'
+}, {
+  title: 'Adaptation',
+  cycle: 'last-none'
 }, {
   title: 'Recap'
 }]

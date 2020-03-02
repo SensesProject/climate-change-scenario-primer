@@ -24,6 +24,7 @@ import VisCycleCircle from '~/components/VisCycleCircle'
 import VisScenarioTypes from '~/components/VisScenarioTypes'
 import VisScenarioTypesLegend from '~/components/VisScenarioTypesLegend'
 import VisMatrix from '~/components/VisMatrix'
+import VisAdapt from '~/components/VisAdapt'
 
 import InHighlight from '~/components/InHighlight'
 import InLegendSequential from '~/components/InLegendSequential'
@@ -54,6 +55,7 @@ Vue.component('VisCycleCircle', VisCycleCircle)
 Vue.component('VisScenarioTypes', VisScenarioTypes)
 Vue.component('VisScenarioTypesLegend', VisScenarioTypesLegend)
 Vue.component('VisMatrix', VisMatrix)
+Vue.component('VisAdapt', VisAdapt)
 
 Vue.component('InHighlight', InHighlight)
 Vue.component('InLegendSequential', InLegendSequential)

@@ -19,7 +19,7 @@
       <path d="M1,0 L1,32 M 31,0 L31,32" />
     </svg>
     <svg
-      v-if="type === 'last'"
+      v-if="type === 'last' || type === 'last-none'"
       width="32px"
       height="20px"
     >
@@ -36,7 +36,7 @@
       height="32px"
     >
       <g
-        v-if="type !== 'none'"
+        v-if="type !== 'none' && type !== 'last-none'"
         transform="translate(31 0)"
       >
         <g v-if="type !== 'double'">
@@ -106,7 +106,7 @@ export default {
         transform: translateY(0%);
       }
 
-      &.last {
+      &.last, &.last-none {
         transform: translateY(-100%);
       }
     }

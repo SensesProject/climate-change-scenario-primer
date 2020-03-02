@@ -2,6 +2,8 @@
   span.scenario-types
      span.circle.hide-print.green(v-if="color === 'green' || color === 'both'")
      span.circle.hide-print.blue(v-if="color === 'blue' || color === 'both'")
+     span.circle.hide-print.yellow(v-if="color === 'yellow' || color === 'both2'")
+     span.circle.hide-print.violet(v-if="color === 'violet' || color === 'both2'")
      img(
        src="~/assets/img/scenario-types/scenario-types-blue.png",
        alt="Pathways",
@@ -56,6 +58,12 @@ export default {
     }
     &.blue {
       background: $color-blue;
+    }
+    &.yellow {
+      background: $color-yellow;
+    }
+    &.violet {
+      background: $color-violet;
     }
   }
 
