@@ -19,6 +19,21 @@
        alt="Projections & Pathways",
        v-if="color === 'both'"
      )
+     img(
+       src="~/assets/img/scenario-types/scenario-types-yellow.png",
+       alt="Crop yield failure",
+       v-if="color === 'yellow'"
+     )
+     img(
+       src="~/assets/img/scenario-types/scenario-types-violet.png",
+       alt="Increased flood/droughts",
+       v-if="color === 'violet'"
+     )
+     img(
+       src="~/assets/img/scenario-types/scenario-types-both2.png",
+       alt="Both",
+       v-if="color === 'both2'"
+     )
 </template>
 
 <script>
@@ -73,6 +88,7 @@ export default {
     @include print {
       display: inline-block;
       margin-left: 0.3em;
+      height: 13px;
     }
   }
 }
