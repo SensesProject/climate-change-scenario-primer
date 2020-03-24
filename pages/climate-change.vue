@@ -53,15 +53,15 @@
 </template>
 
 <script>
-// import rcp26 from '~/assets/data/diff_annual_mean_tas_all-models-rcp26.nc.json'
-// import rcp60 from '~/assets/data/diff_annual_mean_tas_all-models-rcp60.nc.json'
+import rcp26 from '~/assets/data/diff_annual_mean_tas_all-models-rcp26.nc.json'
+import rcp60 from '~/assets/data/diff_annual_mean_tas_all-models-rcp60.nc.json'
 export default {
-  // data () {
-  //   return {
-  //     rcp26,
-  //     rcp60
-  //   }
-  // }
+  data () {
+    return {
+      rcp26,
+      rcp60
+    }
+  }
 }
 </script>
 
