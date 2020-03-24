@@ -1,7 +1,10 @@
 @charset "utf-8";
-@import "fonts";
+$font-prefix: "../../node_modules/library/src/assets/fonts";
+@import "library/src/style/base.scss";
+// @import "library/src/style/global.scss";
+// @import "fonts";
 @import "global";
-@import "typography";
+// @import "typography";
 @import "range";
 
 *, *:before, *:after {

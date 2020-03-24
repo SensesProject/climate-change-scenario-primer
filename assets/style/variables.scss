@@ -1,28 +1,28 @@
-$color-violet: #8665C7;
-$color-yellow: #FEAE00;
-$color-green: #39C88A;
-$color-red: #B7005E;
-$color-blue: #1BA3D0;
-$color-light-violet: #7A67FD;
+// $color-violet: #8665C7;
+// $color-yellow: #FEAE00;
+// $color-green: #39C88A;
+// $color-red: #B7005E;
+// $color-blue: #1BA3D0;
+$color-light-violet: getColor(violet, 80);
 
-$color-accent: #4E40B2;
-$color-violet: $color-accent;
-$color-black: #222;
-$color-white: #FFF;
-$color-pale-gray: #F3F3F3;
-$color-light-gray: #DDD;
-$color-gray: #BBB;
-$color-dark-gray: #888;
-$color-deep-gray: #555;
+$color-accent: $color-neon;
+// $color-violet: $color-accent;
+// $color-black: #222;
+// $color-white: #FFF;
+// $color-pale-gray: #F3F3F3;
+// $color-light-gray: #DDD;
+// $color-gray: #BBB;
+// $color-dark-gray: #888;
+// $color-deep-gray: #555;
 
 $color-text: $color-black;
 $color-text-highlight: $color-accent;
 
-$font-sans: "IBM Plex Sans", "Helvetica Neue", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Open Sans", Helvetica, sans-serif;
-$font-mono: "IBM Plex Mono", monospace;
-$font-serif: "IBM Plex Serif", "Georgia", serif;
+// $font-sans: "IBM Plex Sans", "Helvetica Neue", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Open Sans", Helvetica, sans-serif;
+// $font-mono: "IBM Plex Mono", monospace;
+// $font-serif: "IBM Plex Serif", "Georgia", serif;
 
-$spacing: 1.6rem;
+// $spacing: 1.6rem;
 $max-width: 760px;
 $max-width-extended: calc(#{$max-width} + #{$spacing * 4});
 
@@ -30,4 +30,4 @@ $device-narrow: 600px;
 $device-medium: 800px;
 $device-wide: 1400px;
 
-$transition-time: .4s;
+$transition-time: $transition;

@@ -28,6 +28,7 @@
     "d3-scale": "^2.1.0",
     "d3-scale-chromatic": "^1.3.0",
     "intersection-observer": "^0.7.0",
+    "library": "github:SensesProject/library",
     "no-scroll": "^2.1.1",
     "normalize-scss": "^7.0.1",
     "nuxt": "^2.11.0",
