@@ -1,4 +1,3 @@
-const nodeExternals = require('webpack-node-externals')
 const { favicon, msapplication } = require('./assets/js/favicon.js')
 
 module.exports = {
