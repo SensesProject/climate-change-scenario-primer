@@ -68,13 +68,6 @@ module.exports = {
           }
         })
       }
-      if (isServer) {
-        config.externals = [
-          nodeExternals({
-            whitelist: [/^ol|^proj4/]
-          })
-        ]
-      }
     }
   }
 }
