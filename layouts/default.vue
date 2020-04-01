@@ -1,6 +1,9 @@
 <template lang="pug">
   div(:class='{index}', class='root')
     resize-observer(@notify='setClientWidth', class="hide-print")
+    SensesMenu
+    no-ssr
+      SensesCopy(content='nd sojefnwji')
     transition(name='fade')
       LayoutHeader(v-if='!index')
     transition(name='fade')
@@ -11,8 +14,13 @@
 
 <script>
 import { mapActions, mapState } from 'vuex'
-
+import SensesMenu from 'library/src/components/SensesMenu.vue'
+import SensesCopy from 'library/src/components/SensesCopy.vue'
 export default {
+  components: {
+    SensesMenu,
+    SensesCopy
+  },
   computed: {
     ...mapState(['view']),
     showMenu () {
