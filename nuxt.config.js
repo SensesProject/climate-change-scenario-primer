@@ -8,6 +8,9 @@ module.exports = {
   router: {
     base: '/primer/'
   },
+  env: {
+    NODE_ENV: process.env.NODE_ENV
+  },
   head: {
     htmlAttrs: {
       lang: 'en-US'
