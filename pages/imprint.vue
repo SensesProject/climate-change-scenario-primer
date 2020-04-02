@@ -16,7 +16,7 @@
       | PO Box 601203
       br
       | 14412 Potsdam
-    no-ssr
+    client-only
       p.sans
         | Tel: +49(0)331 288 20787
         br

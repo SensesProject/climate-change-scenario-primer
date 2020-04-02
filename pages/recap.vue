@@ -39,7 +39,7 @@
     div.contact.extended.no-margin.hide-print
       div.center.default
         h3.h2.violet Get in Touch 👋
-        no-ssr
+        client-only
           a.button(:href="`mailto:${address}?subject=Climate Change Scenario Primer`")
             span.mono
               span.arrow →

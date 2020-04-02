@@ -2,7 +2,7 @@
   div(:class='{index}', class='root')
     resize-observer(@notify='setClientWidth', class="hide-print")
     SensesMenu
-    no-ssr
+    client-only
       SensesCopy(content='nd sojefnwji')
     transition(name='fade')
       LayoutHeader(v-if='!index')
