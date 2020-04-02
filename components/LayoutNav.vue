@@ -83,6 +83,7 @@ export default {
         }
 
         .cycle {
+          position: relative;
           .cycle-part {
             transform: translate(0, -$spacing / 8);
             position: absolute;
