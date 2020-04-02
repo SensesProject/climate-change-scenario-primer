@@ -24,7 +24,8 @@ $color-text-highlight: $color-accent;
 
 // $spacing: 1.6rem;
 $max-width: calc(768px + #{$spacing});
-$max-width-extended: calc(#{$max-width} + #{$spacing * 4});
+$max-width-extended: $max-width;
+// $max-width-extended: calc(#{$max-width} + #{$spacing * 4});
 
 $device-narrow: $narrow;
 $device-medium: $medium;

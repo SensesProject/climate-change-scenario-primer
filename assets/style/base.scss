@@ -109,11 +109,28 @@ table {
   padding: 0;
 }
 
-section.wrapper {
-  width: 100%;
+article.wrapper {
+  width: calc(100% - #{$spacing});
   // margin: $spacing;
   max-width: $max-width;
-  margin-top: 0;
+  padding: $spacing * 2.5 0;
+  justify-self: center;
+
+  .extended {
+    margin: 0 #{-$spacing / 2};
+  }
+}
+
+section.wrapper {
+  width: calc(100% - #{$spacing});
+  // margin: $spacing;
+  max-width: $max-width;
+  padding: $spacing * 2.5 0;
+  justify-self: center;
+
+  @include max-width($medium) {
+    margin-top: 0;
+  }
   @include flex-column();
 
   @include print {
@@ -195,7 +212,7 @@ section.wrapper {
   // }
 
   @include media-query($device-wide) {
-    transform: translateX($spacing);
+    // transform: translateX($spacing);
     // width: calc(100vw - #{$nav-width-laptop});
     // left: $nav-width-laptop;
     // align-self: flex-end;
@@ -231,6 +248,11 @@ section.wrapper {
   @include ie {
     display: block !important;
   }
+}
+
+.h1 {
+  font-family: $font-serif;
+  font-size: 2.5em;
 }
 
 // h1, h2, h3 {

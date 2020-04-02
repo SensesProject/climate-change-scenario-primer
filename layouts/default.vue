@@ -67,10 +67,6 @@ export default {
     }
   }
 
-  .wide {
-    padding: $spacing;
-  }
-
   // old
   @include ie {
     display: block !important;
