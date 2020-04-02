@@ -23,11 +23,11 @@ $color-text-highlight: $color-accent;
 // $font-serif: "IBM Plex Serif", "Georgia", serif;
 
 // $spacing: 1.6rem;
-$max-width: 760px;
+$max-width: calc(768px + #{$spacing});
 $max-width-extended: calc(#{$max-width} + #{$spacing * 4});
 
-$device-narrow: 600px;
-$device-medium: 800px;
-$device-wide: 1400px;
+$device-narrow: $narrow;
+$device-medium: $medium;
+$device-wide: $wide;
 
 $transition-time: $transition;

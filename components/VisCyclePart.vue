@@ -1,58 +1,28 @@
 <template>
-  <div class="VisCyclePart">
+  <div class="vis-cycle-part">
     <svg
-      v-if="type === 'first'"
-      class="start"
-      width="32px"
-      height="20px"
+      width="24"
+      height="32"
     >
-      <path d="M31,20 L31,16 C31,7.71572875 24.2842712,1 16,1 C7.71572875,1 1,7.71572875 1,16 L1,20" />
-    </svg>
-    <svg
-      :class="[type]"
-      class="lines"
-      width="32px"
-      height="100px"
-      viewBox="0 0 32 32"
-      preserveAspectRatio="none"
-    >
-      <path d="M1,0 L1,32 M 31,0 L31,32" />
-    </svg>
-    <svg
-      v-if="type === 'last' || type === 'last-none'"
-      width="32px"
-      height="20px"
-    >
-      <path d="M1,0 L1,4 C1,12.2842712 7.71572875,19 16,19 C24.2842712,19 31,12.2842712 31,4 L31,0" />
       <path
-        d="M-5,2 L1,-4 L7,2"
-        class="mask"
+        v-if="position == null"
+        d="M0.5,32 0.5,0 M15.5,0 15.5,32"
       />
-      <path d="M-4,3 L1,-2 L6,3" />
-    </svg>
-    <svg
-      class="dots"
-      width="32px"
-      height="32px"
-    >
-      <g
-        v-if="type !== 'none' && type !== 'last-none'"
-        transform="translate(31 0)"
-      >
-        <g v-if="type !== 'double'">
-          <circle r="5.5" />
-        </g>
-        <g v-else>
-          <circle
-            cy="-6"
-            r="5.5"
-          />
-          <circle
-            cy="6"
-            r="5.5"
-          />
-        </g>
-      </g>
+      <path
+        v-if="position == 'start'"
+        d="M0.5,32 L0.5,8 C0.5,1,8,1,8,1 C15.5,1,15.5,8,15.5,8 L15.5,32"
+      />
+      <path
+        v-if="position == 'end'"
+        d="M15.5,0 L15.5,24 C15.5,31,8,31,8,31 C0.5,31,0.5,24,0.5,24 L0.5,0"
+      />
+      <circle
+        v-for="(c, i) in circles"
+        :key="`c-${i}`"
+        :class="[c]"
+        :transform="`translate(16 ${16 + (circles.length === 1 ? 0 : i === 0 ? -3 : 3)})`"
+        r="3"
+      />
     </svg>
   </div>
 </template>
@@ -60,9 +30,15 @@
 <script>
 export default {
   props: {
-    type: {
+    position: {
       type: String,
-      default: 'center'
+      default: null
+    },
+    circles: {
+      type: Array,
+      default () {
+        return []
+      }
     }
   }
 }
@@ -70,45 +46,18 @@ export default {
 
 <style scoped lang="scss">
 @import "~@/assets/style/global";
-.VisCyclePart {
-  position: relative;
-  background: red;
+.vis-cycle-part {
   svg {
-    position: absolute;
-    display: block;
-    overflow: visible;
+    transform: translate(-100%);
 
     path {
-      stroke: $color-accent;
-      stroke-width: 1.5;
+      stroke: $color-black;
+      stroke-width: 1;
       fill: none;
-
-      &.mask {
-        stroke: $color-white;
-        stroke-width: 3;
-      }
     }
 
     circle {
-      fill: $color-accent;
-      stroke: $color-white;
-      stroke-width: 3;
-    }
-
-    &.start {
-      transform: translateY(-20px);
-    }
-
-    &.lines {
-      transform: translateY(-50%);
-
-      &.first {
-        transform: translateY(0%);
-      }
-
-      &.last, &.last-none {
-        transform: translateY(-100%);
-      }
+      @include tint(fill)
     }
   }
 

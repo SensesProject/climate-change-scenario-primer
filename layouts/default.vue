@@ -1,32 +1,41 @@
 <template>
-  <div class="root">
+  <div>
     <resize-observer
       class="hide-print"
       @notify="setClientWidth"
     />
-    <SensesMenu />
-    <LayoutNav />
-    <nuxt />
+    <div class="root">
+      <template v-if="view.width >= 900">
+        <div class="nav">
+          <SensesMenu
+            disable-scroll-lock
+            narrow
+          />
+          <LayoutNav />
+        </div>
+      </template>
+      <template v-else>
+        <SensesMenu>
+          <LayoutNav slot="about" />
+        </SensesMenu>
+      </template>
+      <nuxt class="wide" />
+    </div>
   </div>
 </template>
 
 <script>
 import { mapActions, mapState } from 'vuex'
+import 'vue-resize/dist/vue-resize.css'
 import SensesMenu from 'library/src/components/SensesMenu.vue'
-import SensesCopy from 'library/src/components/SensesCopy.vue'
 export default {
   components: {
-    SensesMenu,
-    SensesCopy
+    SensesMenu
   },
   computed: {
-    ...mapState(['view']),
-    showMenu () {
-      return !this.index && (this.view.showMenu || this.view.width >= 1400)
-    },
-    index () {
-      return this.$route.name === 'index'
-    }
+    ...mapState([
+      'view'
+    ])
   },
   mounted () {
     this.setClientWidth()
@@ -42,18 +51,29 @@ export default {
 <style scoped lang="scss">
 @import "~@/assets/style/global";
 .root {
-  @include flex-column();
-  align-items: center;
-  width: 100%;
-  min-height: 100vh;
-  // padding: $spacing;
-  background: $color-white;
-  transition: color $transition-time, background $transition-time;
+  display: grid;
+  grid-template-columns: 300px 1fr;
 
+  @include max-width($medium) {
+    grid-template-columns: auto;
+  }
+
+  .nav {
+    border-right: 1px solid $color-deep-gray;
+    .layout-nav {
+      position: sticky;
+      top: $spacing * 2;
+      padding: $spacing $spacing / 2;
+    }
+  }
+
+  .wide {
+    padding: $spacing;
+  }
+
+  // old
   @include ie {
-    // &.index {
-      display: block !important;
-    // }
+    display: block !important;
   }
 
   @include print {

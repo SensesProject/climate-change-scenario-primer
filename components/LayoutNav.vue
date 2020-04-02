@@ -1,11 +1,16 @@
 <template>
   <div
     :class="{ showMenu }"
-    class="Navigation hide-print"
+    class="layout-nav hide-print"
     @click="closeMenu"
   >
     <nav :class="{ showMenu }">
       <ul>
+        <li>
+          <h1 class="title h3 uppercase">
+            Climate Change Scenarios
+          </h1>
+        </li>
         <nuxt-link
           v-for="chapter in chapters"
           :key="chapter.path"
@@ -23,7 +28,7 @@
               class="cycle"
             >
               <div class="cycle-part">
-                <VisCyclePart :type="chapter.cycle" />
+                <VisCyclePart v-bind="chapter.cycle" />
               </div>
               <div class="title">
                 {{ chapter.title }}
@@ -32,12 +37,6 @@
           </li>
         </nuxt-link>
       </ul>
-      <nuxt-link
-        class="imprint"
-        to="/imprint"
-      >
-        Imprint
-      </nuxt-link>
     </nav>
   </div>
 </template>
@@ -58,117 +57,51 @@ export default {
 <style scoped lang="scss">
 @import "~@/assets/style/global";
 
-.Navigation {
-  position: fixed;
-  z-index: 1000;
-  top: $spacing * 2;
-  left: 0;
-  width: 100vw;
-  min-height: calc(100vh - #{$spacing * 2});
-  padding-top: $spacing;
-  background-image: linear-gradient(90deg, $color-white 320px, transparentize($color-white, 1) 1400px);
+.layout-nav {
   hyphens: none;
-  overflow: auto;
-
-  @include media-query($device-wide) {
-    width: 320px;
-    padding-top: 0;
-    height: auto;
-    background: none;
-  }
+  width: 100%;
 
   nav {
-    width: 100%;
-    max-width: 300px;
-    min-height: calc(100% - #{$spacing});
-    display: none;
-    background: $color-white;
-    position: absolute;
-
-    @include media-query($device-wide) {
-      display: flex;
-      background: none;
-      min-height: 100%;
-    }
-    &.showMenu {
-      display: flex;
-    }
-
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
 
-    font-size: 1.2em;
-
-    @include media-query($device-narrow) {
-      font-size: 1em;
-    }
-
     ul {
+      li {
+        display: block;
+        padding: $spacing / 8 0;
+        &:first-child {
+          padding-top: 0;
+        }
+
+        .title {
+          color: $color-deep-gray;
+
+          &.h3 {
+            color: $color-black;
+          }
+        }
+
+        .cycle {
+          .cycle-part {
+            transform: translate(0, -$spacing / 8);
+            position: absolute;
+          }
+        }
+      }
+
+      .nuxt-link-exact-active li .title {
+        color: $color-neon;
+      }
       a {
         li {
-          display: block;
-          padding: $spacing / 4 $spacing / 2;
-          overflow-y: hidden;
-          overflow-x: visible;
-
-          @include media-query($device-narrow) {
-            font-size: 1em;
-          }
-
           .title {
-            opacity: 1;
-            transition: opacity .2s;
-            line-height: 1.4;
-
-            &.index {
-              font-size: 2rem;
-              line-height: 1.25;
-              // opacity: 1;
-              letter-spacing: 0px;
-              // color: $color-accent;
-              @include media-query($device-narrow) {
-                font-size: 1.6rem;
-              }
-            }
-
             &:hover {
-              color: darken($color-accent, 15);
-            }
-          }
-
-          .cycle {
-            @include flex-row();
-            justify-content: flex-start;
-            position: relative;
-
-            .cycle-part {
-              height: 100%;
-              width: 32px;
-              min-width: 32px;
-              margin-right: $spacing / 2;
-            }
-          }
-        }
-
-        &.nuxt-link-exact-active li .title {
-          opacity: 1;
-          color: $color-black;
-        }
-
-        &:first-of-type {
-          li {
-            padding-top: 0;
-
-            @include media-query($device-narrow) {
-              padding-top: $spacing / 4;
+              color: getColor(neon, 40);
             }
           }
         }
       }
-    }
-
-    .imprint {
-      padding: 0 $spacing / 2 $spacing / 4 $spacing / 2;
     }
   }
   @include media-query($device-wide) {

@@ -26,14 +26,14 @@ p + p {
   margin-top: 0;
 }
 
-a {
-  color: $color-text-highlight;
-  text-decoration: none;
+// a {
+//   color: $color-text-highlight;
+//   text-decoration: none;
 
-  &:hover, &:focus {
-    color: darken($color-text-highlight, 10%);
-  }
-}
+//   &:hover, &:focus {
+//     color: darken($color-text-highlight, 10%);
+//   }
+// }
 
 input {
   user-select: none;
@@ -106,19 +106,10 @@ table {
 }
 
 .root {
-  padding: $spacing * 3 $spacing / 2 $spacing / 2 $spacing / 2;
-
-
-  @include media-query($device-wide) {
-    padding: $spacing * 2 $spacing / 2 $spacing / 2 $spacing / 2;
-  }
-
-  @include print {
-    padding: 0;
-  }
+  padding: 0;
 }
 
-.wrapper {
+section.wrapper {
   width: 100%;
   // margin: $spacing;
   max-width: $max-width;
