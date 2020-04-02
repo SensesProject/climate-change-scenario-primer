@@ -600,7 +600,6 @@ export default {
     setHover (property) {
       this.$emit('hover', property.models)
       this.hover = property
-      console.log(property.category)
       switch (this.step) {
         case 1:
           this.selectedCategory = property.category
