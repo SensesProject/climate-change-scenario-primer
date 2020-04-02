@@ -1,15 +1,13 @@
-<template lang="pug">
-  div(:class='{index}', class='root')
-    resize-observer(@notify='setClientWidth', class="hide-print")
-    SensesMenu
-    client-only
-      SensesCopy(content='nd sojefnwji')
-    transition(name='fade')
-      LayoutHeader(v-if='!index')
-    transition(name='fade')
-      LayoutNav(v-if='showMenu')
-    //- Logo(:invert='index')
-    nuxt
+<template>
+  <div class="root">
+    <resize-observer
+      class="hide-print"
+      @notify="setClientWidth"
+    />
+    <SensesMenu />
+    <LayoutNav />
+    <nuxt />
+  </div>
 </template>
 
 <script>
