@@ -1,9 +1,17 @@
-<template lang="pug">
-  header.LayoutHeader#header
-    span.menu-button.hide-print(@click="toggleMenu")
-      span.burger-icon(:class="{active: showMenu}")
-    span.attribution.print-only {{ url }}
-    Logo
+<template>
+  <header
+    id="header"
+    class="LayoutHeader"
+  >
+    <span
+      class="menu-button hide-print"
+      @click="toggleMenu"
+    ><span
+      class="burger-icon"
+      :class="{active: showMenu}"
+    /></span><span class="attribution print-only">{{ url }}</span>
+    <Logo />
+  </header>
 </template>
 
 <script>
