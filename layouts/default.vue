@@ -63,7 +63,7 @@ export default {
     .layout-nav {
       position: sticky;
       top: $spacing * 2;
-      padding: $spacing $spacing / 2;
+      padding: $spacing * 0.75 $spacing / 2;
     }
   }
 
