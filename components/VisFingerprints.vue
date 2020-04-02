@@ -454,7 +454,11 @@
 
 <script>
 import { mapState, mapGetters } from 'vuex'
-import { mapFields } from 'vuex-map-fields'
+import { createHelpers } from 'vuex-map-fields'
+const { mapFields } = createHelpers({
+  getterType: 'highlights/getField',
+  mutationType: 'highlights/updateField'
+})
 export default {
   props: {
     step: {
@@ -487,9 +491,9 @@ export default {
     ...mapState([
       'view'
     ]),
-    ...mapGetters([
-      'fingerprints'
-    ]),
+    ...mapGetters({
+      fingerprints: 'data/fingerprints'
+    }),
     ...mapFields({
       selectedProperties: 'fingerprints.properties',
       selectedCategory: 'fingerprints.category'

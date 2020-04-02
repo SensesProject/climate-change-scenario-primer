@@ -22,7 +22,9 @@ export default {
       this.url = `https://climatescenario.org/primer${this.$route.path}`
     }
   },
-  methods: mapActions(['toggleMenu'])
+  methods: mapActions({
+    toggleMenu: 'view/toggleMenu'
+  })
 }
 </script>
 

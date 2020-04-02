@@ -34,9 +34,9 @@ export default {
     this.setClientWidth()
   },
   methods: {
-    ...mapActions([
-      'setClientWidth'
-    ])
+    ...mapActions({
+      setClientWidth: 'view/setClientWidth'
+    })
   }
 }
 </script>

@@ -135,9 +135,9 @@ export default {
     ...mapState([
       'view'
     ]),
-    ...mapGetters([
-      'iam'
-    ]),
+    ...mapGetters({
+      iam: 'data/iam'
+    }),
     padding () {
       const { width, height } = this
       const w = (width - 4 * 16) / 3

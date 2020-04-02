@@ -75,10 +75,15 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
-import { mapFields } from 'vuex-map-fields'
+import { mapState, mapGetters } from 'vuex'
+import { createHelpers } from 'vuex-map-fields'
 import { scaleLinear } from 'd3-scale'
 import { format } from 'd3-format'
+
+const { mapFields } = createHelpers({
+  getterType: 'highlights/getField',
+  mutationType: 'highlights/updateField'
+})
 export default {
   props: {
     scenario: {
@@ -124,19 +129,22 @@ export default {
     ...mapState([
       'view'
     ]),
+    ...mapGetters({
+      scenarioGetter: 'data/scenario'
+    }),
     ...mapFields({
       highlightSsp: 'charts.ssp',
       filter: 'charts.filter'
     }),
     data () {
       if (this.staticFilter !== null) {
-        return this.$store.getters.scenario(this.scenario).filter(scenario => {
+        return this.scenarioGetter(this.scenario).filter(scenario => {
           const ssp = this.staticFilter.ssp === null || this.staticFilter.ssp === scenario.ssp
           const rcp = this.staticFilter.rcp === null || this.staticFilter.rcp === scenario.rcp
           return ssp && rcp
         })
       }
-      return this.$store.getters.scenario(this.scenario)
+      return this.scenarioGetter(this.scenario)
     },
     variable () {
       return `${this.data[0].variable} in ${this.data[0].unit}`

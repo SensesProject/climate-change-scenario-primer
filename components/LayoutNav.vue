@@ -51,7 +51,9 @@ export default {
     chapters: state => state.chapters,
     showMenu: state => state.view.showMenu
   }),
-  methods: mapActions(['closeMenu'])
+  methods: mapActions({
+    closeMenu: 'view/closeMenu'
+  })
 }
 </script>
 
