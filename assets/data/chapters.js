@@ -1,8 +1,6 @@
 export default [{
-  title: 'Climate Change Scenarios',
+  title: 'What are Climate Change Scenarios?',
   path: '/'
-}, {
-  title: 'What are Climate Change Scenarios?'
 }, {
   title: 'How are Socioeconomic Development and Climate Change connected?'
 }, {

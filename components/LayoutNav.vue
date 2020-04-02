@@ -12,14 +12,12 @@
           :to="chapter.path"
         >
           <li>
-            <component
-              :is="chapter.path === '/' ? 'h1' : 'span'"
+            <span
               v-if="chapter.cycle == null"
-              :class="{h2: chapter.path === '/'}"
               class="title"
             >
               {{ chapter.title }}
-            </component>
+            </span>
             <div
               v-else
               class="cycle"
