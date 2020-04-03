@@ -25,7 +25,7 @@
     </p>
     <p>Owing to the nature of climate change, scenario analysis is a common tool in climate change research and its various subfields. Broadly speaking, seven different types of scenarios can be identified:</p>
     <div class="bullet-list tiny">
-      <div class="key ">
+      <div class="key">
         <span class="key-item">
           <InListBullet :colors="['green']" /> Projections
         </span>
@@ -130,35 +130,29 @@ export default {
 @import "~@/assets/style/global";
 
 .wrapper {
-  .key {
-    margin-bottom: $spacing / 4;
-    .key-item {
-      margin-right: $spacing;
-      color: $color-deep-gray;
-      .scenario-types {
-        .circle {
-          margin-left: 0em;
-        }
-      }
-    }
-  }
-
-  strong {
-    white-space: normal;
-    word-wrap: normal;
-  }
-
   .bullet-list {
     padding-left: $spacing / 2;
     display: flex;
     align-items: center;
     flex-direction: column;
 
+    .key {
+      margin-bottom: $spacing / 4;
+      .key-item {
+        margin-right: $spacing;
+        color: $color-deep-gray;
+        .scenario-types {
+          .circle {
+            margin-left: 0em;
+          }
+        }
+      }
+    }
+
     ul {
       list-style: none;
       max-width: $narrow;
       @include print {
-        /* list-style-position: inside; */
         margin-left: $spacing / 2;
       }
 
@@ -169,44 +163,6 @@ export default {
 
       li + li {
         margin-top: $spacing / 4;
-      }
-    }
-  }
-
-  table {
-    max-width: 760px;
-
-    thead {
-      tr {
-        th {
-          text-align: center;
-          font-weight: normal;
-          &:first-of-type {
-            font-weight: bold;
-            text-align: left;
-          }
-        }
-      }
-    }
-    tbody {
-      tr {
-        td {
-          text-align: center;
-          min-width: 66px;
-          &:first-of-type {
-            // font-weight: bold;
-            text-align: left;
-            max-width: 500px;
-          }
-          span.true {
-            display: inline-block;
-            width: 1em;
-            height: 1em;
-            background: $color-green;
-            border-radius: 50%;
-            transform: translateY(0.15rem);
-          }
-        }
       }
     }
   }
