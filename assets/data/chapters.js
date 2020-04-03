@@ -21,7 +21,7 @@ export default [{
 }, {
   title: 'Climate Change',
   cycle: {
-    circles: ['violet']
+    circles: ['purple']
   }
 }, {
   title: 'Climate Impacts',

@@ -24,7 +24,7 @@
     <div
       v-for="(item, i) in items"
       :key="`item-${i}`"
-      :class="{'reduce-impact': reduceImpact, 'hide-print': true}"
+      :class="[item.text.class, {'reduce-impact': reduceImpact, 'hide-print': true}]"
       v-bind="item.text"
       class="label"
       v-html="item.term"
@@ -71,7 +71,7 @@ export default {
   data () {
     return {
       width: 0,
-      colors: ['#39C88A', '#FEAE00', '#C8005F', '#4E40B2', '#00A5D5'],
+      colors: ['green', 'yellow', 'red', 'purple', 'blue'],
       terms: [
         'Socioeconomic<br>Development',
         'Energy &<br>Land Use',
@@ -123,22 +123,22 @@ export default {
           },
           arc: {
             d: `M ${arcStart.x} ${arcStart.y} A ${radius} ${radius} 0 0 1 ${arcEnd.x} ${arcEnd.y}`,
-            stroke: colors[i]
+            class: colors[i]
           },
           circle: {
             cy: start.y,
             cx: start.x,
             r: circleRadius,
-            fill: colors[i]
+            class: colors[i]
           },
           arrowHead: {
             transform: `translate(${arcEnd.x} ${arcEnd.y}) rotate(72)`,
             d: 'M -2 -2 L 0 0 -2 2',
-            stroke: colors[i]
+            class: colors[i]
           },
           text: {
+            class: colors[i],
             style: {
-              color: colors[i],
               left: `${50 + circleRadius + absoluteStart.x}%`,
               top: `${50 + absoluteStart.y}%`
             }
@@ -198,6 +198,8 @@ export default {
       transform: translate(#{$spacing * 0.5}, -50%);
     }
 
+    @include tint(color);
+
     &.reduce-impact {
       color: $color-light-gray !important;
     }
@@ -217,6 +219,11 @@ export default {
 
     path {
       fill: none;
+      @include tint(stroke);
+    }
+
+    circle {
+      @include tint(fill);
     }
 
     .reduce-impact {
@@ -249,7 +256,6 @@ export default {
 
     .item-text, .item-shadow {
       fill: $color-light-gray;
-      dominant-baseline: central;
     }
 
     .item-shadow {
