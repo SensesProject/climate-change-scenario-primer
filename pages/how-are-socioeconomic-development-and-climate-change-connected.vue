@@ -1,8 +1,19 @@
 <template>
-  <section class="wrapper">
+  <article class="wrapper">
     <h2 class="h1">
       How are Socioeco&shy;nomic Develop&shy;ment and Climate Change connected?
     </h2>
+    <LayoutList>
+      <h3>Chapter Summary</h3>
+      <li>
+        Socioeconomic development and climate change are intricately linked, with social and economic activities determining energy and land use determining emissions determining climate forcing and climate change determining climate impacts which in
+        turn affect socioeconomic developments.
+      </li>
+      <li>
+        Climate change response strategies fall into mitigation strategies to limit human impact on climate change and adaptation strategies to limit the climate change impact on humans. Mitigation and adaptation scenarios (often also called “pathways”)
+        are used to analyse such response strategies.
+      </li>
+    </LayoutList>
     <p>
       Climate change and socioeconomic development are deeply intertwined. Social and economic activities are the main driver of climate change. In turn, climate change will have serious impacts on these activities, e.g., by rising sea levels and exposure
       to severe weather events.
@@ -65,32 +76,26 @@
       overall reductions in economic output. Macroeconomic general equilibrium models use climate damage functions on inputs and production factors of affected economic sectors. Both have to be reconciled with a growing body of empirical findings of
       substantial climate and weather impacts on societies today.
     </p>
-    <VisCycleCircle class="center" reduce-impact="reduce-impact" />
+    <VisCycleCircle class="center" strategies />
     <p>
       Integrated assessment models are an important tool to analyse our response to climate change. Since they capture the link between socioeconomic developments, energy and land use, and emissions, they can be used to investigate emissions reductions
       strategies to stay below a certain warming limit <span class="highlight no-hover yellow">(mitigation pathways).</span> Likewise, biophysical and economic impact models can be used to study adaptation measures to limit the impact of climate change on socioeconomic
-      activities <span class="highlight no-hover red">(adaptation pathways).</span>
+      activities <span class="highlight no-hover purple">(adaptation pathways).</span>
     </p>
-    <LayoutRecap>
-      <li>
-        Socioeconomic development and climate change are intricately linked, with social and economic activities determining energy and land use determining emissions determining climate forcing and climate change determining climate impacts which in
-        turn affect socioeconomic developments.
-      </li>
-      <li>
-        Climate change response strategies fall into mitigation strategies to limit human impact on climate change and adaptation strategies to limit the climate change impact on humans. Mitigation and adaptation scenarios (often also called “pathways”)
-        are used to analyse such response strategies.
-      </li>
-    </LayoutRecap>
-    <LayoutFurtherReading>
+    <LayoutNextChapter>
       <li>Moss, R. H., Edmonds, J. A., Hibbard, K. A., et al. (2010).<a href="https://www.nature.com/articles/nature08823"><strong> The next generation of scenarios for climate change research and assessment.</strong></a> Nature, 463(7282), 747-756.</li>
       <li>Van Vuuren, D. P., Kok, M. T., Girod, B., Lucas, P. L., & de Vries, B. (2012).<a href="https://www.sciencedirect.com/science/article/abs/pii/S0959378012000635"><strong> Scenarios in global environmental assessments: key characteristics and lessons for future use.</strong></a>            Global Environmental Change, 22(4), 884-895.</li>
-    </LayoutFurtherReading>
-  </section>
+    </LayoutNextChapter>
+  </article>
 </template>
 
 <script>
+import LayoutList from '@/components/LayoutList.vue'
+import LayoutNextChapter from '@/components/LayoutNextChapter.vue'
 export default {
   components: {
+    LayoutList,
+    LayoutNextChapter
   }
 }
 </script>
