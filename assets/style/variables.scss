@@ -23,12 +23,14 @@ $color-text-highlight: $color-accent;
 // $font-serif: "IBM Plex Serif", "Georgia", serif;
 
 // $spacing: 1.6rem;
-$max-width: calc(768px + #{$spacing});
+$max-width: calc(800px + #{$spacing});
 $max-width-extended: $max-width;
 // $max-width-extended: calc(#{$max-width} + #{$spacing * 4});
 
 $device-narrow: $narrow;
 $device-medium: $medium;
 $device-wide: $wide;
+
+$touching: 800px + 300px + 64px;
 
 $transition-time: $transition;

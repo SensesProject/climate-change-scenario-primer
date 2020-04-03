@@ -111,10 +111,13 @@ table {
 
 article.wrapper {
   width: calc(100% - #{$spacing});
-  // margin: $spacing;
   max-width: $max-width;
-  padding: $spacing * 2.5 0;
+  padding: $spacing * 2.5 0 $spacing;
   justify-self: center;
+
+  @include max-width($narrow) {
+    padding: $spacing 0 0;
+  }
 
   .extended {
     margin: 0 #{-$spacing / 2};
@@ -253,6 +256,10 @@ section.wrapper {
 .h1 {
   font-family: $font-serif;
   font-size: 2.5em;
+
+  @include max-width($narrow) {
+    font-size: 2.25em;
+  }
 }
 
 // h1, h2, h3 {
@@ -326,16 +333,10 @@ section.wrapper {
 
 .page-enter {
   transform: translateY(5vw);
-  @include media-query($device-wide) {
-    transform: translate($spacing, 5vw);
-  }
 }
 
 .page-leave-to {
   transform: translateY(-5vw);
-  @include media-query($device-wide) {
-    transform: translate($spacing, -5vw);
-  }
 }
 
 .fade-enter-active, .fade-leave-active, .fade-delayed-leave-active {
