@@ -16,7 +16,9 @@
       </template>
       <template v-else>
         <SensesMenu>
-          <LayoutNav slot="about" />
+          <template v-slot:about="{ closeMenu }">
+            <LayoutNav :close-menu="closeMenu" />
+          </template>
         </SensesMenu>
       </template>
       <nuxt class="wide" />

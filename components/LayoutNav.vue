@@ -2,7 +2,6 @@
   <div
     :class="{ showMenu }"
     class="layout-nav hide-print"
-    @click="closeMenu"
   >
     <nav :class="{ showMenu }">
       <ul>
@@ -42,15 +41,23 @@
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex'
+import { mapState } from 'vuex'
 export default {
+  props: {
+    closeMenu: {
+      type: Function,
+      default: null
+    }
+  },
   computed: mapState({
     chapters: state => state.chapters,
     showMenu: state => state.view.showMenu
   }),
-  methods: mapActions({
-    closeMenu: 'view/closeMenu'
-  })
+  watch: {
+    '$route.path' () {
+      if (this.closeMenu) this.closeMenu()
+    }
+  }
 }
 </script>
 
