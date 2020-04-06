@@ -112,7 +112,7 @@ table {
 article.wrapper {
   width: calc(100% - #{$spacing});
   max-width: $max-width;
-  padding: $spacing * 2.5 0 $spacing;
+  padding: $spacing * 1.5 0 $spacing;
   justify-self: center;
 
   @include max-width($narrow) {

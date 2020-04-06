@@ -56,7 +56,7 @@ export default {
     margin: $spacing / 2 #{-$spacing / 2} 0;
 
     @include max-width($touching) {
-      border-radius: 0 $border-radius $border-radius 0;
+      border-radius: $border-radius;
     }
 
     @include max-width($narrow) {

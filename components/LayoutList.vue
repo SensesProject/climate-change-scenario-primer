@@ -18,6 +18,9 @@
   list-style: none;
 
   @include max-width($touching) {
+    border-radius: $border-radius 0 0 $border-radius;
+  }
+  @include max-width($narrow) {
     border-radius: 0;
   }
 
