@@ -12,7 +12,7 @@
 .layout-list {
   margin: $spacing #{-$spacing / 2};
   padding: $spacing / 2 $spacing / 2 $spacing / 4;
-  background: transparentize(getColor(neon, 100), 0.7);
+  background-color: transparentize(getColor(neon, 100), 0.7);
   border-radius: $border-radius;
   color: getColor(neon, 40);
   list-style: none;
