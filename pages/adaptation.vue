@@ -1,7 +1,10 @@
 <template lang="pug">
-  section.wrapper
+  article.wrapper
     h2.h1 Adaptation
-
+    LayoutList
+      h3 Chapter Summary
+      li Adaptation refers to the process of anticipation and adjustment by individuals, groups and governments to observed or expected climate change and its adverse effects.
+      li Climate adaptation scenarios contextualise combined socioeconomic and climate scenarios and their impacts, with knowledge from local stakeholders to iteratively inform robust decision-making in the face of deep uncertainty.
     p Adaptation refers to the process of anticipation and adjustment by individuals, groups and governments to observed or expected climate change and its adverse effects. Natural systems will adapt on their own, but managed systems (such as agriculture, forest industry and water-based utilities) will require human intervention to enable adjustment to climate change. Well-planned (early) adaptation is goal-oriented and avoids harm and opens beneficial opportunities. Adaptation implies both the implementation and monitoring of strategies to evaluate its effectiveness.
 
     VisAdapt
@@ -62,11 +65,8 @@
       h3 Linking Socioeconomic and Climate scenarios
       p The link between multiscale socioeconomic scenarios climate regional scenarios strongly depends on the policy needs and, methodologically, on model and data availability. For data rich regions, regional versions of the global IAMs exist to assess cross-sectoral climate change impacts on urbanisation, water resources, agriculture and land use, and biodiversity, to cite a few examples. Particularly the availability of reliable data of sufficient spatial resolution can be problematic. For larger or data-scarce regions, results of global models are sometimes employed.
 
-    LayoutRecap
-      li Adaptation refers to the process of anticipation and adjustment by individuals, groups and governments to observed or expected climate change and its adverse effects.
-      li Climate adaptation scenarios contextualise combined socioeconomic and climate scenarios and their impacts, with knowledge from local stakeholders to iteratively inform robust decision-making in the face of deep uncertainty.
-
-    LayoutFurtherReading
+    LayoutNextChapter
+      h3 Further Reading
       li Haasnoot, M., Kwakkel, J. H., Walker, W. E., & ter Maat, J. (2013).
         a(href="https://www.sciencedirect.com/science/article/pii/S0016328702000903")
           strong  Dynamic adaptive policy pathways: A method for crafting robust decisions for a deeply uncertain world.
@@ -87,8 +87,12 @@
 </template>
 
 <script>
+import LayoutList from '@/components/LayoutList.vue'
+import LayoutNextChapter from '@/components/LayoutNextChapter.vue'
 export default {
   components: {
+    LayoutList,
+    LayoutNextChapter
   }
 }
 </script>
@@ -166,12 +170,12 @@ export default {
   }
 
   .box {
-    position: relative;
+    // position: relative;
     background: $color-black;
     padding: $spacing $spacing / 2;
     color: $color-white;
+    margin: 0 $spacing / -2 $spacing $spacing / -2;
     margin-top: 0;
-    max-width: $max-width-extended;
     align-self: center;
     margin-bottom: $spacing;
     @include ie {
@@ -186,7 +190,6 @@ export default {
       @include light-text();
       margin: 0;
     }
-    width: 100vw;
     @include print {
       width: 100%;
       border: 1px solid $color-black;

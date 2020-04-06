@@ -1,6 +1,10 @@
 <template lang="pug">
-  section.wrapper
+  article.wrapper
     h2.h1 Climate Change
+    LayoutList
+      h3 Chapter Summary
+      li Climate models are complex systems describing the physical world including its atmosphere, ocean, ice sheets and vegetation. The most comprehensive climate models are called Earth system models.
+      li Climate models generate projections of future temperature and precipitation based on GHG concentration scenarios.
     p The scenarios discussed above assume a large range of greenhouse gas (GHG) emissions into the atmosphere. Not all GHGs emitted into the atmosphere remain there. For instance, the oceans absorb large parts of atmospheric CO
       sub 2
       |  and vegetation can act as a carbon sink as well. Still, the sheer magnitude of GHGs emitted in the past causes GHGs to accumulate in the atmosphere and thus rising GHGs concentrations.
@@ -38,10 +42,8 @@
 
     p The above plot shows the warming in near surface temperatures from 2006–2010 to 2095–2099 for two different emissions scenarios: RCP&thinsp;2.6 and RCP&thinsp;6.0. As you can see: the overall temperature is going to rise, and the increase is far more severe in RCP&thinsp;6.0. It can also be seen that the warming varies between regions, with highest warming occuring in the Northern latitudes.
 
-    LayoutRecap
-      li Climate models are complex systems describing the physical world including its atmosphere, ocean, ice sheets and vegetation. The most comprehensive climate models are called Earth system models.
-      li Climate models generate projections of future temperature and precipitation based on GHG concentration scenarios.
-    LayoutFurtherReading
+    LayoutNextChapter
+      h3 Further Reading
       li Stocker, T. F., Qin, D., Plattner, G., et al. (2013).
         a(href="https://www.ipcc.ch/report/ar5/wg1/")
           strong  IPCC: Summary for Policymakers. In: Climate Change 2013: The Physical Science Basis. Contribution of Working Group I to the Fifth Assessment Report of the Intergovernmental Panel on Climate Change.
@@ -55,7 +57,13 @@
 <script>
 import rcp26 from '~/assets/data/diff_annual_mean_tas_all-models-rcp26.nc.json'
 import rcp60 from '~/assets/data/diff_annual_mean_tas_all-models-rcp60.nc.json'
+import LayoutList from '@/components/LayoutList.vue'
+import LayoutNextChapter from '@/components/LayoutNextChapter.vue'
 export default {
+  components: {
+    LayoutList,
+    LayoutNextChapter
+  },
   data () {
     return {
       rcp26,

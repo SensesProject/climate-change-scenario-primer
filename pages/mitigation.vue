@@ -1,6 +1,11 @@
 <template lang="pug">
-  section.wrapper
+  article.wrapper
     h2.h1 Mitigation
+    LayoutList
+      h3 Chapter Summary
+      li Representative Concentration Pathways (RCPs) represent different emissions, concentration and radiative forcing projections leading to a large range of global warming levels, from continued warming rising above 4&thinsp;°C by the year 2100 to limiting warming well below 2&thinsp;°C as called for in the Paris Agreement.
+      li When combined with the Socioeconomic Pathways (SSPs) they provide a powerful framework to explore the space of future mitigation pathways in terms of different levels of mitigation stringency and different assumptions about socioeconomic development.
+      li The mitigation pathway literature developed by the application of integrated assessment modelling comprises a wide variety of mitigation pathways, including pathways with limited technology availability and delays in climate policy in addition to variations in mitigation targets and socioeconomic drivers.
     p The Paris Agreement was a historic step in global efforts to combat climate change. Countries agreed to take action to hold global mean temperature increase well below  2&thinsp;°C and pursue efforts to limit warming to 1.5&thinsp;°C.
     p Such temperature targets can be translated to various other quantities: emissions budgets of cumulated future greenhouse gas (GHG) emissions and stabilization levels of atmospheric GHG concentrations or, equivalently, anthropogenic radiative forcing of the climate system. Since each ton of carbon dioxide emitted into the atmosphere adds extra warming lasting over hundreds of years, a temperature limit translates into a finite budget for the amount of carbon dioxide that can still be emitted into the atmosphere. Likewise, to limit the warming, greenhouse gas concentrations in the atmosphere and the associated radiative forcing need eventually to stabilize to allow the climate system to find a new equilibrium of incoming solar radiation and outgoing heat radiation from Earth.
     p
@@ -96,11 +101,8 @@
 
     p Mitigation scenarios in the literature are varied along more dimensions than just the SSPs and RCP forcing levels. For example, they have been used to look at the individual role of technologies and sectors for mitigating climate change by changing technology availability or technology costs in terms of a sensitivity analysis (limited technology scenarios).  Others have looked at different near term climate policy developments with different levels of delay and regional variation compared to stringent global action pathways (delay scenarios). These are particularly relevant for informing the implementation of the Paris Agreement,  which aims to coordinate nationally determined contributions (NDCs) to climate action so to reach the long term climate goals. The first set of NDCs were specified for 2030, and thus mitigation scenarios that go through the NDCs in 2030 have become available in recent years.
 
-    LayoutRecap
-      li Representative Concentration Pathways (RCPs) represent different emissions, concentration and radiative forcing projections leading to a large range of global warming levels, from continued warming rising above 4&thinsp;°C by the year 2100 to limiting warming well below 2&thinsp;°C as called for in the Paris Agreement.
-      li When combined with the Socioeconomic Pathways (SSPs) they provide a powerful framework to explore the space of future mitigation pathways in terms of different levels of mitigation stringency and different assumptions about socioeconomic development.
-      li The mitigation pathway literature developed by the application of integrated assessment modelling comprises a wide variety of mitigation pathways, including pathways with limited technology availability and delays in climate policy in addition to variations in mitigation targets and socioeconomic drivers.
-    LayoutFurtherReading
+    LayoutNextChapter
+      h3 Further Reading
       li
         a(href="https://www.ipcc.ch/sr15/")
           strong  IPCC Special Report on Global Warming of 1.5°C, Chapter 3
@@ -119,7 +121,13 @@
 </template>
 
 <script>
+import LayoutList from '@/components/LayoutList.vue'
+import LayoutNextChapter from '@/components/LayoutNextChapter.vue'
 export default {
+  components: {
+    LayoutList,
+    LayoutNextChapter
+  },
   data () {
     return {
       ssp: 'SSP1',

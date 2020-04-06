@@ -3,6 +3,12 @@
     <h2 class="h1">
       Energy, Land Use and Emissions
     </h2>
+    <LayoutList>
+      <h3>Chapter Summary</h3>
+      <li>Integrated assessment models (IAMs) are complex models of the energy-land-economy-climate system that use socioeconomic assumptions to produce energy, land use and emissions scenarios.</li>
+      <li>IAMs show that the widely varying socioeconomic futures described by the SSPs lead to large variations in energy, land use and emissions in baseline projections without  climate policy interventions.</li>
+      <li>IAMs are used to derive both baseline projections (What can happen?) as well as pathways oriented to achieving mitigation goals (What should happen?)</li>
+    </LayoutList>
     <p>Socioeconomic scenarios provide general narratives and key socioeconmic developments to characterize possible futures. To understand what this means for future greenhouse gas emissions and climate change, those assumptions need to be translated into quantitative projections for future energy and land use. This is done by integrated assessment models (IAMs) representing the world’s coupled energy-land-economy-climate system and its development over the 21<sup>st</sup> century. Based on socioeconomic scenarios, IAMs derive consistent pathways for macroeconomic, energy system, and land use variables and project resulting emissions of greenhouse gases and air pollutants until the end of the century. They calculate these energy-land-emissions pathways for both baseline projections (What can happen?) and mitigation goals (What should happen?).</p>
 
     <p>Integrated assessment models (IAMs) provide consistent pathways for macroeconomic, energy system related, and land use variables and connect them to the resulting emissions.</p>
@@ -90,20 +96,20 @@
       </InHighlight>
       combined with the high GDP growth comes at a cost: High energy needs and lots of CO<sub>2</sub> emissions.
     </p>
-    <LayoutRecap>
-      <li>Integrated assessment models (IAMs) are complex models of the energy-land-economy-climate system that use socioeconomic assumptions to produce energy, land use and emissions scenarios.</li>
-      <li>IAMs show that the widely varying socioeconomic futures described by the SSPs lead to large variations in energy, land use and emissions in baseline projections without  climate policy interventions.</li>
-      <li>IAMs are used to derive both baseline projections (What can happen?) as well as pathways oriented to achieving mitigation goals (What should happen?)</li>
-    </LayoutRecap>
-    <LayoutFurtherReading>
+    <LayoutNextChapter>
+      <h3>Further Reading</h3>
       <li>Riahi, K., Van Vuuren, D. P., Kriegler, E., et al. (2017).<a href="https://www.sciencedirect.com/science/article/pii/S0959378016300681"><strong> The shared socioeconomic pathways and their energy, land use, and greenhouse gas emissions implications: an overview.</strong></a>    Global Environmental Change, 42, 153-168.</li>
-    </LayoutFurtherReading>
+    </LayoutNextChapter>
   </section>
 </template>
 
 <script>
+import LayoutList from '@/components/LayoutList.vue'
+import LayoutNextChapter from '@/components/LayoutNextChapter.vue'
 export default {
   components: {
+    LayoutList,
+    LayoutNextChapter
   }
 }
 </script>

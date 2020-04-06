@@ -1,5 +1,5 @@
 <template lang="pug">
-  section.wrapper
+  article.wrapper
     h2.h1 Recap
     p Climate change scenarios are a powerful tool for understanding climate change, charting response strategies, and supporting climate policy making. They are not about predicting the future, but come in the form of projections of what can happen or pathways of how to reach certain goals.
 
@@ -18,32 +18,32 @@
       |  take the next step towards future climate. And
       strong  climate impact models
       |  show us how that effects nature and society.
-    div.share.extended.no-margin.hide-print
-      div.center.default
-        h3.h2.white Share
-        div.button-group
-          a.button(href="mailto:?subject=Climate Change Scenario Primer&body=→ https://climatescenarios.org/primer ")
-            span.mono
-              span.arrow →
-              |  Mail
-          a.button(href="https://twitter.com/home?status=→ https://climatescenarios.org/primer", rel="noopener noreferrer")
-            span.mono
-              span.arrow →
-              |  Twitter
-          |
-          a.button(href="https://www.facebook.com/sharer/sharer.php?u=https://climatescenarios.org/primer", rel="noopener noreferrer")
-            span.mono
-              span.arrow →
-              |  Facebook
-          |
-    div.contact.extended.no-margin.hide-print
-      div.center.default
-        h3.h2.violet Get in Touch 👋
-        client-only
-          a.button(:href="`mailto:${address}?subject=Climate Change Scenario Primer`")
-            span.mono
-              span.arrow →
-              |  Send Mail
+    //- div.share.extended.no-margin.hide-print
+    //-   div.center.default
+    //-     h3.h2.white Share
+    //-     div.button-group
+    //-       a.button(href="mailto:?subject=Climate Change Scenario Primer&body=→ https://climatescenarios.org/primer ")
+    //-         span.mono
+    //-           span.arrow →
+    //-           |  Mail
+    //-       a.button(href="https://twitter.com/home?status=→ https://climatescenarios.org/primer", rel="noopener noreferrer")
+    //-         span.mono
+    //-           span.arrow →
+    //-           |  Twitter
+    //-       |
+    //-       a.button(href="https://www.facebook.com/sharer/sharer.php?u=https://climatescenarios.org/primer", rel="noopener noreferrer")
+    //-         span.mono
+    //-           span.arrow →
+    //-           |  Facebook
+    //-       |
+    //- div.contact.extended.no-margin.hide-print
+    //-   div.center.default
+    //-     h3.h2.violet Get in Touch 👋
+    //-     client-only
+    //-       a.button(:href="`mailto:${address}?subject=Climate Change Scenario Primer`")
+    //-         span.mono
+    //-           span.arrow →
+    //-           |  Send Mail
   </section>
 </template>
 

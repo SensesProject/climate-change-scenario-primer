@@ -83,6 +83,7 @@
       activities <span class="highlight no-hover purple">(adaptation pathways).</span>
     </p>
     <LayoutNextChapter>
+      <h3>Further Reading</h3>
       <li>Moss, R. H., Edmonds, J. A., Hibbard, K. A., et al. (2010).<a href="https://www.nature.com/articles/nature08823"><strong> The next generation of scenarios for climate change research and assessment.</strong></a> Nature, 463(7282), 747-756.</li>
       <li>Van Vuuren, D. P., Kok, M. T., Girod, B., Lucas, P. L., & de Vries, B. (2012).<a href="https://www.sciencedirect.com/science/article/abs/pii/S0959378012000635"><strong> Scenarios in global environmental assessments: key characteristics and lessons for future use.</strong></a>            Global Environmental Change, 22(4), 884-895.</li>
     </LayoutNextChapter>

@@ -1,13 +1,18 @@
 <template lang="pug">
-  section.wrapper
+  article.wrapper
 
     h2.h1 Climate Impacts
+
+    LayoutList
+      h3 Chapter Summary
+      li There is a wide range of sectors considered in climate impact research including impacts related to agriculture, energy, and health.
+      li Climate impact models use data from climate and socioeconomic scenarios to create impact scenarios.
 
     p Climate impacts are consequences and effects of climate change on nature and society. These may include changed agricultural yields, increased floods, and droughts, or coral reef bleaching due to changes in the chemical composition of the ocean.
 
     p The Inter-Sectoral Impact Model Intercomparison Project <a class="strong" href="https://www.isimip.org/">→ISIMIP</a> plays an important role in climate-impact research by faciliting consistent impact simulations across various sectors and collecting and disseminating the results.
 
-    LayoutCarousel.extended(:slots=13, )
+    LayoutCarousel.tiny.extended(:slots=13, )
       div(slot="s0")
         h3.h2.white Agriculture
         p.white The agriculture sector in ISIMIP seeks to understand how crops will be affected by changing atmospheric composition and climate. Increasing carbon dioxide concentrations may help some crops perform better, and in some regions increased temperatures could extend the growing season. But in other regions, more frequent and more intense heat waves and droughts could harm crop yields. This sector also examines how changing management practices (crop varieties, fertiliser, and irrigation) could be used to counteract negative effects of climate change.
@@ -72,22 +77,24 @@
       alt=""
     )
 
-    p The charts above show simulation analyses of impact simulations for two sectors, floods, and crop failure. In particular, the change in the percentage of the global surface that is affected by extreme event when compared to preindustrial times, is shown. In each case, climate data from three different global climate models (
-      strong.green GFDL-ESM2M
-      | ,
-      strong.yellow  MIROC5
-      | , and
-      strong.violet  IPSL-CM5A-LR
-      | ) were used to drive the impact models – each color relates to results using data from a different climate model. The thick lines depict the median of the ensemble for all impact models considered. The shaded areas show the 20
+    p The charts above show simulation analyses of impact simulations for two sectors, floods, and crop failure. In particular, the change in the percentage of the global surface that is affected by extreme event when compared to preindustrial times, is shown. In each case, climate data from three different global climate models
+      |
+      |
+      span.highlight.no-hover.green (GFDL-ESM2M,
+      |
+      |
+      span.highlight.no-hover.yellow  MIROC5,
+      |  and
+      |
+      span.highlight.no-hover.violet  IPSL-CM5A-LR)
+      |  were used to drive the impact models – each color relates to results using data from a different climate model. The thick lines depict the median of the ensemble for all impact models considered. The shaded areas show the 20
       sup th
       |  to 80
       sup th
       |  percentile of that ensemble and thus give a feel of the model spread.
 
-    LayoutRecap
-      li There is a wide range of sectors considered in climate impact research including impacts related to agriculture, energy, and health.
-      li Climate impact models use data from climate and socioeconomic scenarios to create impact scenarios.
-    LayoutFurtherReading
+    LayoutNextChapter
+      h3 Further Reading
       li
         a(href="https://www.ipcc.ch/sr15/")
           strong  IPCC Special Report on Global Warming of 1.5°C, Chapter 2
@@ -110,8 +117,12 @@
 </template>
 
 <script>
+import LayoutList from '@/components/LayoutList.vue'
+import LayoutNextChapter from '@/components/LayoutNextChapter.vue'
 export default {
   components: {
+    LayoutList,
+    LayoutNextChapter
   }
 }
 </script>
@@ -121,10 +132,13 @@ export default {
 .wrapper {
   .LayoutCarousel {
 
+    color: $color-white;
+    padding: $spacing / 2;
+
     min-height: 360px;
 
     @include media-query($device-medium) {
-      min-height: 544px;
+      min-height: 360px;
     }
 
     h4 {
