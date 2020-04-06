@@ -71,6 +71,7 @@ export default {
       @include max-width($medium) {
         position: static;
         padding: 0;
+        margin-bottom: $spacing * 0.75;
       }
       @include max-width($narrow) {
         position: static;
