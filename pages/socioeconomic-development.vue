@@ -201,7 +201,7 @@ export default {
   }
 
   .ssp-detail {
-    margin: 0 $spacing / -2 $spacing $spacing / -2;
+    margin: 0 $spacing / -2 $spacing / 2 $spacing / -2;
     padding: $spacing / 2;
 
     // @include max-width($medium) {

@@ -133,20 +133,7 @@
         </text>
       </g>
       <g
-        class="axis y-axis wide"
-        transform="translate(-7 100) rotate(-90)"
-      >
-        <text
-          :y="step === null || step === 1 ? 2 : 111"
-          x="50"
-        >
-          <tspan>Low&nbsp;&nbsp;&nbsp;&nbsp;←&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-          <tspan class="strong">Challenges for Mitigation</tspan>
-          <tspan>&nbsp;&nbsp;&nbsp;&nbsp;→&nbsp;&nbsp;&nbsp;&nbsp;High</tspan>
-        </text>
-      </g>
-      <g
-        class="axis y-axis mobile"
+        class="axis y-axis"
         transform="translate(-7 100) rotate(-90)"
       >
         <text
@@ -356,7 +343,7 @@ export default {
   svg {
     overflow: visible;
     .background {
-      fill: $color-violet;
+      fill: $color-neon;
     }
 
     text, tspan {
@@ -371,13 +358,13 @@ export default {
     }
 
     .low {
-      fill: $color-black;
-      opacity: 0.6;
+      fill: $color-white;
+      opacity: 0.4;
     }
 
     .high {
-      fill: $color-white;
-      opacity: 0.4;
+      fill: $color-black;
+      opacity: 0.6;
     }
 
     .ssp {
@@ -388,7 +375,6 @@ export default {
       .ssp-title {
         fill: $color-white;
         text-anchor: middle;
-        dominant-baseline: central;
         font-weight: bold;
         @include light-text();
         font-size: 5px;
@@ -397,7 +383,6 @@ export default {
       .ssp-description {
         fill: $color-white;
         text-anchor: middle;
-        dominant-baseline: central;
         @include light-text();
       }
     }
