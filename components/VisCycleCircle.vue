@@ -1,7 +1,7 @@
 <template>
   <div
     ref="cycle"
-    class="VisCycle"
+    class="VisCycle tiny"
   >
     <svg
       :style="{'stroke-width': strokeWidth}"
@@ -178,7 +178,7 @@ export default {
 @import "~@/assets/style/global";
 .VisCycle {
   width: calc(100% - 90px);
-  max-width: 480px;
+  max-width: 420px;
   position: relative;
   margin-right: 90px;
 

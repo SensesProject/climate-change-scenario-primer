@@ -18,7 +18,9 @@
       Climate change and socioeconomic development are deeply intertwined. Social and economic activities are the main driver of climate change. In turn, climate change will have serious impacts on these activities, e.g., by rising sea levels and exposure
       to severe weather events.
     </p>
-    <VisCycleCircle class="center" />
+    <div class="cycle">
+      <VisCycleCircle class="center" />
+    </div>
     <p>
       Let’s take a closer look at the cycle above to understand the underlying relationships. Since it is us humans who drive climate change, we can also act to reduce the impact of our activities on the climate (mitigation) as well as the impact of climate
       change on us (adaptation).
@@ -107,6 +109,11 @@ export default {
 
   .no-hyphen {
     hyphens: none;
+  }
+
+  .cycle {
+    display: flex;
+    justify-content: center;
   }
 
   .cycle-part {
