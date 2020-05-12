@@ -1,5 +1,5 @@
 <template>
-  <section class="wrapper">
+  <article class="wrapper">
     <h2 class="h1">
       Energy, Land Use and Emissions
     </h2>
@@ -100,7 +100,7 @@
       <h3>Further Reading</h3>
       <li>Riahi, K., Van Vuuren, D. P., Kriegler, E., et al. (2017).<a href="https://www.sciencedirect.com/science/article/pii/S0959378016300681"><strong> The shared socioeconomic pathways and their energy, land use, and greenhouse gas emissions implications: an overview.</strong></a>    Global Environmental Change, 42, 153-168.</li>
     </LayoutNextChapter>
-  </section>
+  </article>
 </template>
 
 <script>

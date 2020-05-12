@@ -13,10 +13,10 @@
   margin: $spacing #{-$spacing / 2};
   padding: $spacing / 2 $spacing / 2 $spacing / 4;
   background-color: transparentize(getColor(neon, 100), 0.7);
-  border-radius: $border-radius;
   color: getColor(neon, 40);
   list-style: none;
 
+  border-radius: $border-radius;
   @include max-width($touching) {
     border-radius: $border-radius 0 0 $border-radius;
   }

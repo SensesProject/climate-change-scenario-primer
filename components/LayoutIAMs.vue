@@ -66,7 +66,7 @@
             :hoverModel='hoverModel'
             @setGHeights='setGFingerprintHeights',
             @hover="setHoverModels")
-        LayoutRadioGroup.hide-ie(:options='fingerprintOptions', v-model='fingerprintModel', :highlight="hoverModels", @hover='setHoverModel')
+        LayoutRadioGroup.tiny.hide-ie(:options='fingerprintOptions', v-model='fingerprintModel', :highlight="hoverModels", @hover='setHoverModel')
         //- img(src="~/assets/img/vis-print-fallbacks/fingerprint-2.jpg", alt="").print-only
         div(v-bind='pFingerprint[2]', ref='fingerprintStepper2', step="2")
           p But there are also key differences between IAMs. Some are more detailed in specific aspects and cover different categories better then others. As this makes some better suited to handle the input assumptions of individual SSPs, each of the SSPs has its own reference model.
@@ -167,9 +167,9 @@ export default {
       })
     },
     lines () {
-      const { iam, width, view, height, transformX, transformY, step, padding } = this
+      const { iam, width, height, transformX, transformY, step, padding } = this
       return iam.lines.map(({ points, color, minStep, maxStep }) => {
-        const off = view.width < 826 ? (view.width - width) / 2 - 1 : padding.x
+        const off = 8
         return {
           color,
           opacity: (minStep == null || step >= minStep) && (maxStep == null || step <= maxStep) ? 1 : 0,
@@ -329,10 +329,17 @@ export default {
 .LayoutIAMs {
   position: relative;
   background: $color-black;
-  padding: $spacing $spacing / 2;
   color: $color-white;
-  margin-top: 0;
-  max-width: $max-width-extended;
+  margin: 0 $spacing / -2 $spacing / 2 $spacing / -2;
+  padding: $spacing / 2;
+
+  border-radius: $border-radius;
+  @include max-width($touching) {
+    border-radius: $border-radius 0 0 $border-radius;
+  }
+  @include max-width($narrow) {
+    border-radius: 0;
+  }
 
   @include ie {
     max-width: $max-width !important;
@@ -347,7 +354,6 @@ export default {
     margin: 0;
   }
 
-  width: 100vw;
   @include flex-column();
   align-items: center;
   // @include ie {
@@ -388,7 +394,6 @@ export default {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    max-width: 760px;
     position: relative;
 
     @include ie {
@@ -403,7 +408,7 @@ export default {
     .graphic-wrapper {
       align-self: center;
       position: absolute;
-      width: 100%;
+      width: calc(100%);
       height: 100%;
 
       @include print {
@@ -518,7 +523,6 @@ export default {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    max-width: 760px;
     position: relative;
 
     @include ie {

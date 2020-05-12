@@ -14,7 +14,7 @@
       <label
         :key="`label-${option.value}`"
         :for="`bt-${i}`"
-        :class="[option.color, {highlight: highlight.filter(d => d === option.value)[0]}, {highlighting: highlight.length > 0}]"
+        :class="[option.color, {hl: highlight.filter(d => d === option.value)[0]}, {highlighting: highlight.length > 0}]"
         @mouseover="hover(option.value)"
         @mouseleave="hover(null)"
       >
@@ -96,8 +96,6 @@ export default {
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
-
-  font-size: 0.9em;
 
   label {
     padding: 0 $spacing / 4;
@@ -193,7 +191,7 @@ export default {
       // }
     }
 
-    &.highlight {
+    &.hl, &:hover {
       .radio {
         .circle {
           opacity: 1;
@@ -250,7 +248,7 @@ export default {
           transform: translateX(3px) scale(0.1);
         }
       }
-      &.highlight {
+      &.hl {
         .radio {
           .circle {
             opacity: 1;
