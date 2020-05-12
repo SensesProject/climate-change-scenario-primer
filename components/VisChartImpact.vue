@@ -14,19 +14,19 @@
       width="100%"
       viewBox="0 0 100 77"
     >
-      <mask id="mask1">
+      <mask :id="`mask1-${mkey}`">
         <rect
           width="62.5"
           height="85"
         />
       </mask>
-      <mask id="mask2">
+      <mask :id="`mask2-${mkey}`">
         <rect
           width="50"
           height="85"
         />
       </mask>
-      <mask id="mask3">
+      <mask :id="`mask3-${mkey}`">
         <rect
           width="100"
           height="85"
@@ -37,15 +37,22 @@
         :font-size="fontSize"
       >
         <g v-if="variable === 'Flood'">
-          <g class="model model1">
+          <g class="model model1"
+             :mask="`url(#mask1-${mkey})`"
+             transform="translate(0.000000, 0)"
+          >
             <polygon points="0.41 72.68 0.41 80.98 12.90 79.90 25.40 74.22 37.90 72.48 50.40 67.59 62.91 52.70 62.91 25.97 62.91 25.97 50.40 40.30 37.90 53.08 25.40 57.54 12.90 69.05" />
             <polyline points="0.41 77.81 12.90 75.60 25.40 67.71 37.91 64.98 50.41 57.50 62.91 43.16" />
           </g>
-          <g class="model model2">
+          <g class="model model2"
+             :mask="`url(#mask2-${mkey})`"
+          >
             <polygon points="0.41 70.58 0.41 82.12 12.90 80.41 25.41 73.60 37.90 71.96 50.41 66.25 50.41 36.46 50.41 36.46 37.90 53.92 25.41 56.90 12.90 67.06" />
             <polyline points="0.41 77.98 12.90 75.13 25.40 67.60 37.91 66.02 50.41 51.00" />
           </g>
-          <g class="model model3">
+          <g class="model model3"
+             :mask="`url(#mask3-${mkey})`"
+          >
             <polygon points="0 70.14 0 80.42 12.49 80.01 25 78.29 37.49 70.40 50 67.52 62.50 66.27 75 59.03 87.50 50.28 100 44.77 100 8.52 87.50 9.30 75 21.91 62.50 39.70 50 41.22 37.49 46.23 25 63.79 12.49 68.74" />
             <polyline points="0 76.02 12.49 75.80 24.99 73.59 37.50 62.27 50 58.97 62.49 57.08 74.99 47.58 87.49 35.14 100 34.24" />
           </g>
@@ -53,6 +60,7 @@
         <g v-if="variable === 'Crop Failure'">
           <g
             class="model model1"
+            :mask="`url(#mask1-${mkey})`"
             transform="translate(0.000000, 41.000000)"
           >
             <polygon points="0 30.7221 0 38.75 12.4999248 40.0013 24.9999749 38.1292 37.4998998 36.3851 49.9999499 32.8414 62.5 31.0314 62.5 0.3325 62.5 0.3325 49.9999499 4.5397 37.4998998 18.4134 24.9999749 25.0482 12.4999248 29.763" />
@@ -60,6 +68,7 @@
           </g>
           <g
             class="model model2"
+            :mask="`url(#mask2-${mkey})`"
             transform="translate(0.000000, 51.000000)"
           >
             <polygon points="0 15.2223 0 27.9304 12.4999374 27.7864 25 27.5013 37.4999374 27.1926 50 24.7377 50 0.4169 50 0.4169 37.4999374 8.581 25 10.486 12.4999374 16.0408" />
@@ -67,6 +76,7 @@
           </g>
           <g
             class="model model3"
+            :mask="`url(#mask3-${mkey})`"
             transform="translate(0.000000, -2.000000)"
           >
             <polygon points="0 66.855 0 81.0748 12.4999374 80.2558 25 76.3655 37.4999374 69.2754 50 67.4241 62.5000626 66.0552 75 61.0492 87.5000626 53.8608 100 51.8096 100 1.2982 100 1.2982 87.5000626 0.984 75 7.3781 62.5000626 29.9174 50 31.0716 37.4999374 31.7423 25 45.2512 12.4999374 55.3275" />
@@ -120,7 +130,7 @@
     <div class="key-wrapper">
       <div
         :class="{hide: !legend}"
-        class="key extended"
+        class="key"
       >
         <span
           v-for="(model, i) in models"
@@ -147,6 +157,10 @@ export default {
     legend: {
       type: Boolean,
       default: true
+    },
+    mkey: {
+      type: String,
+      default: 'a'
     }
   },
   data () {
@@ -276,7 +290,7 @@ export default {
         }
 
         &.model1 {
-          mask: url(#mask1);
+          // // mask: url(#mask1);
           polygon {
             fill: $color-yellow;
           }
@@ -285,7 +299,7 @@ export default {
           }
         }
         &.model2 {
-          mask: url(#mask2);
+          // // mask: url(#mask2);
           polygon {
             fill: $color-green;
           }
@@ -294,7 +308,7 @@ export default {
           }
         }
         &.model3 {
-          mask: url(#mask3);
+          // // mask: url(#mask3);
           polygon {
             fill: $color-violet;
           }

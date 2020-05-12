@@ -1,7 +1,10 @@
 @charset "utf-8";
-@import "fonts";
+$font-prefix: "../../node_modules/library/src/assets/fonts";
+@import "library/src/style/base.scss";
+// @import "library/src/style/global.scss";
+// @import "fonts";
 @import "global";
-@import "typography";
+// @import "typography";
 @import "range";
 
 *, *:before, *:after {
@@ -23,20 +26,19 @@ p + p {
   margin-top: 0;
 }
 
-a {
-  color: $color-text-highlight;
-  text-decoration: none;
+// a {
+//   color: $color-text-highlight;
+//   text-decoration: none;
 
-  &:hover, &:focus {
-    color: darken($color-text-highlight, 10%);
-  }
-}
+//   &:hover, &:focus {
+//     color: darken($color-text-highlight, 10%);
+//   }
+// }
 
 input {
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;
-  zoom: 1;
   border: 0;
 
   &:focus {
@@ -104,23 +106,34 @@ table {
 }
 
 .root {
-  padding: $spacing * 3 $spacing / 2 $spacing / 2 $spacing / 2;
+  padding: 0;
+}
 
+article.wrapper {
+  width: calc(100% - #{$spacing});
+  max-width: $max-width;
+  padding: $spacing * 1.5 0 $spacing;
+  justify-self: center;
 
-  @include media-query($device-wide) {
-    padding: $spacing * 2 $spacing / 2 $spacing / 2 $spacing / 2;
+  @include max-width($narrow) {
+    padding: $spacing 0 0;
   }
 
-  @include print {
-    padding: 0;
+  .extended {
+    margin: 0 #{-$spacing / 2};
   }
 }
 
-.wrapper {
-  width: 100%;
+section.wrapper {
+  width: calc(100% - #{$spacing});
   // margin: $spacing;
   max-width: $max-width;
-  margin-top: 0;
+  padding: $spacing * 2.5 0;
+  justify-self: center;
+
+  @include max-width($medium) {
+    margin-top: 0;
+  }
   @include flex-column();
 
   @include print {
@@ -202,7 +215,7 @@ table {
   // }
 
   @include media-query($device-wide) {
-    transform: translateX($spacing);
+    // transform: translateX($spacing);
     // width: calc(100vw - #{$nav-width-laptop});
     // left: $nav-width-laptop;
     // align-self: flex-end;
@@ -237,6 +250,15 @@ table {
 
   @include ie {
     display: block !important;
+  }
+}
+
+.h1 {
+  font-family: $font-serif;
+  font-size: 2.5em;
+
+  @include max-width($narrow) {
+    font-size: 2.25em;
   }
 }
 
@@ -311,16 +333,10 @@ table {
 
 .page-enter {
   transform: translateY(5vw);
-  @include media-query($device-wide) {
-    transform: translate($spacing, 5vw);
-  }
 }
 
 .page-leave-to {
   transform: translateY(-5vw);
-  @include media-query($device-wide) {
-    transform: translate($spacing, -5vw);
-  }
 }
 
 .fade-enter-active, .fade-leave-active, .fade-delayed-leave-active {

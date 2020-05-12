@@ -1,4 +1,3 @@
-const nodeExternals = require('webpack-node-externals')
 const { favicon, msapplication } = require('./assets/js/favicon.js')
 
 module.exports = {
@@ -8,6 +7,9 @@ module.exports = {
   // mode: 'spa',
   router: {
     base: '/primer/'
+  },
+  env: {
+    NODE_ENV: process.env.NODE_ENV
   },
   head: {
     htmlAttrs: {
@@ -67,13 +69,6 @@ module.exports = {
             data: {}
           }
         })
-      }
-      if (isServer) {
-        config.externals = [
-          nodeExternals({
-            whitelist: [/^ol|^proj4/]
-          })
-        ]
       }
     }
   }

@@ -1,5 +1,5 @@
 <template lang="pug">
-  div.VisMatrix.extended
+  div.VisMatrix
     div.hide-print
       div.row(
         v-for="rcp in rcps"
@@ -82,7 +82,7 @@ export default {
 @import "~@/assets/style/global";
 .VisMatrix {
   font-size: 0.9rem;
-  margin: 1.1rem 0 0;
+  margin: $spacing * 2 0 0;
   .row {
     border-top: 1px solid $color-gray;
     display: flex;

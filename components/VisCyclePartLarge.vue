@@ -10,7 +10,7 @@
       height="20px"
     >
       <path
-        :stroke="colors[0]"
+        :class="colors[0]"
         d="M31,20 L31,16 C31,7.71572875 24.2842712,1 16,1 C7.71572875,1 1,7.71572875 1,16 L1,20"
       />
     </svg>
@@ -24,16 +24,16 @@
       preserveAspectRatio="none"
     >
       <path
-        :stroke="colors[0]"
+        :class="colors[0]"
         d="M 1,0 L1,632"
       />
       <path
-        :stroke="colors[index]"
+        :class="colors[index]"
         class="arrow"
         d="M31,0 L31,24 M26,12.5 L31,17.5 L36,12.5"
       />
       <path
-        :stroke="colors[index + 1]"
+        :class="colors[(index + 1) % colors.length]"
         d="M31,24 L31,632"
       />
     </svg>
@@ -43,7 +43,7 @@
       height="20px"
     >
       <path
-        :stroke="colors[0]"
+        :class="colors[0]"
         d="M1,0 L1,4 C1,12.2842712 7.71572875,19 16,19 C24.2842712,19 31,12.2842712 31,4 L31,0"
       />
       <!-- <path
@@ -60,7 +60,7 @@
       <g transform="translate(31 0)">
         <g>
           <circle
-            :fill="colors[index + 1]"
+            :class="colors[(index + 1) % colors.length]"
             r="12"
           />
         </g>
@@ -83,7 +83,7 @@ export default {
   },
   data () {
     return {
-      colors: ['#00A5D5', '#39C88A', '#FEAE00', '#C8005F', '#4E40B2', '#00A5D5']
+      colors: ['blue', 'green', 'yellow', 'red', 'purple']
     }
   }
 }
@@ -107,6 +107,7 @@ export default {
     path {
       stroke-width: 1.5;
       fill: none;
+      @include tint(stroke);
 
       &.mask {
         stroke: $color-white;
@@ -117,6 +118,7 @@ export default {
     circle {
       stroke: $color-white;
       stroke-width: 8;
+      @include tint(fill);
     }
 
     &.start {

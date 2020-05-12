@@ -1,7 +1,7 @@
 <template>
   <div
     ref="cycle"
-    class="VisCycle"
+    class="VisCycle tiny"
   >
     <svg
       :style="{'stroke-width': strokeWidth}"
@@ -13,7 +13,7 @@
       <g
         v-for="(item, i) in items"
         :key="`item-${i}`"
-        :class="{'reduce-impact': reduceImpact}"
+        :class="{strategies}"
         v-bind="item.parent"
       >
         <circle v-bind="item.circle" />
@@ -24,33 +24,33 @@
     <div
       v-for="(item, i) in items"
       :key="`item-${i}`"
-      :class="{'reduce-impact': reduceImpact, 'hide-print': true}"
+      :class="[item.text.class, {strategies, 'hide-print': true}]"
       v-bind="item.text"
       class="label"
       v-html="item.term"
     />
     <div
-      v-if="reduceImpact"
+      v-if="strategies"
       class="label yellow mitigation hide-print"
     >
       Mitigation
     </div>
     <div
-      v-if="reduceImpact"
-      class="label red adaptation hide-print"
+      v-if="strategies"
+      class="label purple adaptation hide-print"
     >
       Adaptation
     </div>
 
     <!-- Fallback images for print. Update when changing vis! -->
     <img
-      v-if="!reduceImpact"
+      v-if="!strategies"
       class="print-only"
       src="~/assets/img/vis-print-fallbacks/VisCycleCircle.jpg"
       alt=""
     >
     <img
-      v-if="reduceImpact"
+      v-if="strategies"
       class="print-only"
       src="~/assets/img/vis-print-fallbacks/VisCycleCircle-reduced.jpg"
       alt=""
@@ -63,7 +63,7 @@ import { mapState } from 'vuex'
 
 export default {
   props: {
-    reduceImpact: {
+    strategies: {
       type: Boolean,
       default: false
     }
@@ -71,7 +71,7 @@ export default {
   data () {
     return {
       width: 0,
-      colors: ['#39C88A', '#FEAE00', '#C8005F', '#4E40B2', '#00A5D5'],
+      colors: ['green', 'yellow', 'red', 'purple', 'blue'],
       terms: [
         'Socioeconomic<br>Development',
         'Energy &<br>Land Use',
@@ -123,22 +123,22 @@ export default {
           },
           arc: {
             d: `M ${arcStart.x} ${arcStart.y} A ${radius} ${radius} 0 0 1 ${arcEnd.x} ${arcEnd.y}`,
-            stroke: colors[i]
+            class: colors[i]
           },
           circle: {
             cy: start.y,
             cx: start.x,
             r: circleRadius,
-            fill: colors[i]
+            class: colors[i]
           },
           arrowHead: {
             transform: `translate(${arcEnd.x} ${arcEnd.y}) rotate(72)`,
             d: 'M -2 -2 L 0 0 -2 2',
-            stroke: colors[i]
+            class: colors[i]
           },
           text: {
+            class: colors[i],
             style: {
-              color: colors[i],
               left: `${50 + circleRadius + absoluteStart.x}%`,
               top: `${50 + absoluteStart.y}%`
             }
@@ -178,7 +178,7 @@ export default {
 @import "~@/assets/style/global";
 .VisCycle {
   width: calc(100% - 90px);
-  max-width: 480px;
+  max-width: 420px;
   position: relative;
   margin-right: 90px;
 
@@ -191,15 +191,16 @@ export default {
     transform: translate(#{$spacing * 0.25}, -50%);
     line-height: 1.1;
     white-space: nowrap;
-    font-weight: bold;
     text-shadow: 0 0 4px $color-white, 0 0 4px $color-white, 0 0 4px $color-white, 0 0 4px $color-white;
 
     @include media-query($device-narrow) {
       transform: translate(#{$spacing * 0.5}, -50%);
     }
 
-    &.reduce-impact {
-      color: $color-light-gray !important;
+    @include tint(color);
+
+    &.strategies {
+      color: $color-light-gray;
     }
 
     &.mitigation {
@@ -217,26 +218,31 @@ export default {
 
     path {
       fill: none;
+      @include tint(stroke);
     }
 
-    .reduce-impact {
+    circle {
+      @include tint(fill);
+    }
+
+    .strategies {
       circle {
-        fill: $color-light-gray !important;
+        fill: $color-pale-gray !important;
       }
 
       path {
-        stroke: $color-light-gray !important;
+        stroke: $color-pale-gray;
       }
 
       &:nth-of-type(1), &:nth-of-type(2) {
         path {
-          stroke: $color-yellow !important;
+          stroke: $color-yellow;
         }
       }
 
       &:nth-of-type(4), &:nth-of-type(5) {
         path {
-          stroke: $color-red !important;
+          stroke: $color-purple;
         }
       }
     }
@@ -249,7 +255,6 @@ export default {
 
     .item-text, .item-shadow {
       fill: $color-light-gray;
-      dominant-baseline: central;
     }
 
     .item-shadow {

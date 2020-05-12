@@ -32,10 +32,10 @@ export default {
   computed: {
     highlight: {
       get () {
-        return this.$store.getters.getField(this.field)
+        return this.$store.getters['highlights/getField'](this.field)
       },
       set (value) {
-        return this.$store.commit('updateField', { path: this.field, value })
+        return this.$store.commit('highlights/updateField', { path: this.field, value })
       }
     }
   },

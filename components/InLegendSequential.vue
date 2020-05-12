@@ -96,7 +96,8 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 512px;
+  width: 320px;
+  margin: auto;
   max-width: 100%;
   .label {
     font-size: 0.9em;

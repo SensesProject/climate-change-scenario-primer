@@ -1,28 +1,38 @@
 export default [{
-  title: 'Climate Change Scenarios',
+  title: 'What are Climate Change Scenarios?',
   path: '/'
-}, {
-  title: 'What are Climate Change Scenarios?'
 }, {
   title: 'How are Socioeconomic Development and Climate Change connected?'
 }, {
   title: 'Socioeconomic Development',
-  cycle: 'first'
+  cycle: {
+    position: 'start',
+    circles: ['green']
+  }
 }, {
   title: 'Energy, Land Use and Emissions',
-  cycle: 'double'
+  cycle: {
+    circles: ['yellow', 'red']
+  }
 }, {
   title: 'Mitigation',
-  cycle: 'none'
+  cycle: {
+  }
 }, {
   title: 'Climate Change',
-  cycle: 'normal'
+  cycle: {
+    circles: ['purple']
+  }
 }, {
   title: 'Climate Impacts',
-  cycle: 'normal'
+  cycle: {
+    circles: ['blue']
+  }
 }, {
   title: 'Adaptation',
-  cycle: 'last-none'
+  cycle: {
+    position: 'end'
+  }
 }, {
   title: 'Recap'
 }]

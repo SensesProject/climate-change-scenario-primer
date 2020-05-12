@@ -1,103 +1,103 @@
 <template>
   <div
     ref="cycle"
-    class="VisScenarioTypes center"
+    class="VisScenarioTypes center narrow"
   >
     <svg
       v-if="width"
-      :style="{'stroke-width': strokeWidth, 'font-size': `${fontSize}px`}"
-      :height="width / 2"
+      :height="width / 2 - 40"
       class="hide-print"
       width="100%"
-      viewBox="0 0 100 50"
     >
-      <path
-        class="range"
-        d="M30,35 Q60,20,100,40 L100,0"
-      />
-      <path
-        class="pathway"
-        d="M30,35 Q60,20,100,40"
-      />
-      <path
-        class="pathway"
-        d="M30,35 Q60,20,100,20"
-      />
-      <path
-        class="projection"
-        d="M30,35 L100,0"
-      />
-      <path
-        :d="`M${strokeWidth},${50 - strokeWidth / 2} L30,35`"
-        class="past"
-      />
-      <path
-        :style="{'stroke-width': strokeWidth / 2}"
-        :d="`M30,50 L30,${35 + strokeWidth * 4}`"
-        class="now"
-      />
-      <circle
-        :r="strokeWidth * 1.5"
-        class="now"
-        cx="30"
-        cy="35"
-      />
-      <circle
-        :r="strokeWidth * 1.5"
-        class="projection"
-        cx="100"
-        cy="0"
-      />
-      <circle
-        :r="strokeWidth * 1.5"
-        class="goal"
-        cx="100"
-        cy="40"
-      />
-      <circle
-        :r="strokeWidth * 1.5"
-        class="goal"
-        cx="100"
-        cy="20"
-      />
-      <text
-        :x="100 + strokeWidth * 4"
-        :y="fontSize / 4"
-        class="projection"
-      >Projection</text>
-      <text
-        :x="100 + strokeWidth * 4"
-        :y="40 + fontSize / 4"
-        class="goal"
-      >Goal B</text>
-      <text
-        :x="100 + strokeWidth * 4"
-        :y="20 + fontSize / 4"
-        class="goal"
-      >Goal A</text>
-      <text
-        :x="100 + strokeWidth * 4"
-        :y="40 + fontSize / 4"
-        class="pathway"
-      >Pathway B</text>
-      <text
-        :x="100 + strokeWidth * 4"
-        :y="20 + fontSize / 4"
-        class="pathway"
-      >Pathway A</text>
-      <text
-        :y="50 + strokeWidth + fontSize"
-      >Past</text>
-      <text
-        :y="50 + strokeWidth + fontSize"
-        x="30"
-        text-anchor="middle"
-      >Now</text>
-      <text
-        :y="50 + strokeWidth + fontSize"
-        x="100"
-        text-anchor="end"
-      >Future</text>
+      <g transform="translate(0, 0)">
+        <path
+          class="range"
+          :d="scalePath('M30,35 Q60,20,100,40 L100,0')"
+        />
+        <path
+          class="pathway"
+          :d="scalePath('M30,35 Q60,20,100,40')"
+        />
+        <path
+          class="pathway"
+          :d="scalePath('M30,35 Q60,20,100,20')"
+        />
+        <path
+          class="projection"
+          :d="scalePath('M30,35 L100,0')"
+        />
+        <path
+          :d="scalePath(`M${scaleRev(strokeWidth)},${50 - scaleRev(strokeWidth / 2)} L30,35`)"
+          class="past"
+        />
+        <path
+          :style="{'stroke-width': strokeWidth / 2}"
+          :d="scalePath(`M30,50 L30,${35 + scaleRev(strokeWidth * 4)}`)"
+          class="now"
+        />
+        <circle
+          :r="`${strokeWidth * 1.5}`"
+          class="now"
+          :cx="scaleVal(30)"
+          :cy="scaleVal(35)"
+        />
+        <circle
+          :r="strokeWidth * 1.5"
+          class="projection"
+          :cx="scaleVal(100)"
+          :cy="scaleVal(0)"
+        />
+        <circle
+          :r="strokeWidth * 1.5"
+          class="goal"
+          :cx="scaleVal(100)"
+          :cy="scaleVal(40)"
+        />
+        <circle
+          :r="strokeWidth * 1.5"
+          class="goal"
+          :cx="scaleVal(100)"
+          :cy="scaleVal(20)"
+        />
+        <text
+          :x="scaleVal(100) + strokeWidth * 4"
+          :y="fontSize / 4"
+          class="projection"
+        >Projection</text>
+        <text
+          :x="scaleVal(100) + strokeWidth * 4"
+          :y="scaleVal(40) + fontSize / 4"
+          class="goal"
+        >Goal B</text>
+        <text
+          :x="scaleVal(100) + strokeWidth * 4"
+          :y="scaleVal(20) + fontSize / 4"
+          class="goal"
+        >Goal A</text>
+        <text
+          :x="scaleVal(100) + strokeWidth * 4"
+          :y="scaleVal(40) + fontSize / 4"
+          class="pathway"
+        >Pathway B</text>
+        <text
+          :x="scaleVal(100) + strokeWidth * 4"
+          :y="scaleVal(20) + fontSize / 4"
+          class="pathway"
+        >Pathway A</text>
+        <text
+          :y="scaleVal(50) + strokeWidth + fontSize"
+        >Past</text>
+        <text
+          :y="scaleVal(50) + strokeWidth + fontSize"
+          :x="scaleVal(30)"
+          text-anchor="middle"
+        >Now</text>
+        <text
+          :y="scaleVal(50) + strokeWidth + fontSize"
+          :x="scaleVal(100)"
+          text-anchor="end"
+        >Future</text>
+      </g>
     </svg>
 
     <img
@@ -122,10 +122,10 @@ export default {
       'view'
     ]),
     strokeWidth () {
-      return (100 / this.width) * 2
+      return 2
     },
     fontSize () {
-      return (100 / this.width) * 16
+      return 12.8
     }
   },
   watch: {
@@ -138,10 +138,17 @@ export default {
   },
   methods: {
     setWidth () {
-      this.width = 0
-      this.$nextTick(() => {
-        this.width = this.$refs.cycle.getBoundingClientRect().width - 90
-      })
+      this.width = this.$refs.cycle.getBoundingClientRect().width
+      this.height = this.width / 2
+    },
+    scalePath (v) {
+      return v.replace(/([0-9.]+)/g, (a) => a / 100 * (this.width - 80))
+    },
+    scaleVal (v) {
+      return v / 100 * (this.width - 80)
+    },
+    scaleRev (v) {
+      return v / (this.width - 80) * 100
     }
   }
 }
@@ -151,16 +158,16 @@ export default {
 @import "~@/assets/style/global";
 .VisScenarioTypes {
   width: calc(100%);
-  max-width: $max-width - 160px;
+  max-width: $max-width-inner;
   position: relative;
   padding: $spacing 0;
   overflow: hidden;
-  // margin-right: 90px;
+  margin: auto;
 
   svg {
-    width: calc(100% - 90px);
     overflow: visible;
     path {
+      stroke-width: 2;
       fill: none;
       &.projection {
         stroke: $color-green;
