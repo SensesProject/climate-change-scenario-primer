@@ -74,7 +74,7 @@
         <h3 class="h2">
           SSPs in Detail
         </h3>
-        <p class="sans">
+        <p class="sans tiny">
           These narratives play out differently for key characteristics of socioeconomic futures. In the following charts, a few of these key characteristics are mapped across the five SSPs covering the space of varying challenges to mitigation and
           adaptation: Education, Trade, and Technological Development.
         </p>
@@ -203,7 +203,11 @@ export default {
   .ssp-detail {
     margin: 0 $spacing / -2 $spacing / 2 $spacing / -2;
     padding: $spacing / 2;
+    border-radius: $border-radius;
 
+    .sans.tiny {
+      margin-top: $spacing / 2;
+    }
     // @include max-width($medium) {
     //   margin: $spacing * 2 #{-spacing / 2} $spacing;
     // }

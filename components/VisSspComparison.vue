@@ -343,7 +343,7 @@ export default {
   svg {
     overflow: visible;
     .background {
-      fill: $color-neon;
+      fill: getColor(neon, 40);
     }
 
     text, tspan {
@@ -358,13 +358,11 @@ export default {
     }
 
     .low {
-      fill: $color-white;
-      opacity: 0.4;
+      fill: getColor(neon, 20);
     }
 
     .high {
-      fill: $color-black;
-      opacity: 0.6;
+      fill: getColor(neon, 50);
     }
 
     .ssp {
