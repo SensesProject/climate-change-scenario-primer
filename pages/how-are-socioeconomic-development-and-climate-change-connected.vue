@@ -78,7 +78,9 @@
       overall reductions in economic output. Macroeconomic general equilibrium models use climate damage functions on inputs and production factors of affected economic sectors. Both have to be reconciled with a growing body of empirical findings of
       substantial climate and weather impacts on societies today.
     </p>
-    <VisCycleCircle class="center" strategies />
+    <div class="cycle">
+      <VisCycleCircle class="center" strategies />
+    </div>
     <p>
       Integrated assessment models are an important tool to analyse our response to climate change. Since they capture the link between socioeconomic developments, energy and land use, and emissions, they can be used to investigate emissions reductions
       strategies to stay below a certain warming limit <span class="highlight no-hover yellow">(mitigation pathways).</span> Likewise, biophysical and economic impact models can be used to study adaptation measures to limit the impact of climate change on socioeconomic
