@@ -69,25 +69,24 @@
 
     p Not only temperature and precipitation are input for impact models but also socioeconomic factors are taken into account. The ISIMIP project, for example, does not only use climate change projections belonging to a certain RCP as input, but also takes up elements of SSP scenarios. A suite of climate impact models produce projections of biophysical impacts of climate change in a variety of sectors described above.
 
-    LayoutColumns.extended.hide-print
-      VisChartImpact(slot="left", variable="Flood")
-      VisChartImpact(slot="right", variable="Crop Failure", :legend="false")
+    LayoutColumns.hide-print
+      VisChartImpact(slot="left", variable="Flood", mkey="a")
+      VisChartImpact(slot="right", variable="Crop Failure", :legend="false", mkey="b")
     img.print-only(
       src="~/assets/img/vis-print-fallbacks/climate-impacts-1.jpg"
       alt=""
     )
 
-    p The charts above show simulation analyses of impact simulations for two sectors, floods, and crop failure. In particular, the change in the percentage of the global surface that is affected by extreme event when compared to preindustrial times, is shown. In each case, climate data from three different global climate models
+    p The charts above show simulation analyses of impact simulations for two sectors, floods, and crop failure. In particular, the change in the percentage of the global surface that is affected by extreme event when compared to preindustrial times, is shown. In each case, climate data from three different global climate models (
       |
-      |
-      span.highlight.no-hover.green (GFDL-ESM2M,
+      span.highlight.no-hover.green GFDL-ESM2M,
       |
       |
       span.highlight.no-hover.yellow  MIROC5,
       |  and
       |
-      span.highlight.no-hover.violet  IPSL-CM5A-LR)
-      |  were used to drive the impact models – each color relates to results using data from a different climate model. The thick lines depict the median of the ensemble for all impact models considered. The shaded areas show the 20
+      span.highlight.no-hover.violet  IPSL-CM5A-LR
+      | ) were used to drive the impact models – each color relates to results using data from a different climate model. The thick lines depict the median of the ensemble for all impact models considered. The shaded areas show the 20
       sup th
       |  to 80
       sup th
@@ -131,6 +130,14 @@ export default {
 @import "~@/assets/style/global";
 .wrapper {
   .LayoutCarousel {
+
+    border-radius: $border-radius;
+    @include max-width($touching) {
+      border-radius: $border-radius 0 0 $border-radius;
+    }
+    @include max-width($narrow) {
+      border-radius: 0;
+    }
 
     color: $color-white;
     padding: $spacing / 2;

@@ -58,7 +58,7 @@
     >
       <div
         :class="{hide: hideLegend}"
-        class="key extended"
+        class="key"
       >
         <span
           v-for="(s, i) in lines"

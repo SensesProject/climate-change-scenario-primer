@@ -11,7 +11,7 @@
     p
       | For classifying the stringency of different warming limits the concept of Representative Concentration Pathways (RCPs) has been introduced to climate change research. Like the SSPs, they are called “Pathways” in the literature, but in fact  constitute projections of greenhouse gas emissions and concentrations and their combined radiative forcing. They originally comprised four projections, ranging from RCP&thinsp;2.6 to RCP&thinsp;8.5, and after the adoption of the Paris Agreement were augmented by RCP&thinsp;1.9 to represent mitigation pathways compatible with the 1.5&thinsp;°C warming limit. The values refer to radiative forcing in Watt/m<sup>2</sup> by the end of the century compared to preindustrial times, e.g. 2.6 Watt/m<sup>2</sup> in the case of RCP&thinsp;2.6. For comparison, a doubling of atmospheric CO<sub>2</sub> concentration from preindustrial times, i.e. from ca. 280 parts per million (ppm) air molecules to 560&thinsp;ppm, would amount to a radiative forcing of 3.7 Watt/m<sup>2</sup>. In 2016, CO<sub>2</sub> concentrations reached 400&thinsp;ppm, and the radiative forcing from all anthropogenic influences on the climate system was estimated to amount to ca. 2.3±1 Watt/m<sup>2</sup> in 2011.
 
-    table.extended
+    table
       thead
         tr
           th RCP

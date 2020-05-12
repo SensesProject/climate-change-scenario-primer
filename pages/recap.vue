@@ -3,7 +3,8 @@
     h2.h1 Recap
     p Climate change scenarios are a powerful tool for understanding climate change, charting response strategies, and supporting climate policy making. They are not about predicting the future, but come in the form of projections of what can happen or pathways of how to reach certain goals.
 
-    VisCycleCircle.center
+    div.cycle
+      VisCycleCircle.center
 
     p Socioeconomics and climate change are inseparably intertwined. Socioeconomics define for example our land and energy needs, which are closely linked to emissions. Increased emissions lead to higher GHG concentrations, which leads to climate change and its impacts. Climate impacts close the cycle as they will also influence our socioeconomics.
 
@@ -18,6 +19,9 @@
       |  take the next step towards future climate. And
       strong  climate impact models
       |  show us how that effects nature and society.
+
+    //- client-only
+      //- SensesMeta(id="primer")
     //- div.share.extended.no-margin.hide-print
     //-   div.center.default
     //-     h3.h2.white Share
@@ -48,10 +52,13 @@
 </template>
 
 <script>
+// import SensesMeta from 'library/src/components/SensesMeta.vue'
 export default {
+  components: {
+    // SensesMeta
+  },
   data () {
     return {
-      address: 'cornelia.auer@pik-potsdam.de'
     }
   }
 }
@@ -68,6 +75,11 @@ export default {
 
   .share {
     margin-top: $spacing;
+  }
+
+  .cycle {
+    display: flex;
+    justify-content: center;
   }
 
   .share, .contact {
