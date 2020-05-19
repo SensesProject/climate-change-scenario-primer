@@ -34,12 +34,12 @@
           </li>
         </nuxt-link>
       </ul>
-      <nuxt-link
+      <a
         class="imprint"
-        to="/imprint"
+        href="/imprint"
       >
         Imprint
-      </nuxt-link>
+      </a>
     </nav>
   </div>
 </template>
