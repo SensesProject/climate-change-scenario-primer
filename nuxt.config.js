@@ -7,7 +7,7 @@ module.exports = {
   */
   // mode: 'spa',
   router: {
-    base: '/primer/'
+    base: '/primer-legacy/'
   },
   head: {
     htmlAttrs: {
