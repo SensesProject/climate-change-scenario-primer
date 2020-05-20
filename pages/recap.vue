@@ -20,42 +20,21 @@
       strong  climate impact models
       |  show us how that effects nature and society.
 
-    //- client-only
-      //- SensesMeta(id="primer")
-    //- div.share.extended.no-margin.hide-print
-    //-   div.center.default
-    //-     h3.h2.white Share
-    //-     div.button-group
-    //-       a.button(href="mailto:?subject=Climate Change Scenario Primer&body=→ https://climatescenarios.org/primer ")
-    //-         span.mono
-    //-           span.arrow →
-    //-           |  Mail
-    //-       a.button(href="https://twitter.com/home?status=→ https://climatescenarios.org/primer", rel="noopener noreferrer")
-    //-         span.mono
-    //-           span.arrow →
-    //-           |  Twitter
-    //-       |
-    //-       a.button(href="https://www.facebook.com/sharer/sharer.php?u=https://climatescenarios.org/primer", rel="noopener noreferrer")
-    //-         span.mono
-    //-           span.arrow →
-    //-           |  Facebook
-    //-       |
-    //- div.contact.extended.no-margin.hide-print
-    //-   div.center.default
-    //-     h3.h2.violet Get in Touch 👋
-    //-     client-only
-    //-       a.button(:href="`mailto:${address}?subject=Climate Change Scenario Primer`")
-    //-         span.mono
-    //-           span.arrow →
-    //-           |  Send Mail
+    client-only
+      SensesMeta.narrow(id="primer")
   </section>
 </template>
 
 <script>
-// import SensesMeta from 'library/src/components/SensesMeta.vue'
+import Vue from 'vue'
+import VModal from 'vue-js-modal/dist/ssr.index'
+import SensesMeta from 'library/src/components/SensesMetaNuxt.vue'
+import 'vue-js-modal/dist/styles.css'
+
+Vue.use(VModal)
 export default {
   components: {
-    // SensesMeta
+    SensesMeta
   },
   data () {
     return {

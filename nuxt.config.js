@@ -39,12 +39,13 @@ module.exports = {
   },
   css: [
     // Load a node module directly (here it's a SASS file)
-    'normalize-scss',
+    // 'normalize-scss',
     // CSS file in the project
     '@/assets/style/base.scss'
   ],
   plugins: [
-    '~/plugins/components.js'
+    '~/plugins/components.js',
+    // '~/plugins/vue-js-modal.js'
   ],
   loading: { color: '#4E40B2' },
   /*

@@ -50,6 +50,10 @@ img {
   max-width: 100%;
 }
 
+.preview img {
+  max-width: none;
+}
+
 table {
   border-spacing: 0;
   border-collapse: collapse;
