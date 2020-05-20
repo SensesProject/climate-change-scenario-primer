@@ -90,9 +90,9 @@
       <h3>Further Reading</h3>
       <li>Haasnoot, M., Kwakkel, J. H., Walker, W. E., & ter Maat, J. (2013).<a href="https://www.sciencedirect.com/science/article/pii/S0016328702000903"><strong> Dynamic adaptive policy pathways: A method for crafting robust decisions for a deeply uncertain world.</strong></a>            Global environmental change, 23(2), 485-498.</li>
       <li>Field, C. B., Barros, V. R., Mastrandrea, M. D., et al. (2014).<a href="https://www.ipcc.ch/report/ar5/wg2/"><strong> IPCC: Summary for Policymakers. In: Climate Change 2014: Impacts, Adaptation, and Vulnerability. Part A: Global and Sectoral Aspects. Contribution of Working Group II to the Fifth Assessment Report of the Intergovernmental Panel on Climate Change.</strong></a>            Cambridge University Press.</li>
-      <li>Adger, W. N., Arnell, N. W., & Tompkins, E. L. (2005).<strong> Successful adaptation to climate change across scales.</strong> Global environmental change, 15(2), 77-86.</li>
-      <li>Pedde, S., Kok, K., Hölscher, K., Frantzeskaki, N., Holman, I., Dunford, R., ... & Jäger, J. (2019).<strong> Advancing the use of scenarios to understand society’s capacity to achieve the 1.5 degree target.</strong> Global environmental change, 56, 75-85.</li>
-      <li>Zurek, M. B., & Henrichs, T. (2007).<strong> Linking scenarios across geographical scales in international environmental assessments.</strong> Technological forecasting and social change, 74(8), 1282-1295.</li>
+      <li>Adger, W. N., Arnell, N. W., & Tompkins, E. L. (2005).<a href="https://www.sciencedirect.com/science/article/abs/pii/S0959378004000901"><strong> Successful adaptation to climate change across scales.</strong></a> Global environmental change, 15(2), 77-86.</li>
+      <li>Pedde, S., Kok, K., Hölscher, K., Frantzeskaki, N., Holman, I., Dunford, R., ... & Jäger, J. (2019).<a href="https://www.sciencedirect.com/science/article/pii/S095937801830061X"><strong> Advancing the use of scenarios to understand society’s capacity to achieve the 1.5 degree target.</strong></a> Global environmental change, 56, 75-85.</li>
+      <li>Zurek, M. B., & Henrichs, T. (2007).<a href="https://www.sciencedirect.com/science/article/pii/S0040162506002149"><strong> Linking scenarios across geographical scales in international environmental assessments.</strong></a> Technological forecasting and social change, 74(8), 1282-1295.</li>
     </LayoutNextChapter>
   </article>
 </template>
