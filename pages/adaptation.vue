@@ -75,15 +75,24 @@
         a(href="https://www.ipcc.ch/report/ar5/wg2/")
           strong  IPCC: Summary for Policymakers. In: Climate Change 2014: Impacts, Adaptation, and Vulnerability. Part A: Global and Sectoral Aspects. Contribution of Working Group II to the Fifth Assessment Report of the Intergovernmental Panel on Climate Change.
         |  Cambridge University Press.
-      li Adger, W. N., Arnell, N. W., & Tompkins, E. L. (2005).
-        strong  Successful adaptation to climate change across scales.
+      li
+        | Adger, W. N., Arnell, N. W., &amp; Tompkins, E. L. (2005).
+        a(href='https://www.sciencedirect.com/science/article/abs/pii/S0959378004000901')
+          strong  Successful adaptation to climate change across scales.
         |  Global environmental change, 15(2), 77-86.
-      li Pedde, S., Kok, K., Hölscher, K., Frantzeskaki, N., Holman, I., Dunford, R., ... & Jäger, J. (2019).
-        strong  Advancing the use of scenarios to understand society’s capacity to achieve the 1.5 degree target.
+      li
+        | Pedde, S., Kok, K., H&ouml;lscher, K., Frantzeskaki, N., Holman, I., Dunford, R., ... &amp; J&auml;ger, J. (2019).
+        a(href='https://www.sciencedirect.com/science/article/pii/S095937801830061X')
+          strong
+            | Advancing the use of scenarios to understand society&rsquo;s capacity to achieve the 1.5 degree target.
         |  Global environmental change, 56, 75-85.
-      li Zurek, M. B., & Henrichs, T. (2007).
-        strong  Linking scenarios across geographical scales in international environmental assessments.
+      li
+        | Zurek, M. B., &amp; Henrichs, T. (2007).
+        a(href='https://www.sciencedirect.com/science/article/pii/S0040162506002149')
+          strong
+            | Linking scenarios across geographical scales in international environmental assessments.
         |  Technological forecasting and social change, 74(8), 1282-1295.
+
 </template>
 
 <script>
