@@ -10,7 +10,7 @@
         <LayoutNav /> -->
       <!-- </template> -->
       <!-- <template v-else> -->
-      <SensesMenu>
+      <SensesMenu id="primer">
         <template v-slot:about="{ closeMenu }">
           <LayoutNav class="menu-nav" :close-menu="closeMenu" />
         </template>
