@@ -29,7 +29,7 @@ module.exports = {
     '@/assets/style/base.scss'
   ],
   plugins: [
-    '~/plugins/components.js',
+    '~/plugins/components.js'
     // '~/plugins/vue-js-modal.js'
   ],
   loading: { color: '#4E40B2' },
