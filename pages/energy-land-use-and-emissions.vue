@@ -15,7 +15,7 @@
 
     <LayoutIAMs />
 
-    <p>So feeding socioeconomic scenario assumptions into IAMs will get us scenarios for energy use, land use and emissions. Let&#8217;s take a look how this plays out for the socioeconomic futures described by the SSPs. Population and GDP developments in the SSPs are shown below.</p>
+    <p>So feeding socioeconomic scenario assumptions into IAMs will get us scenarios for energy use, land use and emissions. Let&#8217;s see how this plays out for the socioeconomic futures described by the SSPs. Population and GDP developments in the SSPs are shown below.</p>
 
     <LayoutColumns class="extended hide-print">
       <VisChart
