@@ -105,7 +105,7 @@
       h3 Further Reading
       li
         a(href="https://www.ipcc.ch/sr15/")
-          strong  IPCC Special Report on Global Warming of 1.5°C, Chapter 3
+          strong  IPCC Special Report on Global Warming of 1.5°C, Chapter 2
       li Van Vuuren, D. P., Kriegler, E., O’Neill, B. C., et al. (2014).
         a(href="https://link.springer.com/article/10.1007/s10584-013-0906-1")
           strong  A new scenario framework for climate change research: scenario matrix architecture.
