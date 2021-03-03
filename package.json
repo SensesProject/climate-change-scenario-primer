@@ -42,7 +42,7 @@
     "eslint": "^6.1.0",
     "eslint-plugin-nuxt": ">=0.4.2",
     "node-sass": "^4.13.1",
-    "pug": "^2.0.3",
+    "pug": "^3.0.1",
     "pug-plain-loader": "^1.0.0",
     "sass-loader": "^8.0.2"
   }
