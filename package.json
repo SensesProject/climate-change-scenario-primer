@@ -27,7 +27,7 @@
     "intersection-observer": "^0.7.0",
     "library": "github:SensesProject/library",
     "no-scroll": "^2.1.1",
-    "nuxt": "^2.11.0",
+    "nuxt": "^2.15.8",
     "ol": "^5.1.3",
     "proj4": "github:proj4js/proj4js",
     "sass-burger": "^1.3.1",
